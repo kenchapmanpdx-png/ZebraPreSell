@@ -36,8 +36,7 @@ export default function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#home" className="font-medium hover:text-terra transition-colors">Home</a>
-          <a href="#avacore" className="font-medium hover:text-terra transition-colors">Core Formula</a>
-          <a href="#boosters" className="font-medium hover:text-terra transition-colors">Boosters</a>
+          <a href="#products" className="font-medium hover:text-terra transition-colors">Products</a>
           <a href="#why" className="font-medium hover:text-terra transition-colors">Why ZebraWell</a>
           <a href="#comparison" className="font-medium hover:text-terra transition-colors">Research</a>
           <a href="#contact" className="font-medium hover:text-terra transition-colors">Contact Us</a>
@@ -58,8 +57,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       <div className={`md:hidden bg-earth-cream border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Home</a>
-        <a href="#avacore" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Core Formula</a>
-        <a href="#boosters" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Boosters</a>
+        <a href="#products" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Products</a>
         <a href="#why" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Why ZebraWell</a>
         <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Research</a>
         <a href="#contact" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Contact Us</a>

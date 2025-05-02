@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import WhyZebraWell from '@/components/WhyZebraWell';
-import AvaCore from '@/components/AvaCore';
-import Boosters from '@/components/Boosters';
+import ProductGrid from '@/components/ProductGrid';
 import Comparison from '@/components/Comparison';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -38,8 +37,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <AvaCore />
-      <Boosters />
+      <ProductGrid />
       <WhyZebraWell />
       <Comparison />
       <Contact />
