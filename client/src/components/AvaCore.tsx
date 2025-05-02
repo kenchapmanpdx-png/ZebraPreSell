@@ -1,38 +1,38 @@
 export default function AvaCore() {
   const ingredients = [
     {
-      name: "Magnesium Glycinate",
-      description: "Highly absorbable form that supports muscle function, nerve signaling, and joint health.",
-      dosage: "400mg per serving",
+      name: "Magnesium (Glycinate Chelate)",
+      description: "Calms nerves, supports muscle function and energy metabolism.",
+      dosage: "250mg per serving",
       note: "Essential for POTS and EDS support",
       image: "https://images.unsplash.com/photo-1577898094685-68a85153f6a9?auto=format&fit=crop&w=600&h=400&q=80"
     },
     {
-      name: "Buffered Vitamin C",
-      description: "Gentle form that supports collagen production, immune function, and mast cell stability.",
+      name: "Vitamin C (Buffered Ascorbates)",
+      description: "Antioxidant, supports collagen, immune function, and adrenal health.",
       dosage: "1000mg per serving",
       note: "Critical for connective tissue integrity",
       image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&h=400&q=80"
     },
     {
-      name: "CoQ10",
-      description: "Supports cellular energy production and helps reduce oxidative stress in mitochondria.",
-      dosage: "200mg per serving",
+      name: "CoQ10 (Ubiquinone)",
+      description: "Supports mitochondrial energy and cardiovascular health.",
+      dosage: "100mg per serving",
       note: "Vital for energy and cardiac function",
       image: "https://images.unsplash.com/photo-1579613832125-5d34a13ffe2a?auto=format&fit=crop&w=600&h=400&q=80"
     },
     {
-      name: "PEA",
-      description: "Palmitoylethanolamide helps modulate inflammatory responses and supports pain management.",
-      dosage: "300mg per serving",
+      name: "PEA (Micronized)",
+      description: "Natural anti-inflammatory, pain-relieving, and mast cell modulating.",
+      dosage: "400mg per serving",
       note: "Supports comfort and inflammation balance",
       image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=600&h=400&q=80"
     },
     {
-      name: "Active B-Complex",
-      description: "Methylated B vitamins that support energy, nervous system function, and MTHFR variations.",
-      dosage: "Complete methylated forms",
-      note: "Optimized for genetic variations",
+      name: "Taurine (L-Taurine)",
+      description: "Modulates nervous system, stabilizes cell membranes, helps with POTS.",
+      dosage: "500mg per serving",
+      note: "Key support for sensitive systems",
       image: "https://images.unsplash.com/photo-1616048056617-93b94a339009?auto=format&fit=crop&w=600&h=400&q=80"
     }
   ];
@@ -41,11 +41,11 @@ export default function AvaCore() {
     <section id="avacore" className="py-16 md:py-24">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 fade-in">Meet AvaCore</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 fade-in">ZebraWell™ Core Formula</h2>
           <p className="text-lg text-neutral-dark/80 fade-in">
-            Our flagship daily formula designed specifically for EDS, POTS, and MCAS support. 
-            AvaCore delivers essential nutrients in their most bioavailable forms to support 
-            cellular health, energy production, and inflammation management.
+            Our flagship daily formula (6–8 capsules/day) designed specifically for EDS, POTS, and MCAS support. 
+            ZebraWell Core delivers essential nutrients in their most bioavailable forms to support 
+            foundational mitochondrial, nervous system, and connective tissue health.
           </p>
         </div>
         

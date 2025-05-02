@@ -37,7 +37,7 @@ export default function Navigation() {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#home" className="font-semibold hover:text-lavender transition-colors">Home</a>
           <a href="#why" className="font-semibold hover:text-lavender transition-colors">Why ZebraWell</a>
-          <a href="#avacore" className="font-semibold hover:text-lavender transition-colors">AvaCore</a>
+          <a href="#avacore" className="font-semibold hover:text-lavender transition-colors">Core Formula</a>
           <a href="#boosters" className="font-semibold hover:text-lavender transition-colors">Boosters</a>
           <a href="#comparison" className="font-semibold hover:text-lavender transition-colors">Comparison</a>
           <a href="#contact" className="font-semibold hover:text-lavender transition-colors">Contact</a>
@@ -49,7 +49,9 @@ export default function Navigation() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
-          <i className="fas fa-bars text-2xl"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
       
@@ -57,7 +59,7 @@ export default function Navigation() {
       <div className={`md:hidden bg-white border-t border-neutral-medium pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <a href="#home" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Home</a>
         <a href="#why" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Why ZebraWell</a>
-        <a href="#avacore" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">AvaCore</a>
+        <a href="#avacore" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Core Formula</a>
         <a href="#boosters" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Boosters</a>
         <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Comparison</a>
         <a href="#contact" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-lavender transition-colors">Contact</a>

@@ -13,7 +13,7 @@ export default function Hero() {
             href="#avacore" 
             className="inline-block bg-teal hover:bg-teal-dark text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 fade-in"
           >
-            Explore AvaCore
+            Explore Core Formula
           </a>
           <p className="mt-4 text-sm italic text-neutral-dark/60 fade-in">
             Wellness for the Rare and Resilient

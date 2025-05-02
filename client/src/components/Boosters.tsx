@@ -1,18 +1,26 @@
 export default function Boosters() {
   const potsBooster = [
-    { name: "L-Carnitine", description: "Supports energy transport and cardiovascular function" },
-    { name: "D-Ribose", description: "Helps restore cellular energy for cardiac function" },
-    { name: "Thiamine (B1)", description: "Critical for energy metabolism and neurological health" },
-    { name: "PQQ", description: "Supports mitochondrial function and biogenesis" },
-    { name: "Potassium", description: "Supports electrolyte balance and cardiac function" }
+    { name: "L-Carnitine L-Tartrate", description: "Transports fatty acids into mitochondria for energy; supports fatigue" },
+    { name: "D-Ribose", description: "Replenishes cellular ATP levels, aids in energy recovery" },
+    { name: "Thiamine HCl", description: "Boosts mitochondrial energy, often deficient in POTS patients" },
+    { name: "PQQ", description: "Stimulates new mitochondrial growth and repair" },
+    { name: "Potassium Citrate", description: "Critical for blood pressure, fluid balance, and nerve function" },
+    { name: "R-Lipoic Acid", description: "Recycles antioxidants, supports mitochondrial and nerve health" },
+    { name: "Hesperidin", description: "Strengthens blood vessels, improves circulation and autonomic tone" }
   ];
 
   const edsBooster = [
-    { name: "Copper", description: "Essential for collagen cross-linking and stability" },
-    { name: "Manganese", description: "Required for connective tissue formation and repair" },
-    { name: "Silicon", description: "Supports collagen synthesis and bone mineralization" },
-    { name: "Hyaluronic Acid", description: "Maintains joint lubrication and tissue hydration" },
-    { name: "MSM", description: "Supports joint comfort and tissue integrity" }
+    { name: "Copper", description: "Required for collagen cross-linking and elastin integrity" },
+    { name: "Manganese", description: "Cofactor for connective tissue enzymes" },
+    { name: "Silicon (from Bamboo)", description: "Supports synthesis of collagen, skin, bones, and joints" },
+    { name: "Hyaluronic Acid", description: "Lubricates joints and hydrates skin/connective tissues" },
+    { name: "Vitamin C", description: "Essential for collagen production and antioxidant support" }
+  ];
+  
+  const mcasBooster = [
+    { name: "Quercetin", description: "Natural mast cell stabilizer and anti-inflammatory" },
+    { name: "Luteolin", description: "Anti-inflammatory, neuroprotective, and MCAS-supportive bioflavonoid" },
+    { name: "Nettle Leaf Extract", description: "Reduces histamine and allergic responses, anti-inflammatory" }
   ];
 
   return (
@@ -21,17 +29,18 @@ export default function Boosters() {
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Targeted Boosters</h2>
         <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-neutral-dark/80 fade-in">
-          Our specialized boosters address specific symptoms and needs, designed to complement AvaCore with targeted support.
+          Our specialized boosters address specific symptoms and needs, designed to complement ZebraWell Core Formula with targeted support.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* POTS Booster */}
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mr-4">
                 <i className="fas fa-heartbeat text-2xl text-teal"></i>
               </div>
-              <h3 className="text-2xl font-bold">POTS Booster</h3>
+              <h3 className="text-2xl font-bold">🔋 POTS Booster</h3>
+              <span className="ml-2 text-sm text-neutral-dark/60">(3-4 capsules/day)</span>
             </div>
             
             <ul className="mb-6 space-y-2">
@@ -57,7 +66,8 @@ export default function Boosters() {
               <div className="w-14 h-14 rounded-full bg-lavender/10 flex items-center justify-center mr-4">
                 <i className="fas fa-bone text-2xl text-lavender"></i>
               </div>
-              <h3 className="text-2xl font-bold">EDS Booster</h3>
+              <h3 className="text-2xl font-bold">🧠 hEDS Booster</h3>
+              <span className="ml-2 text-sm text-neutral-dark/60">(1-3 capsules/day)</span>
             </div>
             
             <ul className="mb-6 space-y-2">
@@ -73,6 +83,33 @@ export default function Boosters() {
             </ul>
             
             <button className="w-full py-3 px-6 bg-teal hover:bg-teal-dark text-white font-semibold rounded-lg transition-colors">
+              Learn More
+            </button>
+          </div>
+          
+          {/* MCAS Booster */}
+          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal-light fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div className="flex items-center mb-6">
+              <div className="w-14 h-14 rounded-full bg-teal-light/10 flex items-center justify-center mr-4">
+                <i className="fas fa-leaf text-2xl text-teal-light"></i>
+              </div>
+              <h3 className="text-2xl font-bold">🌿 MCAS Booster</h3>
+              <span className="ml-2 text-sm text-neutral-dark/60">(1-2 capsules/day)</span>
+            </div>
+            
+            <ul className="mb-6 space-y-2">
+              {mcasBooster.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <i className="fas fa-check text-teal-light mt-1 mr-3"></i>
+                  <div>
+                    <span className="font-semibold">{item.name}</span>
+                    <p className="text-sm text-neutral-dark/70">{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <button className="w-full py-3 px-6 bg-teal-light hover:bg-teal text-white font-semibold rounded-lg transition-colors">
               Learn More
             </button>
           </div>
