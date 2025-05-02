@@ -30,7 +30,7 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#" className="flex items-center">
           <ZebraLogo />
-          <span className="text-2xl font-lora"><span className="text-forest font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
+          <span className="text-2xl font-lora"><span className="text-black font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
         </a>
         
         {/* Desktop Navigation */}
