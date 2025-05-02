@@ -34,12 +34,12 @@ export default function ProductGrid() {
               
               <ul className="mb-6 space-y-2">
                 {[
-                  { name: "CoQ10 (as Ubiquinol)", description: "Superior bioavailable form of CoQ10 for mitochondrial energy", dosage: "200 mg", note: "Patented reduced form for optimal absorption" },
-                  { name: "Magnesium (as Malate & Glycinate)", description: "Essential for energy, muscle & nerve function", dosage: "300 mg", note: "Dual-form for enhanced absorption and reduced GI effects" },
-                  { name: "PQQ (Pyrroloquinoline Quinone)", description: "Stimulates growth of new mitochondria, supports brain health", dosage: "20 mg", note: "Research-backed for mitochondrial biogenesis" },
-                  { name: "B-Complex (Methylated)", description: "Energy production & methylation support in active forms", dosage: "Varied", note: "Includes methylated B12 & folate for MTHFR variants" },
-                  { name: "Creatine Monohydrate", description: "Supplies ATP to muscles & supports connective tissue", dosage: "5g", note: "Micronized for superior dissolution and absorption" },
-                  { name: "Acetyl-L-Carnitine", description: "Transports fatty acids into mitochondria for energy", dosage: "750 mg", note: "Crosses blood-brain barrier for cognitive benefits" }
+                  { name: "Magnesium (Glycinate Chelate)", description: "Calms nerves, supports muscle function and energy metabolism", dosage: "250 mg" },
+                  { name: "Vitamin C (Buffered Ascorbates)", description: "Antioxidant, supports collagen, immune function, and adrenal health", dosage: "1000 mg" },
+                  { name: "CoQ10 (Ubiquinone)", description: "Supports mitochondrial energy and cardiovascular health", dosage: "100 mg" },
+                  { name: "Taurine (L-Taurine)", description: "Modulates nervous system, stabilizes cell membranes, helps with POTS", dosage: "500 mg" },
+                  { name: "Vitamin D3", description: "Supports immune, bone, and mood regulation", dosage: "2000 IU / 50 mcg" },
+                  { name: "Thiamine HCl (B1)", description: "Boosts nerve signaling, energy production—especially helpful for POTS", dosage: "50 mg" }
                 ].map((ingredient, index) => (
                   <li key={index} className="flex items-start">
                     <i className="fas fa-flask text-forest mt-1 mr-3"></i>
@@ -49,7 +49,6 @@ export default function ProductGrid() {
                         <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{ingredient.dosage}</span>
                       </div>
                       <p className="text-sm text-neutral-dark/70">{ingredient.description}</p>
-                      <p className="text-xs text-neutral-dark/90 italic mt-1">{ingredient.note}</p>
                     </div>
                   </li>
                 ))}
