@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
             Wellness for the Rare and Resilient<br/>
-            <span className="text-2xl md:text-4xl text-terra-dark font-medium">for EDS, POTS, and MCAS</span>
+            <span className="text-2xl md:text-4xl text-terra-dark font-medium">Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
             <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
