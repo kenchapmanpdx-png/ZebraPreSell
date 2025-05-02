@@ -25,22 +25,22 @@ export default function Navigation() {
   };
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full bg-white z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-medical-blue/10`}>
+    <nav id="main-nav" className={`fixed top-0 w-full bg-earth-cream z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex items-center">
           <ZebraLogo />
-          <span className="text-2xl font-bold"><span className="text-medical-blue">Zebra</span><span className="text-medical-blue font-normal">Well</span><span className="text-xs align-top bg-medical-blue/10 text-medical-blue px-1 py-0.5 rounded ml-1">MD</span></span>
+          <span className="text-2xl font-lora"><span className="text-forest font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
         </a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="font-semibold hover:text-medical-blue transition-colors">Home</a>
-          <a href="#why" className="font-semibold hover:text-medical-blue transition-colors">Why ZebraWell</a>
-          <a href="#avacore" className="font-semibold hover:text-medical-blue transition-colors">Core Formula</a>
-          <a href="#boosters" className="font-semibold hover:text-medical-blue transition-colors">Boosters</a>
-          <a href="#comparison" className="font-semibold hover:text-medical-blue transition-colors">Research</a>
-          <a href="#contact" className="font-semibold hover:text-medical-blue transition-colors">Consultation</a>
+          <a href="#home" className="font-medium hover:text-terra transition-colors">Home</a>
+          <a href="#why" className="font-medium hover:text-terra transition-colors">Why ZebraWell</a>
+          <a href="#avacore" className="font-medium hover:text-terra transition-colors">Core Formula</a>
+          <a href="#boosters" className="font-medium hover:text-terra transition-colors">Boosters</a>
+          <a href="#comparison" className="font-medium hover:text-terra transition-colors">Research</a>
+          <a href="#contact" className="font-medium hover:text-terra transition-colors">Contact Us</a>
         </div>
         
         {/* Mobile Menu Button */}
@@ -56,13 +56,13 @@ export default function Navigation() {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`md:hidden bg-white border-t border-medical-blue/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-        <a href="#home" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Home</a>
-        <a href="#why" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Why ZebraWell</a>
-        <a href="#avacore" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Core Formula</a>
-        <a href="#boosters" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Boosters</a>
-        <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Research</a>
-        <a href="#contact" onClick={handleLinkClick} className="block py-2 font-semibold hover:text-medical-blue transition-colors">Consultation</a>
+      <div className={`md:hidden bg-earth-cream border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Home</a>
+        <a href="#why" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Why ZebraWell</a>
+        <a href="#avacore" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Core Formula</a>
+        <a href="#boosters" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Boosters</a>
+        <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Research</a>
+        <a href="#contact" onClick={handleLinkClick} className="block py-2 font-medium hover:text-terra transition-colors">Contact Us</a>
       </div>
     </nav>
   );

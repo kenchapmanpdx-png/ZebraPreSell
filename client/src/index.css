@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -27,20 +27,22 @@
   --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
 
-  /* Custom ZebraWell colors with medical feel */
-  --lavender-light: 261 35% 70%;
-  --lavender: 261 45% 55%;
-  --lavender-dark: 261 50% 42%;
-  --teal-light: 187 52% 58%;
-  --teal: 187 70% 42%;
-  --teal-dark: 187 75% 32%;
+  /* ZebraWell earthy, clean, modern colors */
+  --sage: 120 15% 50%;
+  --sage-light: 120 25% 85%;
+  --sage-dark: 120 15% 30%;
+  --terra: 25 60% 50%;
+  --terra-light: 25 70% 85%;
+  --terra-dark: 25 50% 35%;
+  --cream: 40 30% 95%;
+  --sand: 35 25% 88%;
+  --clay: 20 35% 82%;
+  --forest: 150 30% 30%;
+  --forest-light: 150 30% 75%;
   --neutral-lightest: 0 0% 100%;
-  --neutral-light: 210 30% 98%;
-  --neutral-medium: 210 15% 90%;
-  --neutral-dark: 210 25% 27%;
-  --medical-blue: 210 100% 45%;
-  --medical-blue-light: 210 80% 65%;
-  --medical-gray: 220 10% 95%;
+  --neutral-light: 35 10% 95%;
+  --neutral-medium: 35 5% 85%;
+  --neutral-dark: 35 10% 25%;
 }
 
 .dark {
@@ -72,7 +74,7 @@
   }
 
   body {
-    @apply font-opensans antialiased bg-background text-neutral-dark scroll-smooth;
+    @apply font-montserrat antialiased bg-background text-neutral-dark scroll-smooth;
   }
 
   html {
@@ -81,48 +83,24 @@
 }
 
 @layer components {
-  .zebra-bg {
-    background-color: #ffffff;
-    background-image: repeating-linear-gradient(90deg, rgba(200, 210, 220, 0.2), rgba(200, 210, 220, 0.2) 4px, rgba(255, 255, 255, 0) 4px, rgba(255, 255, 255, 0) 40px);
+  .natural-texture {
+    background-color: hsl(var(--cream));
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23887055' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
   
-  .zebra-pattern {
-    background: #fdfdfd;
-    background-image: 
-      repeating-linear-gradient(
-        100deg,
-        rgba(0, 0, 0, 0.04) 0px,
-        rgba(0, 0, 0, 0.04) 12px,
-        rgba(0, 0, 0, 0) 12px,
-        rgba(0, 0, 0, 0) 34px
-      ),
-      repeating-linear-gradient(
-        100deg,
-        rgba(0, 0, 0, 0.02) 0px,
-        rgba(0, 0, 0, 0.02) 7px,
-        rgba(0, 0, 0, 0) 7px,
-        rgba(0, 0, 0, 0) 34px
-      );
+  .leaf-pattern {
+    background-color: hsl(var(--sage-light));
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%237a9c65' fill-opacity='0.1'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   
-  .zebra-stripes {
-    background: repeating-linear-gradient(
-      -45deg,
-      #ffffff,
-      #ffffff 10px,
-      #f7f9fd 10px,
-      #f7f9fd 20px
-    );
+  .grain-texture {
+    background-color: hsl(var(--sand));
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23876a4c' fill-opacity='0.07' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   }
   
-  .zebra-border {
-    border-image: repeating-linear-gradient(45deg, rgba(33, 115, 196, 0.1) 0, rgba(33, 115, 196, 0.1) 1px, transparent 1px, transparent 5px) 5;
-  }
-  
-  .medical-pattern {
-    background-color: hsl(var(--medical-gray));
-    background-image: radial-gradient(circle, rgba(33, 115, 196, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
+  .subtle-waves {
+    background-color: hsl(var(--clay));
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264.888-.14 1.688-1.23 3.416-1.524 5.16-1.74a21.112 21.112 0, 0, 0, 1.672-.34 3.614 3.614 0, 0, 0, 1.013-.45 4.56 4.56 0, 0, 0, .62-.65c.3-.45.272.013.28.255a2.143 2.143 0, 0, 1-.807 1.76c-.02.017-.04.033-.06.05a35.62 35.62 0, 0, 1-.3, 0, 23.43, 23.43 0, 0, 1-.566-.237q-.166-.072-.335-.144a35.018 35.018 0, 0, 1-.234-.106q-.712-.324-1.416-.64c-.86-.39-1.718-.77-2.58-1.13-2.582-1.08-5.192-1.992-7.988-2.627a55.317 55.317 0, 0, 0-3.788-.774 23.057 23.057 0, 0, 0-5.915-.33, 23.18 23.18 0, 0, 0-5.489.828c-.088.017-.176.034-.265.052a23.548 23.548 0, 0, 0-3.235 1.032c-.083.034-.166.067-.249.102a23.808 23.808 0, 0, 0-5.29 3.263 23.65 23.65 0, 0, 0-4.33 4.922c-.078.107-.155.214-.23.325-.138.196-.28.395-.406.602-.16.222-.27.473-.202.733.069.261.254.4.5.393a.79.79 0, 0, 0, .197-.029l.22.047c.266.052.53.1.792.145.733.126 1.462.23 2.193.34.14.022.275.029.414.056l.187.033c.32.053.65.097.97.152 1.36.234 2.724.464 4.09.683 4.905.783 9.82 1.25 14.755 1.247 2.4, 0, 4.8-.082 7.19-.199.481-.023.963-.057 1.444-.087.66-.043 1.26-.174 1.866-.38.97-.332 1.669-1.272 1.961-2.267.125-.426.144-.872.13-1.32-.037-.905-.377-1.683-1.155-2.278-.193-.147-.378-.285-.555-.423-.89-.698-1.309-1.617-1.318-2.75-.002-.232.025-.4.095-.565.185-.43.442-.758.798-1.03.53-.408 1.107-.714 1.705-.962.732-.302 1.465-.598 2.198-.896.13-.053.253-.106.375-.16l.023-.01Z' fill='%23b58b65' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
   
   .fade-in {

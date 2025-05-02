@@ -5,9 +5,8 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      nunito: ['Nunito', 'sans-serif'],
-      roboto: ['Roboto', 'sans-serif'],
-      opensans: ['Open Sans', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
+      lora: ['Lora', 'serif'],
     },
     extend: {
       borderRadius: {
@@ -49,16 +48,20 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // ZebraWell custom colors
-        lavender: {
-          light: "hsl(var(--lavender-light))",
-          DEFAULT: "hsl(var(--lavender))",
-          dark: "hsl(var(--lavender-dark))",
+        // ZebraWell earthy colors
+        sage: {
+          light: "hsl(var(--sage-light))",
+          DEFAULT: "hsl(var(--sage))",
+          dark: "hsl(var(--sage-dark))",
         },
-        teal: {
-          light: "hsl(var(--teal-light))",
-          DEFAULT: "hsl(var(--teal))",
-          dark: "hsl(var(--teal-dark))",
+        terra: {
+          light: "hsl(var(--terra-light))",
+          DEFAULT: "hsl(var(--terra))",
+          dark: "hsl(var(--terra-dark))",
+        },
+        forest: {
+          light: "hsl(var(--forest-light))",
+          DEFAULT: "hsl(var(--forest))",
         },
         neutral: {
           lightest: "hsl(var(--neutral-lightest))",
@@ -66,10 +69,10 @@ export default {
           medium: "hsl(var(--neutral-medium))",
           dark: "hsl(var(--neutral-dark))",
         },
-        medical: {
-          blue: "hsl(var(--medical-blue))",
-          "blue-light": "hsl(var(--medical-blue-light))",
-          gray: "hsl(var(--medical-gray))",
+        earth: {
+          cream: "hsl(var(--cream))",
+          sand: "hsl(var(--sand))",
+          clay: "hsl(var(--clay))",
         },
         chart: {
           "1": "hsl(var(--chart-1))",
