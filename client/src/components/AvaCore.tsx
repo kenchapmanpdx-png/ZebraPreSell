@@ -3,37 +3,68 @@ export default function AvaCore() { // Keeping function name for compatibility, 
     {
       name: "Magnesium (Glycinate Chelate)",
       description: "Calms nerves, supports muscle function and energy metabolism.",
-      dosage: "250mg per serving",
-      note: "Essential for POTS and EDS support",
-      image: "https://images.unsplash.com/photo-1577898094685-68a85153f6a9?auto=format&fit=crop&w=600&h=400&q=80"
+      dosage: "250 mg",
+      note: "Essential for POTS and EDS support"
     },
     {
       name: "Vitamin C (Buffered Ascorbates)",
       description: "Antioxidant, supports collagen, immune function, and adrenal health.",
-      dosage: "1000mg per serving",
-      note: "Critical for connective tissue integrity",
-      image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&h=400&q=80"
+      dosage: "1000 mg",
+      note: "Critical for connective tissue integrity"
     },
     {
       name: "CoQ10 (Ubiquinone)",
       description: "Supports mitochondrial energy and cardiovascular health.",
-      dosage: "100mg per serving",
-      note: "Vital for energy and cardiac function",
-      image: "https://images.unsplash.com/photo-1579613832125-5d34a13ffe2a?auto=format&fit=crop&w=600&h=400&q=80"
-    },
-    {
-      name: "PEA (Micronized)",
-      description: "Natural anti-inflammatory, pain-relieving, and mast cell modulating.",
-      dosage: "400mg per serving",
-      note: "Supports comfort and inflammation balance",
-      image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=600&h=400&q=80"
+      dosage: "100 mg",
+      note: "Vital for energy production"
     },
     {
       name: "Taurine (L-Taurine)",
       description: "Modulates nervous system, stabilizes cell membranes, helps with POTS.",
-      dosage: "500mg per serving",
-      note: "Key support for sensitive systems",
-      image: "https://images.unsplash.com/photo-1616048056617-93b94a339009?auto=format&fit=crop&w=600&h=400&q=80"
+      dosage: "500 mg",
+      note: "Supports cellular stability"
+    },
+    {
+      name: "Vitamin D3",
+      description: "Supports immune, bone, and mood regulation.",
+      dosage: "2000 IU / 50 mcg",
+      note: "Important for overall wellness"
+    },
+    {
+      name: "Vitamin K2 (MK-7)",
+      description: "Directs calcium to bones, supports cardiovascular health.",
+      dosage: "100 mcg",
+      note: "Works synergistically with D3"
+    },
+    {
+      name: "Zinc (Bisglycinate)",
+      description: "Supports immune, skin, and tissue repair.",
+      dosage: "15 mg",
+      note: "Gentle, bioavailable form"
+    },
+    {
+      name: "PEA (Micronized)",
+      description: "Natural anti-inflammatory, pain-relieving, and mast cell modulating.",
+      dosage: "400 mg",
+      note: "Comfort and inflammation support"
+    },
+    {
+      name: "B-Complex Vitamins",
+      description: "Full spectrum of bioavailable B vitamins for energy, methylation and nervous system.",
+      dosage: "Various",
+      note: "Includes P-5-P, 5-MTHF, and Methylcobalamin"
+    },
+    {
+      name: "Potassium Citrate",
+      description: "Important for nerve and muscle function; often low in POTS.",
+      dosage: "99 mg",
+      note: "Electrolyte balance support"
+    },
+    {
+      name: "Trace Minerals",
+      description: "Including Selenium, Molybdenum and other cofactors for enzyme function.",
+      dosage: "Various",
+      note: "Complete mineral support"
     }
   ];
 

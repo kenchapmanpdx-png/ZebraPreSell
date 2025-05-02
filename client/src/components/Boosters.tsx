@@ -1,26 +1,26 @@
 export default function Boosters() {
   const potsBooster = [
-    { name: "L-Carnitine L-Tartrate", description: "Transports fatty acids into mitochondria for energy; supports fatigue" },
-    { name: "D-Ribose", description: "Replenishes cellular ATP levels, aids in energy recovery" },
-    { name: "Thiamine HCl", description: "Boosts mitochondrial energy, often deficient in POTS patients" },
-    { name: "PQQ", description: "Stimulates new mitochondrial growth and repair" },
-    { name: "Potassium Citrate", description: "Critical for blood pressure, fluid balance, and nerve function" },
-    { name: "R-Lipoic Acid", description: "Recycles antioxidants, supports mitochondrial and nerve health" },
-    { name: "Hesperidin", description: "Strengthens blood vessels, improves circulation and autonomic tone" }
+    { name: "L-Carnitine L-Tartrate", description: "Transports fatty acids into mitochondria for energy; supports fatigue", dosage: "1000 mg" },
+    { name: "D-Ribose", description: "Replenishes cellular ATP levels, aids in energy recovery", dosage: "500 mg" },
+    { name: "Thiamine HCl", description: "Boosts mitochondrial energy, often deficient in POTS patients", dosage: "50 mg" },
+    { name: "PQQ", description: "Stimulates new mitochondrial growth and repair", dosage: "10 mg" },
+    { name: "Potassium Citrate", description: "Critical for blood pressure, fluid balance, and nerve function", dosage: "250 mg" },
+    { name: "R-Lipoic Acid", description: "Recycles antioxidants, supports mitochondrial and nerve health", dosage: "150 mg" },
+    { name: "Hesperidin", description: "Strengthens blood vessels, improves circulation and autonomic tone", dosage: "150 mg" }
   ];
 
   const edsBooster = [
-    { name: "Copper", description: "Required for collagen cross-linking and elastin integrity" },
-    { name: "Manganese", description: "Cofactor for connective tissue enzymes" },
-    { name: "Silicon (from Bamboo)", description: "Supports synthesis of collagen, skin, bones, and joints" },
-    { name: "Hyaluronic Acid", description: "Lubricates joints and hydrates skin/connective tissues" },
-    { name: "Vitamin C", description: "Essential for collagen production and antioxidant support" }
+    { name: "Copper", description: "Required for collagen cross-linking and elastin integrity", dosage: "1 mg" },
+    { name: "Manganese", description: "Cofactor for connective tissue enzymes", dosage: "2 mg" },
+    { name: "Silicon (from Bamboo)", description: "Supports synthesis of collagen, skin, bones, and joints", dosage: "10 mg" },
+    { name: "Hyaluronic Acid", description: "Lubricates joints and hydrates skin/connective tissues", dosage: "100 mg" },
+    { name: "Vitamin C", description: "Essential for collagen production and antioxidant support", dosage: "1000 mg" }
   ];
   
   const mcasBooster = [
-    { name: "Quercetin", description: "Natural mast cell stabilizer and anti-inflammatory" },
-    { name: "Luteolin", description: "Anti-inflammatory, neuroprotective, and MCAS-supportive bioflavonoid" },
-    { name: "Nettle Leaf Extract", description: "Reduces histamine and allergic responses, anti-inflammatory" }
+    { name: "Quercetin", description: "Natural mast cell stabilizer and anti-inflammatory", dosage: "500 mg" },
+    { name: "Luteolin", description: "Anti-inflammatory, neuroprotective, and MCAS-supportive bioflavonoid", dosage: "100 mg" },
+    { name: "Nettle Leaf Extract", description: "Reduces histamine and allergic responses, anti-inflammatory", dosage: "200 mg" }
   ];
 
   return (
@@ -59,18 +59,21 @@ export default function Boosters() {
             <ul className="mb-6 space-y-2">
               {potsBooster.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <i className="fas fa-flask text-medical-blue mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">{item.name}</span>
+                  <i className="fas fa-leaf text-sage mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-sage-dark bg-sage-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
+                    </div>
                     <p className="text-sm text-neutral-dark/70">{item.description}</p>
                   </div>
                 </li>
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue/90 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-microscope mr-2"></i>
-              View Research
+            <button className="w-full py-3 px-6 bg-terra hover:bg-terra-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-seedling mr-2"></i>
+              View Details
             </button>
           </div>
           
@@ -100,18 +103,21 @@ export default function Boosters() {
             <ul className="mb-6 space-y-2">
               {edsBooster.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <i className="fas fa-flask text-medical-blue mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">{item.name}</span>
+                  <i className="fas fa-leaf text-terra mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-terra-dark bg-terra-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
+                    </div>
                     <p className="text-sm text-neutral-dark/70">{item.description}</p>
                   </div>
                 </li>
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue/90 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-microscope mr-2"></i>
-              View Research
+            <button className="w-full py-3 px-6 bg-terra hover:bg-terra-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-seedling mr-2"></i>
+              View Details
             </button>
           </div>
           
@@ -141,18 +147,21 @@ export default function Boosters() {
             <ul className="mb-6 space-y-2">
               {mcasBooster.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <i className="fas fa-flask text-medical-blue mt-1 mr-3"></i>
-                  <div>
-                    <span className="font-semibold">{item.name}</span>
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
+                    </div>
                     <p className="text-sm text-neutral-dark/70">{item.description}</p>
                   </div>
                 </li>
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue/90 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
+            <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
               <i className="fas fa-microscope mr-2"></i>
-              View Research
+              Clinical Research
             </button>
           </div>
         </div>
