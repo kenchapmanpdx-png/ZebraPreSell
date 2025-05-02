@@ -2,10 +2,10 @@ import ZebraBackground from './ZebraBackground';
 
 export default function ProductGrid() {
   return (
-    <section id="products" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="products" className="pt-2 pb-16 md:pt-4 md:pb-24 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
-        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Products</h2>
+        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-4 fade-in">Products</h2>
         <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
           {/* Left Column */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
