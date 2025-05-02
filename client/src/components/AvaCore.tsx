@@ -69,7 +69,7 @@ export default function AvaCore() { // Keeping function name for compatibility, 
   ];
 
   return (
-    <section id="avacore" className="py-16 md:py-24 bg-neutral-lightest">
+    <section id="avacore" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-lora mb-6 fade-in text-forest">ZebraWell™ Core Formula</h2>

@@ -24,7 +24,7 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="boosters" className="py-16 md:py-24 bg-earth-cream relative">
+    <section id="boosters" className="py-16 md:py-24 bg-white relative">
       <div className="absolute inset-0 bg-earth-cream/40 z-0"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Targeted Boosters</h2>
