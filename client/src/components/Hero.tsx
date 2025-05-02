@@ -30,12 +30,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl mb-8 text-neutral-dark/80 fade-in max-w-xl mx-auto font-lora">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
-          <a 
-            href="#avacore" 
-            className="inline-block bg-terra hover:bg-terra-dark text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 fade-in flex items-center mx-auto"
-          >
-            <i className="fas fa-leaf mr-2"></i>View Core Formula
-          </a>
+
 
         </div>
       </div>

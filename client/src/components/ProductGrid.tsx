@@ -1,18 +1,4 @@
-import { ReactNode } from 'react';
 import ZebraBackground from './ZebraBackground';
-
-interface ProductCardProps {
-  children: ReactNode;
-  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-}
-
-function ProductCard({ children, position }: ProductCardProps) {
-  return (
-    <div className={`w-full ${position}`}>
-      {children}
-    </div>
-  );
-}
 
 export default function ProductGrid() {
   return (
@@ -20,9 +6,10 @@ export default function ProductGrid() {
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* First row */}
-          <ProductCard position="top-left">
+        <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+          {/* Left Column */}
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
+            {/* Core Formula */}
             <div id="avacore" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
@@ -73,9 +60,59 @@ export default function ProductGrid() {
                 Clinical Research
               </button>
             </div>
-          </ProductCard>
+            
+            {/* MCAS Booster */}
+            <div id="booster-mcas" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="relative w-16 h-20 mr-4">
+                  <div className="absolute inset-0 rounded-lg bg-forest/5 border border-forest/20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-forest/20 to-forest/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 flex items-center justify-center flex-col">
+                    <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-flask text-sm text-forest"></i>
+                    </div>
+                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                    <div className="text-[6px] text-sage">MCAS Booster</div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-lora text-forest">MCAS Booster</h3>
+                  <div className="flex items-center">
+                    <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 1-2 capsules/day</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Histamine Control</span>
+                  </div>
+                </div>
+              </div>
+              
+              <ul className="mb-6 space-y-2">
+                {[
+                  { name: "Quercetin", description: "Natural mast cell stabilizer and anti-inflammatory", dosage: "500 mg" },
+                  { name: "Luteolin", description: "Anti-inflammatory, neuroprotective, and MCAS-supportive bioflavonoid", dosage: "100 mg" },
+                  { name: "Nettle Leaf Extract", description: "Reduces histamine and allergic responses, anti-inflammatory", dosage: "200 mg" }
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                    <div className="w-full">
+                      <div className="flex justify-between items-start">
+                        <span className="font-medium">{item.name}</span>
+                        <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
+                      </div>
+                      <p className="text-sm text-neutral-dark/70">{item.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+                <i className="fas fa-microscope mr-2"></i>
+                Clinical Research
+              </button>
+            </div>
+          </div>
           
-          <ProductCard position="top-right">
+          {/* Right Column */}
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
+            {/* EDS Booster */}
             <div id="booster-eds" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
@@ -124,10 +161,8 @@ export default function ProductGrid() {
                 Clinical Research
               </button>
             </div>
-          </ProductCard>
-          
-          {/* Second row */}
-          <ProductCard position="bottom-left">
+            
+            {/* POTS Booster */}
             <div id="booster-pots" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
@@ -178,56 +213,7 @@ export default function ProductGrid() {
                 Clinical Research
               </button>
             </div>
-          </ProductCard>
-          
-          <ProductCard position="bottom-right">
-            <div id="booster-mcas" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
-              <div className="flex items-center mb-6">
-                <div className="relative w-16 h-20 mr-4">
-                  <div className="absolute inset-0 rounded-lg bg-forest/5 border border-forest/20"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-forest/20 to-forest/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
-                  <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-flask text-sm text-forest"></i>
-                    </div>
-                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-sage">MCAS Booster</div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-lora text-forest">MCAS Booster</h3>
-                  <div className="flex items-center">
-                    <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 1-2 capsules/day</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Histamine Control</span>
-                  </div>
-                </div>
-              </div>
-              
-              <ul className="mb-6 space-y-2">
-                {[
-                  { name: "Quercetin", description: "Natural mast cell stabilizer and anti-inflammatory", dosage: "500 mg" },
-                  { name: "Luteolin", description: "Anti-inflammatory, neuroprotective, and MCAS-supportive bioflavonoid", dosage: "100 mg" },
-                  { name: "Nettle Leaf Extract", description: "Reduces histamine and allergic responses, anti-inflammatory", dosage: "200 mg" }
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <i className="fas fa-flask text-forest mt-1 mr-3"></i>
-                    <div className="w-full">
-                      <div className="flex justify-between items-start">
-                        <span className="font-medium">{item.name}</span>
-                        <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-neutral-dark/70">{item.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              
-              <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-                <i className="fas fa-microscope mr-2"></i>
-                Clinical Research
-              </button>
-            </div>
-          </ProductCard>
+          </div>
         </div>
       </div>
     </section>
