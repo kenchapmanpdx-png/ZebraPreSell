@@ -88,40 +88,50 @@ export default function AvaCore() { // Keeping function name for compatibility, 
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {ingredients.map((ingredient, index) => (
-            <div 
-              key={index}
-              className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl"
-            >
-              <div className="flex items-center mb-6">
-                <div className="relative w-16 h-20 mr-4">
-                  <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
-                  <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-sage/30 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-flask text-sm text-sage"></i>
-                    </div>
-                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-sage">Core Formula</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl lg:col-span-3">
+            <div className="flex items-center mb-6">
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-flask text-sm text-forest"></i>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-lora text-forest">{ingredient.name}</h3>
-                  <div className="flex items-center">
-                    <span className="text-sm text-neutral-dark/70 font-medium">Dosage: {ingredient.dosage}</span>
-                  </div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[6px] text-sage">Core Formula</div>
                 </div>
               </div>
-              
-              <p className="text-neutral-dark/80 mb-3">{ingredient.description}</p>
-              <hr className="my-3 border-neutral-medium" />
-              <div className="flex items-center mb-1">
-                <i className="fas fa-vial text-sage mr-2"></i>
-                <p className="text-sm font-medium">{ingredient.note}</p>
+              <div>
+                <h3 className="text-2xl font-lora text-forest">Core Formula</h3>
+                <div className="flex items-center">
+                  <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 6-8 capsules/day</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Foundational Support</span>
+                </div>
               </div>
             </div>
-          ))}
+            
+            <ul className="mb-6 space-y-2">
+              {ingredients.map((ingredient, index) => (
+                <li key={index} className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{ingredient.name}</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{ingredient.dosage}</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">{ingredient.description}</p>
+                    <p className="text-xs text-neutral-dark/90 italic mt-1">{ingredient.note}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-microscope mr-2"></i>
+              Clinical Research
+            </button>
+          </div>
         </div>
       </div>
     </section>
