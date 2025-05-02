@@ -43,6 +43,9 @@
   --neutral-light: 35 10% 95%;
   --neutral-medium: 35 5% 85%;
   --neutral-dark: 35 10% 25%;
+  --medical-blue: 210 100% 40%;
+  --medical-blue-light: 210 100% 85%;
+  --medical-blue-dark: 210 100% 30%;
 }
 
 .dark {

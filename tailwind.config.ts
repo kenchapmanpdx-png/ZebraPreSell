@@ -69,6 +69,11 @@ export default {
           medium: "hsl(var(--neutral-medium))",
           dark: "hsl(var(--neutral-dark))",
         },
+        medical: {
+          blue: "hsl(var(--medical-blue))",
+          "blue-light": "hsl(var(--medical-blue-light))",
+          "blue-dark": "hsl(var(--medical-blue-dark))",
+        },
         earth: {
           cream: "hsl(var(--cream))",
           sand: "hsl(var(--sand))",

@@ -24,7 +24,7 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="boosters" className="py-16 md:py-24 clinical-pattern relative">
+    <section id="boosters" className="py-16 md:py-24 bg-earth-cream relative">
       <div className="absolute inset-0 bg-earth-cream/40 z-0"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Targeted Boosters</h2>
@@ -37,7 +37,7 @@ export default function Boosters() {
           <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-sage/5 natural-texture border border-sage/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-sage/30 bg-white flex items-center justify-center mb-1">
@@ -71,7 +71,7 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-sage hover:bg-sage-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
               <i className="fas fa-microscope mr-2"></i>
               Clinical Research
             </button>
@@ -81,7 +81,7 @@ export default function Boosters() {
           <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-terra/5 natural-texture border border-terra/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-terra/5 border border-terra/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-terra/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-terra/30 bg-white flex items-center justify-center mb-1">
@@ -115,7 +115,7 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-terra hover:bg-terra-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
               <i className="fas fa-microscope mr-2"></i>
               Clinical Research
             </button>
@@ -125,11 +125,11 @@ export default function Boosters() {
           <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-forest/5 natural-texture border border-forest/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-forest/5 border border-forest/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-forest/20 to-forest/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
-                    <i className="fas fa-leaf text-sm text-forest"></i>
+                    <i className="fas fa-flask text-sm text-forest"></i>
                   </div>
                   <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
                   <div className="text-[6px] text-sage">MCAS Booster</div>
@@ -159,7 +159,7 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
               <i className="fas fa-microscope mr-2"></i>
               Clinical Research
             </button>

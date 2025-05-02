@@ -69,7 +69,7 @@ export default function AvaCore() { // Keeping function name for compatibility, 
   ];
 
   return (
-    <section id="avacore" className="py-16 md:py-24 medical-grid">
+    <section id="avacore" className="py-16 md:py-24 bg-neutral-lightest">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-lora mb-6 fade-in text-forest">ZebraWell™ Core Formula</h2>
@@ -96,7 +96,7 @@ export default function AvaCore() { // Keeping function name for compatibility, 
                   {ingredient.dosage}
                 </div>
                 <div className="relative w-32 h-40">
-                  <div className="absolute inset-0 rounded-lg bg-sage/5 natural-texture border border-sage/20"></div>
+                  <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-16 h-16 rounded-full border-2 border-sage/30 bg-white flex items-center justify-center mb-2">
