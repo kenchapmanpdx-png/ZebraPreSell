@@ -118,9 +118,13 @@
   
   .zebra-bg {
     background-color: hsl(var(--neutral-lightest));
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L100,0 L100,8 C75,10 60,12 45,18 C30,24 15,35 0,45 L0,0 Z M0,45 C15,35 30,24 45,18 C60,12 75,10 100,8 L100,20 C80,20 65,25 50,32 C35,39 20,48 0,60 L0,45 Z M0,60 C20,48 35,39 50,32 C65,25 80,20 100,20 L100,35 C85,35 70,40 55,48 C40,56 25,65 0,80 L0,60 Z M0,80 C25,65 40,56 55,48 C70,40 85,35 100,35 L100,55 C85,55 70,58 55,65 C40,72 20,80 0,100 L0,80 Z' fill='%23333333' fill-opacity='0.015' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-position: center top;
-    background-size: 800px 800px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.01),
+      rgba(0, 0, 0, 0.01) 30px,
+      rgba(0, 0, 0, 0.05) 30px,
+      rgba(0, 0, 0, 0.05) 60px
+    );
   }
   
   .fade-in {
