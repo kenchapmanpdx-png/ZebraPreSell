@@ -64,6 +64,11 @@ export default {
           medium: "hsl(var(--neutral-medium))",
           dark: "hsl(var(--neutral-dark))",
         },
+        medical: {
+          blue: "hsl(var(--medical-blue))",
+          "blue-light": "hsl(var(--medical-blue-light))",
+          gray: "hsl(var(--medical-gray))",
+        },
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",

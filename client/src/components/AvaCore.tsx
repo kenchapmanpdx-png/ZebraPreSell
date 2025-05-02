@@ -38,11 +38,16 @@ export default function AvaCore() {
   ];
 
   return (
-    <section id="avacore" className="py-16 md:py-24">
+    <section id="avacore" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 fade-in">ZebraWell™ Core Formula</h2>
-          <p className="text-lg text-neutral-dark/80 fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 fade-in text-medical-blue">ZebraWell™ Core Formula</h2>
+          <div className="flex justify-center items-center mb-4 fade-in">
+            <span className="px-3 py-1 rounded-full bg-medical-blue/10 text-xs text-medical-blue font-semibold mx-1">Bioavailable Forms</span>
+            <span className="px-3 py-1 rounded-full bg-medical-blue/10 text-xs text-medical-blue font-semibold mx-1">Clinically Tested</span>
+            <span className="px-3 py-1 rounded-full bg-medical-blue/10 text-xs text-medical-blue font-semibold mx-1">Physician Formulated</span>
+          </div>
+          <p className="text-lg text-neutral-dark/80 fade-in max-w-2xl mx-auto">
             Our flagship daily formula (6–8 capsules/day) designed specifically for EDS, POTS, and MCAS support. 
             ZebraWell Core delivers essential nutrients in their most bioavailable forms to support 
             foundational mitochondrial, nervous system, and connective tissue health.
@@ -53,22 +58,23 @@ export default function AvaCore() {
           {ingredients.map((ingredient, index) => (
             <div 
               key={index}
-              className="bg-white border border-neutral-medium rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 fade-in group"
+              className="bg-white border border-neutral-medium rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 fade-in"
             >
-              <div className="h-48 bg-lavender/10 flex items-center justify-center p-6">
-                <img 
-                  src={ingredient.image} 
-                  alt={ingredient.name}
-                  className="max-h-full object-contain"
-                />
+              <div className="h-48 bg-medical-gray flex items-center justify-center p-6 relative">
+                <div className="absolute top-3 right-3 px-2 py-0.5 bg-medical-blue/10 rounded text-xs text-medical-blue font-semibold">
+                  {ingredient.dosage}
+                </div>
+                <i className="fas fa-capsules text-6xl text-medical-blue opacity-40"></i>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{ingredient.name}</h3>
+                <h3 className="text-xl font-bold mb-2 text-medical-blue">{ingredient.name}</h3>
                 <p className="text-neutral-dark/80 mb-3">{ingredient.description}</p>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <div>
                   <hr className="my-3 border-neutral-medium" />
-                  <p className="text-sm text-teal font-semibold">{ingredient.dosage}</p>
-                  <p className="text-sm italic">{ingredient.note}</p>
+                  <div className="flex items-center mb-1">
+                    <i className="fas fa-stethoscope text-medical-blue mr-2"></i>
+                    <p className="text-sm font-medium">{ingredient.note}</p>
+                  </div>
                 </div>
               </div>
             </div>
