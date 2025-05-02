@@ -24,7 +24,7 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="boosters" className="py-16 md:py-24 subtle-waves relative">
+    <section id="boosters" className="py-16 md:py-24 clinical-pattern relative">
       <div className="absolute inset-0 bg-earth-cream/40 z-0"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Targeted Boosters</h2>
@@ -59,7 +59,7 @@ export default function Boosters() {
             <ul className="mb-6 space-y-2">
               {potsBooster.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <i className="fas fa-leaf text-sage mt-1 mr-3"></i>
+                  <i className="fas fa-flask text-sage mt-1 mr-3"></i>
                   <div className="w-full">
                     <div className="flex justify-between items-start">
                       <span className="font-medium">{item.name}</span>
@@ -71,9 +71,9 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-terra hover:bg-terra-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-seedling mr-2"></i>
-              View Details
+            <button className="w-full py-3 px-6 bg-sage hover:bg-sage-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-microscope mr-2"></i>
+              Clinical Research
             </button>
           </div>
           
@@ -103,7 +103,7 @@ export default function Boosters() {
             <ul className="mb-6 space-y-2">
               {edsBooster.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <i className="fas fa-leaf text-terra mt-1 mr-3"></i>
+                  <i className="fas fa-flask text-terra mt-1 mr-3"></i>
                   <div className="w-full">
                     <div className="flex justify-between items-start">
                       <span className="font-medium">{item.name}</span>
@@ -116,8 +116,8 @@ export default function Boosters() {
             </ul>
             
             <button className="w-full py-3 px-6 bg-terra hover:bg-terra-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-seedling mr-2"></i>
-              View Details
+              <i className="fas fa-microscope mr-2"></i>
+              Clinical Research
             </button>
           </div>
           
