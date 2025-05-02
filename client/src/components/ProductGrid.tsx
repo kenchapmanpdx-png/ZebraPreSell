@@ -20,11 +20,11 @@ export default function ProductGrid() {
                       <i className="fas fa-flask text-sm text-forest"></i>
                     </div>
                     <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-sage">Core Formula</div>
+                    <div className="text-[6px] text-sage">AvaCore</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-lora text-forest">Core Formula</h3>
+                  <h3 className="text-2xl font-lora text-forest">AvaCore</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 6-8 capsules/day</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Foundational Support</span>
