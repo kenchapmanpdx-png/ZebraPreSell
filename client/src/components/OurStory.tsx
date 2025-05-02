@@ -13,10 +13,9 @@ export default function OurStory() {
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
               Ava is my daughter. She is brave, brilliant, and resilient in ways that most will never have to be. 
-              She lives with Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), 
-              and Mast Cell Activation Syndrome (MCAS). These are complex, often invisible conditions that affect 
-              every aspect of her life — from the way her body processes nutrients to how it responds to pain, 
-              inflammation, and even gravity.
+              She lives with Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS). 
+              These are complex, often invisible conditions that affect every aspect of her life — from the way 
+              her body processes nutrients to how it responds to her chronic pain, inflammation, and even gravity.
             </p>
             
             <p>
