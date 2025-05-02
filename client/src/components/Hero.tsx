@@ -4,8 +4,9 @@ export default function Hero() {
   return (
     <section id="home" className="pt-24 md:pt-32 pb-4 md:pb-8 relative overflow-hidden">
       <ZebraBackground />
-      <div className="container mx-auto px-6 relative z-1">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="relative z-1">
+        {/* Header Content */}
+        <div className="max-w-3xl mx-auto text-center px-6">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
             Wellness for the Rare and Resilient<br/>
             <span className="text-2xl md:text-4xl text-terra-dark font-medium block pt-2 pb-2 mt-1 mb-1">Support for EDS, POTS, and MCAS</span>
@@ -24,7 +25,11 @@ export default function Hero() {
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
           </div>
-          <div className="bg-sage/10 py-6 px-8 rounded-xl mb-6 max-w-3xl mx-auto border border-sage/15 shadow-inner">
+        </div>
+        
+        {/* Full Width Quote Background */}
+        <div className="bg-sage-light py-8 border-y border-sage/30 shadow-inner">
+          <div className="max-w-3xl mx-auto px-6 md:px-8">
             <blockquote className="mb-4 italic text-base border-l-4 border-terra pl-4 max-w-2xl mx-auto text-neutral-dark/80 fade-in font-bold">
               "Medical students are taught, 'When you hear hoofbeats, think horses'—to expect common conditions, not rare ones. But sometimes, the patient is a zebra. The zebra represents those with complex, often misunderstood conditions like EDS, POTS, and MCAS. At ZebraWell, we honor the zebra—because rare shouldn't mean invisible. You deserve care made for you."
             </blockquote>
@@ -32,11 +37,8 @@ export default function Hero() {
               Pure, organic formulations designed specifically for sensitive systems.
             </p>
           </div>
-
-
         </div>
       </div>
-
     </section>
   );
 }
