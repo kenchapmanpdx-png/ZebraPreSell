@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
-            Natural Supplementation<br/>
+            Wellness for the Rare and Resilient<br/>
             <span className="text-2xl md:text-4xl text-terra-dark font-medium">for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
@@ -33,11 +33,7 @@ export default function Hero() {
           >
             <i className="fas fa-leaf mr-2"></i>View Core Formula
           </a>
-          <div className="mt-8 py-3 px-5 inline-block bg-white rounded-lg border border-terra/20 fade-in">
-            <p className="text-lg md:text-xl font-lora text-forest text-center">
-              Wellness for the Rare and Resilient
-            </p>
-          </div>
+
         </div>
       </div>
 
