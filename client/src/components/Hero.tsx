@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden natural-texture">
+    <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden zebra-bg">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
@@ -30,14 +30,14 @@ export default function Hero() {
           >
             <i className="fas fa-leaf mr-2"></i>View Core Formula
           </a>
-          <div className="mt-8 py-3 px-5 inline-block grain-texture rounded-lg border border-terra/20 fade-in">
+          <div className="mt-8 py-3 px-5 inline-block bg-white rounded-lg border border-terra/20 fade-in">
             <p className="text-lg md:text-xl font-lora text-forest text-center">
               Wellness for the Rare and Resilient
             </p>
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-earth-cream/40 z-0"></div>
+
     </section>
   );
 }
