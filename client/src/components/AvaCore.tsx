@@ -64,7 +64,17 @@ export default function AvaCore() {
                 <div className="absolute top-3 right-3 px-2 py-0.5 bg-medical-blue/10 rounded text-xs text-medical-blue font-semibold">
                   {ingredient.dosage}
                 </div>
-                <i className="fas fa-capsules text-6xl text-medical-blue opacity-40"></i>
+                <div className="relative w-32 h-40">
+                  <div className="absolute inset-0 rounded-lg bg-medical-blue/5 zebra-stripes border border-medical-blue/20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-medical-blue/20 to-medical-blue/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 flex items-center justify-center flex-col">
+                    <div className="w-16 h-16 rounded-full border-2 border-medical-blue/30 bg-white flex items-center justify-center mb-2">
+                      <i className="fas fa-capsules text-2xl text-medical-blue"></i>
+                    </div>
+                    <div className="text-xs font-bold text-medical-blue">ZebraWell™</div>
+                    <div className="text-[10px] text-medical-blue/70">Core Formula</div>
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-medical-blue">{ingredient.name}</h3>

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -71,7 +72,7 @@
   }
 
   body {
-    @apply font-nunito antialiased bg-background text-neutral-dark scroll-smooth;
+    @apply font-opensans antialiased bg-background text-neutral-dark scroll-smooth;
   }
 
   html {
@@ -83,6 +84,15 @@
   .zebra-bg {
     background-image: linear-gradient(45deg, rgba(33, 115, 196, 0.07) 25%, transparent 25%, transparent 50%, rgba(33, 115, 196, 0.07) 50%, rgba(33, 115, 196, 0.07) 75%, transparent 75%, transparent);
     background-size: 80px 80px;
+  }
+  
+  .zebra-stripes {
+    background: linear-gradient(45deg, #ffffff 25%, #f0f5fc 25%, #f0f5fc 50%, #ffffff 50%, #ffffff 75%, #f0f5fc 75%, #f0f5fc);
+    background-size: 24px 24px;
+  }
+  
+  .zebra-border {
+    border-image: repeating-linear-gradient(45deg, rgba(33, 115, 196, 0.1) 0, rgba(33, 115, 196, 0.1) 1px, transparent 1px, transparent 5px) 5;
   }
   
   .medical-pattern {

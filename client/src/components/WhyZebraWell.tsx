@@ -33,7 +33,7 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="py-16 md:py-24 bg-neutral-light">
+    <section id="why" className="py-16 md:py-24 bg-neutral-light zebra-stripes">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Why Choose ZebraWell</h2>
         

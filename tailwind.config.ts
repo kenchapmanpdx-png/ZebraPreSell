@@ -6,6 +6,8 @@ export default {
   theme: {
     fontFamily: {
       nunito: ['Nunito', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
+      opensans: ['Open Sans', 'sans-serif'],
     },
     extend: {
       borderRadius: {

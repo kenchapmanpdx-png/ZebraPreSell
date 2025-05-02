@@ -19,7 +19,7 @@ export default function Comparison() {
             <thead>
               <tr>
                 <th className="p-4 border-b-2 border-neutral-medium"></th>
-                <th className="p-4 border-b-2 border-medical-blue text-center bg-medical-blue/10 text-medical-blue font-bold">ZebraWell Clinical</th>
+                <th className="p-4 border-b-2 border-medical-blue text-center bg-medical-blue/10 text-medical-blue font-bold zebra-stripes">ZebraWell Clinical</th>
                 <th className="p-4 border-b-2 border-neutral-medium text-center text-neutral-dark font-bold">Generic Brands</th>
               </tr>
             </thead>

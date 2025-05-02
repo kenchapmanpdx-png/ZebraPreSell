@@ -24,7 +24,7 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="boosters" className="py-16 md:py-24 bg-medical-gray zebra-bg relative">
+    <section id="boosters" className="py-16 md:py-24 bg-medical-gray relative">
       <div className="absolute inset-0 bg-white/60 z-0"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Targeted Boosters</h2>
@@ -36,8 +36,16 @@ export default function Boosters() {
           {/* POTS Booster */}
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
-              <div className="w-14 h-14 rounded-full bg-medical-blue/10 flex items-center justify-center mr-4">
-                <i className="fas fa-heartbeat text-2xl text-medical-blue"></i>
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-teal/5 zebra-stripes border border-teal/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-teal/20 to-teal/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-teal/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-heartbeat text-sm text-teal"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-teal">ZebraWell™</div>
+                  <div className="text-[6px] text-teal/70">POTS Booster</div>
+                </div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold">POTS Booster</h3>
@@ -69,8 +77,16 @@ export default function Boosters() {
           {/* EDS Booster */}
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-lavender fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
-              <div className="w-14 h-14 rounded-full bg-medical-blue/10 flex items-center justify-center mr-4">
-                <i className="fas fa-bone text-2xl text-medical-blue"></i>
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-lavender/5 zebra-stripes border border-lavender/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-lavender/20 to-lavender/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-lavender/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-bone text-sm text-lavender"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-lavender">ZebraWell™</div>
+                  <div className="text-[6px] text-lavender/70">hEDS Booster</div>
+                </div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold">hEDS Booster</h3>
@@ -102,8 +118,16 @@ export default function Boosters() {
           {/* MCAS Booster */}
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal-light fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
-              <div className="w-14 h-14 rounded-full bg-medical-blue/10 flex items-center justify-center mr-4">
-                <i className="fas fa-leaf text-2xl text-medical-blue"></i>
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-teal-light/5 zebra-stripes border border-teal-light/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-teal-light/20 to-teal-light/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-teal-light/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-leaf text-sm text-teal-light"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-teal-light">ZebraWell™</div>
+                  <div className="text-[6px] text-teal-light/70">MCAS Booster</div>
+                </div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold">MCAS Booster</h3>
