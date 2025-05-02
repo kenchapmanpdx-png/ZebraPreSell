@@ -12,7 +12,7 @@ export default function FloatingCTA() {
       <button 
         id="sample-request-btn" 
         onClick={openModal}
-        className="bg-teal hover:bg-teal-dark text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center"
+        className="bg-medical-blue hover:bg-medical-blue/90 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center"
       >
         <i className="fas fa-vial mr-2"></i>
         Request a Sample

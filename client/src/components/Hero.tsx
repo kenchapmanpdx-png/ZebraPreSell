@@ -28,7 +28,7 @@ export default function Hero() {
             href="#avacore" 
             className="inline-block bg-medical-blue hover:bg-medical-blue/90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 fade-in flex items-center mx-auto"
           >
-            Explore Core Formula
+            <i className="fas fa-microscope mr-2"></i>View Clinical Formula
           </a>
           <p className="mt-4 text-sm italic text-neutral-dark/60 fade-in">
             Wellness for the Rare and Resilient
