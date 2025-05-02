@@ -1,3 +1,5 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function Boosters() {
   const potsBooster = [
     { name: "L-Carnitine L-Tartrate", description: "Transports fatty acids into mitochondria for energy; supports fatigue", dosage: "1000 mg" },
@@ -24,9 +26,9 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="boosters" className="py-16 md:py-24 bg-white relative">
-      <div className="absolute inset-0 bg-earth-cream/40 z-0"></div>
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="boosters" className="py-16 md:py-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Targeted Boosters</h2>
         <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-neutral-dark/80 font-lora fade-in">
           Our specialized boosters address specific symptoms and needs, designed to complement ZebraWell Core Formula with targeted support.

@@ -1,3 +1,5 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function AvaCore() { // Keeping function name for compatibility, but redesigning for earthy theme
   const ingredients = [
     {
@@ -69,8 +71,9 @@ export default function AvaCore() { // Keeping function name for compatibility, 
   ];
 
   return (
-    <section id="avacore" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="avacore" className="py-16 md:py-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-lora mb-6 fade-in text-forest">ZebraWell™ Core Formula</h2>
           <div className="flex flex-wrap justify-center items-center gap-2 mb-4 fade-in">

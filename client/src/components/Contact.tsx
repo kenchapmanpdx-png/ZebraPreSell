@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import ZebraBackground from './ZebraBackground';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -17,8 +18,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-blue-50/30 medical-pattern">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16 md:py-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="fade-in">
