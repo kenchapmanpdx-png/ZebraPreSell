@@ -1,3 +1,5 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function Comparison() {
   const comparisonData = [
     { feature: "Clinical Analysis", zebrawell: "Comprehensive", generic: "Minimal or None" },
@@ -9,8 +11,9 @@ export default function Comparison() {
   ];
 
   return (
-    <section id="comparison" className="py-16 md:py-24">
-      <div className="container mx-auto px-6">
+    <section id="comparison" className="py-16 md:py-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-medical-blue mb-6 fade-in">Clinical Research Comparison</h2>
         <p className="text-center text-neutral-dark/80 max-w-2xl mx-auto mb-12 fade-in">Comparing ZebraWell's medical-grade formulation against conventional supplement alternatives</p>
         

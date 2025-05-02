@@ -1,7 +1,10 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function Hero() {
   return (
-    <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden zebra-bg">
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
             Natural Supplementation<br/>
