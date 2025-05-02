@@ -37,7 +37,7 @@ export default function Boosters() {
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-teal/5 zebra-stripes border border-teal/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-teal/5 zebra-pattern border border-teal/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-teal/20 to-teal/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-teal/30 bg-white flex items-center justify-center mb-1">
@@ -78,7 +78,7 @@ export default function Boosters() {
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-lavender fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-lavender/5 zebra-stripes border border-lavender/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-lavender/5 zebra-pattern border border-lavender/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-lavender/20 to-lavender/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-lavender/30 bg-white flex items-center justify-center mb-1">
@@ -119,7 +119,7 @@ export default function Boosters() {
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-teal-light fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-teal-light/5 zebra-stripes border border-teal-light/20"></div>
+                <div className="absolute inset-0 rounded-lg bg-teal-light/5 zebra-pattern border border-teal-light/20"></div>
                 <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-teal-light/20 to-teal-light/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
                   <div className="w-8 h-8 rounded-full border-2 border-teal-light/30 bg-white flex items-center justify-center mb-1">

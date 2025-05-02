@@ -30,7 +30,7 @@ export default function Hero() {
           >
             <i className="fas fa-microscope mr-2"></i>View Clinical Formula
           </a>
-          <div className="mt-8 py-3 px-5 inline-block zebra-stripes zebra-border rounded-lg border-2 border-medical-blue/20 fade-in">
+          <div className="mt-8 py-3 px-5 inline-block zebra-pattern rounded-lg border-2 border-medical-blue/20 fade-in">
             <p className="text-lg md:text-xl font-medium text-medical-blue text-center">
               Wellness for the Rare and Resilient
             </p>
