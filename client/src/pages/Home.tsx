@@ -8,6 +8,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
+import OurStory from '@/components/OurStory';
 
 export default function Home() {
   // Add scroll animation functionality
@@ -38,6 +39,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ProductGrid />
+      <OurStory />
       <WhyZebraWell />
       <Comparison />
       <Contact />
