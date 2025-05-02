@@ -24,12 +24,14 @@ export default function Hero() {
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
           </div>
-          <blockquote className="mb-6 italic text-base border-l-4 border-terra pl-4 max-w-2xl mx-auto text-neutral-dark/80 fade-in font-bold">
-            "Medical students are taught, 'When you hear hoofbeats, think horses'—to expect common conditions, not rare ones. But sometimes, the patient is a zebra. The zebra represents those with complex, often misunderstood conditions like EDS, POTS, and MCAS. At ZebraWell, we honor the zebra—because rare shouldn't mean invisible. You deserve care made for you."
-          </blockquote>
-          <p className="text-lg md:text-xl mb-4 text-neutral-dark/80 fade-in max-w-xl mx-auto font-lora">
-            Pure, organic formulations designed specifically for sensitive systems.
-          </p>
+          <div className="bg-sage/10 py-6 px-8 rounded-xl mb-6 max-w-3xl mx-auto border border-sage/15 shadow-inner">
+            <blockquote className="mb-4 italic text-base border-l-4 border-terra pl-4 max-w-2xl mx-auto text-neutral-dark/80 fade-in font-bold">
+              "Medical students are taught, 'When you hear hoofbeats, think horses'—to expect common conditions, not rare ones. But sometimes, the patient is a zebra. The zebra represents those with complex, often misunderstood conditions like EDS, POTS, and MCAS. At ZebraWell, we honor the zebra—because rare shouldn't mean invisible. You deserve care made for you."
+            </blockquote>
+            <p className="text-lg md:text-xl text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
+              Pure, organic formulations designed specifically for sensitive systems.
+            </p>
+          </div>
 
 
         </div>
