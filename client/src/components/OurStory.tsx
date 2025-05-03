@@ -29,7 +29,7 @@ export default function OurStory() {
             </p>
             
             <p className="text-center font-medium">
-              And if someone you love is a Zebra, welcome to the herd.
+              And if you or someone you love is a Zebra, welcome to the herd.
             </p>
           </div>
           
