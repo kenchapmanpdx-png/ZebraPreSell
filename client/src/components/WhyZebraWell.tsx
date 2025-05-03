@@ -22,13 +22,13 @@ export default function WhyZebraWell() {
       icon: "microscope",
       title: "Total Transparency",
       description: "Third-party testing and Certificates of Analysis prove our commitment to quality.",
-      color: "terra"
+      color: "forest"
     },
     {
       icon: "dna",
       title: "Targeted Support",
       description: "Core Formula plus specialized Boosters for personalized health management.",
-      color: "forest"
+      color: "sage"
     },
     {
       icon: "brain",
@@ -40,13 +40,13 @@ export default function WhyZebraWell() {
       icon: "leaf",
       title: "Only What Helps",
       description: "Minimalist formulation with bioavailable ingredients that support your body.",
-      color: "sage"
+      color: "forest"
     },
     {
       icon: "puzzle-piece",
       title: "Works as a System",
       description: "Designed to work synergistically whether you need one booster or all.",
-      color: "forest"
+      color: "terra"
     }
   ];
 
