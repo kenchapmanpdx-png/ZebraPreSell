@@ -17,7 +17,7 @@ export default function OurStory() {
             </p>
             
             <p>
-              ZebraWell™ was born from my mission to help her feel better — not just temporarily, but sustainably and safely.
+              ZebraWell™ was born from my relentless pursuit to help her feel better — not just temporarily, but sustainably and safely.
             </p>
             
             <p>
