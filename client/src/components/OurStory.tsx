@@ -7,7 +7,7 @@ export default function OurStory() {
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <div className="mb-10 bg-sage-light/40 p-6 rounded-lg">
             <p className="text-lg md:text-xl italic text-center text-forest">
-              Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a zebra — someone with a rare, often misunderstood condition. We honor the zebra. Because rare shouldn't mean invisible.
+              Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
             </p>
           </div>
           
@@ -33,7 +33,7 @@ export default function OurStory() {
             
             <p>
               This isn't just a business. It's personal. Every ingredient in ZebraWell™ has been chosen with Ava 
-              in mind — and with the hope that it helps others like her feel stronger, steadier, and seen.
+              in mind — and with the hope that we can help others like her feel stronger, steadier, and seen.
             </p>
             
             <p className="font-bold text-terra-dark">
@@ -41,7 +41,7 @@ export default function OurStory() {
             </p>
             
             <p className="text-center font-medium">
-              And if you or someone you love is a zebra too — you're part of our herd now.
+              And if you or someone you love is a Zebra too — you're part of our herd now.
             </p>
           </div>
           
