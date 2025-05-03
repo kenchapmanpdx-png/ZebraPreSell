@@ -18,22 +18,17 @@ export default function OurStory() {
           
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
-              Ava is my daughter. She is brave, brilliant, and resilient in ways that most will never have to be. 
-              Along with Scoliosis, she lives with Ehlers-Danlos Syndrome (hEDS) and Postural Orthostatic Tachycardia Syndrome (POTS). 
-              These are complex, often invisible conditions that affect every aspect of her life — from the way 
-              her body processes nutrients to how it responds to her chronic pain, inflammation, and even gravity.
+              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be. 
+              She lives with scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, invisible conditions that affect everything from how her body processes nutrients to how it manages chronic pain, inflammation, and even gravity.
             </p>
             
             <p>
-              ZebraWell™ was born from my relentless search to help her feel better — not just temporarily, but 
-              sustainably and safely. I've spent countless nights researching and fine-tuning 
-              formulations that could offer real support without triggering the sensitivities that make typical 
-              supplements a minefield for people like her.
+              ZebraWell™ was born from my mission to help her feel better — not just temporarily, but sustainably and safely.
             </p>
             
             <p>
-              This isn't just a business. It's personal. Every ingredient in ZebraWell™ has been chosen with Ava 
-              in mind — and with the hope that we can help others like her feel stronger, steadier, and seen.
+              This isn't just a business. It's personal. Every ingredient was chosen with Ava 
+              in mind — and with the hope of helping others like her feel stronger, steadier, and seen.
             </p>
             
             <p className="font-bold text-terra-dark">
@@ -41,7 +36,7 @@ export default function OurStory() {
             </p>
             
             <p className="text-center font-medium">
-              And if you or someone you love is a Zebra too — you're part of our herd now.
+              And if you or someone you love is a Zebra too, welcome to the herd.
             </p>
           </div>
           
