@@ -3,50 +3,43 @@ export default function WhyZebraWell() {
     {
       icon: "user-plus",
       title: "Formulated For Zebras",
-      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements.",
-      color: "forest"
+      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
     },
     {
       icon: "ban",
       title: "No Junk. Ever.",
       description: "Free from common allergens and fillers for less reactivity and more peace of mind.",
-      color: "terra"
+      color: "forest"
     },
     {
       icon: "feather",
       title: "Gentle by Design",
-      description: "Gut-safe, low-histamine formulations perfect for sensitive systems.",
-      color: "sage"
+      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
     },
     {
       icon: "microscope",
       title: "Total Transparency",
-      description: "Third-party testing and Certificates of Analysis prove our commitment to quality.",
-      color: "forest"
+      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
     },
     {
       icon: "dna",
       title: "Targeted Support",
-      description: "Core Formula plus specialized Boosters for personalized health management.",
-      color: "sage"
+      description: "Core Formula plus specialized Boosters for personalized health management."
     },
     {
       icon: "brain",
       title: "Smart Science",
-      description: "Clinical insight with forms your body can absorb at therapeutic doses.",
-      color: "terra"
+      description: "Clinical insight with forms your body can absorb at therapeutic doses."
     },
     {
       icon: "leaf",
       title: "Only What Helps",
-      description: "Minimalist formulation with bioavailable ingredients that support your body.",
-      color: "forest"
+      description: "Minimalist formulation with bioavailable ingredients that support your body."
     },
     {
       icon: "puzzle-piece",
       title: "Works as a System",
-      description: "Designed to work synergistically whether you need one booster or all.",
-      color: "terra"
+      description: "Designed to work synergistically whether you need one booster or all."
     }
   ];
 
@@ -61,27 +54,23 @@ export default function WhyZebraWell() {
             let iconColorClass = "";
             let textColorClass = "";
             
-            if (feature.color === "forest") {
-              // Forest green theme
-              bgColorClass = "bg-forest/5";
+            // Special case for "No Junk. Ever." feature
+            if (feature.title === "No Junk. Ever.") {
+              // Forest green theme just for text
+              bgColorClass = "bg-earth-cream";
               iconColorClass = "text-forest";
               textColorClass = "text-forest";
-            } else if (feature.color === "terra") {
-              // Terra theme
-              bgColorClass = "bg-terra/10";
-              iconColorClass = "text-terra";
-              textColorClass = "text-terra-dark";
-            } else { // feature.color === "sage"
-              // Light sage theme
-              bgColorClass = "bg-sage/15";
+            } else {
+              // Default theme for all other features
+              bgColorClass = "bg-earth-cream";
               iconColorClass = "text-sage-dark";
-              textColorClass = "text-sage-dark";
+              textColorClass = "text-forest";
             }
             
             return (
               <div key={index} className={`${bgColorClass} p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in hover:bg-white border border-current/10`}>
                 <div className="flex items-center mb-2">
-                  <div className={`w-10 h-10 mr-2 ${bgColorClass} border border-current/20 rounded-full flex items-center justify-center`}>
+                  <div className="w-10 h-10 mr-2 bg-sage-light rounded-full flex items-center justify-center">
                     <i className={`fas fa-${feature.icon} text-lg ${iconColorClass}`}></i>
                   </div>
                   <h3 className={`text-lg font-lora ${textColorClass}`}>{feature.title}</h3>
