@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 
 export default function OurStory() {
   return (
-    <section id="story" className="py-8 md:py-12 relative overflow-hidden">
+    <section id="story" className="py-6 md:py-8 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest">
@@ -13,7 +13,7 @@ export default function OurStory() {
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
               Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be. 
-              She lives with scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, invisible conditions that affect everything from how her body processes nutrients to how it manages chronic pain, inflammation, and even gravity.
+              She lives with scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, invisible conditions that affect everything from how her body processes nutrients to how she manages her chronic pain, inflammation, and even gravity.
             </p>
             
             <p>

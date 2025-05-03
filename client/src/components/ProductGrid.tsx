@@ -2,7 +2,7 @@ import ZebraBackground from './ZebraBackground';
 
 export default function ProductGrid() {
   return (
-    <section id="products" className="pt-1 pb-16 md:pt-2 md:pb-24 relative overflow-hidden">
+    <section id="products" className="pt-1 pb-8 md:pt-2 md:pb-12 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-4 fade-in">Products</h2>
