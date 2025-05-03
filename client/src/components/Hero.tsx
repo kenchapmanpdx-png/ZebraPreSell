@@ -1,6 +1,33 @@
 import ZebraBackground from './ZebraBackground';
+import { useEffect } from 'react';
 
 export default function Hero() {
+  useEffect(() => {
+    // Function to handle animation on scroll
+    const animateOnScroll = () => {
+      const quoteBanner = document.querySelector('.quote-banner');
+      if (!quoteBanner) return;
+      
+      const bannerPosition = quoteBanner.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      // If banner is in viewport
+      if (bannerPosition < windowHeight * 0.75) {
+        quoteBanner.classList.add('animate-float');
+      } else {
+        quoteBanner.classList.remove('animate-float');
+      }
+    };
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Initial check
+    animateOnScroll();
+    
+    // Cleanup
+    return () => window.removeEventListener('scroll', animateOnScroll);
+  }, []);
   return (
     <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden">
       <ZebraBackground />
@@ -63,12 +90,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div style={{ position: 'relative', width: '100%', padding: '2rem 0', marginTop: '2rem', marginBottom: '1.25rem', zIndex: 5 }}>
+      <div style={{ position: 'relative', width: '100%', padding: '2rem 0', marginTop: '2rem', marginBottom: '1.25rem', zIndex: 5 }} className="quote-banner">
         {/* Solid Background */}
-        <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: '#F8F2E6', zIndex: -1, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}></div>
+        <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgb(252, 249, 242)', zIndex: -1, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}></div>
         
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: '#F8F2E6' }}>
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: 'rgb(252, 249, 242)' }}>
           <p className="text-lg md:text-xl mb-6 text-neutral-dark fade-in font-lora text-center">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
