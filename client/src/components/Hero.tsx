@@ -60,11 +60,11 @@ export default function Hero() {
               <span className="text-sm font-medium">Only What Helps</span>
             </div>
           </div>
-          <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
-            Pure, organic formulations designed specifically for sensitive systems.
-          </p>
-          
-          <div className="mb-5 bg-sage-light/40 p-6 rounded-lg max-w-3xl mx-auto">
+          <div className="mb-5 bg-[#f5f0e5] p-6 rounded-lg max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
+              Pure, organic formulations designed specifically for sensitive systems.
+            </p>
+            
             <p className="text-lg md:text-xl italic text-center text-forest">
               Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
             </p>
