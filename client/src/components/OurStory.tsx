@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import fatherDaughterImg from '../assets/father-daughter.jpg';
 
 export default function OurStory() {
   return (
@@ -31,6 +32,12 @@ export default function OurStory() {
             <p className="text-center font-medium">
               And if you or someone you love is a Zebra, welcome to the herd.
             </p>
+            
+            <div className="flex justify-center mt-6 mb-4">
+              <div className="border border-terra/30 p-1 rounded-md shadow-sm">
+                <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '300px' }} />
+              </div>
+            </div>
           </div>
           
           <div className="mt-8 flex justify-center">
