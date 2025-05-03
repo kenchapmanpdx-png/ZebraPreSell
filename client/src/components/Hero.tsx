@@ -63,8 +63,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full py-8 mt-8 mb-5" style={{ backgroundColor: '#F8F2E6', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
-        <div className="max-w-3xl mx-auto px-6">
+      <div style={{ position: 'relative', width: '100%', padding: '2rem 0', marginTop: '2rem', marginBottom: '1.25rem', zIndex: 5 }}>
+        {/* Solid Background */}
+        <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: '#F8F2E6', zIndex: -1, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}></div>
+        
+        {/* Content */}
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: '#F8F2E6' }}>
           <p className="text-lg md:text-xl mb-6 text-neutral-dark fade-in font-lora text-center">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
