@@ -12,12 +12,12 @@ export default function OurStory() {
           
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
-              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
+              Ava is our daughter — brave, brilliant, and resilient in ways most will never have to be.
               She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, dislocating joints, and extreme fatigue.
             </p>
             
             <p>
-              ZebraWell™ was born from my relentless pursuit to help her feel better — not just temporarily, but sustainably and safely.
+              ZebraWell™ was born from our relentless pursuit to help her feel better — not just temporarily, but sustainably and safely.
             </p>
             
             <p>
@@ -26,7 +26,7 @@ export default function OurStory() {
             </p>
             
             <p className="font-bold text-terra-dark text-center text-[1.25em]">
-              She is my Why!
+              She is our Why!
             </p>
             
             <div className="flex justify-center mt-6 mb-4">
