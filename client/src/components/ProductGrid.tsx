@@ -27,7 +27,7 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-lora text-forest">AvaCore</h3>
+                  <h3 className="text-3xl font-lora text-forest">AvaCore</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 6-8 capsules/day</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Foundational Support</span>
