@@ -2,7 +2,7 @@ import ZebraBackground from './ZebraBackground';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-24 md:pt-32 pb-4 md:pb-8 relative overflow-hidden">
+    <section id="home" className="pt-32 md:pt-44 pb-4 md:pb-8 relative overflow-hidden">
       <ZebraBackground />
       <div className="relative z-1">
         {/* Header Content */}

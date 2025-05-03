@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 
 export default function OurStory() {
   return (
-    <section id="story" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="story" className="py-8 md:py-12 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <div className="mb-10 bg-sage-light/40 p-6 rounded-lg">

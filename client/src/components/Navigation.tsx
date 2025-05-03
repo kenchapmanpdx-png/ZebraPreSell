@@ -28,13 +28,13 @@ export default function Navigation() {
     <nav id="main-nav" className={`fixed top-0 w-full bg-earth-cream z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center ml-[-20px]">
           <ZebraLogo />
           <span className="text-5xl font-lora"><span className="text-black font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
         </a>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           <a href="#home" className="font-medium hover:text-terra transition-colors">Home</a>
           <a href="#products" className="font-medium hover:text-terra transition-colors">Products</a>
           <a href="#story" className="font-medium hover:text-terra transition-colors">Our Story</a>
