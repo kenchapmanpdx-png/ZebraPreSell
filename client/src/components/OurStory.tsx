@@ -12,8 +12,8 @@ export default function OurStory() {
           
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
-              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be. 
-              She lives with scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how she lives with chronic pain, dislocating joints, and extreme fatigue to how she manages her inflammation, and even gravity.
+              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
+              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, dislocating joints, and extreme fatigue.
             </p>
             
             <p>
