@@ -6,7 +6,7 @@ export default function ProductGrid() {
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-4 fade-in">Products</h2>
-        <p className="text-lg text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora mb-8 text-center">
+        <p className="text-xl text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora mb-8 text-center">
           AvaCore ingredients are selected to support all three conditions. Boosters are then added to provide more targeted support.
         </p>
         <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
