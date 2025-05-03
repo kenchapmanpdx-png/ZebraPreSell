@@ -6,7 +6,6 @@ export default function OurStory() {
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest">
-            <span className="text-3xl md:text-5xl text-terra block mb-2 font-medium">"WHY"</span>
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is Ava.
           </h2>
           
