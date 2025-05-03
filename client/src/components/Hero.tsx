@@ -61,6 +61,10 @@ export default function Hero() {
               <span className="text-sm font-medium">Only What Helps</span>
             </div>
           </div>
+          
+          <p className="text-lg md:text-xl mb-10 text-neutral-dark fade-in font-lora text-center pt-4">
+            Pure, organic formulations designed specifically for sensitive systems.
+          </p>
         </div>
       </div>
 
@@ -70,12 +74,10 @@ export default function Hero() {
         
         {/* Content */}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: 'rgb(252, 249, 242)' }}>
-          <p className="text-lg md:text-xl mb-6 text-neutral-dark fade-in font-lora text-center">
-            Pure, organic formulations designed specifically for sensitive systems.
-          </p>
+          <h3 className="text-xl md:text-2xl mb-4 text-terra-dark font-medium text-center">Why "Zebra"?</h3>
           
           <p className="text-lg md:text-xl italic text-center text-forest">
-            Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
+            The Zebra is the mascot for rare conditions. Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often undiagnosed and misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
           </p>
         </div>
       </div>
