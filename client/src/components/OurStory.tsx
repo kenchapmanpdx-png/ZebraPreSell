@@ -26,7 +26,7 @@ export default function OurStory() {
             
             <p>
               ZebraWell™ was born from my relentless search to help her feel better — not just temporarily, but 
-              sustainably and safely. I've spent countless nights studying the science, researching and fine-tuning 
+              sustainably and safely. I've spent countless nights researching and fine-tuning 
               formulations that could offer real support without triggering the sensitivities that make typical 
               supplements a minefield for people like her.
             </p>
@@ -37,7 +37,7 @@ export default function OurStory() {
             </p>
             
             <p className="font-bold text-terra-dark">
-              She is my Why.
+              She is my Why!
             </p>
             
             <p className="text-center font-medium">
