@@ -81,9 +81,7 @@ export default function AvaCore() { // Keeping function name for compatibility, 
             <span className="px-3 py-1 rounded-full bg-terra-light text-xs text-terra-dark font-medium mx-1">Pure & Organic</span>
             <span className="px-3 py-1 rounded-full bg-sage-light text-xs text-forest font-medium mx-1">Allergen-Free</span>
           </div>
-          <p className="text-lg text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora mb-6">
-            Every AvaCore ingredient is selected to support all three conditions. Boosters provide targeted support for the specific needs of hEDS, POTS, and MCAS.
-          </p>
+
           <p className="text-lg text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora">
             Our flagship daily formula (6–8 capsules/day) designed specifically for EDS, POTS, and MCAS support. 
             ZebraWell Core delivers essential nutrients in their most bioavailable forms to support 
