@@ -2,7 +2,7 @@ import ZebraBackground from './ZebraBackground';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-32 md:pt-44 pb-4 md:pb-8 relative overflow-hidden">
+    <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden">
       <ZebraBackground />
       <div className="relative z-1">
         {/* Header Content */}
@@ -64,7 +64,7 @@ export default function Hero() {
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
           
-          <div className="mb-10 bg-sage-light/40 p-6 rounded-lg max-w-3xl mx-auto">
+          <div className="mb-5 bg-sage-light/40 p-6 rounded-lg max-w-3xl mx-auto">
             <p className="text-lg md:text-xl italic text-center text-forest">
               Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
             </p>
