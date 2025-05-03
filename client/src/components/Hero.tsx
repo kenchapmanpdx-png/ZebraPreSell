@@ -20,6 +20,10 @@ export default function Hero() {
               <i className="fas fa-seedling mr-2"></i>
               <span className="text-sm font-medium">Bioavailable</span>
             </div>
+            <div className="flex items-center px-3 py-1 bg-medical-blue/30 text-medical-blue rounded-full border border-medical-blue/30">
+              <i className="fas fa-puzzle-piece mr-2"></i>
+              <span className="text-sm font-medium">Works as a System</span>
+            </div>
             <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
               <i className="fas fa-apple-alt mr-2"></i>
               <span className="text-sm font-medium">Allergen-Free</span>
@@ -54,10 +58,6 @@ export default function Hero() {
             <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
               <i className="fas fa-feather mr-2"></i>
               <span className="text-sm font-medium">Gentle by Design</span>
-            </div>
-            <div className="flex items-center px-3 py-1 bg-medical-blue/30 text-medical-blue rounded-full border border-medical-blue/30">
-              <i className="fas fa-puzzle-piece mr-2"></i>
-              <span className="text-sm font-medium">Works as a System</span>
             </div>
           </div>
           <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
