@@ -22,7 +22,7 @@ export default function OurStory() {
             
             <p>
               This isn't just a business. It's personal. Every ingredient was chosen with Ava 
-              in mind — and with the hope of helping others like her feel stronger, steadier, and seen.
+              in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
             </p>
             
             <p className="font-bold text-terra-dark">
