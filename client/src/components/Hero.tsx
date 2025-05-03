@@ -77,7 +77,7 @@ export default function Hero() {
           <h3 className="text-xl md:text-2xl mb-4 text-terra-dark font-medium text-center">Why "Zebra"?</h3>
           
           <p className="text-lg md:text-xl italic text-center text-forest">
-            The Zebra is the mascot for rare conditions. Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often undiagnosed and misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
+            The Zebra is the mascot for rare conditions and diseases. Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often undiagnosed and misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
           </p>
         </div>
       </div>
