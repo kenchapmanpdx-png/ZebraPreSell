@@ -30,7 +30,10 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#" className="flex items-center ml-[-20px]">
           <ZebraLogo />
-          <span className="text-5xl font-lora"><span className="text-black font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
+          <div className="flex flex-col">
+            <span className="text-5xl font-lora"><span className="text-black font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
+            <span className="text-lg text-forest font-lora ml-1 -mt-1 tracking-widest">Supplements</span>
+          </div>
         </a>
         
         {/* Desktop Navigation */}
