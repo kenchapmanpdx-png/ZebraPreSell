@@ -6,7 +6,7 @@ export default function OurStory() {
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest">
-            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is Ava.
+            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-terra">Ava</span>.
           </h2>
           
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
@@ -29,7 +29,7 @@ export default function OurStory() {
             </p>
             
             <p className="text-center font-medium">
-              And if you or someone you love is a Zebra too, welcome to the herd.
+              And if someone you love is a Zebra, welcome to the herd.
             </p>
           </div>
           
