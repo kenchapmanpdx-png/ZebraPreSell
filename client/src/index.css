@@ -27,25 +27,25 @@
   --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
 
-  /* ZebraWell bright, clean, modern colors */
-  --sage: 175 90% 35%;
-  --sage-light: 175 80% 90%;
-  --sage-dark: 175 90% 20%;
-  --terra: 350 80% 60%;
-  --terra-light: 350 80% 90%;
-  --terra-dark: 350 70% 40%;
-  --cream: 210 30% 98%;
-  --sand: 200 30% 95%;
-  --clay: 210 40% 95%;
-  --forest: 195 90% 40%;
-  --forest-light: 195 80% 88%;
+  /* ZebraWell clinical, neutral, modern colors */
+  --sage: 200 15% 45%;
+  --sage-light: 200 15% 92%;
+  --sage-dark: 200 15% 30%;
+  --terra: 340 25% 55%;
+  --terra-light: 340 25% 90%;
+  --terra-dark: 340 20% 40%;
+  --cream: 220 10% 98%;
+  --sand: 210 10% 96%;
+  --clay: 200 10% 94%;
+  --forest: 210 20% 35%;
+  --forest-light: 210 20% 85%;
   --neutral-lightest: 0 0% 100%;
-  --neutral-light: 210 15% 97%;
-  --neutral-medium: 210 10% 90%;
-  --neutral-dark: 210 80% 25%;
-  --medical-blue: 225 95% 50%;
-  --medical-blue-light: 225 95% 90%;
-  --medical-blue-dark: 225 95% 35%;
+  --neutral-light: 220 5% 95%;
+  --neutral-medium: 220 5% 85%;
+  --neutral-dark: 220 5% 30%;
+  --medical-blue: 220 30% 45%;
+  --medical-blue-light: 220 30% 90%;
+  --medical-blue-dark: 220 30% 30%;
 }
 
 .dark {
