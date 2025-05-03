@@ -4,6 +4,41 @@ export default function OurStory() {
   return (
     <section id="story" className="py-16 md:py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
+        <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in max-w-4xl mx-auto">
+          <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+            <i className="fas fa-user-plus text-sage-dark mr-2"></i>
+            <span className="text-sm font-medium">Formulated For Zebras</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+            <i className="fas fa-ban text-terra-dark mr-2"></i>
+            <span className="text-sm font-medium">No Junk. Ever.</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+            <i className="fas fa-leaf text-sage-dark mr-2"></i>
+            <span className="text-sm font-medium">Only What Helps</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+            <i className="fas fa-microscope text-terra-dark mr-2"></i>
+            <span className="text-sm font-medium">Total Transparency</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+            <i className="fas fa-dna text-sage-dark mr-2"></i>
+            <span className="text-sm font-medium">Targeted Support</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+            <i className="fas fa-brain text-terra-dark mr-2"></i>
+            <span className="text-sm font-medium">Smart Science</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+            <i className="fas fa-feather text-sage-dark mr-2"></i>
+            <span className="text-sm font-medium">Gentle by Design</span>
+          </div>
+          <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+            <i className="fas fa-puzzle-piece text-terra-dark mr-2"></i>
+            <span className="text-sm font-medium">Works as a System</span>
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10">
           <div className="mb-10 bg-sage-light/40 p-6 rounded-lg">
             <p className="text-lg md:text-xl italic text-center text-forest">
