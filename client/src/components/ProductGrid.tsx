@@ -40,9 +40,9 @@ export default function ProductGrid() {
                   { name: "Magnesium (Glycinate Chelate)", description: "Calms nerves, supports muscle function and energy metabolism", dosage: "250 mg" },
                   { name: "Vitamin C (Buffered Ascorbates)", description: "Antioxidant, supports collagen, immune function, and adrenal health", dosage: "1000 mg" },
                   { name: "CoQ10 (Ubiquinone)", description: "Supports mitochondrial energy and cardiovascular health", dosage: "100 mg" },
-                  { name: "Taurine (L-Taurine)", description: "Modulates nervous system, stabilizes cell membranes, helps with POTS", dosage: "500 mg" },
-                  { name: "Vitamin D3", description: "Supports immune, bone, and mood regulation", dosage: "2000 IU / 50 mcg" },
-                  { name: "Thiamine HCl (B1)", description: "Boosts nerve signaling, energy production—especially helpful for POTS", dosage: "50 mg" }
+                  { name: "Vitamin D3 & K2 (MK-7)", description: "Supports immune, bone, and cardiovascular health", dosage: "2000 IU & 100 mcg" },
+                  { name: "B Vitamins (Active Forms)", description: "Support energy, methylation and nervous system health", dosage: "Complete B Complex" },
+                  { name: "PEA (Micronized)", description: "Natural anti-inflammatory and mast cell modulating compound", dosage: "400 mg" }
                 ].map((ingredient, index) => (
                   <li key={index} className="flex items-start">
                     <i className="fas fa-flask text-forest mt-1 mr-3"></i>

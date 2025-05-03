@@ -39,22 +39,64 @@ export default function AvaCore() { // Keeping function name for compatibility, 
       note: "Works synergistically with D3"
     },
     {
-      name: "Zinc (Bisglycinate)",
+      name: "Zinc (Bisglycinate or Picolinate)",
       description: "Supports immune, skin, and tissue repair.",
       dosage: "15 mg",
       note: "Gentle, bioavailable form"
     },
     {
-      name: "PEA (Micronized)",
-      description: "Natural anti-inflammatory, pain-relieving, and mast cell modulating.",
-      dosage: "400 mg",
-      note: "Comfort and inflammation support"
+      name: "Thiamine HCl",
+      description: "Boosts nerve signaling and energy production.",
+      dosage: "50 mg",
+      note: "Especially helpful for POTS"
     },
     {
-      name: "B-Complex Vitamins",
-      description: "Full spectrum of bioavailable B vitamins for energy, methylation and nervous system.",
-      dosage: "Various",
-      note: "Includes P-5-P, 5-MTHF, and Methylcobalamin"
+      name: "Riboflavin-5'-Phosphate",
+      description: "Supports energy production and cellular function.",
+      dosage: "25 mg",
+      note: "Active form of B2"
+    },
+    {
+      name: "Niacinamide",
+      description: "Helps cellular repair and energy metabolism.",
+      dosage: "50 mg",
+      note: "Gentle form of B3"
+    },
+    {
+      name: "Pantothenic Acid",
+      description: "Supports adrenal function and energy production.",
+      dosage: "100 mg",
+      note: "Stress support vitamin"
+    },
+    {
+      name: "P-5-P (B6)",
+      description: "Active form of B6, supports over 100 enzyme reactions.",
+      dosage: "25 mg",
+      note: "Neurotransmitter support"
+    },
+    {
+      name: "Folate (L-5-MTHF)",
+      description: "Bioavailable form of folate for methylation support.",
+      dosage: "400 mcg DFE",
+      note: "Methylation cycle support"
+    },
+    {
+      name: "Methylcobalamin (B12)",
+      description: "Active form of B12, supports nervous system and energy.",
+      dosage: "500 mcg",
+      note: "Neurological support"
+    },
+    {
+      name: "Biotin",
+      description: "Supports metabolism, skin, hair and nails.",
+      dosage: "300 mcg",
+      note: "Supports connective tissues"
+    },
+    {
+      name: "PEA (Micronized)",
+      description: "Natural anti-inflammatory and mast cell modulating.",
+      dosage: "400 mg",
+      note: "Comfort and inflammation support"
     },
     {
       name: "Potassium Citrate",
@@ -63,10 +105,16 @@ export default function AvaCore() { // Keeping function name for compatibility, 
       note: "Electrolyte balance support"
     },
     {
-      name: "Trace Minerals",
-      description: "Including Selenium, Molybdenum and other cofactors for enzyme function.",
-      dosage: "Various",
-      note: "Complete mineral support"
+      name: "Selenium",
+      description: "Antioxidant mineral supporting thyroid and immune function.",
+      dosage: "100 mcg",
+      note: "Antioxidant enzyme support"
+    },
+    {
+      name: "Molybdenum",
+      description: "Cofactor for enzymes that metabolize sulfites and toxins.",
+      dosage: "50 mcg",
+      note: "Detoxification support"
     }
   ];
 
