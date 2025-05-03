@@ -29,15 +29,15 @@ export default function OurStory() {
               She is my Why!
             </p>
             
-            <p className="text-center font-medium">
-              And if you or someone you love is a Zebra, welcome to the herd.
-            </p>
-            
             <div className="flex justify-center mt-6 mb-4">
               <div className="border border-terra/30 p-1 rounded-md shadow-sm">
                 <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '225px' }} />
               </div>
             </div>
+            
+            <p className="text-center font-medium mt-4">
+              If you or someone you love is a Zebra, welcome to the herd.
+            </p>
           </div>
           
           <div className="mt-8 flex justify-center">
