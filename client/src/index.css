@@ -141,28 +141,7 @@
     transform: translateY(0);
   }
   
-  .quote-banner {
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  }
-  
-  /* Movement effect when scrolling */
-  @keyframes float-subtle {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-  }
-  
-  /* Apply to quote banner when visible in viewport */
-  .animate-float {
-    animation: float-subtle 4s ease-in-out infinite;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  }
-  
-  .quote-banner:hover, 
-  .quote-banner:focus-within {
-    animation: float-subtle 3s ease-in-out infinite;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-  }
+  /* Animation removed as requested */
   
   .container {
     @apply mx-auto px-4 sm:px-6;
