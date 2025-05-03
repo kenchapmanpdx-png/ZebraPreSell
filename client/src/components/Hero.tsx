@@ -25,6 +25,41 @@ export default function Hero() {
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
           </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
+            <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+              <i className="fas fa-user-plus text-sage-dark mr-2"></i>
+              <span className="text-sm font-medium">Formulated For Zebras</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+              <i className="fas fa-ban text-terra-dark mr-2"></i>
+              <span className="text-sm font-medium">No Junk. Ever.</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+              <i className="fas fa-leaf text-sage-dark mr-2"></i>
+              <span className="text-sm font-medium">Only What Helps</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+              <i className="fas fa-microscope text-terra-dark mr-2"></i>
+              <span className="text-sm font-medium">Total Transparency</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+              <i className="fas fa-dna text-sage-dark mr-2"></i>
+              <span className="text-sm font-medium">Targeted Support</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+              <i className="fas fa-brain text-terra-dark mr-2"></i>
+              <span className="text-sm font-medium">Smart Science</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-sage-light rounded-full">
+              <i className="fas fa-feather text-sage-dark mr-2"></i>
+              <span className="text-sm font-medium">Gentle by Design</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-terra-light rounded-full">
+              <i className="fas fa-puzzle-piece text-terra-dark mr-2"></i>
+              <span className="text-sm font-medium">Works as a System</span>
+            </div>
+          </div>
           <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
