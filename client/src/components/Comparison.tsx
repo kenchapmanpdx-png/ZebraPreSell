@@ -2,7 +2,7 @@ import ZebraBackground from './ZebraBackground';
 
 export default function Comparison() {
   const comparisonData = [
-    { feature: "Research Analysis", zebrawell: "Comprehensive", generic: "Minimal or None" },
+    { feature: "Ingredient Selection", zebrawell: "Thoughtfully Chosen", generic: "Minimal Research" },
     { feature: "Bioavailability", zebrawell: "Maximum Absorption", generic: "Variable" },
     { feature: "Quality Testing", zebrawell: "Third-party Verified", generic: "Limited Testing" },
     { feature: "Cost Efficiency", zebrawell: "$1.50–$2.50/day", generic: "$3–$6+" },

@@ -73,9 +73,9 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-microscope mr-2"></i>
-              Clinical Research
+            <button className="w-full py-3 px-6 bg-sage hover:bg-sage/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
             </button>
           </div>
           
@@ -117,9 +117,9 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-microscope mr-2"></i>
-              Clinical Research
+            <button className="w-full py-3 px-6 bg-terra hover:bg-terra/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
             </button>
           </div>
           
@@ -161,9 +161,9 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-medical-blue hover:bg-medical-blue-dark text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-microscope mr-2"></i>
-              Clinical Research
+            <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
             </button>
           </div>
         </div>
