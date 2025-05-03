@@ -11,9 +11,9 @@ export default function WhyZebraWell() {
       description: "Free from common allergens and fillers for less reactivity and more peace of mind."
     },
     {
-      icon: "leaf",
-      title: "Only What Helps",
-      description: "Minimalist formulation with bioavailable ingredients that support your body."
+      icon: "feather",
+      title: "Gentle by Design",
+      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
     },
     {
       icon: "microscope",
@@ -31,9 +31,9 @@ export default function WhyZebraWell() {
       description: "Clinical insight with forms your body can absorb at therapeutic doses."
     },
     {
-      icon: "feather",
-      title: "Gentle by Design",
-      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
+      icon: "leaf",
+      title: "Only What Helps",
+      description: "Minimalist formulation with bioavailable ingredients that support your body."
     },
     {
       icon: "puzzle-piece",
@@ -49,26 +49,39 @@ export default function WhyZebraWell() {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {features.map((feature, index) => {
-            // Determine color classes based on index modulo 3
+            // Calculate column and row for proper color pattern in grid
+            // For the 2x4 grid on mobile and 4x2 grid on desktop
+            const mobileCol = index % 2; // 0 or 1 for 2 columns on mobile
+            const mobileRow = Math.floor(index / 2); // Row in mobile view
+            const desktopCol = index % 4; // 0, 1, 2, or 3 for 4 columns on desktop
+            
+            // Use desktop column for color alternation
+            const colorIndex = desktopCol;
+            
             let bgColorClass = "";
             let iconColorClass = "";
             let textColorClass = "";
             
-            if (index % 3 === 0) {
+            if (colorIndex === 0) {
               // Forest green theme
               bgColorClass = "bg-forest/5";
               iconColorClass = "text-forest";
               textColorClass = "text-forest";
-            } else if (index % 3 === 1) {
+            } else if (colorIndex === 1) {
               // Terra theme
               bgColorClass = "bg-terra/10";
               iconColorClass = "text-terra";
               textColorClass = "text-terra-dark";
-            } else {
+            } else if (colorIndex === 2) {
               // Light sage theme
               bgColorClass = "bg-sage/15";
               iconColorClass = "text-sage-dark";
               textColorClass = "text-sage-dark";
+            } else { // colorIndex === 3
+              // Terra theme again for the 4th column (to avoid both edges being green)
+              bgColorClass = "bg-terra/10";
+              iconColorClass = "text-terra";
+              textColorClass = "text-terra-dark";
             }
             
             return (
