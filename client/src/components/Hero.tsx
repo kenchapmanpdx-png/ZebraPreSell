@@ -20,11 +20,11 @@ export default function Hero() {
               <i className="fas fa-seedling mr-2"></i>
               <span className="text-sm font-medium">Bioavailable</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
               <i className="fas fa-puzzle-piece mr-2"></i>
               <span className="text-sm font-medium">Works as a System</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
               <i className="fas fa-apple-alt mr-2"></i>
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
@@ -35,7 +35,7 @@ export default function Hero() {
               <i className="fas fa-microscope mr-2"></i>
               <span className="text-sm font-medium">Total Transparency</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
               <i className="fas fa-user-plus mr-2"></i>
               <span className="text-sm font-medium">Formulated For Zebras</span>
             </div>
@@ -47,7 +47,7 @@ export default function Hero() {
               <i className="fas fa-feather mr-2"></i>
               <span className="text-sm font-medium">Gentle by Design</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
               <i className="fas fa-ban mr-2"></i>
               <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
