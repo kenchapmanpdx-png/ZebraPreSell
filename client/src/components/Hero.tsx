@@ -63,9 +63,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full bg-earth-cream py-8 mt-8 mb-5">
+      <div className="w-full bg-[#F8F2E6] py-8 mt-8 mb-5" style={{ boxShadow: '0 0 10px rgba(0,0,0,0.05)' }}>
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-lg md:text-xl mb-6 text-neutral-dark/90 fade-in font-lora text-center">
+          <p className="text-lg md:text-xl mb-6 text-neutral-dark fade-in font-lora text-center">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
           
