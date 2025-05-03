@@ -10,12 +10,6 @@ export default function OurStory() {
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is Ava.
           </h2>
           
-          <div className="mb-10 bg-sage-light/40 p-6 rounded-lg">
-            <p className="text-lg md:text-xl italic text-center text-forest">
-              Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
-            </p>
-          </div>
-          
           <div className="prose prose-lg prose-forest max-w-3xl mx-auto">
             <p>
               Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be. 

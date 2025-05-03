@@ -63,6 +63,12 @@ export default function Hero() {
           <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
+          
+          <div className="mb-10 bg-sage-light/40 p-6 rounded-lg max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl italic text-center text-forest">
+              Medical students are taught, "When you hear hoofbeats, think horses." But sometimes, it's a Zebra — someone with a rare, often misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
+            </p>
+          </div>
         </div>
         
 

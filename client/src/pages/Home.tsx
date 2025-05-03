@@ -38,8 +38,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <OurStory />
       <ProductGrid />
+      <OurStory />
       <WhyZebraWell />
       <Comparison />
       <Contact />
