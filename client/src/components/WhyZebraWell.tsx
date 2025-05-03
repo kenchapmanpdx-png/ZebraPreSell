@@ -3,42 +3,50 @@ export default function WhyZebraWell() {
     {
       icon: "user-plus",
       title: "Formulated For Zebras",
-      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
+      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements.",
+      color: "forest"
     },
     {
       icon: "ban",
       title: "No Junk. Ever.",
-      description: "Free from common allergens and fillers for less reactivity and more peace of mind."
+      description: "Free from common allergens and fillers for less reactivity and more peace of mind.",
+      color: "terra"
     },
     {
       icon: "feather",
       title: "Gentle by Design",
-      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
+      description: "Gut-safe, low-histamine formulations perfect for sensitive systems.",
+      color: "sage"
     },
     {
       icon: "microscope",
       title: "Total Transparency",
-      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
+      description: "Third-party testing and Certificates of Analysis prove our commitment to quality.",
+      color: "terra"
     },
     {
       icon: "dna",
       title: "Targeted Support",
-      description: "Core Formula plus specialized Boosters for personalized health management."
+      description: "Core Formula plus specialized Boosters for personalized health management.",
+      color: "forest"
     },
     {
       icon: "brain",
       title: "Smart Science",
-      description: "Clinical insight with forms your body can absorb at therapeutic doses."
+      description: "Clinical insight with forms your body can absorb at therapeutic doses.",
+      color: "terra"
     },
     {
       icon: "leaf",
       title: "Only What Helps",
-      description: "Minimalist formulation with bioavailable ingredients that support your body."
+      description: "Minimalist formulation with bioavailable ingredients that support your body.",
+      color: "sage"
     },
     {
       icon: "puzzle-piece",
       title: "Works as a System",
-      description: "Designed to work synergistically whether you need one booster or all."
+      description: "Designed to work synergistically whether you need one booster or all.",
+      color: "forest"
     }
   ];
 
@@ -49,39 +57,25 @@ export default function WhyZebraWell() {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {features.map((feature, index) => {
-            // Calculate column and row for proper color pattern in grid
-            // For the 2x4 grid on mobile and 4x2 grid on desktop
-            const mobileCol = index % 2; // 0 or 1 for 2 columns on mobile
-            const mobileRow = Math.floor(index / 2); // Row in mobile view
-            const desktopCol = index % 4; // 0, 1, 2, or 3 for 4 columns on desktop
-            
-            // Use desktop column for color alternation
-            const colorIndex = desktopCol;
-            
             let bgColorClass = "";
             let iconColorClass = "";
             let textColorClass = "";
             
-            if (colorIndex === 0) {
+            if (feature.color === "forest") {
               // Forest green theme
               bgColorClass = "bg-forest/5";
               iconColorClass = "text-forest";
               textColorClass = "text-forest";
-            } else if (colorIndex === 1) {
+            } else if (feature.color === "terra") {
               // Terra theme
               bgColorClass = "bg-terra/10";
               iconColorClass = "text-terra";
               textColorClass = "text-terra-dark";
-            } else if (colorIndex === 2) {
+            } else { // feature.color === "sage"
               // Light sage theme
               bgColorClass = "bg-sage/15";
               iconColorClass = "text-sage-dark";
               textColorClass = "text-sage-dark";
-            } else { // colorIndex === 3
-              // Terra theme again for the 4th column (to avoid both edges being green)
-              bgColorClass = "bg-terra/10";
-              iconColorClass = "text-terra";
-              textColorClass = "text-terra-dark";
             }
             
             return (
