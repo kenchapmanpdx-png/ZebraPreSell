@@ -56,8 +56,8 @@ export default function WhyZebraWell() {
             
             // Special case for "No Junk. Ever." feature
             if (feature.title === "No Junk. Ever.") {
-              // Forest green theme just for text
-              bgColorClass = "bg-earth-cream";
+              // Forest green theme for background and text
+              bgColorClass = "bg-forest/10";
               iconColorClass = "text-forest";
               textColorClass = "text-forest";
             } else {
