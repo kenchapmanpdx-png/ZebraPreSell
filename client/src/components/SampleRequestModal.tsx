@@ -30,7 +30,7 @@ export default function SampleRequestModal() {
     <div id="sample-modal" className="fixed inset-0 bg-neutral-dark/70 flex items-center justify-center z-50 hidden">
       <div className="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4 transform transition-all">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-bold text-medical-blue">Clinical Sample Request</h3>
+          <h3 className="text-2xl font-bold text-forest">Sample Request</h3>
           <button 
             id="close-modal"
             onClick={hideModal}
@@ -43,7 +43,7 @@ export default function SampleRequestModal() {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="modal-name" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-user-md text-medical-blue mr-2"></i>
+              <i className="fas fa-user text-forest mr-2"></i>
               Full Name
             </label>
             <input 
@@ -51,14 +51,14 @@ export default function SampleRequestModal() {
               id="modal-name" 
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 border border-medical-blue/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-medical-blue bg-blue-50/30"
+              className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
               required
             />
           </div>
           
           <div className="mb-4">
             <label htmlFor="modal-email" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-envelope text-medical-blue mr-2"></i>
+              <i className="fas fa-envelope text-forest mr-2"></i>
               Email Address
             </label>
             <input 
@@ -66,21 +66,21 @@ export default function SampleRequestModal() {
               id="modal-email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border border-medical-blue/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-medical-blue bg-blue-50/30"
+              className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
               required
             />
           </div>
           
           <div className="mb-6">
             <label htmlFor="modal-reason" className="flex items-center text-sm font-semibold mb-2">
-              <i className="fas fa-clipboard-list text-medical-blue mr-2"></i>
-              Clinical Interest
+              <i className="fas fa-clipboard-list text-forest mr-2"></i>
+              Your Interest
             </label>
             <select 
               id="modal-reason" 
               value={reason}
               onChange={(e) => setReason(e.target.value)}
-              className="w-full p-3 border border-medical-blue/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-medical-blue bg-blue-50/30"
+              className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
               required
             >
               <option value="">Select a reason</option>
@@ -99,15 +99,15 @@ export default function SampleRequestModal() {
               type="button" 
               id="cancel-request"
               onClick={hideModal}
-              className="flex-1 py-3 px-4 border border-medical-blue/20 text-neutral-dark font-semibold rounded-lg hover:bg-neutral-light transition-colors"
+              className="flex-1 py-3 px-4 border border-forest/20 text-neutral-dark font-semibold rounded-lg hover:bg-neutral-light transition-colors"
             >
               Cancel
             </button>
             <button 
               type="submit" 
-              className="flex-1 bg-medical-blue hover:bg-medical-blue/90 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center"
+              className="flex-1 bg-forest hover:bg-forest/90 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center"
             >
-              <i className="fas fa-vial mr-2"></i>Request Clinical Sample
+              <i className="fas fa-box mr-2"></i>Request Free Sample
             </button>
           </div>
         </form>
