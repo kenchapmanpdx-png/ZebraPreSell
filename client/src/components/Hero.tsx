@@ -12,7 +12,7 @@ export default function Hero() {
             <span className="text-2xl md:text-4xl text-terra-dark font-medium block pt-2 pb-2 mt-1 mb-1">Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 bg-medical-blue/30 text-medical-blue rounded-full border border-medical-blue/30">
+            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">All-Natural</span>
             </div>
@@ -31,33 +31,33 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
+            <div className="flex items-center px-3 py-1 bg-medical-blue/30 text-medical-blue rounded-full border border-medical-blue/30">
+              <i className="fas fa-microscope mr-2"></i>
+              <span className="text-sm font-medium">Total Transparency</span>
+            </div>
             <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
               <i className="fas fa-user-plus mr-2"></i>
               <span className="text-sm font-medium">Formulated For Zebras</span>
             </div>
             <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
-              <i className="fas fa-ban mr-2"></i>
-              <span className="text-sm font-medium">No Junk. Ever.</span>
-            </div>
-            <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
-              <i className="fas fa-leaf mr-2"></i>
-              <span className="text-sm font-medium">Only What Helps</span>
-            </div>
-            <div className="flex items-center px-3 py-1 bg-medical-blue/30 text-medical-blue rounded-full border border-medical-blue/30">
-              <i className="fas fa-microscope mr-2"></i>
-              <span className="text-sm font-medium">Total Transparency</span>
-            </div>
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
               <i className="fas fa-dna mr-2"></i>
               <span className="text-sm font-medium">Targeted Support</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
+              <i className="fas fa-feather mr-2"></i>
+              <span className="text-sm font-medium">Gentle by Design</span>
+            </div>
+            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+              <i className="fas fa-ban mr-2"></i>
+              <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
             <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
               <i className="fas fa-brain mr-2"></i>
               <span className="text-sm font-medium">Smart Science</span>
             </div>
             <div className="flex items-center px-3 py-1 bg-yellow-800/30 text-yellow-800 rounded-full border border-yellow-800/30">
-              <i className="fas fa-feather mr-2"></i>
-              <span className="text-sm font-medium">Gentle by Design</span>
+              <i className="fas fa-leaf mr-2"></i>
+              <span className="text-sm font-medium">Only What Helps</span>
             </div>
           </div>
           <p className="text-lg md:text-xl mb-5 text-neutral-dark/90 fade-in max-w-xl mx-auto font-lora">
