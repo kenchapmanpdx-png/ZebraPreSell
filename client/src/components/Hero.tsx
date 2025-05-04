@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto text-center px-6">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
             Wellness for the Rare and Resilient<br/>
-            <span className="text-[1.08rem] md:text-[2.16rem] text-terra-dark font-medium block pt-2 pb-2 mt-1 mb-1">Supplemental Support for EDS, POTS, and MCAS</span>
+            <span className="text-[1.08rem] md:text-[2.16rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1">Supplemental Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
             <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
@@ -74,7 +74,7 @@ export default function Hero() {
         
         {/* Content */}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: 'rgb(252, 249, 242)' }}>
-          <h3 className="text-xl md:text-2xl mb-4 text-terra-dark font-medium text-center">Why "Zebra"?</h3>
+          <h3 className="text-xl md:text-2xl mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
           
           <p className="text-lg md:text-xl italic text-center text-forest">
             The Zebra is the mascot for rare conditions and diseases.<br/>
