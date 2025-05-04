@@ -8,8 +8,7 @@ export default function WhyZebraWell() {
     {
       icon: "ban",
       title: "No Junk. Ever.",
-      description: "Free from common allergens and fillers for less reactivity and more peace of mind.",
-      color: "forest"
+      description: "Free from common allergens and fillers for less reactivity and more peace of mind."
     },
     {
       icon: "feather",
