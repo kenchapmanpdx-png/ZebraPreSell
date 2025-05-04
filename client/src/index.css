@@ -48,18 +48,18 @@
   --medical-blue-dark: 210 100% 30%;
   */
   
-  /* New ZebraWell blue and mint color scheme */
-  --sage: 160 70% 50%; /* Converted to bright mint */
-  --sage-light: 160 60% 85%;
-  --sage-dark: 160 70% 30%;
-  --terra: 210 100% 40%; /* Converted to medical blue */
+  /* New ZebraWell blue color scheme */
+  --sage: 210 80% 60%; /* Light blue */
+  --sage-light: 210 70% 90%;
+  --sage-dark: 210 80% 40%;
+  --terra: 210 100% 40%; /* Medical blue */
   --terra-light: 210 100% 85%;
   --terra-dark: 210 100% 30%;
   --cream: 210 30% 98%;
   --sand: 210 15% 95%;
   --clay: 210 15% 90%;
-  --forest: 185 80% 35%; /* Darker teal */
-  --forest-light: 185 80% 75%;
+  --forest: 220 70% 30%; /* Darker blue */
+  --forest-light: 220 70% 75%;
   --neutral-lightest: 0 0% 100%;
   --neutral-light: 210 10% 95%;
   --neutral-medium: 210 10% 90%;
