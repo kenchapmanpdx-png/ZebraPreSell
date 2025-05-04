@@ -17,38 +17,38 @@ export default function Hero() {
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">All-Natural</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
               <i className="fas fa-seedling mr-2"></i>
               <span className="text-sm font-medium">Bioavailable</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#87a96b', color: 'white', borderColor: '#87a96b' }}>
               <i className="fas fa-puzzle-piece mr-2"></i>
               <span className="text-sm font-medium">Works as a System</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#0b6623', color: 'white', borderColor: '#0b6623' }}>
               <i className="fas fa-apple-alt mr-2"></i>
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
               <i className="fas fa-microscope mr-2"></i>
               <span className="text-sm font-medium">Total Transparency</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#87a96b', color: 'white', borderColor: '#87a96b' }}>
               <i className="fas fa-user-plus mr-2"></i>
               <span className="text-sm font-medium">Formulated For Zebras</span>
             </div>
-            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#0b6623', color: 'white', borderColor: '#0b6623' }}>
               <i className="fas fa-dna mr-2"></i>
               <span className="text-sm font-medium">Targeted Support</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
               <i className="fas fa-feather mr-2"></i>
               <span className="text-sm font-medium">Gentle by Design</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#87a96b', color: 'white', borderColor: '#87a96b' }}>
               <i className="fas fa-ban mr-2"></i>
               <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
