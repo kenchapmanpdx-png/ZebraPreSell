@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import WhyZebraWell from '@/components/WhyZebraWell';
 import ProductGrid from '@/components/ProductGrid';
-import AvaCore from '@/components/AvaCore';
 import Comparison from '@/components/Comparison';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -40,7 +39,6 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ProductGrid />
-      <AvaCore />
       <OurStory />
       <WhyZebraWell />
       <Comparison />
