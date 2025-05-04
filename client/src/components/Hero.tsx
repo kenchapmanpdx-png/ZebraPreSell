@@ -74,7 +74,7 @@ export default function Hero() {
         
         {/* Content */}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: 'rgb(252, 249, 242)' }}>
-          <h3 className="text-xl md:text-2xl mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
+          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
           
           <p className="text-lg md:text-xl italic text-center text-forest">
             The Zebra is the mascot for rare conditions and diseases.<br/>
