@@ -36,25 +36,197 @@ export default function ProductGrid() {
               </div>
               
               <ul className="mb-6 space-y-2">
-                {[
-                  { name: "Magnesium (Glycinate Chelate)", description: "Calms nerves, supports muscle function and energy metabolism", dosage: "250 mg" },
-                  { name: "Vitamin C (Buffered Ascorbates)", description: "Antioxidant, supports collagen, immune function, and adrenal health", dosage: "1000 mg" },
-                  { name: "CoQ10 (Ubiquinone)", description: "Supports mitochondrial energy and cardiovascular health", dosage: "100 mg" },
-                  { name: "Vitamin D3 & K2 (MK-7)", description: "Supports immune, bone, and cardiovascular health", dosage: "2000 IU & 100 mcg" },
-                  { name: "B Vitamins (Active Forms)", description: "Support energy, methylation and nervous system health", dosage: "Complete B Complex" },
-                  { name: "PEA (Micronized)", description: "Natural anti-inflammatory and mast cell modulating compound", dosage: "400 mg" }
-                ].map((ingredient, index) => (
-                  <li key={index} className="flex items-start">
-                    <i className="fas fa-flask text-forest mt-1 mr-3"></i>
-                    <div className="w-full">
-                      <div className="flex justify-between items-start">
-                        <span className="font-medium">{ingredient.name}</span>
-                        <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{ingredient.dosage}</span>
-                      </div>
-                      <p className="text-sm text-neutral-dark/70">{ingredient.description}</p>
+                {/* Core Formula ingredients */}
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Magnesium (Glycinate Chelate)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">250 mg</span>
                     </div>
-                  </li>
-                ))}
+                    <p className="text-sm text-neutral-dark/70">Calms nerves, supports muscle function and energy metabolism</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Vitamin C (Buffered Ascorbates)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">1000 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Antioxidant, supports collagen, immune function, and adrenal health</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">CoQ10 (Ubiquinone)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">100 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports mitochondrial energy and cardiovascular health</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Taurine (L-Taurine)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">500 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Modulates nervous system, stabilizes cell membranes, helps with POTS</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Vitamin D3</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">2000 IU / 50 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports immune, bone, and mood regulation</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Vitamin K2 (MK-7)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">100 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Directs calcium to bones, supports cardiovascular health</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Zinc (Bisglycinate or Picolinate)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">15 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports immune, skin, and tissue repair</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Thiamine HCl</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">50 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Boosts nerve signaling and energy production</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Riboflavin-5'-Phosphate</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">25 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports energy production and cellular function</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Niacinamide</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">50 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Helps cellular repair and energy metabolism</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Pantothenic Acid</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">100 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports adrenal function and energy production</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">P-5-P (B6)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">25 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Active form of B6, supports over 100 enzyme reactions</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Folate (L-5-MTHF)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">400 mcg DFE</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Bioavailable form of folate for methylation support</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Methylcobalamin (B12)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">500 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Active form of B12, supports nervous system and energy</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Biotin</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">300 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Supports metabolism, skin, hair and nails</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">PEA (Micronized)</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">400 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Natural anti-inflammatory and mast cell modulating</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Potassium Citrate</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">99 mg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Important for nerve and muscle function; often low in POTS</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Selenium</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">100 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Antioxidant mineral supporting thyroid and immune function</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">Molybdenum</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">50 mcg</span>
+                    </div>
+                    <p className="text-sm text-neutral-dark/70">Cofactor for enzymes that metabolize sulfites and toxins</p>
+                  </div>
+                </li>
               </ul>
               
               <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
