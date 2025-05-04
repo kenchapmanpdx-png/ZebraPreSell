@@ -105,7 +105,7 @@ export default function Contact() {
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-forest hover:bg-forest/90 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center"
+                  className="w-full bg-forest hover:bg-forest/90 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center border-2 border-neon shadow-[0_0_10px_rgba(hsl(var(--accent-neon)),.3)]"
                 >
                   <i className="fas fa-paper-plane mr-2"></i>Send Message
                 </button>
