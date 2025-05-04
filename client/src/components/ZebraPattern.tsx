@@ -9,7 +9,8 @@ export default function ZebraPattern() {
         backgroundRepeat: 'repeat',
         backgroundSize: '250px auto',
         opacity: 0.08,
-        filter: 'sepia(100%) hue-rotate(80deg) saturate(60%) brightness(110%)'
+        filter: 'sepia(100%) hue-rotate(80deg) saturate(60%) brightness(110%)',
+        transform: 'rotate(90deg)'
       }}
     />
   );
