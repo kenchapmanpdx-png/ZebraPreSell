@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import fatherDaughterImg from '../assets/father-daughter.jpg';
+import ZebraHeart from './ZebraHeart';
 
 export default function OurStory() {
   return (
@@ -36,7 +37,7 @@ export default function OurStory() {
             </div>
             
             <p className="text-center font-medium mt-4 italic">
-              If you or someone you love is a Zebra, welcome to the herd. <i className="far fa-heart"></i>
+              If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={23} /></span>
             </p>
           </div>
           
