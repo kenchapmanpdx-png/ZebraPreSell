@@ -36,7 +36,7 @@ export default function Boosters() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* POTS Booster */}
-          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl" style={{ borderColor: '#74c365' }}>
             <div className="flex items-center mb-6">
               <div className="relative w-16 h-20 mr-4">
                 <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
@@ -53,7 +53,7 @@ export default function Boosters() {
                 <h3 className="text-2xl font-lora text-forest">POTS Booster</h3>
                 <div className="flex items-center">
                   <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 3-4 capsules/day</span>
-                  <span className="ml-3 px-2 py-0.5 rounded-md bg-sage-light text-xs text-sage-dark font-medium">Energy Support</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md text-xs font-medium" style={{ backgroundColor: 'rgba(116, 195, 101, 0.2)', color: '#0b6623' }}>Energy Support</span>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Boosters() {
               ))}
             </ul>
             
-            <button className="w-full py-3 px-6 bg-sage hover:bg-sage/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+            <button className="w-full py-3 px-6 text-white font-medium rounded-lg transition-colors flex items-center justify-center hover:bg-opacity-90" style={{ backgroundColor: '#74c365' }}>
               <i className="fas fa-info-circle mr-2"></i>
               Product Details
             </button>
