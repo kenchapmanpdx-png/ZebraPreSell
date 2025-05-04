@@ -35,8 +35,8 @@ export default function OurStory() {
               </div>
             </div>
             
-            <p className="text-center font-medium mt-4">
-              If you or someone you love is a Zebra, welcome to the herd.
+            <p className="text-center font-medium mt-4 italic">
+              If you or someone you love is a Zebra, welcome to the herd. <i className="far fa-heart"></i>
             </p>
           </div>
           
