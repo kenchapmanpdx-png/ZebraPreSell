@@ -54,7 +54,7 @@ export default function WhyZebraWell() {
             let textColorClass = "";
             
             // Special case for "No Junk. Ever." feature
-            if (feature.title === "No Junk. Ever." || feature.color === "forest") {
+            if (feature.title === "No Junk. Ever.") {
               // Forest green theme for background and text
               bgColorClass = "bg-forest/10";
               iconColorClass = "text-forest";
