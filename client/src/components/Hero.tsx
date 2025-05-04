@@ -9,7 +9,7 @@ export default function Hero() {
         {/* Header Content */}
         <div className="max-w-3xl mx-auto text-center px-6">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in text-forest">
-            Wellness for the Rare and Resilient<br/>
+            <span style={{ color: '#87a96b' }}>Wellness for the Rare</span> and Resilient<br/>
             <span className="text-[1.08rem] md:text-[2.16rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1">Supplemental Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
