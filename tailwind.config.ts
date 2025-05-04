@@ -62,6 +62,7 @@ export default {
         forest: {
           light: "hsl(var(--forest-light))",
           DEFAULT: "hsl(var(--forest))",
+          mid: "hsl(var(--forest-mid))", 
         },
         neutral: {
           lightest: "hsl(var(--neutral-lightest))",

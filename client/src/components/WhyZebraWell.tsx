@@ -19,7 +19,8 @@ export default function WhyZebraWell() {
     {
       icon: "microscope",
       title: "Total Transparency",
-      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
+      description: "Third-party testing and Certificates of Analysis prove our commitment to quality.",
+      color: "forest-mid"
     },
     {
       icon: "dna",
@@ -29,7 +30,8 @@ export default function WhyZebraWell() {
     {
       icon: "brain",
       title: "Smart Science",
-      description: "Clinical insight with forms your body can absorb at therapeutic doses."
+      description: "Clinical insight with forms your body can absorb at therapeutic doses.",
+      color: "forest-mid"
     },
     {
       icon: "leaf",
@@ -39,7 +41,8 @@ export default function WhyZebraWell() {
     {
       icon: "puzzle-piece",
       title: "Works as a System",
-      description: "Designed to work synergistically whether you need one booster or all."
+      description: "Designed to work synergistically whether you need one booster or all.",
+      color: "forest-mid"
     }
   ];
 
@@ -54,14 +57,19 @@ export default function WhyZebraWell() {
             let iconColorClass = "";
             let textColorClass = "";
             
-            // Special case for "No Junk. Ever." feature
-            if (feature.title === "No Junk. Ever.") {
-              // Forest green theme for background and text
+            // Apply color based on feature's color property
+            if (feature.color === "forest") {
+              // Forest green theme 
               bgColorClass = "bg-forest/10";
               iconColorClass = "text-forest";
               textColorClass = "text-forest";
+            } else if (feature.color === "forest-mid") {
+              // New forest-mid theme
+              bgColorClass = "bg-forest-mid/10";
+              iconColorClass = "text-forest-mid";
+              textColorClass = "text-forest-mid";
             } else {
-              // Default theme for all other features
+              // Default theme for other features
               bgColorClass = "bg-earth-cream";
               iconColorClass = "text-sage-dark";
               textColorClass = "text-forest";
