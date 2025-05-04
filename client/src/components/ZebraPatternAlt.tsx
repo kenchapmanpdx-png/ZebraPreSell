@@ -9,7 +9,7 @@ export default function ZebraPatternAlt() {
         backgroundRepeat: 'repeat',
         backgroundSize: '500px auto',
         opacity: 0.08,
-        filter: 'sepia(100%) hue-rotate(30deg) saturate(60%) brightness(110%)'
+        filter: 'sepia(100%) hue-rotate(345deg) saturate(80%) brightness(50%)'
       }}
     />
   );
