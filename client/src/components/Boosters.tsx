@@ -53,7 +53,7 @@ export default function Boosters() {
                 <h3 className="text-2xl font-lora text-forest">POTS Booster</h3>
                 <div className="flex items-center">
                   <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 3-4 capsules/day</span>
-                  <span className="ml-3 px-2 py-0.5 rounded-md text-xs font-medium" style={{ backgroundColor: 'rgba(116, 195, 101, 0.2)', color: '#0b6623' }}>Energy Support</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md text-xs font-medium" style={{ backgroundColor: 'rgba(116, 195, 101, 0.2)', color: '#2a7635' }}>Energy Support</span>
                 </div>
               </div>
             </div>
