@@ -7,7 +7,7 @@ export default function ZebraLogo() {
         <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-earth-cream relative overflow-hidden">
             <ZebraPattern />
-            <i className="fas fa-leaf absolute inset-0 flex items-center justify-center opacity-70 text-3xl" style={{ color: '#9dc209' }}></i>
+            <i className="fas fa-leaf absolute inset-0 flex items-center justify-center opacity-70 text-3xl" style={{ color: '#0b6623' }}></i>
           </div>
         </div>
       </div>
