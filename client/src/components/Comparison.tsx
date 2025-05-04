@@ -22,7 +22,7 @@ export default function Comparison() {
             <thead>
               <tr>
                 <th className="p-4 border-b-2 border-neutral-medium"></th>
-                <th className="p-4 border-b-2 border-forest text-center bg-forest/10 text-forest font-bold">ZebraWell Premium</th>
+                <th className="p-4 border-b-2 border-forest text-center text-forest font-bold" style={{ backgroundColor: 'rgba(116, 195, 101, 0.15)' }}>ZebraWell Premium</th>
                 <th className="p-4 border-b-2 border-neutral-medium text-center text-neutral-dark font-bold">Generic Brands</th>
               </tr>
             </thead>
@@ -30,9 +30,9 @@ export default function Comparison() {
               {comparisonData.map((row, index) => (
                 <tr key={index}>
                   <td className="p-4 border-b border-neutral-medium font-semibold">{row.feature}</td>
-                  <td className="p-4 border-b border-forest/30 text-center bg-forest/5 text-forest">
+                  <td className="p-4 border-b border-forest/30 text-center text-forest" style={{ backgroundColor: index % 2 === 0 ? 'rgba(116, 195, 101, 0.08)' : 'rgba(135, 169, 107, 0.08)' }}>
                     <div className="flex items-center justify-center">
-                      <i className="fas fa-check text-forest mr-2"></i> {row.zebrawell}
+                      <i className="fas fa-check mr-2" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}></i> {row.zebrawell}
                     </div>
                   </td>
                   <td className="p-4 border-b border-neutral-medium text-center text-neutral-dark/80">

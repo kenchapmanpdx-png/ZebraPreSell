@@ -42,7 +42,7 @@ export default function OurStory() {
           
           <div className="mt-8 flex justify-center">
             <Link to="#products">
-              <button className="bg-terra hover:bg-terra-dark text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+              <button className="text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 hover:opacity-90" style={{ backgroundColor: '#74c365' }}>
                 <i className="fas fa-leaf mr-2"></i>Discover Our Products
               </button>
             </Link>
