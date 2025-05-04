@@ -17,26 +17,26 @@ export default function Hero() {
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">All-Natural</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
+            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
               <i className="fas fa-seedling mr-2"></i>
               <span className="text-sm font-medium">Bioavailable</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
               <i className="fas fa-puzzle-piece mr-2"></i>
               <span className="text-sm font-medium">Works as a System</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
+            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
               <i className="fas fa-apple-alt mr-2"></i>
               <span className="text-sm font-medium">Allergen-Free</span>
             </div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
+            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
               <i className="fas fa-microscope mr-2"></i>
               <span className="text-sm font-medium">Total Transparency</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
               <i className="fas fa-user-plus mr-2"></i>
               <span className="text-sm font-medium">Formulated For Zebras</span>
             </div>
@@ -44,11 +44,11 @@ export default function Hero() {
               <i className="fas fa-dna mr-2"></i>
               <span className="text-sm font-medium">Targeted Support</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
+            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
               <i className="fas fa-feather mr-2"></i>
               <span className="text-sm font-medium">Gentle by Design</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/60">
+            <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
               <i className="fas fa-ban mr-2"></i>
               <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
@@ -56,7 +56,7 @@ export default function Hero() {
               <i className="fas fa-brain mr-2"></i>
               <span className="text-sm font-medium">Smart Science</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-terra/30 text-terra-dark rounded-full border border-terra/30">
+            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">Only What Helps</span>
             </div>
