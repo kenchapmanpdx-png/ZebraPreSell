@@ -25,30 +25,30 @@ export default function Navigation() {
   };
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full bg-medical-blue/90 z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-white/20`}>
+    <nav id="main-nav" className={`fixed top-0 w-full bg-earth-cream z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex items-center ml-[-20px]">
           <ZebraLogo />
           <div className="flex flex-col">
-            <span className="text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-neon font-normal">Well</span></span>
-            <span className="text-lg text-white/80 font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
+            <span className="text-5xl font-lora"><span className="text-black font-medium">Zebra</span><span className="text-sage font-normal">Well</span></span>
+            <span className="text-lg text-forest font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
         </a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#home" className="font-medium text-white hover:text-neon transition-colors">Home</a>
-          <a href="#products" className="font-medium text-white hover:text-neon transition-colors">Products</a>
-          <a href="#story" className="font-medium text-white hover:text-neon transition-colors">Our Story</a>
-          <a href="#why" className="font-medium text-white hover:text-neon transition-colors">Why ZebraWell</a>
-          <a href="#comparison" className="font-medium text-white hover:text-neon transition-colors">Research</a>
-          <a href="#contact" className="font-medium text-white hover:text-neon transition-colors">Contact Us</a>
+          <a href="#home" className="font-medium hover:text-terra transition-colors">Home</a>
+          <a href="#products" className="font-medium hover:text-terra transition-colors">Products</a>
+          <a href="#story" className="font-medium hover:text-terra transition-colors">Our Story</a>
+          <a href="#why" className="font-medium hover:text-terra transition-colors">Why ZebraWell</a>
+          <a href="#comparison" className="font-medium hover:text-terra transition-colors">Research</a>
+          <a href="#contact" className="font-medium hover:text-terra transition-colors">Contact Us</a>
         </div>
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-neutral-dark focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
