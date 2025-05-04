@@ -37,7 +37,7 @@ export default function OurStory() {
             </div>
             
             <p className="text-center font-medium mt-4 italic">
-              If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={23} /></span>
+              If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={26} /></span>
             </p>
           </div>
           
