@@ -13,7 +13,7 @@ export default function Hero() {
             <span className="text-[1.16rem] md:text-[2.31rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#2a7635', color: 'white', borderColor: '#2a7635' }}>
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#1a6e2c', color: 'white', borderColor: '#1a6e2c' }}>
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">All-Natural</span>
             </div>
@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#2a7635', color: 'white', borderColor: '#2a7635' }}>
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#1a6e2c', color: 'white', borderColor: '#1a6e2c' }}>
               <i className="fas fa-microscope mr-2"></i>
               <span className="text-sm font-medium">Total Transparency</span>
             </div>
@@ -48,7 +48,7 @@ export default function Hero() {
               <i className="fas fa-feather mr-2"></i>
               <span className="text-sm font-medium">Gentle by Design</span>
             </div>
-            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#2a7635', color: 'white', borderColor: '#2a7635' }}>
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#1a6e2c', color: 'white', borderColor: '#1a6e2c' }}>
               <i className="fas fa-ban mr-2"></i>
               <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
