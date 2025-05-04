@@ -35,6 +35,12 @@ export default function OurStory() {
               </div>
             </div>
             
+            <div className="p-4 bg-forest/5 rounded-lg border border-forest/10 my-6">
+              <p className="text-center font-medium italic text-forest-mid mb-4">
+                The Zebra is the mascot for rare conditions and diseases. The medical system is trained to, "When you hear hoofbeats, think horse." But sometimes, it's a Zebra — someone with a rare, often undiagnosed and misunderstood condition. We honor the Zebra. Because rare shouldn't mean invisible.
+              </p>
+            </div>
+            
             <p className="text-center font-medium mt-4">
               If you or someone you love is a Zebra, welcome to the herd.
             </p>
