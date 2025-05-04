@@ -12,8 +12,8 @@ export default function ZebraHeart({ className = '', size = 20 }: { className?: 
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <pattern id="zebraPattern" patternUnits="userSpaceOnUse" width="24" height="24">
-          <image href={zebraPatternImg} width="24" height="24" />
+        <pattern id="zebraPattern" patternUnits="userSpaceOnUse" width="12" height="12">
+          <image href={zebraPatternImg} width="12" height="12" />
         </pattern>
       </defs>
       
