@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto text-center px-6">
           <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in" style={{ color: '#357c3b' }}>
             Wellness for the Rare and Resilient<br/>
-            <span className="text-[1.16rem] md:text-[2.31rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
+            <span className="text-[1.044rem] md:text-[2.079rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
             <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#357c3b', color: 'white', borderColor: '#357c3b' }}>
