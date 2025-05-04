@@ -13,7 +13,7 @@ export default function Hero() {
             <span className="text-[1.08rem] md:text-[2.16rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1">Supplemental Support for EDS, POTS, and MCAS</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#0b6623', color: 'white', borderColor: '#0b6623' }}>
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">All-Natural</span>
             </div>
@@ -40,7 +40,7 @@ export default function Hero() {
               <i className="fas fa-user-plus mr-2"></i>
               <span className="text-sm font-medium">Formulated For Zebras</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
               <i className="fas fa-dna mr-2"></i>
               <span className="text-sm font-medium">Targeted Support</span>
             </div>
@@ -52,11 +52,11 @@ export default function Hero() {
               <i className="fas fa-ban mr-2"></i>
               <span className="text-sm font-medium">No Junk. Ever.</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-forest/30 text-forest rounded-full border border-forest/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#0b6623', color: 'white', borderColor: '#0b6623' }}>
               <i className="fas fa-brain mr-2"></i>
               <span className="text-sm font-medium">Smart Science</span>
             </div>
-            <div className="flex items-center px-3 py-1 bg-sage-dark/30 text-sage-dark rounded-full border border-sage-dark/30">
+            <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#74c365', color: '#0b6623', borderColor: '#74c365' }}>
               <i className="fas fa-leaf mr-2"></i>
               <span className="text-sm font-medium">Only What Helps</span>
             </div>
