@@ -1,4 +1,5 @@
 import ZebraPattern from './ZebraPattern';
+import zebraHeadImg from '../assets/zebra-head.png';
 
 export default function ZebraLogo() {
   return (
@@ -7,7 +8,13 @@ export default function ZebraLogo() {
         <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-earth-cream relative overflow-hidden">
             <ZebraPattern />
-            <i className="fas fa-leaf absolute inset-0 flex items-center justify-center opacity-70 text-3xl" style={{ color: '#357c3b' }}></i>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img 
+                src={zebraHeadImg} 
+                alt="Zebra head with heart" 
+                className="h-12 w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
