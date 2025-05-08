@@ -12,7 +12,7 @@ export default function ZebraLogo() {
               <img 
                 src={zebraHeadImg} 
                 alt="Zebra head with heart" 
-                className="h-[5.4rem] w-auto object-contain" /* Increased by additional 20% (4.5rem × 1.2 = 5.4rem) */
+                className="h-[6.5rem] w-auto object-contain" /* Increased to ensure proper size */
               />
             </div>
           </div>
