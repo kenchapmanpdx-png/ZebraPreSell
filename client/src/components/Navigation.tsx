@@ -30,30 +30,21 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#" className="flex items-center">
           <ZebraLogo />
-          <div className="flex flex-col ml-2">
-            <span className="text-4xl font-roboto font-bold">
-              <span className="text-[hsl(var(--capstone-slate))]">Zebra</span>
-              <span className="text-[hsl(var(--capstone-blue))]">Well</span>
-            </span>
-            <span className="text-sm text-[hsl(var(--capstone-gray-dark))] font-roboto tracking-wider uppercase ml-1 -mt-1">
-              Supplements
-            </span>
-          </div>
         </a>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="nav-link py-2">Home</a>
-          <a href="#products" className="nav-link py-2">Products</a>
-          <a href="#story" className="nav-link py-2">Our Story</a>
-          <a href="#why" className="nav-link py-2">Why ZebraWell</a>
-          <a href="#comparison" className="nav-link py-2">Research</a>
-          <a href="#contact" className="btn btn-primary text-sm py-2 px-4">Contact Us</a>
+        <div className="hidden md:flex items-center space-x-6">
+          <a href="#home" className="nav-link py-2">HOME</a>
+          <a href="#products" className="nav-link py-2">PRODUCTS</a>
+          <a href="#story" className="nav-link py-2">OUR STORY</a>
+          <a href="#why" className="nav-link py-2">WHY ZEBRAWELL</a>
+          <a href="#comparison" className="nav-link py-2">RESEARCH</a>
+          <a href="#contact" className="btn btn-primary text-xs uppercase tracking-wider font-medium py-2 px-4">Contact Us</a>
         </div>
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-[hsl(var(--capstone-slate))] focus:outline-none"
+          className="md:hidden text-[hsl(var(--inw-text))] focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -64,14 +55,14 @@ export default function Navigation() {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`md:hidden bg-white border-t border-[hsl(var(--capstone-gray))] pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`md:hidden bg-white border-t border-[hsl(var(--inw-gray))] pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="py-3 space-y-3">
-          <a href="#home" onClick={handleLinkClick} className="nav-link block py-2">Home</a>
-          <a href="#products" onClick={handleLinkClick} className="nav-link block py-2">Products</a>
-          <a href="#story" onClick={handleLinkClick} className="nav-link block py-2">Our Story</a>
-          <a href="#why" onClick={handleLinkClick} className="nav-link block py-2">Why ZebraWell</a>
-          <a href="#comparison" onClick={handleLinkClick} className="nav-link block py-2">Research</a>
-          <a href="#contact" onClick={handleLinkClick} className="btn btn-primary block text-center mt-4">Contact Us</a>
+          <a href="#home" onClick={handleLinkClick} className="nav-link block py-2">HOME</a>
+          <a href="#products" onClick={handleLinkClick} className="nav-link block py-2">PRODUCTS</a>
+          <a href="#story" onClick={handleLinkClick} className="nav-link block py-2">OUR STORY</a>
+          <a href="#why" onClick={handleLinkClick} className="nav-link block py-2">WHY ZEBRAWELL</a>
+          <a href="#comparison" onClick={handleLinkClick} className="nav-link block py-2">RESEARCH</a>
+          <a href="#contact" onClick={handleLinkClick} className="btn btn-primary block text-center mt-4 text-xs uppercase tracking-wider">Contact Us</a>
         </div>
       </div>
     </nav>

@@ -24,27 +24,27 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-[hsl(var(--capstone-gray))]">
+    <section id="products" className="py-20 bg-[hsl(var(--inw-gray-light))]">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--capstone-slate))] mb-4">Targeted Supplements</h2>
-          <div className="w-24 h-1 bg-[hsl(var(--capstone-blue))] mx-auto mb-6"></div>
-          <p className="text-[hsl(var(--capstone-gray-dark))] max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
+          <div className="w-24 h-1 inw-gradient mx-auto mb-6"></div>
+          <p className="text-[hsl(var(--inw-gray-dark))] max-w-3xl mx-auto">
             Our specialized boosters address specific symptoms and needs, formulated specifically for the unique challenges of rare conditions.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* POTS Booster */}
-          <div className="product-card">
+          <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-blue))] opacity-90"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-teal))] opacity-90"></div>
               <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Energy Support</span>
-                <h3 className="text-2xl font-bold mb-1">POTS Booster</h3>
+                <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Energy Support</span>
+                <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">POTS Booster</h3>
                 <p className="text-white/80 mb-3">Support for autonomic dysfunction</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">3-4 capsules/day</span>
+                <div className="flex items-center text-xs">
+                  <span className="bg-white/30 px-2 py-1 rounded-sm">3-4 capsules/day</span>
                 </div>
               </div>
             </div>
@@ -53,35 +53,35 @@ export default function Boosters() {
               <ul className="space-y-4 mb-6">
                 {potsBooster.slice(0, 4).map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-blue))] mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-1 h-8 bg-[hsl(var(--inw-teal))] mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
+                        <span className="font-semibold text-[hsl(var(--inw-text))]">{item.name}</span>
+                        <span className="text-xs bg-[hsl(var(--inw-gray-light))] px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))]">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
                     </div>
                   </li>
                 ))}
               </ul>
               
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$42.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
+              <div className="flex justify-between items-center border-t border-[hsl(var(--inw-gray))] pt-4">
+                <span className="text-[hsl(var(--inw-teal))] font-bold">$42.99</span>
+                <button className="btn btn-primary text-xs uppercase tracking-wider py-2 px-4">View Details</button>
               </div>
             </div>
           </div>
           
           {/* EDS Booster */}
-          <div className="product-card">
+          <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-highlight))] opacity-90"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-green))] opacity-90"></div>
               <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Connective Tissue</span>
-                <h3 className="text-2xl font-bold mb-1">hEDS Booster</h3>
+                <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Connective Tissue</span>
+                <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">hEDS Booster</h3>
                 <p className="text-white/80 mb-3">Support for connective tissue health</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">1-3 capsules/day</span>
+                <div className="flex items-center text-xs">
+                  <span className="bg-white/30 px-2 py-1 rounded-sm">1-3 capsules/day</span>
                 </div>
               </div>
             </div>
@@ -90,35 +90,35 @@ export default function Boosters() {
               <ul className="space-y-4 mb-6">
                 {edsBooster.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-highlight))] mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-1 h-8 bg-[hsl(var(--inw-green))] mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
+                        <span className="font-semibold text-[hsl(var(--inw-text))]">{item.name}</span>
+                        <span className="text-xs bg-[hsl(var(--inw-gray-light))] px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))]">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
                     </div>
                   </li>
                 ))}
               </ul>
               
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$38.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
+              <div className="flex justify-between items-center border-t border-[hsl(var(--inw-gray))] pt-4">
+                <span className="text-[hsl(var(--inw-green))] font-bold">$38.99</span>
+                <button className="btn btn-accent text-xs uppercase tracking-wider py-2 px-4">View Details</button>
               </div>
             </div>
           </div>
           
           {/* MCAS Booster */}
-          <div className="product-card">
+          <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-navy))] opacity-90"></div>
+              <div className="absolute inset-0 inw-gradient opacity-80"></div>
               <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Histamine Control</span>
-                <h3 className="text-2xl font-bold mb-1">MCAS Booster</h3>
+                <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Histamine Control</span>
+                <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">MCAS Booster</h3>
                 <p className="text-white/80 mb-3">Support for mast cell stabilization</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">1-2 capsules/day</span>
+                <div className="flex items-center text-xs">
+                  <span className="bg-white/30 px-2 py-1 rounded-sm">1-2 capsules/day</span>
                 </div>
               </div>
             </div>
@@ -127,28 +127,28 @@ export default function Boosters() {
               <ul className="space-y-4 mb-6">
                 {mcasBooster.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-navy))] mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-1 h-8 inw-gradient mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
+                        <span className="font-semibold text-[hsl(var(--inw-text))]">{item.name}</span>
+                        <span className="text-xs bg-[hsl(var(--inw-gray-light))] px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))]">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
                     </div>
                   </li>
                 ))}
               </ul>
               
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$34.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
+              <div className="flex justify-between items-center border-t border-[hsl(var(--inw-gray))] pt-4">
+                <span className="text-[hsl(var(--inw-teal))] font-bold">$34.99</span>
+                <button className="btn btn-primary text-xs uppercase tracking-wider py-2 px-4">View Details</button>
               </div>
             </div>
           </div>
         </div>
         
         <div className="mt-16 text-center">
-          <a href="#contact" className="btn btn-accent">Request Free Samples</a>
+          <a href="#contact" className="btn btn-accent text-sm uppercase tracking-wider py-2 px-6">Request Free Samples</a>
         </div>
       </div>
     </section>
