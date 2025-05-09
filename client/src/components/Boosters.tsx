@@ -52,7 +52,7 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {potsBooster.slice(0, 4).map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsla(var(--inw-teal),0.25)] rounded-sm p-3 shadow-sm">
+                  <li key={index} className="flex items-start bg-[hsla(var(--inw-teal),0.45)] rounded-sm p-3 shadow-sm">
                     <div className="w-1 h-8 bg-[hsl(var(--inw-teal))] mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {edsBooster.map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsla(var(--inw-green),0.25)] rounded-sm p-3 shadow-sm">
+                  <li key={index} className="flex items-start bg-[hsla(var(--inw-green),0.45)] rounded-sm p-3 shadow-sm">
                     <div className="w-1 h-8 bg-[hsl(var(--inw-green))] mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
@@ -126,7 +126,7 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {mcasBooster.map((item, index) => (
-                  <li key={index} className="flex items-start bg-gradient-to-r from-[hsla(var(--inw-teal),0.25)] to-[hsla(var(--inw-green),0.25)] rounded-sm p-3 shadow-sm">
+                  <li key={index} className="flex items-start bg-gradient-to-r from-[hsla(var(--inw-teal),0.45)] to-[hsla(var(--inw-green),0.45)] rounded-sm p-3 shadow-sm">
                     <div className="w-1 h-8 inw-gradient mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">

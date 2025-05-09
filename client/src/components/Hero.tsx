@@ -7,16 +7,10 @@ export default function Hero() {
       
       {/* Full-width Tagline */}
       <div className="w-full relative z-10 mb-8">
-        <div className="container">
-          <h1 className="text-2xl md:text-4xl text-white font-medium text-center">
-            <span className="text-white/90 block mb-2">Wellness For Zebras</span>
-          </h1>
-        </div>
-        
-        <div className="w-full bg-[hsla(var(--inw-teal),0.15)] py-4 mt-4">
+        <div className="w-full bg-[hsla(var(--inw-teal),0.15)] py-6 mt-4">
           <div className="container text-center">
             <span className="text-3xl md:text-5xl font-bold">
-              Targeted Supplemental Support for EDS, POTS, MCAS, and Dysautonomia
+              Supplement Support for POTS, EDS & Dysautonomia
             </span>
           </div>
         </div>
