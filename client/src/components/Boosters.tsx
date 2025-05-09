@@ -38,7 +38,7 @@ export default function Boosters() {
           {/* POTS Booster */}
           <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--inw-teal))] opacity-90"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-teal))]"></div>
               <div className="relative p-6 text-white z-10">
                 <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Energy Support</span>
                 <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">POTS Booster</h3>
@@ -75,7 +75,7 @@ export default function Boosters() {
           {/* EDS Booster */}
           <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--inw-green))] opacity-90"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-green))]"></div>
               <div className="relative p-6 text-white z-10">
                 <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Connective Tissue</span>
                 <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">hEDS Booster</h3>
@@ -112,7 +112,7 @@ export default function Boosters() {
           {/* MCAS Booster */}
           <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
-              <div className="absolute inset-0 inw-gradient opacity-80"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-green))]"></div>
               <div className="relative p-6 text-white z-10">
                 <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Histamine Control</span>
                 <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">MCAS Booster</h3>
