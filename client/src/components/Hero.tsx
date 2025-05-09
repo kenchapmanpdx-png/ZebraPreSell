@@ -11,8 +11,8 @@ export default function Hero() {
             <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight uppercase tracking-wide">
               Wellness for the <span className="text-white">Rare</span> and <span className="text-white">Resilient</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 font-light">
-              Targeted Supplemental Support for EDS, POTS, and MCAS
+            <p className="text-lg md:text-xl text-white/90 mb-8">
+              Targeted Supplemental Support for EDS, POTS, MCAS, and Dysautonomia
             </p>
             
             <div className="flex flex-wrap gap-2 mb-8">

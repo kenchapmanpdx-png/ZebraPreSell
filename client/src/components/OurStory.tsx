@@ -26,7 +26,7 @@ export default function OurStory() {
               in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
             </p>
             
-            <p className="font-bold text-terra text-center text-[1.25em] font-lora">
+            <p className="font-bold text-[hsl(var(--inw-teal))] text-center text-[1.25em] font-heading">
               She is our Why!
             </p>
             
