@@ -1,11 +1,11 @@
-import zebraLogoSvg from '../assets/zebra-logo.svg';
+import zebraHeadPng from '../assets/zebra-head.png';
 
 export default function ZebraLogo() {
   return (
     <div className="flex items-center">
       <div className="h-24 w-24 mr-3 flex items-center justify-center">
         <img 
-          src={zebraLogoSvg} 
+          src={zebraHeadPng} 
           alt="Zebra head logo" 
           className="h-full w-full object-contain"
         />

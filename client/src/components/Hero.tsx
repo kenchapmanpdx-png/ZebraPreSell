@@ -4,19 +4,28 @@ export default function Hero() {
   return (
     <section id="home" className="pt-32 md:pt-40 pb-20 md:pb-20 relative overflow-hidden inw-gradient text-white">
       <div className="absolute inset-0 bg-[url('@assets/zebra-pattern.jpg')] opacity-10 z-0"></div>
+      
+      {/* Full-width Tagline */}
+      <div className="w-full relative z-10 mb-8">
+        <div className="container">
+          <h1 className="text-2xl md:text-4xl text-white font-medium text-center">
+            <span className="text-white/90 block mb-2">Wellness For Zebras</span>
+          </h1>
+        </div>
+        
+        <div className="w-full bg-[hsla(var(--inw-teal),0.15)] py-4 mt-4">
+          <div className="container text-center">
+            <span className="text-3xl md:text-5xl font-bold">
+              Targeted Supplemental Support for EDS, POTS, MCAS, and Dysautonomia
+            </span>
+          </div>
+        </div>
+      </div>
+      
       <div className="container relative z-10">
         {/* Header Content */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="text-left">
-            <div className="mb-10">
-              <h2 className="text-2xl md:text-4xl text-white mb-8 font-medium">
-                <span className="text-white/90 block mb-2">Wellness For Zebras</span>
-                <span className="text-3xl md:text-5xl block font-bold mt-2">
-                  Targeted Supplemental Support <br />for EDS, POTS, MCAS, and Dysautonomia
-                </span>
-              </h2>
-            </div>
-            
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">All-Natural</span>
               <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">Bioavailable</span>
@@ -32,7 +41,7 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative mt-20">
+          <div className="relative mt-8">
             <div className="p-6 bg-white rounded-sm shadow-xl text-[hsl(var(--inw-text))]">
               <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-4 uppercase tracking-wide">
                 Why "Zebra"?
