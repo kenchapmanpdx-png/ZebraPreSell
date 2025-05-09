@@ -130,7 +130,7 @@ export default function Boosters() {
                     <div className="w-1 h-8 inw-gradient mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))] bg-clip-text text-transparent">{item.name}</span>
+                        <span className="font-semibold text-[hsl(var(--inw-teal))]">{item.name}</span>
                         <span className="text-xs bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))] px-2 py-0.5 rounded-sm text-white font-medium">{item.dosage}</span>
                       </div>
                       <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
