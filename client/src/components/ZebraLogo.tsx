@@ -1,5 +1,5 @@
 import ZebraPattern from './ZebraPattern';
-import zebraHeadImg from '../assets/zebra-head.png';
+import zebraHeadSilhouette from '../assets/zebra-head-silhouette.svg';
 
 export default function ZebraLogo() {
   return (
@@ -10,9 +10,9 @@ export default function ZebraLogo() {
             <ZebraPattern />
             <div className="absolute inset-0 flex items-center justify-center">
               <img 
-                src={zebraHeadImg} 
-                alt="Zebra head with heart" 
-                className="h-[10rem] w-auto object-contain" 
+                src={zebraHeadSilhouette} 
+                alt="Zebra silhouette" 
+                className="h-14 w-auto object-contain z-10" 
               />
             </div>
           </div>
