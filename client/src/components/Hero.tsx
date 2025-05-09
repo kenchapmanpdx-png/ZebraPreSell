@@ -8,13 +8,13 @@ export default function Hero() {
         {/* Header Content */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="text-left">
-            <div className="flex flex-col space-y-1">
-              <p className="text-3xl md:text-5xl font-bold">
-                Wellness for the <span className="text-white">Rare</span> and <span className="text-white">Resilient</span>
-              </p>
-              <p className="text-lg md:text-xl text-white mb-8">
-                Targeted Supplemental Support for EDS, POTS, MCAS, and Dysautonomia
-              </p>
+            <div className="mb-10">
+              <h2 className="text-2xl md:text-4xl text-white mb-8 font-medium">
+                <span className="text-white/90 block mb-2">Wellness For Zebras</span>
+                <span className="text-3xl md:text-5xl block font-bold mt-2">
+                  Targeted Supplemental Support <br />for EDS, POTS, MCAS, and Dysautonomia
+                </span>
+              </h2>
             </div>
             
             <div className="flex flex-wrap gap-2 mb-8">
@@ -32,7 +32,7 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative mt-12">
+          <div className="relative mt-20">
             <div className="p-6 bg-white rounded-sm shadow-xl text-[hsl(var(--inw-text))]">
               <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-4 uppercase tracking-wide">
                 Why "Zebra"?
