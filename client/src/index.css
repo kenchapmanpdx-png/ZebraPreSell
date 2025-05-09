@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -27,20 +26,21 @@
   --ring: 221 83% 53%;
   --radius: 0.5rem;
 
-  /* Capstone-inspired colors */
-  --capstone-blue: 221 83% 53%;
-  --capstone-blue-light: 213 94% 68%;
-  --capstone-blue-dark: 220 85% 30%;
-  --capstone-slate: 215 30% 22%;
-  --capstone-slate-light: 214 20% 35%;
-  --capstone-navy: 215 45% 17%;
-  --capstone-gray: 220 14% 90%;
-  --capstone-gray-medium: 216 15% 57%;
-  --capstone-gray-dark: 215 18% 34%;
-  --capstone-white: 0 0% 100%;
-  --capstone-off-white: 204 20% 97%;
-  --capstone-highlight: 196 100% 38%;
-  --capstone-orange: 33 100% 50%;
+  /* INW/Capstone-inspired colors */
+  --inw-teal: 179 100% 24%;
+  --inw-teal-light: 179 60% 40%;
+  --inw-teal-dark: 179 100% 18%;
+  --inw-green: 85 64% 44%;
+  --inw-green-light: 85 64% 60%;
+  --inw-green-dark: 85 64% 30%;
+  --inw-gray-light: 0 0% 95%;
+  --inw-gray: 0 0% 90%;
+  --inw-gray-medium: 0 0% 70%;
+  --inw-gray-dark: 0 0% 30%;
+  --inw-text: 0 0% 25%;
+  --inw-white: 0 0% 100%;
+  --inw-off-white: 0 0% 98%;
+  --inw-accent: 179 100% 24%;
 }
 
 .dark {
@@ -72,7 +72,7 @@
   }
 
   body {
-    @apply font-roboto antialiased bg-white text-slate-900 scroll-smooth;
+    @apply font-sans antialiased bg-white text-[hsl(var(--inw-text))] scroll-smooth;
   }
 
   html {
@@ -80,7 +80,7 @@
   }
 
   h1, h2, h3 {
-    @apply font-roboto font-bold;
+    @apply font-heading font-bold;
   }
   
   h1 {
@@ -96,54 +96,59 @@
   }
   
   p {
-    @apply font-opensans text-base leading-relaxed;
+    @apply font-sans text-base leading-relaxed;
   }
 }
 
 @layer components {
-  /* Button styles inspired by Capstone website */
+  /* Button styles inspired by INW/Capstone website */
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200;
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-sm font-medium transition-all duration-200;
   }
   
   .btn-primary {
-    @apply bg-[hsl(var(--capstone-blue))] text-white hover:bg-[hsl(var(--capstone-blue-dark))];
+    @apply bg-[hsl(var(--inw-teal))] text-white hover:bg-[hsl(var(--inw-teal-dark))];
   }
   
   .btn-secondary {
-    @apply bg-white text-[hsl(var(--capstone-slate))] border border-[hsl(var(--capstone-gray-medium))] 
-           hover:bg-[hsl(var(--capstone-gray))] hover:border-[hsl(var(--capstone-slate))];
+    @apply bg-white text-[hsl(var(--inw-text))] border border-[hsl(var(--inw-gray-medium))] 
+           hover:bg-[hsl(var(--inw-gray))] hover:border-[hsl(var(--inw-teal))];
   }
   
   .btn-accent {
-    @apply bg-[hsl(var(--capstone-highlight))] text-white hover:bg-[hsl(var(--capstone-navy))];
+    @apply bg-[hsl(var(--inw-green))] text-white hover:bg-[hsl(var(--inw-green-dark))];
+  }
+  
+  .btn-outline {
+    @apply border border-[hsl(var(--inw-teal))] text-[hsl(var(--inw-teal))] bg-transparent
+           hover:bg-[hsl(var(--inw-teal))] hover:text-white;
   }
   
   /* Card styles */
   .card-modern {
-    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
   }
   
   /* Section styles */
-  .section-blue {
-    @apply bg-[hsl(var(--capstone-blue-light)/0.1)];
+  .section-teal {
+    @apply bg-[hsl(var(--inw-teal))];
+  }
+  
+  .section-green {
+    @apply bg-[hsl(var(--inw-green))];
   }
   
   .section-white {
-    @apply bg-[hsl(var(--capstone-white))];
-  }
-  
-  .section-navy {
-    @apply bg-[hsl(var(--capstone-navy))] text-white;
+    @apply bg-[hsl(var(--inw-white))];
   }
   
   .section-gray {
-    @apply bg-[hsl(var(--capstone-gray))];
+    @apply bg-[hsl(var(--inw-gray-light))];
   }
   
   /* Product styles */
   .product-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+    @apply bg-white rounded-sm shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
   }
   
   .product-image {
@@ -155,15 +160,15 @@
   }
   
   .product-title {
-    @apply text-xl font-bold text-[hsl(var(--capstone-slate))] mb-2;
+    @apply text-xl font-bold text-[hsl(var(--inw-text))] mb-2;
   }
   
   .product-description {
-    @apply text-[hsl(var(--capstone-gray-dark))] mb-4;
+    @apply text-[hsl(var(--inw-gray-dark))] mb-4;
   }
   
   .product-price {
-    @apply text-lg font-bold text-[hsl(var(--capstone-blue))];
+    @apply text-lg font-bold text-[hsl(var(--inw-teal))];
   }
   
   /* Header/Navigation styles */
@@ -172,17 +177,17 @@
   }
   
   .nav-link {
-    @apply text-[hsl(var(--capstone-slate))] hover:text-[hsl(var(--capstone-blue))] 
-           font-medium transition-colors duration-200;
+    @apply text-[hsl(var(--inw-text))] hover:text-[hsl(var(--inw-teal))] uppercase tracking-wide
+           font-medium transition-colors duration-200 text-sm;
   }
   
   .nav-link-active {
-    @apply text-[hsl(var(--capstone-blue))] border-b-2 border-[hsl(var(--capstone-blue))];
+    @apply text-[hsl(var(--inw-teal))] font-bold;
   }
   
   /* Utility patterns */
-  .capstone-gradient {
-    @apply bg-gradient-to-br from-[hsl(var(--capstone-blue))] to-[hsl(var(--capstone-blue-dark))];
+  .inw-gradient {
+    @apply bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))];
   }
   
   .capstone-grid {
@@ -195,7 +200,7 @@
   
   .zebra-bg {
     position: relative;
-    @apply bg-[hsl(var(--capstone-off-white))];
+    @apply bg-[hsl(var(--inw-off-white))];
   }
 
   .zebra-bg::before {
