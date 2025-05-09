@@ -20,7 +20,7 @@ export default function ZebraLogo() {
       </div>
       <div className="text-[hsl(var(--inw-teal))] font-heading">
         <div className="text-xl font-bold tracking-wide">ZebraWell</div>
-        <div className="text-xs uppercase tracking-wider">Wellness for the Rare and Resilient</div>
+        <div className="text-xs">Wellness for the Rare and Resilient</div>
       </div>
     </div>
   );

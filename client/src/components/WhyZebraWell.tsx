@@ -43,9 +43,9 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="py-12 md:py-16 leaf-pattern">
+    <section id="why" className="py-12 md:py-16 bg-[hsl(var(--inw-gray-light))]">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-8 fade-in">Why Choose ZebraWell</h2>
+        <h2 className="text-3xl md:text-4xl font-heading text-[hsl(var(--inw-teal))] text-center mb-8 fade-in">Why Choose ZebraWell</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {features.map((feature, index) => {
@@ -69,12 +69,12 @@ export default function WhyZebraWell() {
             return (
               <div key={index} className={`${bgColorClass} p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/10" : "hover:bg-white"} border border-current/10`}>
                 <div className="flex items-center mb-2">
-                  <div className="w-10 h-10 mr-2 rounded-full flex items-center justify-center" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
-                    (index % 5 === 1) ? '#396132' : 
-                    (index % 5 === 2) ? '#435435' : 
-                    (index % 5 === 3) ? 'rgba(102, 107, 94, 0.5)' : 
-                    'rgba(91, 98, 80, 0.3)' }}>
-                    <i className={`fas fa-${feature.icon} text-lg ${index % 5 === 1 ? 'text-forest' : 'text-white'}`}></i>
+                  <div className="w-10 h-10 mr-2 rounded-full flex items-center justify-center" style={{ backgroundColor: (index % 5 === 0) ? 'hsla(179, 100%, 24%, 0.8)' : 
+                    (index % 5 === 1) ? 'hsla(179, 60%, 40%, 0.8)' : 
+                    (index % 5 === 2) ? 'hsla(85, 64%, 44%, 0.8)' : 
+                    (index % 5 === 3) ? 'hsla(85, 64%, 60%, 0.8)' : 
+                    'hsla(179, 100%, 24%, 0.6)' }}>
+                    <i className={`fas fa-${feature.icon} text-lg text-white`}></i>
                   </div>
                   <h3 className={`text-lg font-lora ${textColorClass}`}>{feature.title}</h3>
                 </div>
