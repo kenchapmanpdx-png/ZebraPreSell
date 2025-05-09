@@ -52,14 +52,14 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {potsBooster.slice(0, 4).map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsla(var(--inw-teal),0.45)] rounded-sm p-3 shadow-sm">
-                    <div className="w-1 h-8 bg-[hsl(var(--inw-teal))] mt-0 mr-3 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-3 shadow-sm">
+                    <div className="w-1 h-8 bg-white mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--inw-teal))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--inw-teal))] px-2 py-0.5 rounded-sm text-white font-medium">{item.dosage}</span>
+                        <span className="font-semibold text-white">{item.name}</span>
+                        <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-white text-opacity-90">{item.description}</p>
                     </div>
                   </li>
                 ))}
@@ -89,14 +89,14 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {edsBooster.map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsla(var(--inw-green),0.45)] rounded-sm p-3 shadow-sm">
-                    <div className="w-1 h-8 bg-[hsl(var(--inw-green))] mt-0 mr-3 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-3 shadow-sm">
+                    <div className="w-1 h-8 bg-white mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--inw-green))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--inw-green))] px-2 py-0.5 rounded-sm text-white font-medium">{item.dosage}</span>
+                        <span className="font-semibold text-white">{item.name}</span>
+                        <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-white text-opacity-90">{item.description}</p>
                     </div>
                   </li>
                 ))}
@@ -126,14 +126,14 @@ export default function Boosters() {
             <div className="product-content">
               <ul className="space-y-4 mb-6">
                 {mcasBooster.map((item, index) => (
-                  <li key={index} className="flex items-start bg-gradient-to-r from-[hsla(var(--inw-teal),0.45)] to-[hsla(var(--inw-green),0.45)] rounded-sm p-3 shadow-sm">
-                    <div className="w-1 h-8 inw-gradient mt-0 mr-3 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-3 shadow-sm">
+                    <div className="w-1 h-8 bg-white mt-0 mr-3 flex-shrink-0"></div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--inw-teal))]">{item.name}</span>
-                        <span className="text-xs bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))] px-2 py-0.5 rounded-sm text-white font-medium">{item.dosage}</span>
+                        <span className="font-semibold text-white">{item.name}</span>
+                        <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
                       </div>
-                      <p className="text-sm text-[hsl(var(--inw-gray-dark))]">{item.description}</p>
+                      <p className="text-sm text-white text-opacity-90">{item.description}</p>
                     </div>
                   </li>
                 ))}
