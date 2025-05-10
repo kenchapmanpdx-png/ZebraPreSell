@@ -37,8 +37,8 @@ export default function Boosters() {
         <ZebraBackground />
       </div>
       <div className="container relative z-10">
-        <div className="mb-16">
-          <div className="bg-[#f5f2e8] py-8 px-6 w-full text-center mb-8 animate-fade-in">
+        <div className="mb-16 -mx-6 sm:-mx-8 md:-mx-16 lg:-mx-24">
+          <div className="bg-[#f5f2e8] py-8 px-6 text-center mb-8 animate-fade-in w-full">
             <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
             <div className="w-24 h-1 inw-gradient mx-auto mb-6 animate-pulse-subtle"></div>
             <p className="text-[hsl(var(--inw-gray-dark))] max-w-3xl mx-auto">
@@ -121,10 +121,10 @@ export default function Boosters() {
           </div>
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="bg-[#f5f2e8] p-6 rounded-lg inline-block max-w-2xl animate-fade-in">
+        <div className="mt-16 -mx-6 sm:-mx-8 md:-mx-16 lg:-mx-24">
+          <div className="bg-[#f5f2e8] py-8 px-6 text-center w-full animate-fade-in">
             <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-3">Complete System Package</h3>
-            <p className="text-[hsl(var(--inw-text))] mb-4">
+            <p className="text-[hsl(var(--inw-text))] mb-4 max-w-2xl mx-auto">
               Get the complete day & night system for optimal 24-hour support for your EDS, POTS & related conditions.
             </p>
             <div className="text-2xl font-bold text-[hsl(var(--inw-teal))] mb-4">$109.99 <span className="text-sm text-[hsl(var(--inw-gray-dark))] font-normal">(Save $10)</span></div>
