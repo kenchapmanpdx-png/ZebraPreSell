@@ -9,9 +9,9 @@ export default function Hero() {
       <div className="relative z-1">
         {/* Header Content */}
         <div className="max-w-3xl mx-auto text-center px-6">
-          <h1 className="text-3xl md:text-5xl font-lora font-bold mb-6 leading-tight fade-in" style={{ color: '#357c3b' }}>
-            Wellness for the Rare and Resilient<br/>
-            <span className="text-[1.044rem] md:text-[2.079rem] text-terra font-medium block pt-2 pb-2 mt-1 mb-1 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
+          <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
+            <span className="text-[1.566rem] md:text-[3.1185rem] text-terra font-medium block pb-2 mb-2 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
+            <span className="text-[1.08rem] md:text-[1.8rem] block leading-tight text-forest">Wellness for the Rare and Resilient</span>
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
             <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#357c3b', color: 'white', borderColor: '#357c3b' }}>
@@ -70,16 +70,9 @@ export default function Hero() {
       </div>
 
       <div className="relative w-full py-8 mt-8 mb-5 z-10 inw-gradient overflow-hidden">
-        {/* Tagline in semi-transparent band */}
-        <div className="inw-gradient-tagline py-3 mb-4 relative z-10">
-          <div className="container mx-auto px-6">
-            <p className="text-white text-center font-lora text-lg italic">Wellness for the Rare and Resilient</p>
-          </div>
-        </div>
-        
         {/* Content */}
         <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-white font-medium text-center">Why "Zebra"?</h3>
+          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
           
           <p className="text-lg md:text-xl italic text-center text-white">
             The Zebra is the mascot for rare conditions and diseases.<br/>
