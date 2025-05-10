@@ -122,7 +122,7 @@ export default function Boosters() {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="bg-[hsl(var(--inw-teal-light))] p-6 rounded-lg inline-block max-w-2xl animate-fade-in animate-pulse-subtle">
+          <div className="bg-[#f5f2e8] p-6 rounded-lg inline-block max-w-2xl animate-fade-in">
             <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-3">Complete System Package</h3>
             <p className="text-[hsl(var(--inw-text))] mb-4">
               Get the complete day & night system for optimal 24-hour support for your EDS, POTS & related conditions.
