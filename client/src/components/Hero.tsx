@@ -21,22 +21,22 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="text-left">
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">All-Natural</span>
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">Bioavailable</span>
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">System-based</span>
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">Allergen-Free</span>
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">Total Transparency</span>
-              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-sm border border-white/20">Targeted Support</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">All-Natural</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">Bioavailable</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">System-based</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">Allergen-Free</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">Total Transparency</span>
+              <span className="inline-flex items-center px-3 py-1 bg-white/10 text-white text-xs uppercase tracking-wider rounded-lg border border-white/20">Targeted Support</span>
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <a href="#products" className="btn btn-accent text-sm uppercase tracking-wider font-medium">View Our Products</a>
-              <a href="#why" className="btn bg-white/60 hover:bg-white/80 text-[hsl(var(--inw-teal))] font-semibold text-sm uppercase tracking-wider">Learn More</a>
+              <a href="#products" className="btn bg-[#f5f2e8] hover:bg-[#eae5d5] text-[hsl(var(--inw-teal))] text-sm uppercase tracking-wider font-medium rounded-lg">View Our Products</a>
+              <a href="#why" className="btn bg-white/60 hover:bg-white/80 text-[hsl(var(--inw-teal))] font-semibold text-sm uppercase tracking-wider rounded-lg">Learn More</a>
             </div>
           </div>
           
           <div className="relative mt-8">
-            <div className="p-6 bg-white rounded-sm shadow-xl text-[hsl(var(--inw-text))]">
+            <div className="p-6 bg-white rounded-xl shadow-xl text-[hsl(var(--inw-text))]">
               <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-4 uppercase tracking-wide">
                 Why "Zebra"?
               </h3>
@@ -49,7 +49,7 @@ export default function Hero() {
                 We honor the Zebra. Because rare shouldn't mean invisible.
               </div>
               
-              <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-[hsl(var(--inw-teal))] rounded-sm flex items-center justify-center shadow-lg">
+              <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-[hsl(var(--inw-teal))] rounded-lg flex items-center justify-center shadow-lg">
                 <div className="text-white text-2xl font-bold">Z</div>
               </div>
             </div>

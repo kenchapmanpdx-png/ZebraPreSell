@@ -49,15 +49,15 @@ export default function Boosters() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* AM Formula */}
-          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-right">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-right rounded-xl">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--inw-teal))]"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-teal))] rounded-t-xl"></div>
               <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Daytime Support</span>
+                <span className="inline-block px-3 py-1 bg-white/20 rounded-lg text-xs uppercase tracking-wider font-medium mb-2">Daytime Support</span>
                 <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">AvaCore AM Formula</h3>
                 <p className="text-white/80 mb-3">Comprehensive daytime support for EDS, POTS & related conditions</p>
                 <div className="flex items-center text-xs">
-                  <span className="bg-white/30 px-2 py-1 rounded-sm">4-6 capsules each morning</span>
+                  <span className="bg-white/30 px-2 py-1 rounded-lg">4-6 capsules each morning</span>
                 </div>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function Boosters() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {amFormula.map((item, index) => (
                   <div key={index} 
-                    className="bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
+                    className="bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-lg p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
                     style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s', animationFillMode: 'both', animationName: 'fadeIn' }}>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold text-white">{item.name}</span>
-                      <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
+                      <span className="text-xs bg-white px-2 py-0.5 rounded-lg text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
                     </div>
                     <p className="text-xs text-white text-opacity-90">{item.description}</p>
                   </div>
@@ -85,15 +85,15 @@ export default function Boosters() {
           </div>
           
           {/* PM Formula */}
-          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-left">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-left rounded-xl">
             <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--inw-green))]"></div>
+              <div className="absolute inset-0 bg-[hsl(var(--inw-green))] rounded-t-xl"></div>
               <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-sm text-xs uppercase tracking-wider font-medium mb-2">Evening Support</span>
+                <span className="inline-block px-3 py-1 bg-white/20 rounded-lg text-xs uppercase tracking-wider font-medium mb-2">Evening Support</span>
                 <h3 className="text-2xl font-bold mb-1 uppercase tracking-wide">AvaCore PM Formula</h3>
                 <p className="text-white/80 mb-3">Nighttime recovery and sleep support for EDS, POTS & related conditions</p>
                 <div className="flex items-center text-xs">
-                  <span className="bg-white/30 px-2 py-1 rounded-sm">3-4 capsules each evening</span>
+                  <span className="bg-white/30 px-2 py-1 rounded-lg">3-4 capsules each evening</span>
                 </div>
               </div>
             </div>
@@ -102,11 +102,11 @@ export default function Boosters() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {pmFormula.map((item, index) => (
                   <div key={index} 
-                    className="bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
+                    className="bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-lg p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
                     style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s', animationFillMode: 'both', animationName: 'fadeIn' }}>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold text-white">{item.name}</span>
-                      <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
+                      <span className="text-xs bg-white px-2 py-0.5 rounded-lg text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
                     </div>
                     <p className="text-xs text-white text-opacity-90">{item.description}</p>
                   </div>
