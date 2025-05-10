@@ -1,4 +1,5 @@
 import ZebraBackground from './ZebraBackground';
+import ZebraPatternOverlay from './ZebraPatternOverlay';
 
 export default function Hero() {
   // Animation removed as requested
@@ -68,15 +69,22 @@ export default function Hero() {
         </div>
       </div>
 
-      <div style={{ position: 'relative', width: '100%', padding: '2rem 0', marginTop: '2rem', marginBottom: '1.25rem', zIndex: 5 }}>
-        {/* Solid Background */}
-        <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgb(252, 249, 242)', zIndex: -1, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}></div>
+      <div className="relative w-full py-8 mt-8 mb-5 z-10 inw-gradient overflow-hidden">
+        {/* Zebra Pattern Overlay */}
+        <ZebraPatternOverlay opacity={0.1} />
+        
+        {/* Tagline in semi-transparent band */}
+        <div className="inw-gradient-tagline py-3 mb-4 relative z-10">
+          <div className="container mx-auto px-6">
+            <p className="text-white text-center font-lora text-lg italic">Wellness for the Rare and Resilient</p>
+          </div>
+        </div>
         
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: '48rem', margin: '0 auto', padding: '0 1.5rem', backgroundColor: 'rgb(252, 249, 242)' }}>
-          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
+          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-white font-medium text-center">Why "Zebra"?</h3>
           
-          <p className="text-lg md:text-xl italic text-center text-forest">
+          <p className="text-lg md:text-xl italic text-center text-white">
             The Zebra is the mascot for rare conditions and diseases.<br/>
             The medical system teaches, "When you hear hoofbeats, think horses."<br/>
             But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.<br/>
