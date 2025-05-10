@@ -1,3 +1,5 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function Boosters() {
   const amFormula = [
     { name: "Magnesium Malate", description: "Supports muscle relaxation, energy production; reduces cramps and pain in EDS", dosage: "1,500 mg" },
@@ -30,8 +32,10 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-white relative">
-      <div className="absolute inset-0 bg-[url('@assets/zebra-pattern-green.png')] opacity-100 z-0" style={{ backgroundSize: '800px auto', backgroundRepeat: 'repeat' }}></div>
+    <section id="products" className="py-20 bg-white relative overflow-hidden">
+      <div className="absolute inset-0">
+        <ZebraBackground />
+      </div>
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
