@@ -38,11 +38,13 @@ export default function Boosters() {
       </div>
       <div className="container relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
-          <div className="w-24 h-1 inw-gradient mx-auto mb-6"></div>
-          <p className="text-[hsl(var(--inw-gray-dark))] max-w-3xl mx-auto">
-            Our comprehensive AM/PM system supports your day and night cycles, formulated specifically for the unique challenges of rare conditions.
-          </p>
+          <div className="bg-[#f5f2e8] py-8 px-6 rounded-lg inline-block max-w-3xl mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
+            <div className="w-24 h-1 inw-gradient mx-auto mb-6"></div>
+            <p className="text-[hsl(var(--inw-gray-dark))] max-w-3xl mx-auto">
+              Our comprehensive AM/PM system supports your day and night cycles, formulated specifically for the unique challenges of rare conditions.
+            </p>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
