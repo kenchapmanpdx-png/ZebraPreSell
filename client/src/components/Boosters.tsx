@@ -31,8 +31,7 @@ export default function Boosters() {
 
   return (
     <section id="products" className="py-20 bg-white relative">
-      <div className="absolute inset-0 bg-[url('@assets/zebra-pattern.svg')] opacity-30 z-0" style={{ backgroundSize: '400px 400px', transform: 'rotate(30deg)' }}></div>
-      <div className="absolute inset-0 bg-[url('@assets/zebra-pattern.svg')] opacity-30 z-0" style={{ backgroundSize: '300px 300px', transform: 'rotate(-15deg)' }}></div>
+      <div className="absolute inset-0 zebra-pattern opacity-20 z-0"></div>
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
