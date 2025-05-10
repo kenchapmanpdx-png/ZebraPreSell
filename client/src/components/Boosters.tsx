@@ -37,10 +37,10 @@ export default function Boosters() {
         <ZebraBackground />
       </div>
       <div className="container relative z-10">
-        <div className="text-center mb-16">
-          <div className="bg-[#f5f2e8] py-8 px-6 rounded-lg inline-block max-w-3xl mb-8">
+        <div className="mb-16">
+          <div className="bg-[#f5f2e8] py-8 px-6 w-full text-center mb-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
-            <div className="w-24 h-1 inw-gradient mx-auto mb-6"></div>
+            <div className="w-24 h-1 inw-gradient mx-auto mb-6 animate-pulse-subtle"></div>
             <p className="text-[hsl(var(--inw-gray-dark))] max-w-3xl mx-auto">
               Our comprehensive AM/PM system supports your day and night cycles, formulated specifically for the unique challenges of rare conditions.
             </p>
@@ -49,7 +49,7 @@ export default function Boosters() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* AM Formula */}
-          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-right">
             <div className="product-image relative">
               <div className="absolute inset-0 bg-[hsl(var(--inw-teal))]"></div>
               <div className="relative p-6 text-white z-10">
@@ -65,7 +65,9 @@ export default function Boosters() {
             <div className="product-content">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {amFormula.map((item, index) => (
-                  <div key={index} className="bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-2 shadow-sm">
+                  <div key={index} 
+                    className="bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
+                    style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s', animationFillMode: 'both', animationName: 'fadeIn' }}>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold text-white">{item.name}</span>
                       <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
@@ -83,7 +85,7 @@ export default function Boosters() {
           </div>
           
           {/* PM Formula */}
-          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg animate-slide-left">
             <div className="product-image relative">
               <div className="absolute inset-0 bg-[hsl(var(--inw-green))]"></div>
               <div className="relative p-6 text-white z-10">
@@ -99,7 +101,9 @@ export default function Boosters() {
             <div className="product-content">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {pmFormula.map((item, index) => (
-                  <div key={index} className="bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-2 shadow-sm">
+                  <div key={index} 
+                    className="bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-2 shadow-sm transform transition-all duration-300 hover:scale-105"
+                    style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s', animationFillMode: 'both', animationName: 'fadeIn' }}>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold text-white">{item.name}</span>
                       <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
@@ -118,13 +122,13 @@ export default function Boosters() {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="bg-[hsl(var(--inw-teal-light))] p-6 rounded-lg inline-block max-w-2xl">
+          <div className="bg-[hsl(var(--inw-teal-light))] p-6 rounded-lg inline-block max-w-2xl animate-fade-in animate-pulse-subtle">
             <h3 className="text-xl font-bold text-[hsl(var(--inw-teal))] mb-3">Complete System Package</h3>
             <p className="text-[hsl(var(--inw-text))] mb-4">
               Get the complete day & night system for optimal 24-hour support for your EDS, POTS & related conditions.
             </p>
             <div className="text-2xl font-bold text-[hsl(var(--inw-teal))] mb-4">$109.99 <span className="text-sm text-[hsl(var(--inw-gray-dark))] font-normal">(Save $10)</span></div>
-            <a href="#contact" className="btn btn-accent text-sm uppercase tracking-wider py-3 px-6">Request Free Samples</a>
+            <a href="#contact" className="btn btn-accent text-sm uppercase tracking-wider py-3 px-6 animate-float">Request Free Samples</a>
           </div>
         </div>
       </div>
