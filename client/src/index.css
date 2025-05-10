@@ -48,7 +48,7 @@
   --medical-blue-dark: 210 100% 30%;
   
   /* Gradient colors for Why Zebra section */
-  --inw-teal: 179 100% 24%;
+  --inw-forest: 125 40% 25%;
   --inw-green: 85 64% 44%;
 }
 
@@ -136,11 +136,11 @@
   
   .inw-gradient {
     position: relative;
-    background: linear-gradient(to left, hsl(var(--inw-teal)), hsl(var(--inw-green)));
+    background: linear-gradient(to left, hsl(var(--inw-forest)), hsl(var(--inw-green)));
   }
   
   .inw-gradient-tagline {
-    background-color: hsla(var(--inw-teal), 0.15);
+    background-color: hsla(var(--inw-forest), 0.15);
   }
   
   .fade-in {
