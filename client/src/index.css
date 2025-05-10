@@ -1,66 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.animate-slide-right {
-  animation: slideInRight 0.8s ease-out forwards;
-}
-
-.animate-slide-left {
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.animate-pulse-subtle {
-  animation: pulse 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 5s ease-in-out infinite;
-}
-
-.zebra-pattern {
-  background: repeating-linear-gradient(
-    45deg,
-    #ffffff,
-    #ffffff 10px,
-    #1b7340 10px,
-    #1b7340 20px
-  );
-}
 
 :root {
   --background: 0 0% 100%;
@@ -84,21 +27,20 @@
   --ring: 221 83% 53%;
   --radius: 0.5rem;
 
-  /* INW/Capstone-inspired colors */
-  --inw-teal: 179 100% 24%;
-  --inw-teal-light: 179 60% 40%;
-  --inw-teal-dark: 179 100% 18%;
-  --inw-green: 85 64% 44%;
-  --inw-green-light: 85 64% 60%;
-  --inw-green-dark: 85 64% 30%;
-  --inw-gray-light: 0 0% 95%;
-  --inw-gray: 0 0% 90%;
-  --inw-gray-medium: 0 0% 70%;
-  --inw-gray-dark: 0 0% 30%;
-  --inw-text: 0 0% 25%;
-  --inw-white: 0 0% 100%;
-  --inw-off-white: 0 0% 98%;
-  --inw-accent: 179 100% 24%;
+  /* Capstone-inspired colors */
+  --capstone-blue: 221 83% 53%;
+  --capstone-blue-light: 213 94% 68%;
+  --capstone-blue-dark: 220 85% 30%;
+  --capstone-slate: 215 30% 22%;
+  --capstone-slate-light: 214 20% 35%;
+  --capstone-navy: 215 45% 17%;
+  --capstone-gray: 220 14% 90%;
+  --capstone-gray-medium: 216 15% 57%;
+  --capstone-gray-dark: 215 18% 34%;
+  --capstone-white: 0 0% 100%;
+  --capstone-off-white: 204 20% 97%;
+  --capstone-highlight: 196 100% 38%;
+  --capstone-orange: 33 100% 50%;
 }
 
 .dark {
@@ -130,7 +72,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-white text-[hsl(var(--inw-text))] scroll-smooth;
+    @apply font-roboto antialiased bg-white text-slate-900 scroll-smooth;
   }
 
   html {
@@ -138,7 +80,7 @@
   }
 
   h1, h2, h3 {
-    @apply font-heading font-bold;
+    @apply font-roboto font-bold;
   }
   
   h1 {
@@ -154,59 +96,54 @@
   }
   
   p {
-    @apply font-sans text-base leading-relaxed;
+    @apply font-opensans text-base leading-relaxed;
   }
 }
 
 @layer components {
-  /* Button styles inspired by INW/Capstone website */
+  /* Button styles inspired by Capstone website */
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-sm font-medium transition-all duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200;
   }
   
   .btn-primary {
-    @apply bg-[hsl(var(--inw-teal))] text-white hover:bg-[hsl(var(--inw-teal-dark))];
+    @apply bg-[hsl(var(--capstone-blue))] text-white hover:bg-[hsl(var(--capstone-blue-dark))];
   }
   
   .btn-secondary {
-    @apply bg-white text-[hsl(var(--inw-text))] border border-[hsl(var(--inw-gray-medium))] 
-           hover:bg-[hsl(var(--inw-gray))] hover:border-[hsl(var(--inw-teal))];
+    @apply bg-white text-[hsl(var(--capstone-slate))] border border-[hsl(var(--capstone-gray-medium))] 
+           hover:bg-[hsl(var(--capstone-gray))] hover:border-[hsl(var(--capstone-slate))];
   }
   
   .btn-accent {
-    @apply bg-[hsl(var(--inw-green))] text-white hover:bg-[hsl(var(--inw-green-dark))];
-  }
-  
-  .btn-outline {
-    @apply border border-[hsl(var(--inw-teal))] text-[hsl(var(--inw-teal))] bg-transparent
-           hover:bg-[hsl(var(--inw-teal))] hover:text-white;
+    @apply bg-[hsl(var(--capstone-highlight))] text-white hover:bg-[hsl(var(--capstone-navy))];
   }
   
   /* Card styles */
   .card-modern {
-    @apply bg-white rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
   }
   
   /* Section styles */
-  .section-teal {
-    @apply bg-[hsl(var(--inw-teal))];
-  }
-  
-  .section-green {
-    @apply bg-[hsl(var(--inw-green))];
+  .section-blue {
+    @apply bg-[hsl(var(--capstone-blue-light)/0.1)];
   }
   
   .section-white {
-    @apply bg-[hsl(var(--inw-white))];
+    @apply bg-[hsl(var(--capstone-white))];
+  }
+  
+  .section-navy {
+    @apply bg-[hsl(var(--capstone-navy))] text-white;
   }
   
   .section-gray {
-    @apply bg-[hsl(var(--inw-gray-light))];
+    @apply bg-[hsl(var(--capstone-gray))];
   }
   
   /* Product styles */
   .product-card {
-    @apply bg-white rounded-sm shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
   }
   
   .product-image {
@@ -218,15 +155,15 @@
   }
   
   .product-title {
-    @apply text-xl font-bold text-[hsl(var(--inw-text))] mb-2;
+    @apply text-xl font-bold text-[hsl(var(--capstone-slate))] mb-2;
   }
   
   .product-description {
-    @apply text-[hsl(var(--inw-gray-dark))] mb-4;
+    @apply text-[hsl(var(--capstone-gray-dark))] mb-4;
   }
   
   .product-price {
-    @apply text-lg font-bold text-[hsl(var(--inw-teal))];
+    @apply text-lg font-bold text-[hsl(var(--capstone-blue))];
   }
   
   /* Header/Navigation styles */
@@ -235,17 +172,17 @@
   }
   
   .nav-link {
-    @apply text-[hsl(var(--inw-text))] hover:text-[hsl(var(--inw-teal))] uppercase tracking-wide
-           font-medium transition-colors duration-200 text-sm;
+    @apply text-[hsl(var(--capstone-slate))] hover:text-[hsl(var(--capstone-blue))] 
+           font-medium transition-colors duration-200;
   }
   
   .nav-link-active {
-    @apply text-[hsl(var(--inw-teal))] font-bold;
+    @apply text-[hsl(var(--capstone-blue))] border-b-2 border-[hsl(var(--capstone-blue))];
   }
   
   /* Utility patterns */
-  .inw-gradient {
-    @apply bg-gradient-to-r from-[hsl(var(--inw-teal))] to-[hsl(var(--inw-green))];
+  .capstone-gradient {
+    @apply bg-gradient-to-br from-[hsl(var(--capstone-blue))] to-[hsl(var(--capstone-blue-dark))];
   }
   
   .capstone-grid {
@@ -258,7 +195,7 @@
   
   .zebra-bg {
     position: relative;
-    @apply bg-[hsl(var(--inw-off-white))];
+    @apply bg-[hsl(var(--capstone-off-white))];
   }
 
   .zebra-bg::before {

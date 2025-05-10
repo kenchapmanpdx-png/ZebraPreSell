@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import WhyZebraWell from '@/components/WhyZebraWell';
-import Boosters from '@/components/Boosters';
+import ProductGrid from '@/components/ProductGrid';
 import Comparison from '@/components/Comparison';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -38,7 +38,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <Boosters />
+      <ProductGrid />
+      {/* AvaCore component removed as requested */}
       <OurStory />
       <WhyZebraWell />
       <Comparison />

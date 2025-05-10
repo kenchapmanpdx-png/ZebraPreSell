@@ -2,23 +2,23 @@ import ZebraLogo from './ZebraLogo';
 
 export default function Footer() {
   return (
-    <footer className="inw-gradient text-white py-12">
+    <footer className="bg-forest text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <ZebraLogo />
-              <span className="text-2xl font-bold"><span className="text-white">Zebra</span><span className="text-white font-normal">Well</span><span className="text-xs align-top bg-white/10 text-white px-1 py-0.5 rounded-sm ml-1">MD</span></span>
+              <span className="text-2xl font-bold"><span className="text-white">Zebra</span><span className="text-white font-normal">Well</span><span className="text-xs align-top bg-white/10 text-white px-1 py-0.5 rounded ml-1">MD</span></span>
             </div>
             <p className="text-white/70 mb-6">Advanced Supplementation for Complex Conditions</p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
                 <i className="fab fa-twitter"></i>
               </a>
             </div>
