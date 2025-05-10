@@ -136,7 +136,7 @@
   
   .inw-gradient {
     position: relative;
-    background: linear-gradient(to right, hsl(var(--inw-teal)), hsl(var(--inw-green)));
+    background: linear-gradient(to left, hsl(var(--inw-teal)), hsl(var(--inw-green)));
   }
   
   .inw-gradient-tagline {

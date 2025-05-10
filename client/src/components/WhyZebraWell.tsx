@@ -1,3 +1,5 @@
+import ZebraPatternOverlay from './ZebraPatternOverlay';
+
 export default function WhyZebraWell() {
   const features = [
     {
@@ -43,9 +45,19 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="py-12 md:py-16 leaf-pattern">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-8 fade-in">Why Choose ZebraWell</h2>
+    <section id="why" className="py-12 md:py-16 inw-gradient relative overflow-hidden">
+      {/* Zebra pattern overlay */}
+      <ZebraPatternOverlay opacity={0.1} />
+      
+      {/* Tagline section with semi-transparent background */}
+      <div className="inw-gradient-tagline py-3 mb-8 relative z-10">
+        <div className="container mx-auto px-6">
+          <p className="text-white text-center font-lora text-lg italic">Wellness for the Rare and Resilient</p>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {features.map((feature, index) => {
@@ -56,18 +68,18 @@ export default function WhyZebraWell() {
             // Special case for "No Junk. Ever." feature
             if (feature.title === "No Junk. Ever.") {
               // Forest green theme for background and text
-              bgColorClass = "bg-forest/20";
-              iconColorClass = "text-forest";
-              textColorClass = "text-forest";
+              bgColorClass = "bg-forest/80";
+              iconColorClass = "text-white";
+              textColorClass = "text-white";
             } else {
               // Default theme for all other features
-              bgColorClass = "bg-earth-cream";
+              bgColorClass = "bg-white/90";
               iconColorClass = "text-sage-dark";
               textColorClass = "text-forest";
             }
             
             return (
-              <div key={index} className={`${bgColorClass} p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/10" : "hover:bg-white"} border border-current/10`}>
+              <div key={index} className={`${bgColorClass} p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`}>
                 <div className="flex items-center mb-2">
                   <div className="w-10 h-10 mr-2 rounded-full flex items-center justify-center" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 
