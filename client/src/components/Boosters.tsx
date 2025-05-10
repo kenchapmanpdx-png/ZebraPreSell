@@ -30,8 +30,9 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-[hsl(var(--inw-gray-light))]">
-      <div className="container">
+    <section id="products" className="py-20 bg-white relative">
+      <div className="absolute inset-0 bg-[url('@assets/zebra-pattern.jpg')] opacity-25 z-0"></div>
+      <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--inw-text))] mb-4 uppercase tracking-wide">Targeted Formulations</h2>
           <div className="w-24 h-1 inw-gradient mx-auto mb-6"></div>
@@ -42,7 +43,7 @@ export default function Boosters() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* AM Formula */}
-          <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
               <div className="absolute inset-0 bg-[hsl(var(--inw-teal))]"></div>
               <div className="relative p-6 text-white z-10">
@@ -76,7 +77,7 @@ export default function Boosters() {
           </div>
           
           {/* PM Formula */}
-          <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+          <div className="product-card group overflow-hidden bg-white transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
               <div className="absolute inset-0 bg-[hsl(var(--inw-green))]"></div>
               <div className="relative p-6 text-white z-10">
