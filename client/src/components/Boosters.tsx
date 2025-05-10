@@ -1,3 +1,5 @@
+import ZebraBackground from './ZebraBackground';
+
 export default function Boosters() {
   const potsBooster = [
     { name: "L-Carnitine L-Tartrate", description: "Transports fatty acids into mitochondria for energy; supports fatigue", dosage: "1000 mg" },
@@ -24,131 +26,146 @@ export default function Boosters() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-[hsl(var(--capstone-gray))]">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--capstone-slate))] mb-4">Targeted Supplements</h2>
-          <div className="w-24 h-1 bg-[hsl(var(--capstone-blue))] mx-auto mb-6"></div>
-          <p className="text-[hsl(var(--capstone-gray-dark))] max-w-3xl mx-auto">
-            Our specialized boosters address specific symptoms and needs, formulated specifically for the unique challenges of rare conditions.
-          </p>
-        </div>
+    <section id="boosters" className="py-16 md:py-24 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-6 relative z-1">
+        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">Targeted Boosters</h2>
+        <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-neutral-dark/80 font-lora fade-in">
+          Our specialized boosters address specific symptoms and needs, designed to complement ZebraWell Core Formula with targeted support.
+        </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* POTS Booster */}
-          <div className="product-card">
-            <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-blue))] opacity-90"></div>
-              <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Energy Support</span>
-                <h3 className="text-2xl font-bold mb-1">POTS Booster</h3>
-                <p className="text-white/80 mb-3">Support for autonomic dysfunction</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">3-4 capsules/day</span>
+          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-sage fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl" style={{ borderColor: '#74c365' }}>
+            <div className="flex items-center mb-6">
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-sage/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-heartbeat text-sm text-sage"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[6px] text-sage">POTS Booster</div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-lora text-forest">POTS Booster</h3>
+                <div className="flex items-center">
+                  <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 3-4 capsules/day</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md text-xs font-medium" style={{ backgroundColor: 'rgba(116, 195, 101, 0.2)', color: '#2a7635' }}>Energy Support</span>
                 </div>
               </div>
             </div>
             
-            <div className="product-content">
-              <ul className="space-y-4 mb-6">
-                {potsBooster.slice(0, 4).map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-blue))] mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+            <ul className="mb-6 space-y-2">
+              {potsBooster.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <i className="fas fa-flask text-sage mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-sage-dark bg-sage-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
                     </div>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$42.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
-              </div>
-            </div>
+                    <p className="text-sm text-neutral-dark/70">{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <button className="w-full py-3 px-6 text-white font-medium rounded-lg transition-colors flex items-center justify-center hover:bg-opacity-90" style={{ backgroundColor: '#74c365' }}>
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
+            </button>
           </div>
           
           {/* EDS Booster */}
-          <div className="product-card">
-            <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-highlight))] opacity-90"></div>
-              <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Connective Tissue</span>
-                <h3 className="text-2xl font-bold mb-1">hEDS Booster</h3>
-                <p className="text-white/80 mb-3">Support for connective tissue health</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">1-3 capsules/day</span>
+          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div className="flex items-center mb-6">
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-terra/5 border border-terra/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-terra/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-terra/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-bone text-sm text-terra"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[6px] text-terra">hEDS Booster</div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-lora text-forest">hEDS Booster</h3>
+                <div className="flex items-center">
+                  <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 1-3 capsules/day</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-medium">Connective Tissue</span>
                 </div>
               </div>
             </div>
             
-            <div className="product-content">
-              <ul className="space-y-4 mb-6">
-                {edsBooster.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-highlight))] mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+            <ul className="mb-6 space-y-2">
+              {edsBooster.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <i className="fas fa-flask text-terra mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-terra-dark bg-terra-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
                     </div>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$38.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
-              </div>
-            </div>
+                    <p className="text-sm text-neutral-dark/70">{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <button className="w-full py-3 px-6 bg-terra hover:bg-terra/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
+            </button>
           </div>
           
           {/* MCAS Booster */}
-          <div className="product-card">
-            <div className="product-image relative">
-              <div className="absolute inset-0 bg-[hsl(var(--capstone-navy))] opacity-90"></div>
-              <div className="relative p-6 text-white z-10">
-                <span className="inline-block px-3 py-1 bg-white/20 rounded-md text-sm font-medium mb-2">Histamine Control</span>
-                <h3 className="text-2xl font-bold mb-1">MCAS Booster</h3>
-                <p className="text-white/80 mb-3">Support for mast cell stabilization</p>
-                <div className="flex items-center text-sm">
-                  <span className="bg-white/30 px-2 py-1 rounded">1-2 capsules/day</span>
+          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div className="flex items-center mb-6">
+              <div className="relative w-16 h-20 mr-4">
+                <div className="absolute inset-0 rounded-lg bg-forest/5 border border-forest/20"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-forest/20 to-forest/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
+                    <i className="fas fa-flask text-sm text-forest"></i>
+                  </div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[6px] text-sage">MCAS Booster</div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-lora text-forest">MCAS Booster</h3>
+                <div className="flex items-center">
+                  <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 1-2 capsules/day</span>
+                  <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Histamine Control</span>
                 </div>
               </div>
             </div>
             
-            <div className="product-content">
-              <ul className="space-y-4 mb-6">
-                {mcasBooster.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--capstone-navy))] mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[hsl(var(--capstone-slate))]">{item.name}</span>
-                        <span className="text-xs bg-[hsl(var(--capstone-gray))] px-2 py-0.5 rounded">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-[hsl(var(--capstone-gray-dark))]">{item.description}</p>
+            <ul className="mb-6 space-y-2">
+              {mcasBooster.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
+                  <div className="w-full">
+                    <div className="flex justify-between items-start">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{item.dosage}</span>
                     </div>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex justify-between items-center border-t border-[hsl(var(--capstone-gray))] pt-4">
-                <span className="text-[hsl(var(--capstone-slate))] font-bold">$34.99</span>
-                <button className="btn btn-primary text-sm py-2 px-4">View Details</button>
-              </div>
-            </div>
+                    <p className="text-sm text-neutral-dark/70">{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <i className="fas fa-info-circle mr-2"></i>
+              Product Details
+            </button>
           </div>
-        </div>
-        
-        <div className="mt-16 text-center">
-          <a href="#contact" className="btn btn-accent">Request Free Samples</a>
         </div>
       </div>
     </section>
