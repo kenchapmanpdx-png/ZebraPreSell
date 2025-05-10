@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,62 +7,67 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 16% 47%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
+  --popover-foreground: 20 14.3% 4.1%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222 47% 11%;
-  --accent: 205 100% 35%;
-  --accent-foreground: 210 40% 98%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 221 83% 53%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
 
-  /* Capstone-inspired colors */
-  --capstone-blue: 221 83% 53%;
-  --capstone-blue-light: 213 94% 68%;
-  --capstone-blue-dark: 220 85% 30%;
-  --capstone-slate: 215 30% 22%;
-  --capstone-slate-light: 214 20% 35%;
-  --capstone-navy: 215 45% 17%;
-  --capstone-gray: 220 14% 90%;
-  --capstone-gray-medium: 216 15% 57%;
-  --capstone-gray-dark: 215 18% 34%;
-  --capstone-white: 0 0% 100%;
-  --capstone-off-white: 204 20% 97%;
-  --capstone-highlight: 196 100% 38%;
-  --capstone-orange: 33 100% 50%;
+  /* ZebraWell earthy, clean, modern colors */
+  --sage: 120 15% 50%;
+  --sage-light: 120 25% 85%;
+  --sage-dark: 120 15% 30%;
+  --terra: 25 60% 50%;
+  --terra-light: 25 70% 85%;
+  --terra-dark: 25 50% 35%;
+  --cream: 40 30% 95%;
+  --sand: 35 25% 88%;
+  --clay: 20 35% 82%;
+  --forest: 125 40% 34%;
+  --forest-light: 128 47% 74%;
+  --neutral-lightest: 0 0% 100%;
+  --neutral-light: 35 10% 95%;
+  --neutral-medium: 35 5% 85%;
+  --neutral-dark: 35 10% 25%;
+  --medical-blue: 210 100% 40%;
+  --medical-blue-light: 210 100% 85%;
+  --medical-blue-dark: 210 100% 30%;
 }
 
 .dark {
-  --background: 215 45% 17%;
-  --foreground: 210 40% 98%;
-  --muted: 217 33% 25%;
-  --muted-foreground: 210 40% 80%;
-  --popover: 215 45% 17%;
-  --popover-foreground: 210 40% 98%;
-  --card: 215 45% 17%;
-  --card-foreground: 210 40% 98%;
-  --border: 217 33% 25%;
-  --input: 217 33% 25%;
-  --primary: 213 94% 68%;
-  --primary-foreground: 222 47% 11%;
-  --secondary: 217 33% 25%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 196 100% 38%;
-  --accent-foreground: 222 47% 11%;
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 213 94% 68%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
   --radius: 0.5rem;
 }
 
@@ -72,130 +77,43 @@
   }
 
   body {
-    @apply font-roboto antialiased bg-white text-slate-900 scroll-smooth;
+    @apply font-montserrat antialiased bg-white text-neutral-dark scroll-smooth;
   }
 
   html {
     scroll-behavior: smooth;
   }
-
-  h1, h2, h3 {
-    @apply font-roboto font-bold;
-  }
-  
-  h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
-  }
-  
-  h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
-  }
-  
-  h3 {
-    @apply text-xl md:text-2xl;
-  }
-  
-  p {
-    @apply font-opensans text-base leading-relaxed;
-  }
 }
 
 @layer components {
-  /* Button styles inspired by Capstone website */
-  .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200;
-  }
-  
-  .btn-primary {
-    @apply bg-[hsl(var(--capstone-blue))] text-white hover:bg-[hsl(var(--capstone-blue-dark))];
-  }
-  
-  .btn-secondary {
-    @apply bg-white text-[hsl(var(--capstone-slate))] border border-[hsl(var(--capstone-gray-medium))] 
-           hover:bg-[hsl(var(--capstone-gray))] hover:border-[hsl(var(--capstone-slate))];
-  }
-  
-  .btn-accent {
-    @apply bg-[hsl(var(--capstone-highlight))] text-white hover:bg-[hsl(var(--capstone-navy))];
-  }
-  
-  /* Card styles */
-  .card-modern {
-    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
-  }
-  
-  /* Section styles */
-  .section-blue {
-    @apply bg-[hsl(var(--capstone-blue-light)/0.1)];
-  }
-  
-  .section-white {
-    @apply bg-[hsl(var(--capstone-white))];
-  }
-  
-  .section-navy {
-    @apply bg-[hsl(var(--capstone-navy))] text-white;
-  }
-  
-  .section-gray {
-    @apply bg-[hsl(var(--capstone-gray))];
-  }
-  
-  /* Product styles */
-  .product-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
-  }
-  
-  .product-image {
-    @apply relative overflow-hidden;
-  }
-  
-  .product-content {
-    @apply p-6;
-  }
-  
-  .product-title {
-    @apply text-xl font-bold text-[hsl(var(--capstone-slate))] mb-2;
-  }
-  
-  .product-description {
-    @apply text-[hsl(var(--capstone-gray-dark))] mb-4;
-  }
-  
-  .product-price {
-    @apply text-lg font-bold text-[hsl(var(--capstone-blue))];
-  }
-  
-  /* Header/Navigation styles */
-  .header-shadow {
-    @apply shadow-sm;
-  }
-  
-  .nav-link {
-    @apply text-[hsl(var(--capstone-slate))] hover:text-[hsl(var(--capstone-blue))] 
-           font-medium transition-colors duration-200;
-  }
-  
-  .nav-link-active {
-    @apply text-[hsl(var(--capstone-blue))] border-b-2 border-[hsl(var(--capstone-blue))];
-  }
-  
-  /* Utility patterns */
-  .capstone-gradient {
-    @apply bg-gradient-to-br from-[hsl(var(--capstone-blue))] to-[hsl(var(--capstone-blue-dark))];
-  }
-  
-  .capstone-grid {
+  .natural-texture {
     background-color: white;
-    background-image: 
-      linear-gradient(to right, rgba(225, 232, 240, 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(225, 232, 240, 0.15) 1px, transparent 1px);
-    background-size: 20px 20px;
+  }
+  
+  .leaf-pattern {
+    background-color: hsl(var(--sage-light) / 0.9);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%237a9c65' fill-opacity='0.2'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .grain-texture {
+    background-color: white;
+  }
+  
+  .subtle-waves {
+    background-color: white;
+  }
+  
+  .clinical-pattern {
+    background-color: white;
+  }
+
+  .medical-grid {
+    background-color: white;
   }
   
   .zebra-bg {
     position: relative;
-    @apply bg-[hsl(var(--capstone-off-white))];
+    background-color: white;
   }
 
   .zebra-bg::before {
@@ -208,7 +126,7 @@
     background-image: url('@assets/zebra-pattern.jpg');
     background-repeat: repeat;
     background-size: 400px auto;
-    opacity: 0.08;
+    opacity: 0.2;
     z-index: 0;
   }
   
@@ -223,7 +141,9 @@
     transform: translateY(0);
   }
   
+  /* Animation removed as requested */
+  
   .container {
-    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply mx-auto px-4 sm:px-6;
   }
 }

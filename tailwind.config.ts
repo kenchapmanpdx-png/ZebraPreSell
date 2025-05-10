@@ -5,8 +5,8 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      roboto: ['Roboto', 'sans-serif'],
-      opensans: ['Open Sans', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
+      lora: ['Lora', 'serif'],
     },
     extend: {
       borderRadius: {
