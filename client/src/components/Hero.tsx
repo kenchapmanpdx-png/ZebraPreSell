@@ -70,9 +70,6 @@ export default function Hero() {
       </div>
 
       <div className="relative w-full py-8 mt-8 mb-5 z-10 inw-gradient overflow-hidden">
-        {/* Zebra Pattern Overlay */}
-        <ZebraPatternOverlay opacity={0.1} />
-        
         {/* Tagline in semi-transparent band */}
         <div className="inw-gradient-tagline py-3 mb-4 relative z-10">
           <div className="container mx-auto px-6">
