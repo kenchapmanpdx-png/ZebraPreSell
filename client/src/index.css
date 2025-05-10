@@ -48,8 +48,8 @@
   --medical-blue-dark: 210 100% 30%;
   
   /* Gradient colors for Why Zebra section */
-  --inw-forest: 125 40% 25%;
-  --inw-green: 85 64% 44%;
+  --inw-forest: 125 40% 22.5%; /* 10% darker than original */
+  --inw-green: 85 64% 41.8%; /* 5% darker than original */
 }
 
 .dark {
