@@ -40,7 +40,7 @@ export default function Boosters() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* AM Formula */}
           <div className="product-card group overflow-hidden transition-all duration-300 hover:shadow-lg">
             <div className="product-image relative">
@@ -56,20 +56,17 @@ export default function Boosters() {
             </div>
             
             <div className="product-content">
-              <ul className="space-y-4 mb-6 max-h-[400px] overflow-y-auto p-1">
-                {amFormula.slice(0, 8).map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-3 shadow-sm">
-                    <div className="w-1 h-8 bg-white mt-0 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-white">{item.name}</span>
-                        <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-white text-opacity-90">{item.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                {amFormula.map((item, index) => (
+                  <div key={index} className="bg-[hsl(var(--inw-teal))] bg-opacity-80 rounded-sm p-2 shadow-sm">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-semibold text-white">{item.name}</span>
+                      <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-teal))] font-medium">{item.dosage}</span>
                     </div>
-                  </li>
+                    <p className="text-xs text-white text-opacity-90">{item.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
               
               <div className="flex justify-between items-center border-t border-[hsl(var(--inw-gray))] pt-4">
                 <span className="text-[hsl(var(--inw-teal))] font-bold">$64.99</span>
@@ -93,20 +90,17 @@ export default function Boosters() {
             </div>
             
             <div className="product-content">
-              <ul className="space-y-4 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 {pmFormula.map((item, index) => (
-                  <li key={index} className="flex items-start bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-3 shadow-sm">
-                    <div className="w-1 h-8 bg-white mt-0 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-white">{item.name}</span>
-                        <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
-                      </div>
-                      <p className="text-sm text-white text-opacity-90">{item.description}</p>
+                  <div key={index} className="bg-[hsl(var(--inw-green))] bg-opacity-80 rounded-sm p-2 shadow-sm">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-semibold text-white">{item.name}</span>
+                      <span className="text-xs bg-white px-2 py-0.5 rounded-sm text-[hsl(var(--inw-green))] font-medium">{item.dosage}</span>
                     </div>
-                  </li>
+                    <p className="text-xs text-white text-opacity-90">{item.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
               
               <div className="flex justify-between items-center border-t border-[hsl(var(--inw-gray))] pt-4">
                 <span className="text-[hsl(var(--inw-green))] font-bold">$54.99</span>
