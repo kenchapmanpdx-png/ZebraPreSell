@@ -35,7 +35,7 @@ export default function ProductGrid() {
                 </div>
               </div>
               
-              <div className="mb-6 max-h-80 overflow-y-auto">
+              <div className="mb-6">
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <i className="fas fa-flask text-sage mt-1 mr-3 flex-shrink-0"></i>
@@ -232,7 +232,7 @@ export default function ProductGrid() {
                 </div>
               </div>
               
-              <div className="mb-6 max-h-80 overflow-y-auto">
+              <div className="mb-6">
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <i className="fas fa-flask text-forest mt-1 mr-3 flex-shrink-0"></i>
