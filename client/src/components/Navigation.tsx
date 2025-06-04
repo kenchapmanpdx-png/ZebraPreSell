@@ -34,6 +34,10 @@ export default function Navigation() {
             <span className="text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
             <span className="text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
+          <div className="hidden lg:flex flex-col ml-6 border-l border-white/20 pl-6">
+            <span className="text-sm text-white/90 font-medium">Supporting EDS, POTS & MCAS</span>
+            <span className="text-xs text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
+          </div>
         </a>
         
         {/* Desktop Navigation */}
