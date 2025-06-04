@@ -5,7 +5,7 @@ interface ZebraPatternOverlayProps {
   className?: string;
 }
 
-export default function ZebraPatternOverlay({ opacity = 0.1, className = '' }: ZebraPatternOverlayProps) {
+export default function ZebraPatternOverlay({ opacity = 0.065, className = '' }: ZebraPatternOverlayProps) {
   return (
     <div 
       className={`absolute inset-0 z-0 ${className}`} 
