@@ -1,4 +1,6 @@
 import ZebraBackground from './ZebraBackground';
+import IngredientTooltip from './IngredientTooltip';
+import { amFormulaIngredients, pmFormulaIngredients } from '../data/ingredientData';
 
 export default function ProductGrid() {
   return (
@@ -36,34 +38,23 @@ export default function ProductGrid() {
               
               <div className="mb-6">
                 <ul className="space-y-2">
-                  {[
-                    { name: "Magnesium Malate", dosage: "1,500 mg", description: "Essential for energy production and muscle function" },
-                    { name: "CoQ10 (Ubiquinol)", dosage: "300 mg", description: "Active form of CoQ10 for mitochondrial energy support" },
-                    { name: "Vitamin D3", dosage: "4,000 IU", description: "Supports immune function and bone health" },
-                    { name: "Vitamin K2 (MK-7)", dosage: "200 mcg", description: "Directs calcium to bones and away from arteries" },
-                    { name: "PEA (Ultra-micronized)", dosage: "600 mg", description: "Natural pain relief and inflammation support" },
-                    { name: "Alpha-GPC", dosage: "300 mg", description: "Cognitive support and acetylcholine production" },
-                    { name: "ALCAR", dosage: "600 mg", description: "Brain and mitochondrial support" },
-                    { name: "Taurine", dosage: "500 mg", description: "Cardiovascular and nervous system support" },
-                    { name: "Thiamine (Benfotiamine)", dosage: "150 mg", description: "Advanced B1 for nervous system health" },
-                    { name: "B2 (Riboflavin-5-Phosphate)", dosage: "10 mg", description: "Active B2 for energy metabolism" },
-                    { name: "B6 (Pyridoxal-5-Phosphate)", dosage: "10 mg", description: "Active B6 for neurotransmitter support" },
-                    { name: "B12 (Methyl + Adenosyl)", dosage: "500 mcg", description: "Dual-form B12 for optimal absorption" },
-                    { name: "Folate (L-5-MTHF)", dosage: "800 mcg", description: "Active folate for methylation support" },
-                    { name: "Zinc Glycinate", dosage: "60 mg", description: "Highly absorbable zinc for immune support" },
-                    { name: "Copper Glycinate", dosage: "10 mg", description: "Balanced copper for connective tissue health" },
-                    { name: "Silicon (ch-OSA)", dosage: "200 mg", description: "Bioavailable silicon for connective tissue support" }
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <i className="fas fa-flask text-orange-500 mt-1 mr-3 flex-shrink-0"></i>
-                      <div className="w-full">
-                        <div className="flex justify-between items-start">
-                          <span className="font-medium text-sm">{item.name}</span>
-                          <span className="text-xs text-orange-600 bg-yellow-100 px-2 py-0.5 rounded ml-2 flex-shrink-0">{item.dosage}</span>
+                  {amFormulaIngredients.map((ingredient, index) => (
+                    <IngredientTooltip 
+                      key={index} 
+                      ingredient={ingredient} 
+                      colorScheme="orange"
+                    >
+                      <li className="flex items-start">
+                        <i className="fas fa-flask text-orange-500 mt-1 mr-3 flex-shrink-0"></i>
+                        <div className="w-full">
+                          <div className="flex justify-between items-start">
+                            <span className="font-medium text-sm">{ingredient.name}</span>
+                            <span className="text-xs text-orange-600 bg-yellow-100 px-2 py-0.5 rounded ml-2 flex-shrink-0">{ingredient.dosage}</span>
+                          </div>
+                          <p className="text-xs text-neutral-dark/70">{ingredient.description}</p>
                         </div>
-                        <p className="text-xs text-neutral-dark/70">{item.description}</p>
-                      </div>
-                    </li>
+                      </li>
+                    </IngredientTooltip>
                   ))}
                 </ul>
               </div>
@@ -101,26 +92,23 @@ export default function ProductGrid() {
               
               <div className="mb-6">
                 <ul className="space-y-2">
-                  {[
-                    { name: "Magnesium Malate", dosage: "1,500 mg", description: "Supports relaxation and muscle recovery" },
-                    { name: "PEA (Ultra-micronized)", dosage: "600 mg", description: "Enhanced evening dose for pain relief" },
-                    { name: "Alpha-GPC", dosage: "300 mg", description: "Supports brain health and recovery" },
-                    { name: "ALCAR", dosage: "600 mg", description: "Enhanced evening dose for neurological support" },
-                    { name: "Taurine", dosage: "500 mg", description: "Promotes relaxation and cardiovascular health" },
-                    { name: "Hyaluronic Acid", dosage: "300 mg", description: "Joint lubrication and tissue hydration" },
-                    { name: "R-Lipoic Acid", dosage: "200 mg", description: "Powerful antioxidant for nerve and mitochondrial health" },
-                    { name: "L-Theanine", dosage: "150 mg", description: "Promotes calm focus and relaxation" }
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <i className="fas fa-flask text-forest mt-1 mr-3 flex-shrink-0"></i>
-                      <div className="w-full">
-                        <div className="flex justify-between items-start">
-                          <span className="font-medium text-sm">{item.name}</span>
-                          <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2 flex-shrink-0">{item.dosage}</span>
+                  {pmFormulaIngredients.map((ingredient, index) => (
+                    <IngredientTooltip 
+                      key={index} 
+                      ingredient={ingredient} 
+                      colorScheme="forest"
+                    >
+                      <li className="flex items-start">
+                        <i className="fas fa-flask text-forest mt-1 mr-3 flex-shrink-0"></i>
+                        <div className="w-full">
+                          <div className="flex justify-between items-start">
+                            <span className="font-medium text-sm">{ingredient.name}</span>
+                            <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2 flex-shrink-0">{ingredient.dosage}</span>
+                          </div>
+                          <p className="text-xs text-neutral-dark/70">{ingredient.description}</p>
                         </div>
-                        <p className="text-xs text-neutral-dark/70">{item.description}</p>
-                      </div>
-                    </li>
+                      </li>
+                    </IngredientTooltip>
                   ))}
                 </ul>
               </div>
