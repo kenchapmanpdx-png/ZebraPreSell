@@ -32,19 +32,11 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
   };
 
   const getColorClasses = () => {
-    if (colorScheme === 'orange') {
-      return {
-        bg: 'bg-gradient-to-br from-blue-50 to-indigo-50',
-        border: 'border-blue-200',
-        accent: 'text-blue-600',
-        tag: 'bg-blue-100 text-blue-700'
-      };
-    }
     return {
-      bg: 'bg-gradient-to-br from-purple-50 to-pink-50',
-      border: 'border-purple-200',
-      accent: 'text-purple-600',
-      tag: 'bg-purple-100 text-purple-700'
+      bg: 'bg-gradient-to-br from-gray-50 to-slate-100',
+      border: 'border-gray-300',
+      accent: 'text-gray-800',
+      tag: 'bg-gray-200 text-gray-800'
     };
   };
 
@@ -81,16 +73,16 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
             <div className={`${colors.bg} ${colors.border} border rounded-xl shadow-xl p-4 backdrop-blur-sm`}>
               {/* Header */}
               <div className="flex items-center justify-between mb-3">
-                <h4 className={`font-semibold text-lg ${colors.accent}`}>
+                <h4 className={`font-black text-lg ${colors.accent}`}>
                   {ingredient.name}
                 </h4>
-                <span className={`text-sm font-medium px-2 py-1 rounded-md ${colors.tag}`}>
+                <span className={`text-sm font-bold px-2 py-1 rounded-md ${colors.tag}`}>
                   {ingredient.dosage}
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-sm text-neutral-dark/80 mb-3 leading-relaxed">
+              <p className="text-sm text-gray-800 font-semibold mb-3 leading-relaxed">
                 {ingredient.description}
               </p>
 

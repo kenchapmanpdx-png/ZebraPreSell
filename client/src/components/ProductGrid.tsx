@@ -99,13 +99,13 @@ export default function ProductGrid() {
                       colorScheme="forest"
                     >
                       <li className="flex items-start">
-                        <i className="fas fa-flask text-forest mt-1 mr-3 flex-shrink-0"></i>
+                        <i className="fas fa-flask text-gray-600 mt-1 mr-3 flex-shrink-0"></i>
                         <div className="w-full">
                           <div className="flex justify-between items-start">
-                            <span className="font-medium text-sm">{ingredient.name}</span>
-                            <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2 flex-shrink-0">{ingredient.dosage}</span>
+                            <span className="font-bold text-sm text-gray-900">{ingredient.name}</span>
+                            <span className="text-xs text-gray-800 bg-gray-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-xs text-neutral-dark/70">{ingredient.description}</p>
+                          <p className="text-xs text-gray-700 font-medium">{ingredient.description}</p>
                         </div>
                       </li>
                     </IngredientTooltip>
@@ -113,7 +113,7 @@ export default function ProductGrid() {
                 </ul>
               </div>
               
-              <button className="w-full py-3 px-6 bg-purple-500 hover:bg-purple-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <button className="w-full py-3 px-6 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>
