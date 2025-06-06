@@ -34,17 +34,17 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
   const getColorClasses = () => {
     if (colorScheme === 'orange') {
       return {
-        bg: 'bg-gradient-to-br from-orange-50 to-yellow-50',
-        border: 'border-orange-200',
-        accent: 'text-orange-600',
-        tag: 'bg-orange-100 text-orange-700'
+        bg: 'bg-gradient-to-br from-blue-50 to-indigo-50',
+        border: 'border-blue-200',
+        accent: 'text-blue-600',
+        tag: 'bg-blue-100 text-blue-700'
       };
     }
     return {
-      bg: 'bg-gradient-to-br from-green-50 to-emerald-50',
-      border: 'border-forest/20',
-      accent: 'text-forest',
-      tag: 'bg-forest-light/30 text-forest'
+      bg: 'bg-gradient-to-br from-purple-50 to-pink-50',
+      border: 'border-purple-200',
+      accent: 'text-purple-600',
+      tag: 'bg-purple-100 text-purple-700'
     };
   };
 

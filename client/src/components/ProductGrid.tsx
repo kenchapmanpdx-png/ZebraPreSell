@@ -14,24 +14,24 @@ export default function ProductGrid() {
         <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <div id="am-formula" className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-yellow-400 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div id="am-formula" className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-blue-400 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
-                  <div className="absolute inset-0 rounded-lg bg-yellow-100/50 border border-yellow-200"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-yellow-200/40 to-yellow-100/20 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 rounded-lg bg-blue-100/50 border border-blue-200"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-blue-200/40 to-blue-100/20 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-yellow-400/40 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-sun text-sm text-yellow-600"></i>
+                    <div className="w-8 h-8 rounded-full border-2 border-blue-400/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-sun text-sm text-blue-600"></i>
                     </div>
                     <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-yellow-600">AM Formula</div>
+                    <div className="text-[6px] text-blue-600">AM Formula</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-lora text-orange-600">ZebraWell AM Formula</h3>
+                  <h3 className="text-3xl font-lora text-blue-600">ZebraWell AM Formula</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-neutral-dark/70 font-medium">Morning energizing formula</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-yellow-100 text-xs text-orange-600 font-medium">Daily Foundation</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-blue-100 text-xs text-blue-600 font-medium">Daily Foundation</span>
                   </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function ProductGrid() {
                 </ul>
               </div>
               
-              <button className="w-full py-3 px-6 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <button className="w-full py-3 px-6 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>
@@ -68,24 +68,24 @@ export default function ProductGrid() {
           
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <div id="pm-formula" className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div id="pm-formula" className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-purple-400 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
-                  <div className="absolute inset-0 rounded-lg bg-forest/5 border border-forest/20"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-forest/20 to-forest/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 rounded-lg bg-purple-100/50 border border-purple-200"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-purple-200/40 to-purple-100/20 rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-sm text-forest"></i>
+                    <div className="w-8 h-8 rounded-full border-2 border-purple-400/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-moon text-sm text-purple-600"></i>
                     </div>
                     <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-forest">PM Formula</div>
+                    <div className="text-[6px] text-purple-600">PM Formula</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-lora text-forest">ZebraWell PM Formula</h3>
+                  <h3 className="text-3xl font-lora text-purple-600">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-neutral-dark/70 font-medium">Evening recovery formula</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Recovery Support</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-purple-100 text-xs text-purple-600 font-medium">Recovery Support</span>
                   </div>
                 </div>
               </div>
