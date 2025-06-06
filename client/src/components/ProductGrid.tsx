@@ -59,7 +59,7 @@ export default function ProductGrid() {
                 </ul>
               </div>
               
-              <button className="w-full py-3 px-6 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+              <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>
@@ -68,24 +68,24 @@ export default function ProductGrid() {
           
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <div id="pm-formula" className="bg-gradient-to-br from-gray-50 to-slate-100 rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-slate-400 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
-                  <div className="absolute inset-0 rounded-lg bg-gray-200/60 border border-gray-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-gray-300/50 to-gray-200/30 rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-gray-400/50 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-sm text-gray-700"></i>
+                    <div className="w-8 h-8 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-moon text-sm text-terra"></i>
                     </div>
                     <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-gray-700">PM Formula</div>
+                    <div className="text-[6px] text-terra">PM Formula</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-lora font-black text-gray-900">ZebraWell PM Formula</h3>
+                  <h3 className="text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
-                    <span className="text-sm text-gray-700 font-semibold">Evening recovery formula</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-gray-200 text-xs text-gray-800 font-bold">Recovery Support</span>
+                    <span className="text-sm text-forest font-semibold">Evening recovery formula</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
                   </div>
                 </div>
               </div>
@@ -99,13 +99,13 @@ export default function ProductGrid() {
                       colorScheme="forest"
                     >
                       <li className="flex items-start">
-                        <i className="fas fa-flask text-gray-600 mt-1 mr-3 flex-shrink-0"></i>
+                        <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
                         <div className="w-full">
                           <div className="flex justify-between items-start">
-                            <span className="font-bold text-sm text-gray-900">{ingredient.name}</span>
-                            <span className="text-xs text-gray-800 bg-gray-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                            <span className="font-bold text-sm text-forest">{ingredient.name}</span>
+                            <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-xs text-gray-700 font-medium">{ingredient.description}</p>
+                          <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
                         </div>
                       </li>
                     </IngredientTooltip>
@@ -113,7 +113,7 @@ export default function ProductGrid() {
                 </ul>
               </div>
               
-              <button className="w-full py-3 px-6 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+              <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>

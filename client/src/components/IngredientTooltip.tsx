@@ -33,10 +33,10 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
 
   const getColorClasses = () => {
     return {
-      bg: 'bg-gradient-to-br from-gray-50 to-slate-100',
-      border: 'border-gray-300',
-      accent: 'text-gray-800',
-      tag: 'bg-gray-200 text-gray-800'
+      bg: 'bg-earth-cream',
+      border: 'border-terra/20',
+      accent: 'text-forest',
+      tag: 'bg-terra-light text-terra-dark'
     };
   };
 
@@ -82,7 +82,7 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
               </div>
 
               {/* Description */}
-              <p className="text-sm text-gray-800 font-semibold mb-3 leading-relaxed">
+              <p className="text-sm text-forest font-semibold mb-3 leading-relaxed">
                 {ingredient.description}
               </p>
 
