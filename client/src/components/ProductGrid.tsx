@@ -113,7 +113,7 @@ export default function ProductGrid() {
                 </ul>
               </div>
               
-              <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+              <button className="w-full py-3 px-6 bg-purple-500 hover:bg-purple-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>
