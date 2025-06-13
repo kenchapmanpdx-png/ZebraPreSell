@@ -2,53 +2,103 @@ import ZebraBackground from './ZebraBackground';
 
 export default function Comparison() {
   const comparisonData = [
-    { feature: "Ingredient Selection", zebrawell: "Thoughtfully Chosen", generic: "Minimal Research" },
-    { feature: "Bioavailability", zebrawell: "Maximum Absorption", generic: "Variable" },
-    { feature: "Quality Testing", zebrawell: "Third-party Verified", generic: "Limited Testing" },
-    { feature: "Cost Efficiency", zebrawell: "$1.50–$2.50/day", generic: "$3–$6+" },
-    { feature: "Allergen Control", zebrawell: "Premium", generic: "Inconsistent" },
-    { feature: "Formulation", zebrawell: "EDS/POTS/MCAS Specific", generic: "General Purpose" }
+    { 
+      feature: "Formulated for Rare Conditions", 
+      zebrawell: "Built specifically for POTS, EDS & MCAS bodies", 
+      generic: "Made for the \"average person\"" 
+    },
+    { 
+      feature: "Tolerability for Sensitive Systems", 
+      zebrawell: "Free from dyes, fillers, stearates, soy, titanium dioxide — MCAS-safe", 
+      generic: "Contains harsh additives, allergens, and hidden triggers" 
+    },
+    { 
+      feature: "Therapeutic Doses That Matter", 
+      zebrawell: "Clinical levels of proven ingredients — not pixie dust", 
+      generic: "Underdosed for label appeal only" 
+    },
+    { 
+      feature: "Targeted AM/PM Support", 
+      zebrawell: "Designed for daytime energy + nighttime recovery", 
+      generic: "One-size-fits-all formulas" 
+    },
+    { 
+      feature: "Real-World, Patient-Driven Design", 
+      zebrawell: "Formulated by a father for his daughter — not just a marketing team", 
+      generic: "Generic industry copycats" 
+    },
+    { 
+      feature: "No Guesswork or Stacks Needed", 
+      zebrawell: "One system replaces 12+ supplements — simple & complete", 
+      generic: "Requires stacking 5–10 products" 
+    },
+    { 
+      feature: "Tested for Peace of Mind", 
+      zebrawell: "Third-party tested in FDA-registered, cGMP facility", 
+      generic: "\"Trust us\" — no transparent testing" 
+    }
   ];
 
   return (
     <section id="comparison" className="py-16 md:py-24 relative overflow-hidden">
       <ZebraBackground />
-      <div className="container mx-auto px-6 relative z-1">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="relative">
-          {/* Background block */}
-          <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#E1DCD2', opacity: 0.5 }}></div>
+          {/* Darker zebra-pattern background */}
+          <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#1a1a1a', opacity: 0.8 }}></div>
+          
           {/* Content */}
-          <div className="relative z-10 px-8 py-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-forest mb-6 fade-in">Product Comparison</h2>
-            <p className="text-center text-neutral-dark/80 max-w-2xl mx-auto mb-12 fade-in">Comparing ZebraWell's premium formulation against conventional supplement alternatives</p>
+          <div className="relative z-10 px-8 py-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-4 fade-in">
+              Why <span className="text-accent">ZebraWell</span> Leads the Industry
+            </h2>
+            <p className="text-center text-white/80 max-w-3xl mx-auto mb-12 fade-in text-lg">
+              Stop settling for supplements that weren't made for your body. Here's what sets us apart:
+            </p>
             
-            <div className="max-w-4xl mx-auto overflow-x-auto fade-in">
-              <table className="w-full border-collapse">
+            <div className="max-w-6xl mx-auto overflow-x-auto fade-in">
+              <table className="w-full border-collapse bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
                 <thead>
-                  <tr>
-                    <th className="p-4 border-b-2 border-neutral-medium"></th>
-                    <th className="p-4 border-b-2 border-forest text-center text-forest font-bold" style={{ backgroundColor: 'rgba(116, 195, 101, 0.15)' }}>ZebraWell Premium</th>
-                    <th className="p-4 border-b-2 border-neutral-medium text-center text-neutral-dark font-bold">Generic Brands</th>
+                  <tr className="bg-black/20">
+                    <th className="p-6 text-left text-white font-bold text-lg">Feature</th>
+                    <th className="p-6 text-center text-green-400 font-bold text-lg hover:bg-green-500/10 transition-colors">
+                      ZebraWell Premium ✅
+                    </th>
+                    <th className="p-6 text-center text-gray-400 font-bold text-lg">Generic Brands ❌</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((row, index) => (
-                    <tr key={index} className="hover:bg-neutral-light transition-colors">
-                      <td className="p-4 border-b border-neutral-medium font-semibold text-neutral-dark text-left">{row.feature}</td>
-                      <td className="p-4 border-b border-neutral-medium text-center font-medium">
-                        <div className="flex items-center justify-center" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}>
-                          <i className="fas fa-check mr-2" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}></i> {row.zebrawell}
+                    <tr key={index} className="border-b border-white/10 hover:bg-white/5 transition-all duration-300">
+                      <td className="p-6 font-semibold text-white text-left border-r border-white/10">
+                        <strong>{row.feature}</strong>
+                      </td>
+                      <td className="p-6 text-center text-green-400 font-medium hover:bg-green-500/10 transition-all duration-300 border-r border-white/10">
+                        <div className="flex items-center justify-center space-x-2">
+                          <span className="text-green-400 text-xl">✅</span>
+                          <span className="font-semibold">{row.zebrawell}</span>
                         </div>
                       </td>
-                      <td className="p-4 border-b border-neutral-medium text-center text-neutral-dark/80">
-                        <div className="flex items-center justify-center">
-                          <i className="fas fa-triangle-exclamation text-neutral-dark/50 mr-2"></i> {row.generic}
+                      <td className="p-6 text-center text-gray-400 font-medium">
+                        <div className="flex items-center justify-center space-x-2">
+                          <span className="text-red-400 text-xl">❌</span>
+                          <span>{row.generic}</span>
                         </div>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+            
+            {/* Call to action */}
+            <div className="text-center mt-12 fade-in">
+              <p className="text-white/90 text-lg mb-6">
+                <strong>Ready to upgrade from generic supplements to targeted care?</strong>
+              </p>
+              <button className="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-accent/90 transition-all duration-300 hover:scale-[1.02]">
+                Get Early Access to ZebraWell
+              </button>
             </div>
           </div>
         </div>
