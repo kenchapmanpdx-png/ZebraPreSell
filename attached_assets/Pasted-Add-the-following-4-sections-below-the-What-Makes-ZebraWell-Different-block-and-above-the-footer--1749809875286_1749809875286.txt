@@ -1,0 +1,61 @@
+Add the following 4 sections below the “What Makes ZebraWell Different” block and above the footer. Each should follow the site’s current styling conventions (padded section, max-width container, consistent fonts/colors).
+
+💬 1. Real Testimonials Section
+jsx
+Copy
+Edit
+<section className="bg-white py-16 px-8">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-6">💬 What People Are Saying</h2>
+    <blockquote className="text-gray-700 italic">
+      “This is the only supplement I’ve tried that didn’t make me feel worse. It’s part of my daily survival kit now.”
+    </blockquote>
+    <p className="text-sm text-gray-500 mt-2">— Facebook community member (placeholder)</p>
+  </div>
+</section>
+🛒 2. Buy Now Section
+jsx
+Copy
+Edit
+<section className="bg-gray-50 py-16 px-8">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-6">🛒 Available Soon</h2>
+    <p className="text-gray-700">ZebraWell will be available on Amazon and Shopify. Subscribe for launch updates and exclusive early access.</p>
+    <div className="mt-6 flex justify-center gap-4">
+      <img src="/images/shopify-icon.png" alt="Shopify" className="h-10" />
+      <img src="/images/amazon-icon.png" alt="Amazon" className="h-10" />
+    </div>
+  </div>
+</section>
+📦 3. What You Get Section
+jsx
+Copy
+Edit
+<section className="bg-white py-16 px-8">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-6">📦 What's Inside</h2>
+    <p className="text-gray-700">Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night. That’s it—no more 12-bottle stacks.</p>
+  </div>
+</section>
+🧬 4. Clinical Rationale Section
+jsx
+Copy
+Edit
+<section className="bg-gray-50 py-16 px-8">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-6">🧬 Why Each Ingredient Matters</h2>
+    <ul className="list-disc text-left list-inside text-gray-700 max-w-2xl mx-auto">
+      <li><strong>CoQ10 (AM):</strong> Supports mitochondrial energy for people with dysautonomia.</li>
+      <li><strong>PEA:</strong> Reduces neuroinflammation and connective tissue pain.</li>
+      <li><strong>L-Theanine (PM):</strong> Calms the nervous system and promotes restful sleep.</li>
+      <li><strong>Magnesium Malate:</strong> Relieves muscle tension and supports vascular tone.</li>
+    </ul>
+  </div>
+</section>
+📌 Developer Notes:
+Use existing section padding and layout styles (py-16 px-8, max-w-4xl, text-center) to keep visual consistency.
+
+Use bg-white and bg-gray-50 alternating to separate sections visually.
+
+Placeholder content is fine for now. Make each block modular so it’s easy to replace or hide later.
+
