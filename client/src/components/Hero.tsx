@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
           <div className="flex gap-4 mt-6">
             <Link to="#products">
-              <button className="bg-white text-primary font-semibold px-6 py-3 rounded-md shadow hover:bg-[#f5f5f5] border border-accent transition-all duration-300 hover:scale-[1.02]">
+              <button className="bg-cta-green text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-cta-green-dark transition-all duration-300 hover:scale-[1.02]">
                 Shop Now
               </button>
             </Link>

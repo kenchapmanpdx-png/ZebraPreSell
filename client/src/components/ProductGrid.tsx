@@ -35,7 +35,7 @@ export default function ProductGrid() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <ul className="space-y-2">
                   {amFormulaIngredients.map((ingredient, index) => (
@@ -58,14 +58,14 @@ export default function ProductGrid() {
                   ))}
                 </ul>
               </div>
-              
-              <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+
+              <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>
             </div>
           </div>
-          
+
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
@@ -89,7 +89,7 @@ export default function ProductGrid() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <ul className="space-y-2">
                   {pmFormulaIngredients.map((ingredient, index) => (
@@ -112,8 +112,8 @@ export default function ProductGrid() {
                   ))}
                 </ul>
               </div>
-              
-              <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+
+              <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
               </button>

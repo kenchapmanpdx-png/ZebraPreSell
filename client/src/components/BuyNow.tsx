@@ -6,7 +6,7 @@ export default function BuyNow() {
         <p className="text-lg text-forest/80 leading-relaxed mb-4 fade-in">
           ZebraWell will be available on Amazon and Shopify. Get exclusive early access and launch updates.
         </p>
-        <button className="bg-accent text-white px-6 py-2.5 rounded-md shadow-lg hover:opacity-90 transition-all duration-300 hover:scale-[1.02] font-semibold mb-4 fade-in">
+        <button className="bg-cta-green text-white px-6 py-2.5 rounded-md shadow-lg hover:bg-cta-green-dark transition-all duration-300 hover:scale-[1.02] font-semibold mb-4 fade-in">
           Get Notified When We Launch
         </button>
         <div className="mt-6 flex justify-center gap-4 fade-in">

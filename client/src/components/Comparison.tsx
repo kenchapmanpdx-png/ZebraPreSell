@@ -96,7 +96,7 @@ export default function Comparison() {
               <p className="text-white/90 text-lg mb-6">
                 <strong>Ready to upgrade from generic supplements to targeted care?</strong>
               </p>
-              <button className="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-accent/90 transition-all duration-300 hover:scale-[1.02]">
+              <button className="bg-cta-green text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-cta-green-dark transition-all duration-300 hover:scale-[1.02]">
                 Get Early Access to ZebraWell
               </button>
             </div>
