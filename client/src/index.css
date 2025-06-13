@@ -48,6 +48,9 @@
   --medical-blue: 210 100% 40%;
   --medical-blue-light: 210 100% 85%;
   --medical-blue-dark: 210 100% 30%;
+  --cta-green: 76 76% 40%;
+  --cta-green-light: 76 76% 85%;
+  --cta-green-dark: 76 76% 30%;
   
   /* Gradient colors for Why Zebra section */
   --inw-forest: 125 40% 22.5%; /* 10% darker than original */

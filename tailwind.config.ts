@@ -81,6 +81,11 @@ export default {
           "blue-light": "hsl(var(--medical-blue-light))",
           "blue-dark": "hsl(var(--medical-blue-dark))",
         },
+        cta: {
+          green: "hsl(var(--cta-green))",
+          "green-light": "hsl(var(--cta-green-light))",
+          "green-dark": "hsl(var(--cta-green-dark))",
+        },
         earth: {
           cream: "hsl(var(--cream))",
           sand: "hsl(var(--sand))",
