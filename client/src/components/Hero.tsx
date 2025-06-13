@@ -37,19 +37,19 @@ export default function Hero() {
       </div>
 
       {/* Why Zebra Section */}
-      <div className="relative w-full py-20 mt-20 bg-surface/10 rounded-lg overflow-hidden">
+      <div className="relative w-full py-12 mt-16 bg-surface/10 rounded-lg overflow-hidden">
         {/* Zebra pattern overlay */}
         <div 
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.05,
+            opacity: 0.025,
             backgroundSize: '300px 150px'
           }}
         ></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h3 className="text-5xl md:text-6xl mb-9 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-6 text-3xl text-white/90 leading-relaxed">
+          <h3 className="text-4xl md:text-5xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
+          <div className="space-y-4 text-2xl text-white/90 leading-relaxed">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
             <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>
