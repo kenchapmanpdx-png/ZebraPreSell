@@ -54,14 +54,14 @@ export default function WhyZebraWell() {
         className="absolute inset-0 bg-cover bg-center bg-repeat"
         style={{
           backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.1,
+          opacity: 0.05,
           backgroundSize: '400px 200px'
         }}
       ></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             let bgColorClass = "";
             let iconColorClass = "";
@@ -81,18 +81,20 @@ export default function WhyZebraWell() {
             }
             
             return (
-              <div key={index} className={`${bgColorClass} p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`}>
-                <div className="flex items-center mb-2">
-                  <div className="w-10 h-10 mr-2 rounded-full flex items-center justify-center" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
+              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`}>
+                <div className="flex items-start mb-4">
+                  <div className="w-12 h-12 mr-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 
                     (index % 5 === 2) ? '#435435' : 
                     (index % 5 === 3) ? 'rgba(102, 107, 94, 0.5)' : 
                     'rgba(91, 98, 80, 0.3)' }}>
-                    <i className={`fas fa-${feature.icon} text-lg ${index % 5 === 1 ? 'text-forest' : 'text-white'}`}></i>
+                    <i className={`fas fa-${feature.icon} text-xl ${index % 5 === 1 ? 'text-forest' : 'text-white'}`}></i>
                   </div>
-                  <h3 className={`text-lg font-lora ${textColorClass}`}>{feature.title}</h3>
+                  <div>
+                    <h3 className={`text-xl font-lora font-bold mb-2 ${textColorClass}`}>{feature.title}</h3>
+                    <p className={`text-base leading-relaxed ${feature.title === "No Junk. Ever." ? "text-white/90" : "text-neutral-dark/80"}`}>{feature.description}</p>
+                  </div>
                 </div>
-                <p className="text-sm text-neutral-dark/80">{feature.description}</p>
               </div>
             );
           })}

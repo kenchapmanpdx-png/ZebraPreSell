@@ -18,19 +18,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-16 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-forest">Contact Us</h2>
-              <p className="text-neutral-dark/80 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-forest">Contact Us</h2>
+              <p className="text-neutral-dark/80 mb-6">
                 Have questions about our formulations or want to learn more about ZebraWell products? 
                 We're here to help! Reach out to our support team for any inquiries regarding our supplements.
               </p>
               
-              <div className="mb-6">
+              <div className="mb-4">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center mr-3">
                     <i className="fas fa-envelope text-forest"></i>
@@ -54,12 +54,12 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-md fade-in">
-              <h3 className="text-2xl font-bold mb-6 text-forest">Request Information</h3>
+            <div className="bg-white p-6 rounded-xl shadow-md fade-in">
+              <h3 className="text-2xl font-bold mb-4 text-forest">Request Information</h3>
               
               <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="flex items-center text-sm font-semibold mb-2">
+                <div className="mb-3">
+                  <label htmlFor="name" className="flex items-center text-sm font-semibold mb-1">
                     <i className="fas fa-user text-forest mr-2"></i>
                     Full Name
                   </label>
@@ -73,8 +73,8 @@ export default function Contact() {
                   />
                 </div>
                 
-                <div className="mb-4">
-                  <label htmlFor="email" className="flex items-center text-sm font-semibold mb-2">
+                <div className="mb-3">
+                  <label htmlFor="email" className="flex items-center text-sm font-semibold mb-1">
                     <i className="fas fa-envelope text-forest mr-2"></i>
                     Email Address
                   </label>
@@ -88,8 +88,8 @@ export default function Contact() {
                   />
                 </div>
                 
-                <div className="mb-6">
-                  <label htmlFor="message" className="flex items-center text-sm font-semibold mb-2">
+                <div className="mb-4">
+                  <label htmlFor="message" className="flex items-center text-sm font-semibold mb-1">
                     <i className="fas fa-comment text-forest mr-2"></i>
                     Your Message
                   </label>

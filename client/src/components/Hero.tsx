@@ -43,7 +43,7 @@ export default function Hero() {
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.1,
+            opacity: 0.05,
             backgroundSize: '300px 150px'
           }}
         ></div>
