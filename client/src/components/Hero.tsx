@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
-import heroImage from '/src/assets/zebrawell-products-hero.jpg';
+import heroImage from '../assets/zebrawell-products-hero.jpg';
 
 export default function Hero() {
   return (
@@ -27,12 +27,12 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center">
-            <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl bg-white/10">
+          <div className="md:w-1/2 flex justify-center relative z-10">
+            <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl bg-white/10 relative z-20">
               <img 
                 src={heroImage} 
                 alt="ZebraWell AM and PM Formula bottles" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover relative z-30"
                 onError={(e) => {
                   console.log('Image failed to load:', heroImage);
                   e.currentTarget.style.display = 'none';
