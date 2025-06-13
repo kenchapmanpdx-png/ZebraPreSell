@@ -24,10 +24,10 @@ export default function Hero() {
                 Ditch the junk science and generic multis. ZebraWell delivers therapeutic doses of bioavailable nutrients—formulated by a father for his daughter, and validated by the lived experience of this community.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8 fade-in">
-                <button className="bg-forest hover:bg-forest/90 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button className="inw-gradient hover:opacity-90 text-white px-6 py-3 rounded-lg font-medium transition-opacity">
                   Explore AM Formula
                 </button>
-                <button className="border border-forest text-forest hover:bg-forest hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button className="border-2 inw-gradient text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-opacity">
                   Explore PM Formula
                 </button>
                 <button className="text-forest hover:text-terra px-6 py-3 rounded-lg font-medium transition-colors">
@@ -41,6 +41,26 @@ export default function Hero() {
                 <span className="flex items-center">✅ Third-Party Tested</span>
                 <span className="flex items-center">✅ MCAS-Safe | No Dyes | No Fillers</span>
                 <span className="flex items-center">✅ Designed for POTS & EDS Bodies</span>
+              </div>
+
+              {/* Certification Badges */}
+              <div className="flex justify-center items-center gap-6 mt-6 mb-4 fade-in">
+                <div className="flex items-center gap-2">
+                  <img 
+                    src="/attached_assets/GMP-Certification_1749808301441.png" 
+                    alt="GMP Certified" 
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-xs text-forest font-medium">GMP Certified</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img 
+                    src="/attached_assets/images_1749808301442.png" 
+                    alt="FDA Registered Facility" 
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-xs text-forest font-medium">FDA Registered</span>
+                </div>
               </div>
             </div>
           </div>
