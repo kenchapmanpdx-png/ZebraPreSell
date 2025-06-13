@@ -9,7 +9,9 @@ export default function Hero() {
           {/* Rectangle background block with zebra pattern */}
           <div className="relative">
             <div className="absolute inset-0 -mx-8 rounded-xl overflow-hidden">
-              <ZebraPatternOverlay opacity={0.8} className="" />
+              <div className="w-full h-full">
+                <ZebraPatternOverlay opacity={0.15} className="" />
+              </div>
             </div>
             <div className="relative z-10 py-12 px-8">
               <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
