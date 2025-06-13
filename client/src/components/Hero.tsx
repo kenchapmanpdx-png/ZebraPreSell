@@ -25,27 +25,11 @@ export default function Hero() {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center">
+          <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
             <img 
-              src="/src/assets/zebrawell-products-hero.jpg" 
+              src="/src/assets/zebrawell-hero-bottles.jpg" 
               alt="ZebraWell AM and PM Formula bottles" 
               className="w-full h-full object-cover"
-              onError={(e) => {
-                // Fallback to a placeholder if image fails
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent && !parent.querySelector('.fallback-content')) {
-                  const fallback = document.createElement('div');
-                  fallback.className = 'fallback-content text-center text-white/80 p-8';
-                  fallback.innerHTML = `
-                    <div class="text-6xl mb-4">🦓</div>
-                    <div class="text-xl font-semibold">ZebraWell</div>
-                    <div class="text-sm">AM & PM Formula</div>
-                  `;
-                  parent.appendChild(fallback);
-                }
-              }}
             />
           </div>
         </div>
