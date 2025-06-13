@@ -10,6 +10,10 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 import OurStory from '@/components/OurStory';
+import Testimonials from '@/components/Testimonials';
+import BuyNow from '@/components/BuyNow';
+import WhatYouGet from '@/components/WhatYouGet';
+import ClinicalRationale from '@/components/ClinicalRationale';
 
 export default function Home() {
   // Add scroll animation functionality
@@ -44,6 +48,10 @@ export default function Home() {
       {/* AvaCore component removed as requested */}
       <OurStory />
       <WhyZebraWell />
+      <Testimonials />
+      <BuyNow />
+      <WhatYouGet />
+      <ClinicalRationale />
       <Comparison />
       <Contact />
       <Footer />
