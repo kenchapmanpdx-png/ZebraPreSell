@@ -1,0 +1,68 @@
+1. Upgrade the “What People Are Saying” Section
+Current Issue: It's nearly invisible and lacks emotional punch.
+
+Instructions:
+
+Replace the current testimonial placeholder with a centered quote box. Use a serif font, larger text, and subtle border or shadow for depth.
+
+Code Sample:
+
+jsx
+Copy
+Edit
+<section className="bg-white py-16 px-6">
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-2xl font-serif font-bold mb-6">💬 What People Are Saying</h2>
+    <blockquote className="bg-surface text-lg md:text-xl italic text-gray-800 px-8 py-6 rounded-md shadow-md border-l-4 border-primary">
+      “ZebraWell is the first supplement I’ve taken that didn’t make me worse. It gave me hope again.”
+      <footer className="mt-4 text-sm text-gray-600">— Emily, EDS + POTS Warrior</footer>
+    </blockquote>
+  </div>
+</section>
+✅ 2. Improve the “Available Soon” (Retail Channels) Section
+Current Issue: Amazon/Shopify icons are too small and bland.
+
+Instructions:
+
+Enlarge the Amazon and Shopify buttons/icons. Add text like “Join the Launch Waitlist” and make the section more visually appealing.
+
+Code Sample:
+
+jsx
+Copy
+Edit
+<section className="bg-gray-50 py-16 px-6">
+  <div className="max-w-4xl mx-auto text-center space-y-6">
+    <h2 className="text-2xl font-serif font-bold">🛒 Where to Buy</h2>
+    <p className="text-gray-700 text-lg">ZebraWell will be available soon on:</p>
+    <div className="flex justify-center gap-6">
+      <img src="/images/amazon-logo.png" alt="Amazon" className="h-12" />
+      <img src="/images/shopify-logo.png" alt="Shopify" className="h-12" />
+    </div>
+    <button className="mt-6 bg-primary text-white px-6 py-3 font-semibold rounded-md shadow hover:bg-green-700">
+      Join the Launch Waitlist
+    </button>
+  </div>
+</section>
+You’ll need to upload your branded Amazon and Shopify icons to /public/images/.
+
+✅ 3. Improve Typography Hierarchy Site-Wide
+Current Issue: Some sections still feel a little flat due to inconsistent font sizing and weight.
+
+Instructions:
+
+Update section headings to use a consistent, premium serif font with increased size and spacing.
+
+Global Tailwind utility updates:
+
+css
+Copy
+Edit
+h2 {
+  @apply font-serif font-bold text-2xl md:text-3xl leading-snug;
+}
+h3 {
+  @apply font-sans font-semibold text-xl md:text-2xl;
+}
+Use font-serif only for main section titles, and keep supporting subheaders in sans-serif (font-sans).
+
