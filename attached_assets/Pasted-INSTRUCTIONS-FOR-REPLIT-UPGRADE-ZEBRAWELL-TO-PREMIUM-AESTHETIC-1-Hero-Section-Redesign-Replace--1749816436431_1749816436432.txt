@@ -1,0 +1,105 @@
+INSTRUCTIONS FOR REPLIT: UPGRADE ZEBRAWELL TO PREMIUM AESTHETIC
+🧱 1. Hero Section Redesign
+Replace current hero block with this full-width dark green hero using Tailwind:
+
+jsx
+Copy
+Edit
+<section className="bg-[#0f2e24] text-white py-20 px-8">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div className="md:w-1/2 space-y-6">
+      <h1 className="text-4xl font-serif font-bold leading-tight">
+        Behind every bottle of ZebraWell is a deeper purpose—
+        <br />
+        and her name is Ava.
+      </h1>
+      <p className="text-lg text-white/90">
+        Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
+      </p>
+      <div className="flex gap-4 mt-4">
+        <button className="bg-white text-[#0f2e24] font-semibold px-6 py-2 rounded-md shadow hover:bg-gray-100">
+          Shop Now
+        </button>
+      </div>
+    </div>
+    <div className="md:w-1/2 flex justify-center">
+      <img src=\"/images/zebrawell-hero-bottles.png\" alt=\"ZebraWell AM and PM\" className=\"w-[280px] md:w-[350px]\" />
+    </div>
+  </div>
+</section>
+You’ll need to replace /images/zebrawell-hero-bottles.png with the actual premium-looking bottle image (you can use the mockup I just created as a temp).
+
+🎨 2. Typography Overhaul
+Update Tailwind or global CSS:
+
+js
+Copy
+Edit
+// tailwind.config.js
+theme: {
+  extend: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      serif: ['\"Playfair Display\"', 'serif'], // for headings
+    }
+  }
+}
+Use:
+
+font-serif for section titles and headlines
+
+font-sans for body and secondary text
+
+🎨 3. Color System Upgrade
+Replace flat greens and beige with a modern palette:
+
+js
+Copy
+Edit
+primary: '#0f2e24',        // Deep green
+accent: '#d4af37',         // Soft gold
+background: '#ffffff',
+surface: '#f6f6f6',
+text: '#1e1e1e',
+Apply gold sparingly (e.g., CTA underline hover, icons, checkmarks).
+
+🧾 4. Product Section Redesign
+Replace the stacked beige ingredient cards with a side-by-side premium layout:
+
+jsx
+Copy
+Edit
+<section className="bg-white py-20 px-8">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl font-serif font-bold mb-10">Our Formulas</h2>
+    <div className="grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <img src=\"/images/am-formula-bottle.png\" alt=\"AM Formula\" className=\"mx-auto w-48\" />
+        <h3 className="text-xl font-semibold mt-4">AM Formula</h3>
+        <p className="text-gray-700 mt-2">Supports energy, brain fog, and vascular tone</p>
+        <button className="mt-4 text-primary underline hover:text-accent">View Ingredients</button>
+      </div>
+      <div>
+        <img src=\"/images/pm-formula-bottle.png\" alt=\"PM Formula\" className=\"mx-auto w-48\" />
+        <h3 className="text-xl font-semibold mt-4">PM Formula</h3>
+        <p className="text-gray-700 mt-2">Supports inflammation, repair, and deep rest</p>
+        <button className="mt-4 text-primary underline hover:text-accent">View Ingredients</button>
+      </div>
+    </div>
+  </div>
+</section>
+Use real bottle renders later. For now, use the photo you just generated.
+
+💡 5. Other Premium Adjustments
+Replace emojis with line-style SVG icons (e.g., from Heroicons or Tabler Icons)
+
+Remove beige card backgrounds – use white + shadows or soft borders
+
+Add hover effects to buttons and links
+
+Add subtle motion (hover:scale-[1.02], transition-all duration-300)
+
+Increase vertical spacing (py-20, space-y-12) for a more open feel
+
+✅ Summary for the Developer
+“Please upgrade the homepage to feel premium and clinically credible. Use serif fonts for headlines, deep green and white color blocks, luxury supplement bottle mockups, and cleaner modern spacing. Swap emojis for minimalist icons, and remove beige card layouts in favor of flat white with more whitespace and subtle shadows. Use the mockup I provided as a visual reference.”
