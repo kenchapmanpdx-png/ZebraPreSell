@@ -2,15 +2,17 @@ import ZebraPatternOverlay from './ZebraPatternOverlay';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden" style={{ backgroundColor: '#E1D9C6' }}>
+    <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden">
+      {/* Zebra pattern background for hero section */}
+      <div className="absolute inset-0 z-0">
+        <ZebraPatternOverlay opacity={0.15} className="w-full h-full" />
+      </div>
       <div className="relative z-1">
         {/* Header Content */}
         <div className="max-w-4xl mx-auto text-center px-6">
-          {/* Rectangle background block with zebra pattern */}
+          {/* Rectangle background block with solid color */}
           <div className="relative">
-            <div className="absolute -inset-8 rounded-xl overflow-hidden">
-              <ZebraPatternOverlay opacity={0.15} className="w-full h-full" />
-            </div>
+            <div className="absolute -inset-8 rounded-xl" style={{ backgroundColor: '#E1D9C6' }}></div>
             <div className="relative z-10 py-12 px-8">
               <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
                 <span className="text-[1.566rem] md:text-[3.1185rem] text-terra font-medium block pb-2 mb-2 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
