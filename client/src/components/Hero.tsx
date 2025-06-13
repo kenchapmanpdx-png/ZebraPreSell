@@ -37,8 +37,17 @@ export default function Hero() {
       </div>
 
       {/* Why Zebra Section */}
-      <div className="relative w-full py-20 mt-20 bg-surface/10 rounded-lg">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="relative w-full py-20 mt-20 bg-surface/10 rounded-lg overflow-hidden">
+        {/* Zebra pattern overlay */}
+        <div 
+          className="absolute inset-0 bg-repeat"
+          style={{
+            backgroundImage: 'url(/zebra-pattern.jpg)',
+            opacity: 0.2,
+            backgroundSize: '300px 150px'
+          }}
+        ></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h3 className="text-3xl md:text-4xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
           <div className="space-y-4 text-lg text-white/90 leading-relaxed">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
