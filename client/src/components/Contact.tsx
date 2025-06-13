@@ -68,7 +68,7 @@ export default function Contact() {
                     id="name" 
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
+                    className="w-full p-2 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
                     required
                   />
                 </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                     id="email" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
+                    className="w-full p-2 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
                     required
                   />
                 </div>
@@ -95,10 +95,10 @@ export default function Contact() {
                   </label>
                   <textarea 
                     id="message" 
-                    rows={4} 
+                    rows={3} 
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full p-3 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
+                    className="w-full p-2 border border-forest/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest bg-sage/5"
                     required
                   ></textarea>
                 </div>
