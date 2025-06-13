@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
+import heroBottles from '../assets/zebrawell-hero-bottles.jpg';
 
 export default function Hero() {
   return (
@@ -33,19 +34,10 @@ export default function Hero() {
         <div className="md:w-1/2 flex justify-center">
           <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white">
             <img 
-              src="/images/zebrawell-hero-bottles.jpg" 
+              src={heroBottles} 
               alt="ZebraWell AM and PM Formula bottles" 
               className="w-full h-full object-contain"
-              onError={(e) => {
-                console.log('Image failed to load:', e.target.src);
-                console.log('Trying PNG version...');
-                if (e.target.src.includes('.jpg')) {
-                  e.target.src = "/images/zebrawell-hero-bottles.png";
-                } else {
-                  console.log('Both JPG and PNG failed to load');
-                }
-              }}
-              onLoad={() => console.log('Image loaded successfully:', e.target.src)}
+              onLoad={() => console.log('Image loaded successfully from assets')}
             />
           </div>
         </div>
