@@ -75,8 +75,8 @@ export default function Comparison() {
                       </td>
                       <td className="p-6 text-center font-medium transition-all duration-300 border-r border-white/10" style={{ color: '#C3CC12' }}>
                         <div className="flex items-center justify-center space-x-2">
-                          <span className="text-xl" style={{ color: '#C3CC12' }}>✅</span>
-                          <span className="font-semibold">{row.zebrawell}</span>
+                          <span className="bg-white text-black px-1 py-0.5 rounded font-bold text-sm">✓</span>
+                          <span className="font-semibold" style={{ color: '#C3CC12' }}>{row.zebrawell}</span>
                         </div>
                       </td>
                       <td className="p-6 text-center text-gray-400 font-medium">

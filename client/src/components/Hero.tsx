@@ -12,10 +12,18 @@ export default function Hero() {
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
           </h1>
           <div className="flex flex-wrap gap-3 mt-6 mb-8 text-sm">
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ cGMP Manufactured</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ FDA-Registered Facility</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ Third-Party Tested</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ MCAS-Safe</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
+            </span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
+            </span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
+            </span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Safe
+            </span>
           </div>
           <div className="flex gap-4 mt-6">
             <Link to="#products">
@@ -43,8 +51,8 @@ export default function Hero() {
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.025,
-            backgroundSize: '300px 150px'
+            opacity: 0.0175,
+            backgroundSize: '600px 300px'
           }}
         ></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
