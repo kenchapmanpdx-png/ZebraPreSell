@@ -15,62 +15,33 @@ export default function Hero() {
             {/* Content */}
             <div className="relative z-10 px-8 py-10">
               <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
-                <span className="text-[1.566rem] md:text-[3.1185rem] text-terra font-medium block pb-2 mb-2 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
-                <span className="text-[1.08rem] md:text-[1.8rem] block leading-tight text-forest">Wellness for the Rare and Resilient</span>
+                <span className="text-[2.5rem] md:text-[3.5rem] text-forest font-bold block pb-2 mb-2 font-lora">Supplements Built for the Rare and Resilient</span>
               </h1>
-              <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 22.5%)', color: 'white', borderColor: 'hsl(125, 40%, 22.5%)' }}>
-                  <i className="fas fa-leaf mr-2"></i>
-                  <span className="text-sm font-medium">All-Natural</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(85, 64%, 41.8%)', color: 'white', borderColor: 'hsl(85, 64%, 41.8%)' }}>
-                  <i className="fas fa-seedling mr-2"></i>
-                  <span className="text-sm font-medium">Bioavailable</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 32%)', color: 'white', borderColor: 'hsl(125, 40%, 32%)' }}>
-                  <i className="fas fa-puzzle-piece mr-2"></i>
-                  <span className="text-sm font-medium">Works as a System</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(85, 64%, 51%)', color: 'white', borderColor: 'hsl(85, 64%, 51%)' }}>
-                  <i className="fas fa-apple-alt mr-2"></i>
-                  <span className="text-sm font-medium">Allergen-Free</span>
-                </div>
+              <p className="text-lg md:text-xl text-terra font-semibold mb-4 fade-in">
+                Clinically-backed. Hypersensitive-friendly. Trusted by patients with EDS, POTS & Dysautonomia.
+              </p>
+              <p className="text-md md:text-lg text-forest/80 mb-6 fade-in max-w-3xl mx-auto">
+                Ditch the junk science and generic multis. ZebraWell delivers therapeutic doses of bioavailable nutrients—formulated by a father for his daughter, and validated by the lived experience of this community.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8 fade-in">
+                <button className="bg-forest hover:bg-forest/90 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  Explore AM Formula
+                </button>
+                <button className="border border-forest text-forest hover:bg-forest hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                  Explore PM Formula
+                </button>
+                <button className="text-forest hover:text-terra px-6 py-3 rounded-lg font-medium transition-colors">
+                  Compare AM vs PM
+                </button>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3 mb-6 fade-in">
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 22.5%)', color: 'white', borderColor: 'hsl(125, 40%, 22.5%)' }}>
-                  <i className="fas fa-microscope mr-2"></i>
-                  <span className="text-sm font-medium">Total Transparency</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(85, 64%, 41.8%)', color: 'white', borderColor: 'hsl(85, 64%, 41.8%)' }}>
-                  <i className="fas fa-user-plus mr-2"></i>
-                  <span className="text-sm font-medium">Formulated For Zebras</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 32%)', color: 'white', borderColor: 'hsl(125, 40%, 32%)' }}>
-                  <i className="fas fa-dna mr-2"></i>
-                  <span className="text-sm font-medium">Targeted Support</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(85, 64%, 51%)', color: 'white', borderColor: 'hsl(85, 64%, 51%)' }}>
-                  <i className="fas fa-feather mr-2"></i>
-                  <span className="text-sm font-medium">Gentle by Design</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 32%)', color: 'white', borderColor: 'hsl(125, 40%, 32%)' }}>
-                  <i className="fas fa-ban mr-2"></i>
-                  <span className="text-sm font-medium">No Junk. Ever.</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(85, 64%, 41.8%)', color: 'white', borderColor: 'hsl(85, 64%, 41.8%)' }}>
-                  <i className="fas fa-brain mr-2"></i>
-                  <span className="text-sm font-medium">Smart Science</span>
-                </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: 'hsl(125, 40%, 22.5%)', color: 'white', borderColor: 'hsl(125, 40%, 22.5%)' }}>
-                  <i className="fas fa-leaf mr-2"></i>
-                  <span className="text-sm font-medium">Only What Helps</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-4 pt-6 text-sm text-forest mb-6 fade-in">
+                <span className="flex items-center">✅ cGMP Manufactured</span>
+                <span className="flex items-center">✅ FDA-Registered Facility</span>
+                <span className="flex items-center">✅ Third-Party Tested</span>
+                <span className="flex items-center">✅ MCAS-Safe | No Dyes | No Fillers</span>
+                <span className="flex items-center">✅ Designed for POTS & EDS Bodies</span>
               </div>
-              
-              <p className="text-lg md:text-xl mb-10 text-neutral-dark fade-in font-lora text-center pt-4">
-                Pure, organic formulations designed specifically for sensitive systems.
-              </p>
             </div>
           </div>
         </div>

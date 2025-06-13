@@ -1,0 +1,73 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function HomePage() {
+  return (
+    <div className="bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-8 py-20 max-w-7xl mx-auto">
+        <div className="md:w-1/2 space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Supplements Built for the Rare and Resilient
+          </h1>
+          <p className="text-lg text-gray-700">
+            Clinically-backed. Hypersensitive-friendly. Trusted by patients with EDS, POTS & Dysautonomia.
+          </p>
+          <p className="text-md text-gray-600">
+            Ditch the junk science and generic multis. ZebraWell delivers therapeutic doses of bioavailable nutrients—formulated by a father for his daughter, and validated by the lived experience of this community.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button>Explore AM Formula</Button>
+            <Button variant="outline">Explore PM Formula</Button>
+            <Button variant="ghost">Compare AM vs PM</Button>
+          </div>
+          <div className="flex flex-wrap gap-4 pt-6 text-sm text-gray-600">
+            <span>✅ cGMP Manufactured</span>
+            <span>✅ FDA-Registered Facility</span>
+            <span>✅ Third-Party Tested</span>
+            <span>✅ MCAS-Safe | No Dyes | No Fillers</span>
+            <span>✅ Designed for POTS & EDS Bodies</span>
+          </div>
+        </div>
+        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+          <img src="/images/zebrawell-bottles.png" alt="ZebraWell AM and PM" className="w-80" />
+        </div>
+      </section>
+
+      {/* Difference Section */}
+      <section className="bg-gray-50 py-16 px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-6">What Makes ZebraWell Different</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">🧠 Targeted for EDS & POTS</h3>
+                <p>Built specifically to support collagen, mast cells, blood volume, and autonomic balance.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">💊 2 Bottles Replace 15</h3>
+                <p>AM + PM system simplifies routines. No guesswork, no 20-bottle supplement graveyard.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">🌿 Clean & MCAS-Friendly</h3>
+                <p>No titanium dioxide, stearates, soy, corn, dyes, or mystery additives.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t py-8 px-8 text-sm text-gray-500 text-center">
+        <p>&copy; {new Date().getFullYear()} ZebraWell. Wellness for the Rare and Resilient.</p>
+        <p className="mt-2">Manufactured in the USA in a cGMP, FDA-registered facility. Third-party tested.</p>
+        <p className="mt-2">This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      </footer>
+    </div>
+  );
+}
