@@ -25,7 +25,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full inw-gradient z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`}>
+    <nav id="main-nav" className={`fixed top-0 w-full bg-gradient-to-b from-[#0f2e24] to-[#072018] z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex items-center ml-[-20px]">
@@ -63,7 +63,7 @@ export default function Navigation() {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`md:hidden inw-gradient border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`md:hidden bg-gradient-to-b from-[#0f2e24] to-[#072018] border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Home</a>
         <a href="#products" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Products</a>
         <a href="#story" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Our Story</a>

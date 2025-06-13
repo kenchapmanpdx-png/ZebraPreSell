@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
-import heroBottles from '../assets/zebrawell-hero-bottles.jpg';
+import heroBottles from '../assets/zebrawell-bottles-new.jpg';
 
 export default function Hero() {
   return (
@@ -10,13 +10,8 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-6">
           <h1 className="text-4xl font-serif font-bold leading-tight">
-            Behind every bottle of ZebraWell is a deeper purpose—
-            <br />
-            and her name is Ava.
-          </h1>
-          <p className="text-lg text-white/90">
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
-          </p>
+          </h1>
           <div className="flex flex-wrap gap-2 mt-4 mb-6 text-sm">
             <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ cGMP Manufactured</span>
             <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ FDA-Registered Facility</span>
@@ -46,7 +41,7 @@ export default function Hero() {
       {/* Why Zebra Section */}
       <div className="relative w-full py-20 mt-20 bg-surface/10 rounded-lg">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-3xl md:text-4xl mb-6 text-white font-serif font-bold">Why "Zebra"?</h3>
+          <h3 className="text-3xl md:text-4xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
           <div className="space-y-4 text-lg text-white/90 leading-relaxed">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
