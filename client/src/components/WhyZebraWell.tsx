@@ -45,7 +45,9 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="py-6 md:py-8 inw-gradient relative overflow-hidden">
+    <section id="why" className="py-6 md:py-8 relative overflow-hidden" style={{
+      background: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(196, 183, 151, 1) 50%, rgba(15, 46, 36, 1) 94%)'
+    }}>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
         

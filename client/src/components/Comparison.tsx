@@ -62,7 +62,7 @@ export default function Comparison() {
                   <tr className="bg-black/20">
                     <th className="p-6 text-left text-white font-bold text-lg">Feature</th>
                     <th className="p-6 text-center text-green-400 font-bold text-lg hover:bg-green-500/10 transition-colors">
-                      ZebraWell Premium ✅
+                      ZebraWell ✅
                     </th>
                     <th className="p-6 text-center text-gray-400 font-bold text-lg">Generic Brands ❌</th>
                   </tr>
