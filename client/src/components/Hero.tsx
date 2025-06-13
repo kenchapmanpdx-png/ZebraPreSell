@@ -26,16 +26,12 @@ export default function Hero() {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-white to-gray-50 flex items-center justify-center">
-            <div className="text-center text-gray-400">
-              <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-[#8BAB34] to-[#0F2E24] rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="text-sm font-medium text-gray-500">ZebraWell Products</p>
-              <p className="text-xs text-gray-400 mt-1">AM & PM Formulas</p>
-            </div>
+          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+            <img 
+              src="/images/zebrawell-hero-bottles.png" 
+              alt="ZebraWell AM and PM Formula bottles" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
