@@ -9,7 +9,12 @@ export default function Hero() {
       <div className="relative z-1">
         {/* Header Content */}
         <div className="max-w-3xl mx-auto text-center px-6">
-          <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
+          <div className="relative">
+            {/* Background rectangle */}
+            <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#E1DCD2' }}></div>
+            {/* Content */}
+            <div className="relative z-10 px-8 py-10">
+              <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
             <span className="text-[1.566rem] md:text-[3.1185rem] text-terra font-medium block pb-2 mb-2 font-lora">Supplemental Support for EDS, POTS, and MCAS</span>
             <span className="text-[1.08rem] md:text-[1.8rem] block leading-tight text-forest">Wellness for the Rare and Resilient</span>
           </h1>
@@ -66,6 +71,8 @@ export default function Hero() {
           <p className="text-lg md:text-xl mb-10 text-neutral-dark fade-in font-lora text-center pt-4">
             Pure, organic formulations designed specifically for sensitive systems.
           </p>
+            </div>
+          </div>
         </div>
       </div>
 
