@@ -31,11 +31,13 @@ export default function Hero() {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
-              src="/images/zebrawell-hero-bottles.png" 
+              src="/images/zebrawell-hero-bottles.jpg" 
               alt="ZebraWell AM and PM Formula bottles" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
+              onError={(e) => console.log('Image failed to load:', e.target.src)}
+              onLoad={() => console.log('Image loaded successfully')}
             />
           </div>
         </div>
