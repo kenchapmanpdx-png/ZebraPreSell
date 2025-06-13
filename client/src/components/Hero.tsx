@@ -6,7 +6,7 @@ import heroBottlesImg from '../assets/zebrawell-hero-bottles.jpg';
 
 export default function Hero() {
   return (
-    <section className="bg-primary text-white py-20 px-8 pt-32">
+    <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-6">
           <h1 className="text-4xl font-serif font-bold leading-tight">
@@ -17,16 +17,22 @@ export default function Hero() {
           <p className="text-lg text-white/90">
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
           </p>
+          <div className="flex flex-wrap gap-2 mt-4 mb-6 text-sm">
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ cGMP Manufactured</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ FDA-Registered Facility</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ Third-Party Tested</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ MCAS-Safe</span>
+          </div>
           <div className="flex gap-4 mt-4">
             <Link to="#products">
-              <button className="bg-white text-primary font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02]">
+              <button className="bg-white text-primary font-semibold px-6 py-3 rounded-md shadow hover:bg-[#f5f5f5] border border-accent transition-all duration-300 hover:scale-[1.02]">
                 Shop Now
               </button>
             </Link>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
+          <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
               src={heroBottlesImg} 
               alt="ZebraWell AM and PM Formula bottles" 

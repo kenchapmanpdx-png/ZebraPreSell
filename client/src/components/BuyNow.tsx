@@ -6,14 +6,14 @@ export default function BuyNow() {
         <p className="text-forest/80 text-lg leading-relaxed mb-8 fade-in">
           ZebraWell will be available on Amazon and Shopify. Subscribe for launch updates and exclusive early access.
         </p>
-        <div className="mt-6 flex justify-center gap-8 fade-in">
-          <div className="bg-white rounded-lg p-4 shadow-md">
-            <div className="h-10 w-20 bg-orange-500 rounded flex items-center justify-center text-white font-bold text-sm">
+        <div className="mt-8 flex justify-center gap-6 fade-in">
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+            <div className="h-12 w-24 bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md">
               Amazon
             </div>
           </div>
-          <div className="bg-white rounded-lg p-4 shadow-md">
-            <div className="h-10 w-20 bg-green-600 rounded flex items-center justify-center text-white font-bold text-sm">
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+            <div className="h-12 w-24 bg-gradient-to-r from-green-500 to-green-700 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md">
               Shopify
             </div>
           </div>

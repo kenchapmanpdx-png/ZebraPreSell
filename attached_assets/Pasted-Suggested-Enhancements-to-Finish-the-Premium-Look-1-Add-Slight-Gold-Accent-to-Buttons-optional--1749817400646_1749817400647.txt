@@ -1,0 +1,69 @@
+Suggested Enhancements to Finish the Premium Look
+1. 💅 Add Slight Gold Accent to Buttons (optional)
+To give it that “luxury” polish:
+
+jsx
+Copy
+Edit
+<button className="bg-white text-primary font-semibold px-6 py-3 rounded-md shadow hover:bg-[#f5f5f5] border border-accent transition-all duration-300 hover:scale-[1.02]">
+  Shop Now
+</button>
+In your tailwind.config.js, define:
+
+js
+Copy
+Edit
+accent: '#d4af37' // Soft gold
+2. 🖼️ Improve Image Framing and Style
+Right now the bottle image is nice, but you can add subtle visual polish like so:
+
+jsx
+Copy
+Edit
+<div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+  <img 
+    src={heroBottlesImg} 
+    alt="ZebraWell AM and PM Formula bottles" 
+    className="w-full h-full object-cover"
+  />
+</div>
+This gives the image a “framed” feel and high-end edge.
+
+3. 🎨 Gradient Background Option (if you want drama)
+Replace bg-primary with a gradient to deepen visual depth:
+
+jsx
+Copy
+Edit
+<section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
+4. 🧾 Typography Polish (Optional)
+Make sure these styles are applied globally in Tailwind:
+
+js
+Copy
+Edit
+fontFamily: {
+  serif: ['\"Playfair Display\"', 'serif'],
+  sans: ['Inter', 'sans-serif'],
+}
+Use:
+
+font-serif for headlines (which you're doing—good!)
+
+text-white/80 or /90 for body to soften contrast just a bit (you’ve got this started already)
+
+5. ✅ Final Polish Instructions for Replit:
+Tell Replit:
+
+“Please keep this exact structure, but:
+
+Add an accent color in Tailwind (#d4af37) and apply a 1px border to the CTA for a luxury accent.
+
+Upgrade the hero image container with a white border and slightly more rounded corners.
+
+Optionally, add a from-darkgreen to-deepgreen gradient to the hero background instead of flat green.
+
+Ensure the serif heading font is 'Playfair Display' or similar, and the body uses Inter or a clean sans-serif.
+
+Keep spacing generous (pt-32, py-20, gap-10) to maintain open, premium feel.”
+
