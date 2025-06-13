@@ -1,8 +1,8 @@
 import zebraPattern from '../assets/zebra-pattern.jpg';
 
 export default function ZebraBackground() {
-  // Get the sage-green color from our palette for the zebra pattern
-  const sageGreen = "rgb(122, 156, 101)"; // This is the sage green from our palette
+  // Dark tan color for the zebra pattern background
+  const darkTan = "rgb(139, 118, 94)"; // Dark tan color
   
   return (
     <div 
@@ -12,7 +12,7 @@ export default function ZebraBackground() {
         backgroundRepeat: 'repeat',
         backgroundSize: '1200px auto', // 300% larger than the original 400px
         opacity: 0.02, // Reduced by another 50% for cleaner hero section
-        filter: `sepia(100%) hue-rotate(80deg) saturate(60%) brightness(110%)` // Transforms black to sage green
+        filter: `sepia(100%) hue-rotate(25deg) saturate(50%) brightness(90%)` // Transforms black to dark tan
       }}
     />
   );
