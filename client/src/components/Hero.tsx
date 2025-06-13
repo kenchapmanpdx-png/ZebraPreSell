@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
+import heroBottlesImg from '../assets/zebrawell-hero-bottles.jpg';
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
         <div className="md:w-1/2 flex justify-center">
           <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
             <img 
-              src="/src/assets/zebrawell-hero-bottles.jpg" 
+              src={heroBottlesImg} 
               alt="ZebraWell AM and PM Formula bottles" 
               className="w-full h-full object-cover"
             />
