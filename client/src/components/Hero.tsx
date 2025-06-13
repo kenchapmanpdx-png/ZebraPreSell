@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
 
 export default function Hero() {
