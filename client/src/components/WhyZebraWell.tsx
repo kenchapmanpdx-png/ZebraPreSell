@@ -60,13 +60,13 @@ export default function WhyZebraWell() {
       ></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             let bgColorClass = "";
             let iconColorClass = "";
             let textColorClass = "";
-            
+
             // Special case for "No Junk. Ever." feature
             if (feature.title === "No Junk. Ever.") {
               // Forest green theme for background and text
@@ -79,7 +79,7 @@ export default function WhyZebraWell() {
               iconColorClass = "text-sage-dark";
               textColorClass = "text-forest";
             }
-            
+
             return (
               <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`}>
                 <div className="flex items-start mb-4">

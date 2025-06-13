@@ -38,8 +38,8 @@ export default function Navigation() {
             <span className="text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
             <span className="text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
-          <div className="hidden lg:flex flex-col ml-6 border-l border-white/20 pl-6">
-            <span className="text-sm text-white/90 font-medium">Supporting EDS, POTS & MCAS</span>
+          <div className="flex flex-col ml-6 border-l border-white/20 pl-6">
+            <span className="text-sm text-white/90 font-medium">Supporting EDS & POTS</span>
             <span className="text-xs text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
           </div>
         </a>
@@ -48,10 +48,8 @@ export default function Navigation() {
         <div className="hidden md:flex items-center space-x-6">
           <a href="#home" className="font-medium text-white hover:text-terra transition-colors">Home</a>
           <a href="#products" className="font-medium text-white hover:text-terra transition-colors">Products</a>
-          <a href="#story" className="font-medium text-white hover:text-terra transition-colors">Our Story</a>
           <a href="#why" className="font-medium text-white hover:text-terra transition-colors">Why ZebraWell</a>
           <a href="#comparison" className="font-medium text-white hover:text-terra transition-colors">Research</a>
-          <a href="#contact" className="font-medium text-white hover:text-terra transition-colors">Contact Us</a>
         </div>
         
         {/* Mobile Menu Button */}
@@ -73,10 +71,8 @@ export default function Navigation() {
            }}>
         <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Home</a>
         <a href="#products" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Products</a>
-        <a href="#story" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Our Story</a>
         <a href="#why" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Why ZebraWell</a>
         <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Research</a>
-        <a href="#contact" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Contact Us</a>
       </div>
     </nav>
   );

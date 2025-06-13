@@ -21,13 +21,10 @@ export default function Hero() {
             <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Safe
-            </span>
-          </div>
+            </div>
           <div className="flex gap-4 mt-6">
             <Link to="#products">
-              <button className="bg-cta-green text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-cta-green-dark transition-all duration-300 hover:scale-[1.02]">
+              <button className="bg-terra text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-terra-dark transition-all duration-300 hover:scale-[1.02]">
                 Shop Now
               </button>
             </Link>
