@@ -2,16 +2,14 @@ import ZebraPatternOverlay from './ZebraPatternOverlay';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden" style={{ backgroundColor: '#DCC693' }}>
+    <section id="home" className="pt-32 md:pt-44 pb-0 md:pb-0 relative overflow-hidden" style={{ backgroundColor: '#E1D9C6' }}>
       <div className="relative z-1">
         {/* Header Content */}
         <div className="max-w-4xl mx-auto text-center px-6">
           {/* Rectangle background block with zebra pattern */}
           <div className="relative">
-            <div className="absolute inset-0 -mx-8 rounded-xl overflow-hidden">
-              <div className="w-full h-full">
-                <ZebraPatternOverlay opacity={0.15} className="" />
-              </div>
+            <div className="absolute -inset-8 rounded-xl overflow-hidden">
+              <ZebraPatternOverlay opacity={0.15} className="w-full h-full" />
             </div>
             <div className="relative z-10 py-12 px-8">
               <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
