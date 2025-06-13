@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto text-center px-6">
           <div className="relative">
             {/* Background rectangle */}
-            <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#E1DCD2' }}></div>
+            <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#E1DCD2', opacity: 0.5 }}></div>
             {/* Content */}
             <div className="relative z-10 px-8 py-10">
               <h1 className="font-lora font-bold mb-6 leading-tight fade-in">
