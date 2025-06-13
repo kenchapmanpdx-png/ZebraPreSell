@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-6">
-          <h1 className="text-4xl font-serif font-bold leading-tight">
+          <h1 className="text-3xl font-serif font-bold leading-tight">
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
           </h1>
           <div className="flex flex-wrap gap-2 mt-4 mb-6 text-sm">
