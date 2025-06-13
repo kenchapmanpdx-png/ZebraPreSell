@@ -46,8 +46,6 @@ export default function WhyZebraWell() {
 
   return (
     <section id="why" className="py-12 md:py-16 inw-gradient relative overflow-hidden">
-      {/* Zebra pattern overlay */}
-      <ZebraPatternOverlay opacity={0.1} />
       
       {/* Tagline section with semi-transparent background */}
       <div className="inw-gradient-tagline py-3 mb-8 relative z-10">

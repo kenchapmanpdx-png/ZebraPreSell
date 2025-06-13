@@ -14,36 +14,43 @@ export default function Comparison() {
     <section id="comparison" className="py-16 md:py-24 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-forest mb-6 fade-in">Product Comparison</h2>
-        <p className="text-center text-neutral-dark/80 max-w-2xl mx-auto mb-12 fade-in">Comparing ZebraWell's premium formulation against conventional supplement alternatives</p>
-        
-        <div className="max-w-4xl mx-auto overflow-x-auto fade-in">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="p-4 border-b-2 border-neutral-medium"></th>
-                <th className="p-4 border-b-2 border-forest text-center text-forest font-bold" style={{ backgroundColor: 'rgba(116, 195, 101, 0.15)' }}>ZebraWell Premium</th>
-                <th className="p-4 border-b-2 border-neutral-medium text-center text-neutral-dark font-bold">Generic Brands</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparisonData.map((row, index) => (
-                <tr key={index}>
-                  <td className="p-4 border-b border-neutral-medium font-semibold">{row.feature}</td>
-                  <td className="p-4 border-b border-forest/30 text-center text-forest" style={{ backgroundColor: index % 2 === 0 ? 'rgba(116, 195, 101, 0.08)' : 'rgba(135, 169, 107, 0.08)' }}>
-                    <div className="flex items-center justify-center">
-                      <i className="fas fa-check mr-2" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}></i> {row.zebrawell}
-                    </div>
-                  </td>
-                  <td className="p-4 border-b border-neutral-medium text-center text-neutral-dark/80">
-                    <div className="flex items-center justify-center">
-                      <i className="fas fa-triangle-exclamation text-neutral-dark/50 mr-2"></i> {row.generic}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="relative">
+          {/* Background block */}
+          <div className="absolute inset-0 rounded-2xl mx-auto" style={{ backgroundColor: '#E1DCD2', opacity: 0.5 }}></div>
+          {/* Content */}
+          <div className="relative z-10 px-8 py-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-forest mb-6 fade-in">Product Comparison</h2>
+            <p className="text-center text-neutral-dark/80 max-w-2xl mx-auto mb-12 fade-in">Comparing ZebraWell's premium formulation against conventional supplement alternatives</p>
+            
+            <div className="max-w-4xl mx-auto overflow-x-auto fade-in">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr>
+                    <th className="p-4 border-b-2 border-neutral-medium"></th>
+                    <th className="p-4 border-b-2 border-forest text-center text-forest font-bold" style={{ backgroundColor: 'rgba(116, 195, 101, 0.15)' }}>ZebraWell Premium</th>
+                    <th className="p-4 border-b-2 border-neutral-medium text-center text-neutral-dark font-bold">Generic Brands</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, index) => (
+                    <tr key={index} className="hover:bg-neutral-light transition-colors">
+                      <td className="p-4 border-b border-neutral-medium font-semibold text-neutral-dark text-left">{row.feature}</td>
+                      <td className="p-4 border-b border-neutral-medium text-center font-medium">
+                        <div className="flex items-center justify-center" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}>
+                          <i className="fas fa-check mr-2" style={{ color: index % 2 === 0 ? '#74c365' : '#87a96b' }}></i> {row.zebrawell}
+                        </div>
+                      </td>
+                      <td className="p-4 border-b border-neutral-medium text-center text-neutral-dark/80">
+                        <div className="flex items-center justify-center">
+                          <i className="fas fa-triangle-exclamation text-neutral-dark/50 mr-2"></i> {row.generic}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>

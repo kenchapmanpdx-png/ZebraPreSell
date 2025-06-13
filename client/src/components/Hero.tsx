@@ -54,7 +54,7 @@ export default function Hero() {
                   <i className="fas fa-feather mr-2"></i>
                   <span className="text-sm font-medium">Gentle by Design</span>
                 </div>
-                <div className="flex items-center px-3 py-1 rounded-full border" style={{ backgroundColor: '#357c3b', color: 'white', borderColor: '#357c3b' }}>
+                <div className="flex items-center px-3 py-1 bg-sage-light/50 text-sage-dark rounded-full border border-sage-light/50">
                   <i className="fas fa-ban mr-2"></i>
                   <span className="text-sm font-medium">No Junk. Ever.</span>
                 </div>
@@ -79,9 +79,9 @@ export default function Hero() {
       <div className="relative w-full py-8 mt-8 mb-5 z-10 inw-gradient overflow-hidden">
         {/* Content */}
         <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <h3 className="text-[1.4375rem] md:text-[1.725rem] mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
+          <h3 className="text-[2.0125rem] md:text-[2.415rem] mb-4 text-terra font-medium text-center">Why "Zebra"?</h3>
           
-          <p className="text-lg md:text-xl italic text-center text-white">
+          <p className="text-[1.368rem] md:text-[1.44rem] italic text-center text-white">
             The Zebra is the mascot for rare conditions and diseases.<br/>
             The medical system teaches, "When you hear hoofbeats, think horses."<br/>
             But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.<br/>
