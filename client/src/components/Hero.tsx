@@ -1,12 +1,14 @@
+
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
+import heroImage from '../assets/zebrawell-products-hero.jpg';
 
 export default function Hero() {
   return (
     <>
       {/* Premium Hero Section */}
-      <section className="bg-primary text-white py-20 px-8">
+      <section className="bg-primary text-white py-20 px-8 pt-32">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl font-serif font-bold leading-tight">
@@ -26,10 +28,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-[280px] md:w-[350px] h-[280px] md:h-[350px] bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white/60 text-center">
-                Premium Bottle<br/>Mockup Here
-              </span>
+            <div className="w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
+              <img 
+                src={heroImage} 
+                alt="ZebraWell AM and PM Formula bottles" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
