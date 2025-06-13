@@ -50,7 +50,7 @@ export default function Comparison() {
           {/* Content */}
           <div className="relative z-10 px-8 py-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-4 fade-in">
-              Why <span className="text-accent">ZebraWell</span> Leads the Industry
+              Why <span style={{ color: '#C3CC12' }}>ZebraWell</span> Leads the Industry
             </h2>
             <p className="text-center text-white/80 max-w-3xl mx-auto mb-12 fade-in text-lg">
               Stop settling for supplements that weren't made for your body. Here's what sets us apart:
@@ -61,7 +61,7 @@ export default function Comparison() {
                 <thead>
                   <tr className="bg-black/20">
                     <th className="p-6 text-left text-white font-bold text-lg">Feature</th>
-                    <th className="p-6 text-center text-green-400 font-bold text-lg hover:bg-green-500/10 transition-colors">
+                    <th className="p-6 text-center font-bold text-lg transition-colors" style={{ color: '#C3CC12' }}>
                       ZebraWell ✅
                     </th>
                     <th className="p-6 text-center text-gray-400 font-bold text-lg">Generic Brands ❌</th>
@@ -73,9 +73,9 @@ export default function Comparison() {
                       <td className="p-6 font-semibold text-white text-left border-r border-white/10">
                         <strong>{row.feature}</strong>
                       </td>
-                      <td className="p-6 text-center text-green-400 font-medium hover:bg-green-500/10 transition-all duration-300 border-r border-white/10">
+                      <td className="p-6 text-center font-medium transition-all duration-300 border-r border-white/10" style={{ color: '#C3CC12' }}>
                         <div className="flex items-center justify-center space-x-2">
-                          <span className="text-green-400 text-xl">✅</span>
+                          <span className="text-xl" style={{ color: '#C3CC12' }}>✅</span>
                           <span className="font-semibold">{row.zebrawell}</span>
                         </div>
                       </td>

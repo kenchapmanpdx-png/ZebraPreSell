@@ -7,17 +7,17 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2 space-y-9">
+        <div className="md:w-1/2 space-y-11">
           <h1 className="text-3xl font-serif font-bold leading-tight">
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
           </h1>
-          <div className="flex flex-wrap gap-2 mt-4 mb-6 text-sm">
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ cGMP Manufactured</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ FDA-Registered Facility</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ Third-Party Tested</span>
-            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20">✅ MCAS-Safe</span>
+          <div className="flex flex-wrap gap-3 mt-6 mb-8 text-sm">
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ cGMP Manufactured</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ FDA-Registered Facility</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ Third-Party Tested</span>
+            <span className="bg-white/10 text-white px-3 py-1 rounded-full border border-white/20" style={{ color: '#C3CC12' }}>✅ MCAS-Safe</span>
           </div>
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 mt-6">
             <Link to="#products">
               <button className="bg-white text-primary font-semibold px-6 py-3 rounded-md shadow hover:bg-[#f5f5f5] border border-accent transition-all duration-300 hover:scale-[1.02]">
                 Shop Now

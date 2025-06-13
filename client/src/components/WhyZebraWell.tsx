@@ -51,10 +51,11 @@ export default function WhyZebraWell() {
     }}>
       {/* Zebra pattern overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center bg-repeat"
         style={{
           backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.1
+          opacity: 0.1,
+          backgroundSize: '400px 200px'
         }}
       ></div>
       <div className="container mx-auto px-6 relative z-10">
