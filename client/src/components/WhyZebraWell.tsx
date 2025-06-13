@@ -45,15 +45,7 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="py-12 md:py-16 inw-gradient relative overflow-hidden">
-      
-      {/* Tagline section with semi-transparent background */}
-      <div className="inw-gradient-tagline py-3 mb-8 relative z-10">
-        <div className="container mx-auto px-6">
-          <p className="text-white text-center font-lora text-lg italic">Wellness for the Rare and Resilient</p>
-        </div>
-      </div>
-      
+    <section id="why" className="py-6 md:py-8 inw-gradient relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
         
