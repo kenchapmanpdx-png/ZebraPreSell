@@ -1,7 +1,11 @@
-import ZebraBackground from './ZebraBackground';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
-export default function AvaCore() { // Keeping function name for compatibility, but redesigning for earthy theme
-  const ingredients = [
+export default function AvaCore() {
+  const [showAMIngredients, setShowAMIngredients] = useState(false);
+  const [showPMIngredients, setShowPMIngredients] = useState(false);
+
+  const amIngredients = [
     {
       name: "Magnesium (Glycinate Chelate)",
       description: "Calms nerves, supports muscle function and energy metabolism.",
@@ -25,7 +29,10 @@ export default function AvaCore() { // Keeping function name for compatibility, 
       description: "Modulates nervous system, stabilizes cell membranes, helps with POTS.",
       dosage: "500 mg",
       note: "Supports cellular stability"
-    },
+    }
+  ];
+
+  const pmIngredients = [
     {
       name: "Vitamin D3",
       description: "Supports immune, bone, and mood regulation.",
@@ -39,147 +46,88 @@ export default function AvaCore() { // Keeping function name for compatibility, 
       note: "Works synergistically with D3"
     },
     {
-      name: "Zinc (Bisglycinate or Picolinate)",
+      name: "Zinc (Bisglycinate)",
       description: "Supports immune, skin, and tissue repair.",
       dosage: "15 mg",
-      note: "Gentle, bioavailable form"
-    },
-    {
-      name: "Thiamine HCl",
-      description: "Boosts nerve signaling and energy production.",
-      dosage: "50 mg",
-      note: "Especially helpful for POTS"
-    },
-    {
-      name: "Riboflavin-5'-Phosphate",
-      description: "Supports energy production and cellular function.",
-      dosage: "25 mg",
-      note: "Active form of B2"
-    },
-    {
-      name: "Niacinamide",
-      description: "Helps cellular repair and energy metabolism.",
-      dosage: "50 mg",
-      note: "Gentle form of B3"
-    },
-    {
-      name: "Pantothenic Acid",
-      description: "Supports adrenal function and energy production.",
-      dosage: "100 mg",
-      note: "Stress support vitamin"
-    },
-    {
-      name: "P-5-P (B6)",
-      description: "Active form of B6, supports over 100 enzyme reactions.",
-      dosage: "25 mg",
-      note: "Neurotransmitter support"
-    },
-    {
-      name: "Folate (L-5-MTHF)",
-      description: "Bioavailable form of folate for methylation support.",
-      dosage: "400 mcg DFE",
-      note: "Methylation cycle support"
-    },
-    {
-      name: "Methylcobalamin (B12)",
-      description: "Active form of B12, supports nervous system and energy.",
-      dosage: "500 mcg",
-      note: "Neurological support"
-    },
-    {
-      name: "Biotin",
-      description: "Supports metabolism, skin, hair and nails.",
-      dosage: "300 mcg",
-      note: "Supports connective tissues"
-    },
-    {
-      name: "PEA (Micronized)",
-      description: "Natural anti-inflammatory and mast cell modulating.",
-      dosage: "400 mg",
-      note: "Comfort and inflammation support"
-    },
-    {
-      name: "Potassium Citrate",
-      description: "Important for nerve and muscle function; often low in POTS.",
-      dosage: "99 mg",
-      note: "Electrolyte balance support"
-    },
-    {
-      name: "Selenium",
-      description: "Antioxidant mineral supporting thyroid and immune function.",
-      dosage: "100 mcg",
-      note: "Antioxidant enzyme support"
-    },
-    {
-      name: "Molybdenum",
-      description: "Cofactor for enzymes that metabolize sulfites and toxins.",
-      dosage: "50 mcg",
-      note: "Detoxification support"
+      note: "Essential mineral support"
     }
   ];
 
   return (
-    <section id="avacore" className="py-16 md:py-24 relative overflow-hidden">
-      <ZebraBackground />
-      <div className="container mx-auto px-6 relative z-1">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-lora mb-6 fade-in text-forest">ZebraWell™ Core Formula</h2>
-          <div className="flex flex-wrap justify-center items-center gap-2 mb-4 fade-in">
-            <span className="px-3 py-1 rounded-full bg-sage-light text-xs text-forest font-medium mx-1">Natural Ingredients</span>
-            <span className="px-3 py-1 rounded-full bg-terra-light text-xs text-terra-dark font-medium mx-1">Pure & Organic</span>
-            <span className="px-3 py-1 rounded-full bg-sage-light text-xs text-forest font-medium mx-1">Allergen-Free</span>
+    <section className="bg-white py-20 px-8" id="products">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-serif font-bold mb-4 text-primary">Our Formulas</h2>
+        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+          Two comprehensive formulas designed to support your body's complex needs throughout the day and night.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* AM Formula */}
+          <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300">
+            <div className="w-48 h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg mx-auto mb-6 flex items-center justify-center">
+              <span className="text-orange-600 font-semibold text-center">
+                AM Formula<br/>Bottle
+              </span>
+            </div>
+            <h3 className="text-2xl font-serif font-bold mt-4 text-primary">AM Formula</h3>
+            <p className="text-gray-700 mt-2 mb-4">Supports energy, brain fog, and vascular tone</p>
+
+            <button 
+              onClick={() => setShowAMIngredients(!showAMIngredients)}
+              className="text-primary hover:text-accent underline font-medium flex items-center gap-2 mx-auto transition-colors duration-300"
+            >
+              View Ingredients 
+              {showAMIngredients ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+
+            {showAMIngredients && (
+              <div className="mt-6 space-y-4 text-left">
+                {amIngredients.map((ingredient, index) => (
+                  <div key={index} className="border-l-2 border-accent pl-4">
+                    <h4 className="font-semibold text-primary">{ingredient.name}</h4>
+                    <p className="text-sm text-gray-600 mb-1">{ingredient.description}</p>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-accent">{ingredient.dosage}</span>
+                      <span className="text-xs text-gray-500 italic">{ingredient.note}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
-          <p className="text-lg text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora">
-            Our flagship daily formula (6–8 capsules/day) designed specifically for EDS, POTS, and MCAS support. 
-            ZebraWell Core delivers essential nutrients in their most bioavailable forms to support 
-            foundational mitochondrial, nervous system, and connective tissue health.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-forest fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl lg:col-span-3">
-            <div className="flex items-center mb-6">
-              <div className="relative w-16 h-20 mr-4">
-                <div className="absolute inset-0 rounded-lg bg-sage/5 border border-sage/20"></div>
-                <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-sage/20 to-sage/5 rounded-b-lg rounded-t-3xl shadow-inner"></div>
-                <div className="absolute inset-0 flex items-center justify-center flex-col">
-                  <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
-                    <i className="fas fa-flask text-sm text-forest"></i>
-                  </div>
-                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                  <div className="text-[6px] text-sage">Core Formula</div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-lora text-forest">Core Formula</h3>
-                <div className="flex items-center">
-                  <span className="text-sm text-neutral-dark/70 font-medium">Dosage: 6-8 capsules/day</span>
-                  <span className="ml-3 px-2 py-0.5 rounded-md bg-forest-light text-xs text-forest font-medium">Foundational Support</span>
-                </div>
-              </div>
+          {/* PM Formula */}
+          <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300">
+            <div className="w-48 h-48 bg-gradient-to-br from-blue-100 to-purple-200 rounded-lg mx-auto mb-6 flex items-center justify-center">
+              <span className="text-purple-600 font-semibold text-center">
+                PM Formula<br/>Bottle
+              </span>
             </div>
-            
-            <ul className="mb-6 space-y-2">
-              {ingredients.map((ingredient, index) => (
-                <li key={index} className="flex items-start">
-                  <i className="fas fa-flask text-forest mt-1 mr-3"></i>
-                  <div className="w-full">
-                    <div className="flex justify-between items-start">
-                      <span className="font-medium">{ingredient.name}</span>
-                      <span className="text-xs text-forest bg-forest-light/50 px-2 py-0.5 rounded ml-2">{ingredient.dosage}</span>
-                    </div>
-                    <p className="text-sm text-neutral-dark/70">{ingredient.description}</p>
-                    <p className="text-xs text-neutral-dark/90 italic mt-1">{ingredient.note}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            
-            <button className="w-full py-3 px-6 bg-forest hover:bg-forest/90 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
-              <i className="fas fa-info-circle mr-2"></i>
-              Product Details
+            <h3 className="text-2xl font-serif font-bold mt-4 text-primary">PM Formula</h3>
+            <p className="text-gray-700 mt-2 mb-4">Supports inflammation, repair, and deep rest</p>
+
+            <button 
+              onClick={() => setShowPMIngredients(!showPMIngredients)}
+              className="text-primary hover:text-accent underline font-medium flex items-center gap-2 mx-auto transition-colors duration-300"
+            >
+              View Ingredients 
+              {showPMIngredients ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </button>
+
+            {showPMIngredients && (
+              <div className="mt-6 space-y-4 text-left">
+                {pmIngredients.map((ingredient, index) => (
+                  <div key={index} className="border-l-2 border-accent pl-4">
+                    <h4 className="font-semibold text-primary">{ingredient.name}</h4>
+                    <p className="text-sm text-gray-600 mb-1">{ingredient.description}</p>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-accent">{ingredient.dosage}</span>
+                      <span className="text-xs text-gray-500 italic">{ingredient.note}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

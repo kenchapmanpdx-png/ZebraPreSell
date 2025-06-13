@@ -5,6 +5,8 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      serif: ['Playfair Display', 'serif'],
       montserrat: ['Montserrat', 'sans-serif'],
       lora: ['Lora', 'serif'],
     },
@@ -48,6 +50,11 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        // Premium color system
+        primary: '#0f2e24',
+        accent: '#d4af37',
+        surface: '#f6f6f6',
+        
         // ZebraWell earthy colors
         sage: {
           light: "hsl(var(--sage-light))",

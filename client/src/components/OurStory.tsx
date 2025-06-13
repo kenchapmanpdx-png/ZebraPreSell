@@ -26,7 +26,7 @@ export default function OurStory() {
               in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
             </p>
             
-            <p className="font-bold text-terra text-center text-[1.25em] font-lora">
+            <p className="font-bold text-primary text-center text-xl font-serif">
               She is our Why!
             </p>
             
@@ -43,8 +43,8 @@ export default function OurStory() {
           
           <div className="mt-8 flex justify-center">
             <Link to="#products">
-              <button className="text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 hover:opacity-90" style={{ backgroundColor: '#74c365' }}>
-                <i className="fas fa-leaf mr-2"></i>Discover Our Products
+              <button className="bg-primary text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90">
+                Discover Our Products
               </button>
             </Link>
           </div>
