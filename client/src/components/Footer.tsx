@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="text-white py-12" style={{
       background: '#0F2E24',
-      backgroundImage: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(144, 150, 15, 1) 50%, rgba(15, 46, 36, 1) 94%)'
+      backgroundImage: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(96, 125, 16, 1) 50%, rgba(15, 46, 36, 1) 94%)'
     }}>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

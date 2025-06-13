@@ -43,13 +43,13 @@ export default function Hero() {
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.2,
+            opacity: 0.1,
             backgroundSize: '300px 150px'
           }}
         ></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h3 className="text-3xl md:text-4xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-4 text-lg text-white/90 leading-relaxed">
+          <h3 className="text-5xl md:text-6xl mb-9 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
+          <div className="space-y-6 text-3xl text-white/90 leading-relaxed">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
             <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>
