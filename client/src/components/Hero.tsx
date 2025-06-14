@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section className="text-white py-20 px-8 pt-12" style={{
         background: 'hsla(161, 51%, 12%, 1)',
-        backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 0%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 100%)'
+        backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
       }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-5" data-aos="fade-up" style={{ lineHeight: '1.4' }}>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold leading-relaxed mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
           </h1>
 
@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center items-start" data-aos="fade">
-          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white mt-0">
+          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white" style={{ marginTop: '-2rem' }}>
             <img 
               src="/images/zebrawell-hero-bottles.png" 
               alt="ZebraWell AM and PM Formula bottles" 
