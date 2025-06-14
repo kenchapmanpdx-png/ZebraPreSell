@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
-          <h1 className="text-[3.45xl] font-serif font-bold leading-relaxed mb-8" data-aos="fade-up">
+          <h1 className="text-6xl md:text-7xl font-serif font-bold leading-relaxed mb-8" data-aos="fade-up">
             Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           

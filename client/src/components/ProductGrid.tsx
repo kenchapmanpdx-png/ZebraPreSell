@@ -44,7 +44,7 @@ export default function ProductGrid() {
                       ingredient={ingredient} 
                       colorScheme="orange"
                     >
-                      <li className="flex items-start">
+                      <li className="flex items-start" data-aos="fade-right" data-aos-delay={`${600 + (index * 100)}`}>
                         <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
                         <div className="w-full">
                           <div className="flex justify-between items-start">
@@ -98,7 +98,7 @@ export default function ProductGrid() {
                       ingredient={ingredient} 
                       colorScheme="forest"
                     >
-                      <li className="flex items-start">
+                      <li className="flex items-start" data-aos="fade-left" data-aos-delay={`${800 + (index * 100)}`}>
                         <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
                         <div className="w-full">
                           <div className="flex justify-between items-start">
