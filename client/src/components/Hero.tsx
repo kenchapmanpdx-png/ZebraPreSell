@@ -71,9 +71,9 @@ export default function Hero() {
             backgroundSize: '600px 300px'
           }}
         ></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade">
           <h3 className="text-4xl md:text-5xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-4 text-2xl text-white/90 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+          <div className="space-y-4 text-2xl text-white/90 leading-relaxed" data-aos="fade">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
             <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>
