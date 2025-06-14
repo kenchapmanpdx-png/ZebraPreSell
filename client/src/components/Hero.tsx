@@ -8,11 +8,11 @@ export default function Hero() {
     <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
-          <h1 className="text-[3.45xl] font-serif font-bold leading-relaxed mb-8 slide-in-left">
+          <h1 className="text-[3.45xl] font-serif font-bold leading-relaxed mb-8" data-aos="fade-up">
             Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           
-          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
+          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm" data-aos="fade-up" data-aos-delay="200">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
@@ -71,9 +71,9 @@ export default function Hero() {
             backgroundSize: '600px 300px'
           }}
         ></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">
           <h3 className="text-4xl md:text-5xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-4 text-2xl text-white/90 leading-relaxed">
+          <div className="space-y-4 text-2xl text-white/90 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
             <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>

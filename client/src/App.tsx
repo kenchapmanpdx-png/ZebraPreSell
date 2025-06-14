@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Router() {
   return (
@@ -16,6 +19,14 @@ function Router() {
 }
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: true, // only animate once per scroll
+    });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
