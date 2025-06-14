@@ -81,7 +81,7 @@ export default function WhyZebraWell() {
             }
 
             return (
-              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`}>
+              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm premium-hover fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10 ${index % 3 === 0 ? 'stagger-delay-1' : index % 3 === 1 ? 'stagger-delay-2' : 'stagger-delay-3'}`}>
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 mr-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 

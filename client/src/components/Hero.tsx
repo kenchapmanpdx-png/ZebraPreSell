@@ -8,32 +8,32 @@ export default function Hero() {
     <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
-          <h1 className="text-3xl font-serif font-bold leading-relaxed mb-8">
+          <h1 className="text-3xl font-serif font-bold leading-relaxed mb-8 slide-in-left">
             Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
           </h1>
           
-          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm">
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20">
+          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
           </div>
           
-          <div className="flex gap-4 mt-10">
+          <div className="flex gap-4 mt-10 slide-in-left stagger-delay-2">
             <Link to="#products">
-              <button className="bg-terra text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-terra-dark transition-all duration-300 hover:scale-[1.02]">
+              <button className="bg-terra text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-terra-dark transition-all duration-300 hover:scale-[1.05] glow-on-hover">
                 Shop Now
               </button>
             </Link>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white slide-in-right subtle-scale">
             <img 
               src="/images/zebrawell-hero-bottles.png" 
               alt="ZebraWell AM and PM Formula bottles" 

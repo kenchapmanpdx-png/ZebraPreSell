@@ -18,10 +18,10 @@ import ClinicalRationale from '@/components/ClinicalRationale';
 export default function Home() {
   // Add scroll animation functionality
   useEffect(() => {
-    const fadeElements = document.querySelectorAll('.fade-in');
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
     
-    const checkFade = () => {
-      fadeElements.forEach(element => {
+    const checkAnimation = () => {
+      animatedElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
         
@@ -31,11 +31,11 @@ export default function Home() {
       });
     };
     
-    window.addEventListener('scroll', checkFade);
-    checkFade(); // Check on initial load
+    window.addEventListener('scroll', checkAnimation);
+    checkAnimation(); // Check on initial load
     
     return () => {
-      window.removeEventListener('scroll', checkFade);
+      window.removeEventListener('scroll', checkAnimation);
     };
   }, []);
 

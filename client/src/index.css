@@ -159,7 +159,66 @@
     transform: translateY(0);
   }
   
-  /* Animation removed as requested */
+  /* Premium hover animations */
+  .premium-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .premium-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .subtle-scale {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .subtle-scale:hover {
+    transform: scale(1.02);
+  }
+  
+  .glow-on-hover {
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: 0 0 30px rgba(137, 179, 23, 0.3);
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .slide-in-left.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .slide-in-right.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .stagger-delay-1 {
+    transition-delay: 0.1s;
+  }
+  
+  .stagger-delay-2 {
+    transition-delay: 0.2s;
+  }
+  
+  .stagger-delay-3 {
+    transition-delay: 0.3s;
+  }
   
   .container {
     @apply mx-auto px-4 sm:px-6;
