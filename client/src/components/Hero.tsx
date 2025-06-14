@@ -62,10 +62,10 @@ export default function Hero() {
 
       {/* Why Zebra Section */}
       <div className="relative w-fit mx-auto py-12 mt-16 rounded-lg overflow-hidden px-8" style={{
-        background: '#0F2E24'
+        background: '#2E6229'
       }}>
         {/* Solid dark green background */}
-        <div className="absolute inset-0" style={{ background: '#0F2E24' }}></div>
+        <div className="absolute inset-0" style={{ background: '#2E6229' }}></div>
         {/* Zebra pattern overlay */}
         <div 
           className="absolute inset-0 bg-repeat"

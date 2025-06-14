@@ -5,32 +5,32 @@ export default function ClinicalRationale() {
         <h2 className="text-3xl font-serif font-bold text-white mb-8 text-center fade-in">🧬 Why Each Ingredient Matters</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
           {/* AM Formula Ingredients */}
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-orange-400 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Magnesium Malate</h3>
             <p className="text-xs text-forest/70">Energy production & muscle function</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-green-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">CoQ10 (Ubiquinol)</h3>
             <p className="text-xs text-forest/70">Mitochondrial energy support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-yellow-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Vitamin D3</h3>
             <p className="text-xs text-forest/70">Immune & bone health</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-blue-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Vitamin K2</h3>
             <p className="text-xs text-forest/70">Bone mineralization</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-purple-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">PEA</h3>
             <p className="text-xs text-forest/70">Pain relief & inflammation</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-teal-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Alpha-GPC</h3>
             <p className="text-xs text-forest/70">Cognitive support</p>
           </div>

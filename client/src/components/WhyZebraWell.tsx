@@ -46,8 +46,8 @@ export default function WhyZebraWell() {
 
   return (
     <section id="why" className="py-6 md:py-8 relative overflow-hidden" style={{
-      background: 'hsla(161, 51%, 12%, 1)',
-      backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+      background: '#2E6229',
+      backgroundImage: 'linear-gradient(90deg, rgba(46, 98, 41, 1) 15%, rgba(117, 133, 70, 1) 49%, rgba(46, 98, 41, 1) 85%)'
     }}>
       {/* Zebra pattern overlay */}
       <div 
