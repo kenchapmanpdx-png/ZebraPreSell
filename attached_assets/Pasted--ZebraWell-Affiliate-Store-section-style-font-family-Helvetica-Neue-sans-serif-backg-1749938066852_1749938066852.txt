@@ -1,0 +1,67 @@
+<!-- ZebraWell Affiliate Store -->
+<section style="font-family: 'Helvetica Neue', sans-serif; background: #fff; color: #333; padding: 2rem; max-width: 900px; margin: auto;">
+  <h1 style="text-align: center; font-size: 2.2rem; margin-bottom: 1rem;">ZebraWell Trusted Tools & Essentials</h1>
+  <p style="text-align: center; font-size: 1rem; max-width: 700px; margin: 0 auto 2rem; color: #555;">
+    Every item below is carefully selected for people living with EDS, POTS, and MCAS. No fluff. No hype. Just clinically relevant, MCAS-conscious support that aligns with our values: transparency, functionality, and safety.
+  </p>
+
+  <!-- Category: Electrolytes & Hydration -->
+  <h2 style="margin-top: 2rem; font-size: 1.5rem; border-bottom: 2px solid #eee;">💧 Electrolytes & Hydration</h2>
+  <div style="margin-top: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B085L1LZ3R" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">LMNT Recharge Electrolyte Drink Mix</a>
+      <p style="margin: 0.2rem 0; color: #777;">$30 (30-pack)</p>
+      <p style="margin: 0;">Trusted by POTS patients for maintaining hydration without triggering MCAS flares.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B00A1FXYWA" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">DripDrop ORS Electrolyte Powder</a>
+      <p style="margin: 0.2rem 0; color: #777;">$20–$40 (32-count)</p>
+      <p style="margin: 0;">Effective oral rehydration solution used in clinical settings—review ingredients if MCAS-sensitive.</p>
+    </div>
+  </div>
+
+  <!-- Category: Compression Wear -->
+  <h2 style="margin-top: 2rem; font-size: 1.5rem; border-bottom: 2px solid #eee;">🧦 Compression Wear</h2>
+  <div style="margin-top: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B07D1F8FWH" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">TOFLY Compression Stockings (20–30 mmHg)</a>
+      <p style="margin: 0.2rem 0; color: #777;">$20–$25</p>
+      <p style="margin: 0;">Recommended by POTS specialists to reduce blood pooling and support vascular tone.</p>
+    </div>
+  </div>
+
+  <!-- Category: MCAS-Safe Supplements -->
+  <h2 style="margin-top: 2rem; font-size: 1.5rem; border-bottom: 2px solid #eee;">🧬 MCAS-Safe Supplements</h2>
+  <div style="margin-top: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B0013OVW0E" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">Quercetin Bromelain Complex (NOW Foods)</a>
+      <p style="margin: 0.2rem 0; color: #777;">$15–$20</p>
+      <p style="margin: 0;">Helps stabilize mast cells and reduce histamine response—check third-party test results when possible.</p>
+    </div>
+  </div>
+
+  <!-- Category: Daily Living Aids -->
+  <h2 style="margin-top: 2rem; font-size: 1.5rem; border-bottom: 2px solid #eee;">🛋 Daily Living Aids</h2>
+  <div style="margin-top: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B07F8WZV3B" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">Contour Legacy Leg Pillow</a>
+      <p style="margin: 0.2rem 0; color: #777;">$25–$30</p>
+      <p style="margin: 0;">Provides ergonomic leg support for those with EDS-related hip instability or POTS-related pooling.</p>
+    </div>
+  </div>
+
+  <!-- Category: Health Tools -->
+  <h2 style="margin-top: 2rem; font-size: 1.5rem; border-bottom: 2px solid #eee;">🩺 Health Tools</h2>
+  <div style="margin-top: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="https://www.amazon.com/dp/B00DIFIP06" target="_blank" style="font-weight: bold; font-size: 1.1rem; color: #1a73e8;">iHealth Wireless Blood Pressure Monitor</a>
+      <p style="margin: 0.2rem 0; color: #777;">$40–$60</p>
+      <p style="margin: 0;">Track your vitals with ease—ideal for POTS and dysautonomia patients monitoring upright BP changes.</p>
+    </div>
+  </div>
+
+  <!-- Affiliate Disclosure -->
+  <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666;">
+    <p><strong>Affiliate Disclaimer:</strong> As an Amazon Associate, ZebraWell earns from qualifying purchases. We only recommend products we believe meet our clinical and safety standards for EDS, POTS, and MCAS patients.</p>
+  </footer>
+</section>
