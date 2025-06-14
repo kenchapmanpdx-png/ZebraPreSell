@@ -12,47 +12,39 @@ export default function Hero() {
             Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           
-          <div className="grid grid-cols-2 gap-3 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
-            </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
-            </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
-            </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
             </span>
-            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
+            </span>
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
+            </span>
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
+            </span>
+            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
             </span>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 mt-10 slide-in-left stagger-delay-2">
+          <div className="flex gap-4 mt-10 slide-in-left stagger-delay-2">
             <Link to="#products">
-              <button className="bg-terra text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-terra-dark transition-all duration-300 hover:scale-[1.05] glow-on-hover">
+              <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] glow-on-hover">
                 Shop Now
               </button>
             </Link>
-            <div className="flex gap-3">
-              <a href="https://amazon.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-[1.05]">
-                <img src="/images/amazon-button.png" alt="Buy on Amazon" className="h-12 w-auto" />
-              </a>
-              <a href="https://shopify.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-[1.05]">
-                <img src="/images/shopify-button.png" alt="Shop on Shopify" className="h-12 w-auto" />
-              </a>
-            </div>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
