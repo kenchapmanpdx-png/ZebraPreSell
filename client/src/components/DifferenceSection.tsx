@@ -6,12 +6,12 @@ export default function DifferenceSection() {
     <section className="bg-surface py-20 px-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-serif font-bold text-primary mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
-        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           We've reimagined supplement design for the unique needs of rare condition warriors.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Target className="w-8 h-8 text-primary" />
             </div>
@@ -27,7 +27,7 @@ export default function DifferenceSection() {
             <p className="text-gray-700 leading-relaxed">AM + PM system simplifies routines. No guesswork, no 20-bottle supplement graveyard.</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Leaf className="w-8 h-8 text-green-600" />
             </div>
