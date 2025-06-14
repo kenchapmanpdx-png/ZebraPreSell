@@ -7,11 +7,11 @@ export default function OurStory() {
     <section id="story" className="py-6 md:py-8 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto bg-earth-cream rounded-xl p-8 md:p-12 shadow-lg border border-terra/10" data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest" data-aos="fade-up" data-aos-delay="100">
+          <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest" data-aos="fade-up">
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-terra">Ava</span>.
           </h2>
           
-          <div className="prose prose-lg prose-forest max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          <div className="prose prose-lg prose-forest max-w-3xl mx-auto" data-aos="fade">
             <p>
               Ava is our daughter — brave, brilliant, and resilient in ways most will never have to be.
               She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, dislocating joints, and extreme fatigue.
