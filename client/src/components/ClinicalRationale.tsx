@@ -2,7 +2,7 @@ export default function ClinicalRationale() {
   return (
     <section className="bg-gray-50 py-16 px-8" style={{ background: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)' }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-serif font-bold text-forest mb-8 text-center fade-in">🧬 Why Each Ingredient Matters</h2>
+        <h2 className="text-3xl font-serif font-bold text-white mb-8 text-center fade-in">🧬 Why Each Ingredient Matters</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
           {/* AM Formula Ingredients */}
           <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">

@@ -34,7 +34,7 @@ export default function Navigation() {
         className="absolute inset-0 bg-repeat"
         style={{
           backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.05,
+          opacity: 0.025,
           backgroundSize: '800px 400px'
         }}
       ></div>

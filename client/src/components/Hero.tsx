@@ -16,28 +16,28 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 mt-12 mb-12 text-sm" data-aos="fade">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
             </span>
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
             </span>
           </div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
       </div>
 
       {/* Why Zebra Section */}
-      <div className="relative w-full py-12 mt-16 rounded-lg overflow-hidden" style={{
+      <div className="relative w-fit mx-auto py-12 mt-16 rounded-lg overflow-hidden px-8" style={{
         background: '#0F2E24'
       }}>
         {/* Solid dark green background */}
@@ -75,7 +75,7 @@ export default function Hero() {
             backgroundSize: '600px 300px'
           }}
         ></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade">
+        <div className="max-w-3xl mx-auto px-6 text-center relative z-10" data-aos="fade">
           <h3 className="text-4xl md:text-5xl mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
           <div className="space-y-4 text-2xl text-white/90 leading-relaxed" data-aos="fade">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
