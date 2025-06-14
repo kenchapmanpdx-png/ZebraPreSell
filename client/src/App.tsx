@@ -21,8 +21,8 @@ function Router() {
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 700,
-      easing: 'ease-in-out',
+      duration: 400,
+      easing: 'ease-out',
       once: true, // only animate once per scroll
     });
   }, []);

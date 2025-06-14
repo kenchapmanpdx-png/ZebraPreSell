@@ -12,7 +12,7 @@ export default function Hero() {
             Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           
-          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm" data-aos="fade-up" data-aos-delay="200">
+          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm" data-aos="fade-up" data-aos-delay="100">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
@@ -39,7 +39,7 @@ export default function Hero() {
             </span>
           </div>
           
-          <div className="flex gap-4 mt-10" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex gap-4 mt-10" data-aos="fade-up" data-aos-delay="200">
             <Link to="#products">
               <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05]">
                 Shop Now
@@ -47,7 +47,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+        <div className="md:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-delay="200">
           <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
               src="/images/zebrawell-hero-bottles.png" 
