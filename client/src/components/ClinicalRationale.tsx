@@ -35,68 +35,68 @@ export default function ClinicalRationale() {
             <p className="text-xs text-forest/70">Cognitive support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-indigo-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">ALCAR</h3>
             <p className="text-xs text-forest/70">Brain & mitochondrial support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-pink-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Taurine</h3>
             <p className="text-xs text-forest/70">Cardiovascular support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-red-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Thiamine</h3>
             <p className="text-xs text-forest/70">Nervous system health</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-emerald-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">B2 (R5P)</h3>
             <p className="text-xs text-forest/70">Energy metabolism</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-cyan-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">B6 (P5P)</h3>
             <p className="text-xs text-forest/70">Neurotransmitter support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-amber-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">B12 (Dual-form)</h3>
             <p className="text-xs text-forest/70">Energy & nerve function</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-lime-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Folate (L-5-MTHF)</h3>
             <p className="text-xs text-forest/70">Methylation support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-violet-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Zinc Glycinate</h3>
             <p className="text-xs text-forest/70">Immune support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-rose-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Copper Glycinate</h3>
             <p className="text-xs text-forest/70">Connective tissue health</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-slate-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Silicon (ch-OSA)</h3>
             <p className="text-xs text-forest/70">Collagen synthesis</p>
           </div>
 
           {/* PM Formula Additional Ingredients */}
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-sky-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">L-Theanine</h3>
             <p className="text-xs text-forest/70">Relaxation & sleep</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-fuchsia-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Hyaluronic Acid</h3>
             <p className="text-xs text-forest/70">Joint lubrication</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border border-gray-100 fade-in">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-emerald-600 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">R-Lipoic Acid</h3>
             <p className="text-xs text-forest/70">Antioxidant & nerve health</p>
           </div>
