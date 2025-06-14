@@ -1,0 +1,76 @@
+ I see the likely reason “No Junk. Ever.” is rendering inconsistently. It's not about the content or map loop — it's about how styles are conditionally applied and potentially overridden or conflicting due to:
+
+🔍 Likely Issues
+1. ✅ textColorClass gets applied to the <h3> — good
+BUT…
+
+2. ⚠️ You’re also overriding that color via this conditional inline:
+jsx
+Copy
+Edit
+<p className={`text-base leading-relaxed ${feature.title === "No Junk. Ever." ? "text-white/90" : "text-neutral-dark/80"}`}>{feature.description}</p>
+So even if textColorClass is set to text-white, this line ignores it.
+
+✅ Fix: Use textColorClass consistently instead of hardcoded white.
+
+3. 🧱 The background color is using a Tailwind-style class that might not be defined in your tailwind.config.js:
+js
+Copy
+Edit
+bg-forest/80
+If bg-forest or forest isn’t defined in your custom colors, this will silently fail or fall back to default.
+
+✅ Fix: Use either a real Tailwind color (bg-green-900/80) or define forest in your tailwind.config.js.
+
+✅ Cleaned Up Fix (apply this to your map return):
+Replace this block:
+
+jsx
+Copy
+Edit
+<p className={`text-base leading-relaxed ${feature.title === "No Junk. Ever." ? "text-white/90" : "text-neutral-dark/80"}`}>{feature.description}</p>
+With this:
+
+jsx
+Copy
+Edit
+<p className={`text-base leading-relaxed ${textColorClass}`}>{feature.description}</p>
+And make sure textColorClass is defined cleanly above as you already did:
+
+js
+Copy
+Edit
+if (feature.title === "No Junk. Ever.") {
+  bgColorClass = "bg-forest/80";
+  iconColorClass = "text-white";
+  textColorClass = "text-white/90";
+} else {
+  bgColorClass = "bg-white/90";
+  iconColorClass = "text-sage-dark";
+  textColorClass = "text-forest";
+}
+⚠️ Bonus Check: font-lora
+Make sure font-lora is available in your Tailwind theme or linked via Google Fonts:
+
+html
+Copy
+Edit
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+And in tailwind.config.js:
+
+js
+Copy
+Edit
+fontFamily: {
+  lora: ['Lora', 'serif'],
+  // other fonts...
+}
+✅ Final Note:
+If only “No Junk. Ever.” breaks, and not any other card, the issue is 99% this:
+
+Conflicting or missing Tailwind color (like bg-forest/80)
+
+Not applying textColorClass consistently
+
+Possibly stale cache from earlier attempts (force refresh, rebuild project)
+
