@@ -25,12 +25,21 @@ export default function Navigation() {
   };
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10`} 
+    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10 relative`} 
          style={{
            background: '#0F2E24',
            backgroundImage: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(117, 133, 70, 1) 50%, rgba(15, 46, 36, 1) 94%)'
          }}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      {/* Zebra pattern overlay */}
+      <div 
+        className="absolute inset-0 bg-repeat"
+        style={{
+          backgroundImage: 'url(/zebra-pattern.jpg)',
+          opacity: 0.05,
+          backgroundSize: '800px 400px'
+        }}
+      ></div>
+      <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         {/* Logo */}
         <a href="#" className="flex items-center ml-[-20px]">
           <ZebraLogo />
