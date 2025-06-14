@@ -3,7 +3,7 @@ export default function ClinicalRationale() {
     <section className="bg-gray-50 py-16 px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-serif font-bold text-forest mb-8 text-center" data-aos="fade-up">🧬 Why Each Ingredient Matters</h2>
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="200">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="100">
           {/* AM Formula Ingredients */}
           <div className="bg-white rounded-lg p-4 shadow border border-gray-100">
             <h3 className="text-sm font-bold text-forest mb-1">Magnesium Malate</h3>
