@@ -27,7 +27,7 @@ export default function DifferenceSection() {
             <p className="text-gray-700 leading-relaxed">AM + PM system simplifies routines. No guesswork, no 20-bottle supplement graveyard.</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 premium-hover fade-in">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="600">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Leaf className="w-8 h-8 text-green-600" />
             </div>
