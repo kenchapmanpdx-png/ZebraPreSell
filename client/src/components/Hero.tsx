@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'wouter';
 import ZebraHeart from './ZebraHeart';
@@ -12,9 +11,9 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
           <h1 className="text-5xl md:text-6xl font-serif font-bold leading-relaxed mb-5" data-aos="fade-up">
-            Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
+            Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
           </h1>
-          
+
           <div className="flex flex-wrap gap-4 mt-12 mb-12 text-sm" data-aos="fade">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
@@ -41,7 +40,7 @@ export default function Hero() {
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
             </span>
           </div>
-          
+
           <div className="flex gap-4 mt-10" data-aos="fade-up">
             <Link to="#products">
               <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05]">
