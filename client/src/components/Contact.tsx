@@ -23,7 +23,7 @@ export default function Contact() {
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="fade-in">
+            <div data-aos="fade-right">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-forest">Contact Us</h2>
               <p className="text-neutral-dark/80 mb-6">
                 Have questions about our formulations or want to learn more about ZebraWell products? 
@@ -54,7 +54,7 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-md fade-in">
+            <div className="bg-white p-6 rounded-xl shadow-md" data-aos="fade-left" data-aos-delay="200">
               <h3 className="text-2xl font-bold mb-4 text-forest">Request Information</h3>
               
               <form onSubmit={handleSubmit}>

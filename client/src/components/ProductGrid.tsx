@@ -7,14 +7,14 @@ export default function ProductGrid() {
     <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
-        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-4 fade-in">Products</h2>
-        <p className="text-xl text-neutral-dark/80 fade-in max-w-2xl mx-auto font-lora mb-12 text-center py-6">
+        <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-4" data-aos="fade-up">Products</h2>
+        <p className="text-xl text-neutral-dark/80 max-w-2xl mx-auto font-lora mb-12 text-center py-6" data-aos="fade-up" data-aos-delay="200">
           Our comprehensive AM and PM formulas provide targeted support throughout the day, addressing the unique needs of individuals with EDS, POTS, and MCAS.
         </p>
         <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <div id="am-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div id="am-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="300">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
@@ -68,7 +68,7 @@ export default function ProductGrid() {
 
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 fade-in transform transition-all hover:-translate-y-2 hover:shadow-xl">
+            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="500">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
