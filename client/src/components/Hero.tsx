@@ -9,18 +9,33 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
           <h1 className="text-3xl font-serif font-bold leading-relaxed mb-8 slide-in-left">
-            Clinical-grade supplements designed for the rare and resilient. Built for POTS, EDS, and Dysautonomia support—clean, bioavailable, and tested.
+            Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           
-          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+          <div className="flex flex-wrap gap-3 mt-10 mb-10 text-sm slide-in-left stagger-delay-1">
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
+            </span>
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
+            </span>
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
+            </span>
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
+            </span>
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
+            </span>
+            <span className="bg-white/10 text-white px-3 py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
             </span>
           </div>
           
@@ -44,7 +59,9 @@ export default function Hero() {
       </div>
 
       {/* Why Zebra Section */}
-      <div className="relative w-full py-12 mt-16 bg-surface/10 rounded-lg overflow-hidden">
+      <div className="relative w-full py-12 mt-16 rounded-lg overflow-hidden" style={{
+        background: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(117, 133, 70, 1) 50%, rgba(15, 46, 36, 1) 94%)'
+      }}>
         {/* Zebra pattern overlay */}
         <div 
           className="absolute inset-0 bg-repeat"
