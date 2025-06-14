@@ -39,16 +39,16 @@ export default function Hero() {
             </span>
           </div>
           
-          <div className="flex gap-4 mt-10 slide-in-left stagger-delay-2">
+          <div className="flex gap-4 mt-10" data-aos="fade-up" data-aos-delay="400">
             <Link to="#products">
-              <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] glow-on-hover">
+              <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05]">
                 Shop Now
               </button>
             </Link>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white slide-in-right subtle-scale">
+        <div className="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
               src="/images/zebrawell-hero-bottles.png" 
               alt="ZebraWell AM and PM Formula bottles" 

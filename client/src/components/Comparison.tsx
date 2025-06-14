@@ -49,14 +49,14 @@ export default function Comparison() {
           
           {/* Content */}
           <div className="relative z-10 px-8 py-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-4 fade-in">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-4" data-aos="fade-up">
               Why <span style={{ color: '#C3CC12' }}>ZebraWell</span> Leads the Industry
             </h2>
-            <p className="text-center text-white/80 max-w-3xl mx-auto mb-12 fade-in text-lg">
+            <p className="text-center text-white/80 max-w-3xl mx-auto mb-12 text-lg" data-aos="fade-up" data-aos-delay="200">
               Stop settling for supplements that weren't made for your body. Here's what sets us apart:
             </p>
             
-            <div className="max-w-6xl mx-auto overflow-x-auto fade-in">
+            <div className="max-w-6xl mx-auto overflow-x-auto" data-aos="fade-left" data-aos-delay="400">
               <table className="w-full border-collapse bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
                 <thead>
                   <tr className="bg-black/20">
@@ -92,7 +92,7 @@ export default function Comparison() {
             </div>
             
             {/* Call to action */}
-            <div className="text-center mt-12 fade-in">
+            <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="600">
               <p className="text-white/90 text-lg mb-6">
                 <strong>Ready to upgrade from generic supplements to targeted care?</strong>
               </p>

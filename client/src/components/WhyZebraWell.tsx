@@ -59,7 +59,7 @@ export default function WhyZebraWell() {
         }}
       ></div>
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8 fade-in">Why Choose ZebraWell</h2>
+        <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8" data-aos="fade-up">Why Choose ZebraWell</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
@@ -81,7 +81,7 @@ export default function WhyZebraWell() {
             }
 
             return (
-              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm premium-hover fade-in ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10 ${index % 3 === 0 ? 'stagger-delay-1' : index % 3 === 1 ? 'stagger-delay-2' : 'stagger-delay-3'}`}>
+              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`} data-aos="fade-up" data-aos-delay={`${index * 150}`}>
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 mr-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 
