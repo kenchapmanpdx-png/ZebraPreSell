@@ -46,8 +46,8 @@ export default function WhyZebraWell() {
 
   return (
     <section id="why" className="py-6 md:py-8 relative overflow-hidden" style={{
-      background: '#0F2E24',
-      backgroundImage: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(117, 133, 70, 1) 50%, rgba(15, 46, 36, 1) 94%)'
+      background: 'hsla(161, 51%, 12%, 1)',
+      backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 0%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 100%)'
     }}>
       {/* Zebra pattern overlay */}
       <div 
@@ -81,7 +81,7 @@ export default function WhyZebraWell() {
             }
 
             return (
-              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10`} data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10 fade-in`}>
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 mr-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 

@@ -5,14 +5,17 @@ import ZebraHeart from './ZebraHeart';
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-[#0f2e24] to-[#072018] text-white py-20 px-8 pt-32">
+    <section className="text-white py-20 px-8 pt-20" style={{
+        background: 'hsla(161, 51%, 12%, 1)',
+        backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 0%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 100%)'
+      }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 space-y-8">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold leading-relaxed mb-8" data-aos="fade-up">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold leading-relaxed mb-5" data-aos="fade-up">
             Clinical-grade supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-party tested.
           </h1>
           
-          <div className="flex flex-wrap gap-4 mt-10 mb-10 text-sm" data-aos="fade">
+          <div className="flex flex-wrap gap-4 mt-12 mb-12 text-sm" data-aos="fade">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-white text-black px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
@@ -60,7 +63,8 @@ export default function Hero() {
 
       {/* Why Zebra Section */}
       <div className="relative w-full py-12 mt-16 rounded-lg overflow-hidden" style={{
-        background: '#0f2e24'
+        background: 'hsla(161, 51%, 12%, 1)',
+        backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 0%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 100%)'
       }}>
         {/* Zebra pattern overlay */}
         <div 

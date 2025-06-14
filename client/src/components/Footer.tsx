@@ -3,8 +3,8 @@ import ZebraLogo from './ZebraLogo';
 export default function Footer() {
   return (
     <footer className="text-white py-12" style={{
-      background: '#0F2E24',
-      backgroundImage: 'linear-gradient(90deg, rgba(15, 46, 36, 1) 6%, rgba(117, 133, 70, 1) 50%, rgba(15, 46, 36, 1) 94%)'
+      background: 'hsla(161, 51%, 12%, 1)',
+      backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 0%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 100%)'
     }}>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -26,7 +26,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-4 flex items-center"><i className="fas fa-link text-white/50 mr-2"></i>Quick Links</h4>
             <ul className="space-y-2">
@@ -36,7 +36,7 @@ export default function Footer() {
               <li><a href="#boosters" className="hover:text-white transition-colors">Medical Boosters</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-4 flex items-center"><i className="fas fa-question-circle text-white/50 mr-2"></i>Resources</h4>
             <ul className="space-y-2">
@@ -47,9 +47,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <hr className="my-8 border-white/20" />
-        
+
         <div className="text-center text-white/70">
           <p>&copy; ZebraWell 2025. All rights reserved.</p>
           <p className="mt-2 text-sm">These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease.</p>
