@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10 relative`} 
          style={{
-           background: '#2E6229'
+           background: '#1D4526'
          }}>
       {/* Zebra pattern overlay */}
       <div 
