@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="md:w-1/2 mt-6 md:mt-0 w-full flex justify-center" data-aos="fade-left">
           <div className="w-full max-w-[85%] sm:max-w-md flex justify-center">
             <img 
-              src="/images/zebrawell-bottles-final.png" 
+              src="/images/zebrawell-bottles-latest.png" 
               alt="ZebraWell AM and PM Formula bottles" 
               className="w-full h-auto max-w-full object-contain drop-shadow-2xl"
             />
@@ -61,7 +61,7 @@ export default function Hero() {
       </div>
 
       {/* Why Zebra Section */}
-      <div className="relative w-fit mx-auto py-8 md:py-12 mt-8 md:mt-16 rounded-lg overflow-hidden px-4 md:px-8 border-4 border-white" style={{
+      <div className="relative w-fit mx-auto py-8 md:py-12 mt-8 md:mt-16 rounded-lg overflow-hidden px-4 md:px-8 border-2 border-white" style={{
         background: '#1D4526'
       }}>
         {/* Solid dark green background */}
