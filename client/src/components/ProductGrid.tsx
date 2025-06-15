@@ -1,8 +1,14 @@
+import { useState, useMemo } from 'react';
 import ZebraBackground from './ZebraBackground';
 import IngredientTooltip from './IngredientTooltip';
 import { amFormulaIngredients, pmFormulaIngredients } from '../data/ingredientData';
 
 export default function ProductGrid() {
+  const [activeTab, setActiveTab] = useState('am');
+  
+  // Memoize ingredient data for better performance
+  const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
+  const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   return (
     <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden">
       <ZebraBackground />
@@ -36,8 +42,8 @@ export default function ProductGrid() {
                 </div>
               </div>
 
-              <div className="mb-6">
-                <ul className="space-y-2">
+              <div className="mb-4 md:mb-6">
+                <ul className="space-y-1 md:space-y-2">
                   {memoizedAmIngredients.map((ingredient, index) => (
                     <IngredientTooltip 
                       key={index} 
@@ -90,20 +96,20 @@ export default function ProductGrid() {
                 </div>
               </div>
 
-              <div className="mb-6">
-                <ul className="space-y-2">
+              <div className="mb-4 md:mb-6">
+                <ul className="space-y-1 md:space-y-2">
                   {memoizedPmIngredients.map((ingredient, index) => (
                     <IngredientTooltip 
                       key={index} 
                       ingredient={ingredient} 
                       colorScheme="forest"
                     >
-                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${500 + (index * 50)}`}>
-                        <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
+                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${400 + (index * 30)}`}>
+                        <i className="fas fa-flask text-terra mt-1 mr-2 md:mr-3 flex-shrink-0 text-xs md:text-sm"></i>
                         <div className="w-full">
                           <div className="flex justify-between items-start">
-                            <span className="font-bold text-sm text-forest">{ingredient.name}</span>
-                            <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                            <span className="font-bold text-xs md:text-sm text-forest">{ingredient.name}</span>
+                            <span className="text-xs text-terra-dark bg-terra-light px-1.5 md:px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
                           <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
                         </div>
