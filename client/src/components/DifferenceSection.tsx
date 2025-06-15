@@ -32,6 +32,36 @@ export default function DifferenceSection() {
       icon: "🚫",
       title: "No Junk. Ever.",
       description: "No fillers. No pixie dust. No nonsense."
+    },
+    {
+      icon: "👥",
+      title: "Formulated For Zebras",
+      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
+    },
+    {
+      icon: "🍃",
+      title: "Gentle by Design",
+      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
+    },
+    {
+      icon: "🔍",
+      title: "Total Transparency",
+      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
+    },
+    {
+      icon: "🎯",
+      title: "Targeted Support",
+      description: "Core Formula plus specialized Boosters for personalized health management."
+    },
+    {
+      icon: "🌱",
+      title: "Only What Helps",
+      description: "Minimalist formulation with bioavailable ingredients that support your body."
+    },
+    {
+      icon: "🧩",
+      title: "Works as a System",
+      description: "Designed to work synergistically whether you need one booster or all."
     }
   ];
 
@@ -43,7 +73,7 @@ export default function DifferenceSection() {
           We've reimagined supplement design for the unique needs of rare condition warriors.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
               <div className="text-4xl mb-4">{feature.icon}</div>

@@ -56,7 +56,7 @@ export default function Navigation() {
         <div className="hidden md:flex items-center space-x-6">
           <a href="#home" className="font-medium text-white hover:text-terra transition-colors">Home</a>
           <a href="#products" className="font-medium text-white hover:text-terra transition-colors">Products</a>
-          <a href="#why" className="font-medium text-white hover:text-terra transition-colors">Why ZebraWell</a>
+          <a href="#what-makes-different" className="font-medium text-white hover:text-terra transition-colors">What Makes Us Different</a>
           <a href="#comparison" className="font-medium text-white hover:text-terra transition-colors">Research</a>
         </div>
         
@@ -79,7 +79,7 @@ export default function Navigation() {
            }}>
         <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Home</a>
         <a href="#products" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Products</a>
-        <a href="#why" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Why ZebraWell</a>
+        <a href="#what-makes-different" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">What Makes Us Different</a>
         <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Research</a>
       </div>
     </nav>
