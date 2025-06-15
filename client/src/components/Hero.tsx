@@ -4,17 +4,17 @@ import ZebraHeart from './ZebraHeart';
 
 export default function Hero() {
   return (
-    <section className="text-white py-20 px-8 pt-12" style={{
+    <section className="text-white py-12 md:py-20 px-4 md:px-8 pt-8 md:pt-12" style={{
         background: 'hsla(161, 51%, 12%, 1)',
         backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
       }}>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2 space-y-8">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold leading-relaxed mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div className="md:w-1/2 space-y-4 md:space-y-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight md:leading-relaxed mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
           </h1>
 
-          <div className="flex flex-wrap gap-4 mt-12 mb-12 text-sm" data-aos="fade">
+          <div className="flex flex-wrap gap-2 md:gap-4 mt-6 md:mt-12 mb-6 md:mb-12 text-xs md:text-sm" data-aos="fade">
             <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>

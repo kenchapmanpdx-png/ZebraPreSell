@@ -40,13 +40,13 @@ export default function Navigation() {
       ></div>
       <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         {/* Logo */}
-        <a href="#" className="flex items-center ml-[-20px]">
+        <a href="#" className="flex items-center ml-[-20px] md:ml-[-20px] ml-0">
           <ZebraLogo />
           <div className="flex flex-col">
-            <span className="text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
-            <span className="text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
+            <span className="text-2xl md:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
+            <span className="text-sm md:text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
-          <div className="flex flex-col ml-6 border-l border-white/20 pl-6">
+          <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
             <span className="text-sm text-white/90 font-medium">Supporting EDS & POTS</span>
             <span className="text-xs text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
           </div>
