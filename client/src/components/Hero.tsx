@@ -4,44 +4,44 @@ import ZebraHeart from './ZebraHeart';
 
 export default function Hero() {
   return (
-    <section className="text-white py-12 md:py-20 px-4 md:px-8 pt-8 md:pt-12" style={{
+    <section className="text-white py-8 md:py-16 px-4 md:px-8 pt-6 md:pt-10" style={{
         background: 'hsla(161, 51%, 12%, 1)',
         backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
       }}>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
-        <div className="md:w-1/2 space-y-4 md:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight md:leading-relaxed mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-8">
+        <div className="md:w-1/2 space-y-3 md:space-y-6">
+          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
           </h1>
 
-          <div className="flex flex-wrap gap-2 md:gap-4 mt-6 md:mt-12 mb-6 md:mb-12 text-xs md:text-sm" data-aos="fade">
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
+          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-4 md:mt-8 mb-4 md:mb-8 text-xs sm:text-sm" data-aos="fade">
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Zero Junk Ever
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Zebra-Strong Promise
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Formulated by People Like You
             </span>
-            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
+            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
+              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Rigorously Tested for Purity
             </span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-10" data-aos="fade-up">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-4 md:mt-8" data-aos="fade-up">
             <Link to="#products">
               <button className="bg-[#89B317] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] w-full sm:w-auto">
                 Shop Now

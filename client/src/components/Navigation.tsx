@@ -25,7 +25,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 shadow-md' : 'py-3'} border-b border-sage/10 relative`} 
+    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-1 md:py-2 shadow-md' : 'py-2 md:py-3'} border-b border-sage/10 relative`} 
          style={{
            background: '#1D4526'
          }}>
@@ -38,13 +38,13 @@ export default function Navigation() {
           backgroundSize: '800px 400px'
         }}
       ></div>
-      <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
+      <div className="container mx-auto px-3 md:px-4 flex justify-between items-center relative z-10">
         {/* Logo */}
         <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
           <ZebraLogo />
           <div className="flex flex-col">
-            <span className="text-2xl md:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
-            <span className="text-sm md:text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
+            <span className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
           <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
             <span className="text-sm text-white/90 font-medium">Supporting EDS & POTS</span>
