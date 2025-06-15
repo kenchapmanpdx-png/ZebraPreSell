@@ -10,11 +10,11 @@ export default function Hero() {
       }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-8">
         <div className="md:w-1/2 space-y-3 md:space-y-6">
-          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
           </h1>
 
-          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-4 md:mt-8 mb-4 md:mb-8 text-xs sm:text-sm" data-aos="fade">
+          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-4 md:mt-8 mb-4 md:mb-8 text-sm sm:text-base" data-aos="fade">
             <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
@@ -29,12 +29,6 @@ export default function Hero() {
             </span>
             <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Zero Junk Ever
-            </span>
-            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Zebra-Strong Promise
-            </span>
-            <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Formulated by People Like You
             </span>
             <span className="bg-white/10 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Rigorously Tested for Purity

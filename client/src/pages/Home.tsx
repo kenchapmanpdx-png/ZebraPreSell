@@ -44,10 +44,10 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ProductGrid />
+      <OurStory />
       <DifferenceSection />
       <WhatYouGet />
       <Comparison />
-      <OurStory />
       <Testimonials />
       <Contact />
       <Footer />

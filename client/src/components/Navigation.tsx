@@ -4,21 +4,21 @@ import ZebraLogo from './ZebraLogo';
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
+
   // Handle scroll effect for sticky navigation
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       setScrolled(scrollTop > 100);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   // Handle mobile menu links - close menu when a link is clicked
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
@@ -51,7 +51,7 @@ export default function Navigation() {
             <span className="text-xs text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
           </div>
         </a>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <a href="#home" className="font-medium text-white hover:text-terra transition-colors">Home</a>
@@ -59,7 +59,7 @@ export default function Navigation() {
           <a href="#what-makes-different" className="font-medium text-white hover:text-terra transition-colors">What Makes Us Different</a>
           <a href="#comparison" className="font-medium text-white hover:text-terra transition-colors">Research</a>
         </div>
-        
+
         {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-white focus:outline-none"
@@ -71,7 +71,7 @@ export default function Navigation() {
           </svg>
         </button>
       </div>
-      
+
       {/* Mobile Navigation */}
       <div className={`md:hidden border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
            style={{
