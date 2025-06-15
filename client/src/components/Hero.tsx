@@ -49,12 +49,12 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center items-start" data-aos="fade">
-          <div className="w-[280px] md:w-[400px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white" style={{ marginTop: '-2rem' }}>
+        <div className="md:w-1/2 mt-6 md:mt-0 w-full flex justify-center" data-aos="fade-left">
+          <div className="w-full max-w-[85%] sm:max-w-md flex justify-center">
             <img 
               src="/images/zebrawell-hero-bottles.png" 
               alt="ZebraWell AM and PM Formula bottles" 
-              className="w-full h-full object-cover"
+              className="w-full h-auto max-w-full object-contain"
             />
           </div>
         </div>
