@@ -1,128 +1,130 @@
-
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import ZebraPatternAlt from './ZebraPatternAlt';
+import { useState, useMemo } from 'react';
+import ZebraBackground from './ZebraBackground';
 import IngredientTooltip from './IngredientTooltip';
-import { amFormulaIngredients, pmFormulaIngredients } from '@/data/ingredientData';
+import { amFormulaIngredients, pmFormulaIngredients } from '../data/ingredientData';
 
 export default function ProductGrid() {
-  const [showAMIngredients, setShowAMIngredients] = useState(false);
-  const [showPMIngredients, setShowPMIngredients] = useState(false);
-
+  const [activeTab, setActiveTab] = useState('am');
+  
+  // Memoize ingredient data for better performance
+  const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
+  const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      <ZebraPatternAlt />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            AM & PM Formulas
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Two comprehensive formulas designed to support your body's complex needs throughout the day and night
-          </p>
-        </div>
+    <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden">
+      <ZebraBackground />
+      <div className="container mx-auto px-4 md:px-6 relative z-1">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-lora text-forest text-center mb-4" data-aos="fade-up">Products</h2>
+        <p className="text-lg md:text-xl text-neutral-dark/80 max-w-2xl mx-auto font-lora mb-8 md:mb-12 text-center py-4 md:py-6" data-aos="fade-up" data-aos-delay="200">
+          Our comprehensive AM and PM formulas provide targeted support throughout the day, addressing the unique needs of individuals with EDS, POTS, and MCAS.
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-6xl mx-auto">
+          {/* Left Column - AM Formula */}
+          <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
+            <div id="am-formula" className="bg-earth-cream rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+              <div className="flex items-center mb-6">
+                <div className="relative w-16 h-20 mr-4">
+                  <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 flex items-center justify-center flex-col">
+                    <div className="w-8 h-8 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-sun text-sm text-terra"></i>
+                    </div>
+                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                    <div className="text-[6px] text-terra">AM Formula</div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell AM Formula</h3>
+                  <div className="flex items-center">
+                    <span className="text-sm text-forest font-semibold">Morning energizing formula</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
+                  </div>
+                </div>
+              </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-          {/* AM Formula */}
-          <Card className="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <CardHeader className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-t-lg p-6">
-              <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                <span className="text-3xl">☀️</span>
-                AM Formula
-              </CardTitle>
-              <p className="text-yellow-50 mt-2">
-                Supports energy, brain fog, and vascular tone
-              </p>
-            </CardHeader>
-            <CardContent className="p-6">
-              <button 
-                onClick={() => setShowAMIngredients(!showAMIngredients)}
-                className="text-orange-600 hover:text-orange-800 underline font-medium flex items-center gap-2 mx-auto transition-colors duration-300 mb-4"
-              >
-                View Detailed Ingredients 
-                {showAMIngredients ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-              </button>
-
-              {showAMIngredients && (
-                <div className="space-y-4 text-left">
-                  {amFormulaIngredients.map((ingredient, index) => (
-                    <IngredientTooltip key={index} ingredient={ingredient} colorScheme="orange">
-                      <div className="border-l-2 border-orange-400 pl-4 hover:bg-orange-50 rounded-r-lg p-3 transition-all duration-200">
-                        <h4 className="font-semibold text-gray-800">{ingredient.name}</h4>
-                        <p className="text-sm text-gray-600 mb-1">{ingredient.description}</p>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium text-orange-600">{ingredient.dosage}</span>
-                          <span className="text-xs text-gray-500 italic">{ingredient.timing}</span>
+              <div className="mb-4 md:mb-6">
+                <ul className="space-y-1 md:space-y-2">
+                  {memoizedAmIngredients.map((ingredient, index) => (
+                    <IngredientTooltip 
+                      key={index} 
+                      ingredient={ingredient} 
+                      colorScheme="orange"
+                    >
+                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
+                        <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
+                        <div className="w-full">
+                          <div className="flex justify-between items-start">
+                            <span className="font-bold text-sm text-forest">{ingredient.name}</span>
+                            <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          </div>
+                          <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
                         </div>
-                      </div>
+                      </li>
                     </IngredientTooltip>
                   ))}
-                </div>
-              )}
+                </ul>
+              </div>
 
-              {!showAMIngredients && (
-                <div className="space-y-3">
-                  <div className="text-sm text-gray-600">
-                    <strong>Key Ingredients:</strong> Magnesium Malate, CoQ10, Vitamin D3, PEA, Alpha-GPC, and more
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    <strong>Total Ingredients:</strong> {amFormulaIngredients.length} research-backed compounds
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-
-          {/* PM Formula */}
-          <Card className="bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <CardHeader className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-t-lg p-6">
-              <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                <span className="text-3xl">🌙</span>
-                PM Formula
-              </CardTitle>
-              <p className="text-purple-50 mt-2">
-                Supports inflammation, repair, and deep rest
-              </p>
-            </CardHeader>
-            <CardContent className="p-6">
-              <button 
-                onClick={() => setShowPMIngredients(!showPMIngredients)}
-                className="text-purple-600 hover:text-purple-800 underline font-medium flex items-center gap-2 mx-auto transition-colors duration-300 mb-4"
-              >
-                View Detailed Ingredients 
-                {showPMIngredients ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+              <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+                <i className="fas fa-info-circle mr-2"></i>
+                Product Details
               </button>
+            </div>
+          </div>
 
-              {showPMIngredients && (
-                <div className="space-y-4 text-left">
-                  {pmFormulaIngredients.map((ingredient, index) => (
-                    <IngredientTooltip key={index} ingredient={ingredient} colorScheme="forest">
-                      <div className="border-l-2 border-purple-400 pl-4 hover:bg-purple-50 rounded-r-lg p-3 transition-all duration-200">
-                        <h4 className="font-semibold text-gray-800">{ingredient.name}</h4>
-                        <p className="text-sm text-gray-600 mb-1">{ingredient.description}</p>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium text-purple-600">{ingredient.dosage}</span>
-                          <span className="text-xs text-gray-500 italic">{ingredient.timing}</span>
+          {/* Right Column - PM Formula */}
+          <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
+            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+              <div className="flex items-center mb-6">
+                <div className="relative w-16 h-20 mr-4">
+                  <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
+                  <div className="absolute inset-0 flex items-center justify-center flex-col">
+                    <div className="w-8 h-8 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-moon text-sm text-terra"></i>
+                    </div>
+                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                    <div className="text-[6px] text-terra">PM Formula</div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
+                  <div className="flex items-center">
+                    <span className="text-sm text-forest font-semibold">Evening recovery formula</span>
+                    <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-4 md:mb-6">
+                <ul className="space-y-1 md:space-y-2">
+                  {memoizedPmIngredients.map((ingredient, index) => (
+                    <IngredientTooltip 
+                      key={index} 
+                      ingredient={ingredient} 
+                      colorScheme="forest"
+                    >
+                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
+                        <i className="fas fa-flask text-terra mt-1 mr-2 md:mr-3 flex-shrink-0 text-xs md:text-sm"></i>
+                        <div className="w-full">
+                          <div className="flex justify-between items-start">
+                            <span className="font-bold text-xs md:text-sm text-forest">{ingredient.name}</span>
+                            <span className="text-xs text-terra-dark bg-terra-light px-1.5 md:px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          </div>
+                          <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
                         </div>
-                      </div>
+                      </li>
                     </IngredientTooltip>
                   ))}
-                </div>
-              )}
+                </ul>
+              </div>
 
-              {!showPMIngredients && (
-                <div className="space-y-3">
-                  <div className="text-sm text-gray-600">
-                    <strong>Key Ingredients:</strong> Magnesium Malate, PEA, Alpha-GPC, ALCAR, Hyaluronic Acid, and more
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    <strong>Total Ingredients:</strong> {pmFormulaIngredients.length} research-backed compounds
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
+              <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
+                <i className="fas fa-info-circle mr-2"></i>
+                Product Details
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

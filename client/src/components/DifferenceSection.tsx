@@ -1,78 +1,85 @@
 
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import ZebraPatternAlt from './ZebraPatternAlt';
-
-const differences = [
-  {
-    icon: "🦓",
-    title: "Formulated for EDS, POTS & MCAS",
-    description: "Specifically designed for connective tissue disorders and dysautonomia"
-  },
-  {
-    icon: "🔄",
-    title: "2 Bottles Replace 15",
-    description: "Comprehensive AM/PM formulas eliminate supplement clutter"
-  },
-  {
-    icon: "🛡️",
-    title: "MCAS-Friendly",
-    description: "Hypoallergenic formulation safe for mast cell activation"
-  },
-  {
-    icon: "⚡",
-    title: "Therapeutic Doses",
-    description: "Clinical-strength ingredients at proven effective levels"
-  },
-  {
-    icon: "🚫",
-    title: "No Fillers or Stearates",
-    description: "Pure ingredients without unnecessary additives"
-  },
-  {
-    icon: "🔬",
-    title: "Third-Party Tested",
-    description: "Independent verification for purity and potency"
-  },
-  {
-    icon: "🧠",
-    title: "Smart Science",
-    description: "Evidence-based formulation backed by clinical research"
-  },
-  {
-    icon: "💚",
-    title: "Designed for Sensitive Systems",
-    description: "Gentle on the stomach, effective for complex conditions"
-  }
-];
 
 export default function DifferenceSection() {
-  return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      <ZebraPatternAlt />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            What Makes ZebraWell Different
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Designed specifically for the unique needs of rare disease communities
-          </p>
-        </div>
+  const features = [
+    {
+      icon: "🧬",
+      title: "Formulated for EDS, POTS & MCAS",
+      description: "Built specifically for rare, sensitive bodies."
+    },
+    {
+      icon: "💊",
+      title: "2 Bottles Replace 15",
+      description: "AM & PM system delivers complete, targeted support."
+    },
+    {
+      icon: "🌿",
+      title: "Clean & MCAS-Friendly",
+      description: "Free from dyes, stearates, soy, and titanium dioxide."
+    },
+    {
+      icon: "🔬",
+      title: "Third-Party Tested",
+      description: "Every batch tested for purity and potency."
+    },
+    {
+      icon: "🧠",
+      title: "Smart Science",
+      description: "Only therapeutic doses of highly bioavailable ingredients."
+    },
+    {
+      icon: "🚫",
+      title: "No Junk. Ever.",
+      description: "No fillers. No pixie dust. No nonsense."
+    },
+    {
+      icon: "👥",
+      title: "Formulated For Zebras",
+      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
+    },
+    {
+      icon: "🍃",
+      title: "Gentle by Design",
+      description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
+    },
+    {
+      icon: "🔍",
+      title: "Total Transparency",
+      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
+    },
+    {
+      icon: "🎯",
+      title: "Targeted Support",
+      description: "Core Formula plus specialized Boosters for personalized health management."
+    },
+    {
+      icon: "🌱",
+      title: "Only What Helps",
+      description: "Minimalist formulation with bioavailable ingredients that support your body."
+    },
+    {
+      icon: "🧩",
+      title: "Works as a System",
+      description: "Designed to work synergistically whether you need one booster or all."
+    }
+  ];
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          {differences.map((difference, index) => (
-            <Card key={index} className="bg-white/80 backdrop-blur-sm border-gray-200 hover:shadow-md transition-shadow duration-300">
-              <CardContent className="p-4 text-center">
-                <div className="text-2xl mb-3">{difference.icon}</div>
-                <h3 className="font-semibold text-sm md:text-base text-gray-800 mb-2">
-                  {difference.title}
-                </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                  {difference.description}
-                </p>
-              </CardContent>
-            </Card>
+  return (
+    <section className="bg-surface py-20 px-6" id="what-makes-different">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
+        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          We've reimagined supplement design for the unique needs of rare condition warriors.
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-serif font-bold mb-2 text-primary">{feature.title}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">{feature.description}</p>
+            </div>
           ))}
         </div>
       </div>
