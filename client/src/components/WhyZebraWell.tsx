@@ -45,7 +45,7 @@ export default function WhyZebraWell() {
   ];
 
   return (
-    <section id="why" className="hidden" style={{
+    <section id="why" className="py-8 md:py-12 px-4 md:px-8 relative overflow-hidden" style={{
       background: '#1D4526',
       backgroundImage: 'linear-gradient(90deg, rgba(29, 69, 38, 1) 15%, rgba(117, 133, 70, 1) 49%, rgba(29, 69, 38, 1) 85%)'
     }}>

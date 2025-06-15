@@ -70,7 +70,7 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
               maxWidth: '320px',
             }}
           >
-            <div className={`${colors.bg} ${colors.border} border rounded-xl shadow-xl p-4 backdrop-blur-sm`}>
+            <div className={`${colors.bg} ${colors.border} border rounded-xl shadow-xl p-2 backdrop-blur-sm`}>
               {/* Header */}
               <div className="flex items-center justify-between mb-3">
                 <h4 className={`font-black text-lg ${colors.accent}`}>
@@ -94,7 +94,7 @@ export default function IngredientTooltip({ ingredient, children, colorScheme }:
                   </h5>
                   <ul className="space-y-1">
                     {ingredient.benefits.map((benefit, index) => (
-                      <li key={index} className="text-xs text-neutral-dark/70 flex items-start">
+                      <li key={index} className="text-lg text-neutral-dark/70 flex items-start">
                         <span className={`${colors.accent} mr-2 mt-1`}>•</span>
                         {benefit}
                       </li>
