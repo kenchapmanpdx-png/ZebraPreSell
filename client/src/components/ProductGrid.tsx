@@ -38,7 +38,7 @@ export default function ProductGrid() {
 
               <div className="mb-6">
                 <ul className="space-y-2">
-                  {amFormulaIngredients.map((ingredient, index) => (
+                  {memoizedAmIngredients.map((ingredient, index) => (
                     <IngredientTooltip 
                       key={index} 
                       ingredient={ingredient} 
@@ -92,7 +92,7 @@ export default function ProductGrid() {
 
               <div className="mb-6">
                 <ul className="space-y-2">
-                  {pmFormulaIngredients.map((ingredient, index) => (
+                  {memoizedPmIngredients.map((ingredient, index) => (
                     <IngredientTooltip 
                       key={index} 
                       ingredient={ingredient} 

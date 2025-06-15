@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="md:w-1/2 mt-6 md:mt-0 w-full flex justify-center" data-aos="fade-left">
           <div className="w-full max-w-[85%] sm:max-w-md flex justify-center">
             <img 
-              src="/images/zebrawell-hero-bottles.png" 
+              src="/images/zebrawell-bottles-hero.png" 
               alt="ZebraWell AM and PM Formula bottles" 
               className="w-full h-auto max-w-full object-contain"
             />
