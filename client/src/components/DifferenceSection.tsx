@@ -1,39 +1,56 @@
+
 import React from 'react';
-import { Target, Layers, Leaf } from 'lucide-react';
 
 export default function DifferenceSection() {
+  const features = [
+    {
+      icon: "🧬",
+      title: "Formulated for EDS, POTS & MCAS",
+      description: "Built specifically for rare, sensitive bodies."
+    },
+    {
+      icon: "💊",
+      title: "2 Bottles Replace 15",
+      description: "AM & PM system delivers complete, targeted support."
+    },
+    {
+      icon: "🌿",
+      title: "Clean & MCAS-Friendly",
+      description: "Free from dyes, stearates, soy, and titanium dioxide."
+    },
+    {
+      icon: "🔬",
+      title: "Third-Party Tested",
+      description: "Every batch tested for purity and potency."
+    },
+    {
+      icon: "🧠",
+      title: "Smart Science",
+      description: "Only therapeutic doses of highly bioavailable ingredients."
+    },
+    {
+      icon: "🚫",
+      title: "No Junk. Ever.",
+      description: "No fillers. No pixie dust. No nonsense."
+    }
+  ];
+
   return (
-    <section className="bg-surface py-20 px-8">
+    <section className="bg-surface py-20 px-6" id="what-makes-different">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-serif font-bold text-primary mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           We've reimagined supplement design for the unique needs of rare condition warriors.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Target className="w-8 h-8 text-primary" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-serif font-bold mb-2 text-primary">{feature.title}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">{feature.description}</p>
             </div>
-            <h3 className="text-xl font-serif font-bold mb-4 text-primary">Targeted for EDS & POTS</h3>
-            <p className="text-gray-700 leading-relaxed">Built specifically to support collagen, mast cells, blood volume, and autonomic balance.</p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Layers className="w-8 h-8 text-accent" />
-            </div>
-            <h3 className="text-xl font-serif font-bold mb-4 text-primary">2 Bottles Replace 15</h3>
-            <p className="text-gray-700 leading-relaxed">AM + PM system simplifies routines. No guesswork, no 20-bottle supplement graveyard.</p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Leaf className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-xl font-serif font-bold mb-4 text-primary">Clean & MCAS-Friendly</h3>
-            <p className="text-gray-700 leading-relaxed">No titanium dioxide, stearates, soy, corn, dyes, or mystery additives.</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
