@@ -40,7 +40,7 @@ export default function Navigation() {
       ></div>
       <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         {/* Logo */}
-        <a href="#" className="flex items-center ml-[-20px] md:ml-[-20px] ml-0">
+        <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
           <ZebraLogo />
           <div className="flex flex-col">
             <span className="text-2xl md:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>

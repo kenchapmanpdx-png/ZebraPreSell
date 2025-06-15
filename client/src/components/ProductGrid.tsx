@@ -68,7 +68,7 @@ export default function ProductGrid() {
 
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-6 md:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
@@ -82,7 +82,7 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-forest font-semibold">Evening recovery formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>

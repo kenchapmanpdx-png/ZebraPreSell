@@ -41,9 +41,9 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="flex gap-4 mt-10" data-aos="fade-up">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-10" data-aos="fade-up">
             <Link to="#products">
-              <button className="bg-[#89B317] text-white font-semibold px-8 py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05]">
+              <button className="bg-[#89B317] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] w-full sm:w-auto">
                 Shop Now
               </button>
             </Link>
