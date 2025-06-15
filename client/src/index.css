@@ -51,7 +51,7 @@
   --cta-green: 76 76% 40%;
   --cta-green-light: 76 76% 85%;
   --cta-green-dark: 76 76% 30%;
-  
+
   /* Gradient colors for Why Zebra section */
   --inw-forest: 125 40% 22.5%; /* 10% darker than original */
   --inw-green: 85 64% 41.8%; /* 5% darker than original */
@@ -98,20 +98,20 @@
   .natural-texture {
     background-color: white;
   }
-  
+
   .leaf-pattern {
     background-color: hsl(var(--sage-light) / 0.9);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%237a9c65' fill-opacity='0.2'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
-  
+
   .grain-texture {
     background-color: white;
   }
-  
+
   .subtle-waves {
     background-color: white;
   }
-  
+
   .clinical-pattern {
     background-color: white;
   }
@@ -119,7 +119,7 @@
   .medical-grid {
     background-color: white;
   }
-  
+
   .zebra-bg {
     position: relative;
     background-color: white;
@@ -138,89 +138,161 @@
     opacity: 0.2;
     z-index: 0;
   }
-  
+
   .inw-gradient {
     position: relative;
     background: linear-gradient(to left, hsl(var(--inw-forest)), hsl(var(--inw-green)));
   }
-  
+
   .inw-gradient-tagline {
     background-color: hsla(var(--inw-forest), 0.15);
   }
-  
+
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
   }
-  
+
   .fade-in.appear {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   /* Premium hover animations */
   .premium-hover {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .premium-hover:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
-  
+
   .subtle-scale {
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .subtle-scale:hover {
     transform: scale(1.02);
   }
-  
+
   .glow-on-hover {
     transition: all 0.3s ease;
     position: relative;
   }
-  
+
   .glow-on-hover:hover {
     box-shadow: 0 0 30px rgba(137, 179, 23, 0.3);
   }
-  
+
   .slide-in-left {
     opacity: 0;
     transform: translateX(-30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  
+
   .slide-in-left.appear {
     opacity: 1;
     transform: translateX(0);
   }
-  
+
   .slide-in-right {
     opacity: 0;
     transform: translateX(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  
+
   .slide-in-right.appear {
     opacity: 1;
     transform: translateX(0);
   }
-  
+
   .stagger-delay-1 {
     transition-delay: 0.1s;
   }
-  
+
   .stagger-delay-2 {
     transition-delay: 0.2s;
   }
-  
+
   .stagger-delay-3 {
     transition-delay: 0.3s;
   }
-  
+
   .container {
     @apply mx-auto px-4 sm:px-6;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Improve touch targets for mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better spacing for small screens */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Custom utilities */
+.subtle-scale {
+  transition: transform 0.2s ease;
+}
+
+.subtle-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Improve touch responsiveness on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .subtle-scale:hover {
+    transform: none;
+  }
+
+  .subtle-scale:active {
+    transform: scale(0.98);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile optimization for text readability */
+@media (max-width: 640px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  p {
+    line-height: 1.6;
   }
 }
