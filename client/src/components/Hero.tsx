@@ -48,6 +48,9 @@ export default function Hero() {
               </button>
             </Link>
           </div>
+          <p className="text-sm text-white/80 italic mt-2">
+            Born from experience. Backed by science. Made for the sensitive and strong.
+          </p>
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0 w-full flex justify-center" data-aos="fade-left">
           <div className="w-full max-w-[85%] sm:max-w-md flex justify-center">

@@ -4,7 +4,6 @@ import Hero from '@/components/Hero';
 import DifferenceSection from '@/components/DifferenceSection';
 
 import ProductGrid from '@/components/ProductGrid';
-import Comparison from '@/components/Comparison';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
@@ -46,7 +45,6 @@ export default function Home() {
       <ProductGrid />
       <DifferenceSection />
       <WhatYouGet />
-      <Comparison />
       <OurStory />
       <Testimonials />
       <Contact />
