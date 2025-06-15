@@ -1,0 +1,108 @@
+Please apply the following changes to clean up the site layout, improve mobile usability, and simplify content:
+
+🔧 1. Remove the Comparison Table Entirely
+Delete the full “Why ZebraWell Leads the Industry” block.
+
+Remove any nav links or jump anchors tied to it.
+
+This content is now redundant and no longer needed.
+
+🔧 2. Update Ingredient Display in AM/PM Product Cards
+✅ A. Typography Format
+Display each ingredient and its benefit on two separate lines.
+
+Keep ingredient name bold, benefit in regular weight.
+
+Example structure:
+
+jsx
+Copy
+Edit
+<div className="mb-3">
+  <p className="font-semibold text-sm md:text-base">Magnesium Malate</p>
+  <p className="text-sm md:text-base text-gray-600">Supports energy and muscle tone</p>
+</div>
+✅ Don’t let the benefit wrap awkwardly or shrink text to fit on one line — it should breathe.
+
+✅ B. Improve Visual Style of Product Sections
+Apply these changes to both the AM and PM formula blocks:
+
+Add background: bg-gray-50 or bg-white/90
+
+Add padding: p-6
+
+Add border: border border-gray-200 rounded-lg
+
+Add light shadow: shadow-sm
+
+Optionally tint headers:
+
+AM Formula: use soft gold (bg-yellow-50)
+
+PM Formula: use soft lavender (bg-purple-50)
+
+🔧 3. Condense the “What Makes ZebraWell Different” Grid
+✅ A. Reduce Number of Cards
+Keep only the top 6–8 strongest cards, for example:
+
+Formulated for EDS, POTS & MCAS
+
+2 Bottles Replace 15
+
+MCAS-Friendly
+
+Therapeutic Doses
+
+No Fillers or Stearates
+
+Third-Party Tested
+
+Smart Science
+
+Designed for Sensitive Systems
+
+✅ B. Tighten Spacing and Layout
+Use grid-cols-2 md:grid-cols-3
+
+Reduce padding to p-4
+
+Reduce icon size to text-2xl
+
+Use gap-4 instead of gap-6 in the grid container
+
+🔧 4. Refine Hero Section
+✅ A. Remove Unprofessional/Hokey Lines
+Delete: “Formulated by people like you”
+
+Delete: “The Zebra Strong Promise”
+
+✅ B. Optional Replacement (Cleaner, More Professional)
+Instead of those lines, insert:
+
+jsx
+Copy
+Edit
+<p className="text-sm text-white/80 italic mt-2">
+  Born from experience. Backed by science. Made for the sensitive and strong.
+</p>
+OR
+
+jsx
+Copy
+Edit
+<p className="text-sm text-white/70 mt-2">
+  Designed by caregivers. Trusted by patients. Built for bodies that don’t fit the mold.
+</p>
+Choose only one, or skip entirely if space feels crowded on mobile.
+
+✅ Copy-Paste Summary
+Delete the full comparison table.
+
+In the AM/PM product blocks, display ingredient name and benefit on two separate lines, with only the ingredient name bolded.
+
+Style product blocks with soft background (bg-gray-50 or bg-white/90), rounded corners, padding, and light shadow. Optionally tint AM/PM headers.
+
+In the “What Makes ZebraWell Different” section, reduce to 6–8 key cards, tighten grid spacing, use smaller icons and less padding.
+
+In the hero section, remove the hokey sub-lines (“Formulated by people like you” and “Zebra Strong Promise”). Optionally replace with a more professional, science-backed line.
+
