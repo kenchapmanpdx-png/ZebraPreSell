@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ZebraPatternAlt from './ZebraPatternAlt';
@@ -40,26 +41,22 @@ export default function ProductGrid() {
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* AM Formula */}
-          <Card className="bg-white/90 border border-gray-200 rounded-lg shadow-sm">
-            <CardHeader className="bg-yellow-50 rounded-t-lg p-6">
-              <CardTitle className="text-2xl font-bold text-gray-800 flex items-center gap-3">
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-t-lg">
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
                 <span className="text-3xl">☀️</span>
                 AM Formula
               </CardTitle>
-              <p className="text-gray-600 mt-2">
+              <p className="text-yellow-50 mt-2">
                 Energy & Vitality Support
               </p>
             </CardHeader>
-            <CardContent className="p-6 bg-gray-50">
+            <CardContent className="p-6">
               <div className="space-y-4">
                 {amIngredients.map((ingredient, index) => (
-                  <div key={index} className="mb-3">
-                    <p className="font-semibold text-sm md:text-base text-gray-800">
-                      {ingredient.name}
-                    </p>
-                    <p className="text-sm md:text-base text-gray-600">
-                      {ingredient.benefit}
-                    </p>
+                  <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-2">
+                    <span className="font-semibold text-gray-800">{ingredient.name}</span>
+                    <span className="text-sm text-gray-600">{ingredient.benefit}</span>
                   </div>
                 ))}
               </div>
@@ -67,26 +64,22 @@ export default function ProductGrid() {
           </Card>
 
           {/* PM Formula */}
-          <Card className="bg-white/90 border border-gray-200 rounded-lg shadow-sm">
-            <CardHeader className="bg-purple-50 rounded-t-lg p-6">
-              <CardTitle className="text-2xl font-bold text-gray-800 flex items-center gap-3">
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-t-lg">
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
                 <span className="text-3xl">🌙</span>
                 PM Formula
               </CardTitle>
-              <p className="text-gray-600 mt-2">
+              <p className="text-purple-50 mt-2">
                 Recovery & Rest Support
               </p>
             </CardHeader>
-            <CardContent className="p-6 bg-gray-50">
+            <CardContent className="p-6">
               <div className="space-y-4">
                 {pmIngredients.map((ingredient, index) => (
-                  <div key={index} className="mb-3">
-                    <p className="font-semibold text-sm md:text-base text-gray-800">
-                      {ingredient.name}
-                    </p>
-                    <p className="text-sm md:text-base text-gray-600">
-                      {ingredient.benefit}
-                    </p>
+                  <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-2">
+                    <span className="font-semibold text-gray-800">{ingredient.name}</span>
+                    <span className="text-sm text-gray-600">{ingredient.benefit}</span>
                   </div>
                 ))}
               </div>
