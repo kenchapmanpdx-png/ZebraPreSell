@@ -15,28 +15,28 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-wrap gap-2 md:gap-4 mt-6 md:mt-12 mb-6 md:mb-12 text-xs md:text-sm" data-aos="fade">
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> cGMP Manufactured
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Third-Party Tested
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Free from Dyes, Fillers, & Titanium Dioxide
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> No Stearates, Soy, Gluten, or Dairy
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Hypersensitive-System Approved
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 subtle-scale">
+            <span className="bg-white/10 text-white px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="bg-[#89B317] text-white px-1 py-0.5 rounded mr-2 font-bold text-xs">✓</span> Therapeutic Doses—No "Pixie Dusting"
             </span>
           </div>
