@@ -43,7 +43,7 @@ export default function Navigation() {
         <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
           <ZebraLogo />
           <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
+            <span className="text-4xl sm:text-2xl md:text-4xl lg:text-5xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
             <span className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
           <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">

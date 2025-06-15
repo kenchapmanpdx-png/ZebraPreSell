@@ -40,7 +40,7 @@ export default function Comparison() {
   ];
 
   return (
-    <section id="comparison" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="comparison" className="hidden md:block py-16 md:py-24 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-10">
         <div className="relative">
