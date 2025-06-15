@@ -37,7 +37,7 @@ export default function Boosters() {
       <div className="container mx-auto px-6 relative z-1">
         <h2 className="text-3xl md:text-4xl font-lora text-forest text-center mb-12 fade-in">ZebraWell Formulas</h2>
         <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-neutral-dark/80 font-lora fade-in">
-          Our comprehensive AM and PM formulas provide targeted support throughout the day, addressing the unique needs of individuals with EDS, POTS, and MCAS.
+          Our comprehensive AM and PM formulas provide targeted support throughout the day and night, addressing the unique needs of individuals with EDS and POTS.
         </p>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">

@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-8">
         <div className="md:w-1/2 space-y-3 md:space-y-6">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
-            Clinical-Grade Supplements for POTS, EDS, and Dysautonomia. Clean. Bioavailable. Third-Party Tested.
+            Clinical-Grade Supplements for Postural Orthostatic Tachycardia Syndrome (POTS), Ehlers-Danlos Syndrome (EDS), & Dysautonomia. Clean. Bioavailable. Therapeutic
           </h1>
 
           <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-4 md:mt-8 mb-4 md:mb-8 text-sm sm:text-base" data-aos="fade">
