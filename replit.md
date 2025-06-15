@@ -99,6 +99,8 @@ Changelog:
   - Reduced ingredient tab height by 50% in "Why Each Ingredient Matters" section (p-4 to p-2)
   - Logo refinements: removed black border, increased white circle opacity to 0.9
   - Updated bottle image styling with rounded corners and removed border trim
+  - Updated hero statement to emphasize full condition names and therapeutic focus
+  - Refined AM/PM formula descriptions to remove MCAS reference and emphasize day/night support
 
 ## User Preferences
 
