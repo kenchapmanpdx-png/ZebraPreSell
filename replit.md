@@ -91,6 +91,14 @@ ZebraWell is a modern wellness supplement company focused on providing clinical-
 
 Changelog:
 - June 13, 2025. Initial setup
+- June 15, 2025. Major structural reorganization:
+  - Moved all 8 benefits from "Why Choose ZebraWell" section to "What Makes ZebraWell Different" section
+  - Removed entire "Why Choose ZebraWell" section from site
+  - Updated navigation links to point to "What Makes Us Different" section
+  - Doubled font size for ingredient benefits in tooltips (text-lg to text-2xl)
+  - Reduced ingredient tab height by 50% in "Why Each Ingredient Matters" section (p-4 to p-2)
+  - Logo refinements: removed black border, increased white circle opacity to 0.9
+  - Updated bottle image styling with rounded corners and removed border trim
 
 ## User Preferences
 

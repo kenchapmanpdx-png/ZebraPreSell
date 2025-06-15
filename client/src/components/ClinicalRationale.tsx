@@ -5,7 +5,7 @@ export default function ClinicalRationale() {
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6 md:mb-8 text-center fade-in">🧬 Why Each Ingredient Matters</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 fade-in">
           {/* AM Formula Ingredients */}
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-orange-400 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-lg p-2 shadow border-l-4 border-l-orange-400 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Magnesium Malate</h3>
             <p className="text-xs text-forest/70">Energy production & muscle function</p>
           </div>
