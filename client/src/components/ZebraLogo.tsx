@@ -4,7 +4,7 @@ export default function ZebraLogo() {
       {/* White inner circle with gap */}
       <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center relative">
         {/* New zebra head image */}
-        <div className="relative z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center">
+        <div className="relative z-10 w-8 h-8 md:w-11 md:h-11 flex items-center justify-center">
           <img 
             src="/images/zebra-head-latest.png" 
             alt="Zebra head" 
