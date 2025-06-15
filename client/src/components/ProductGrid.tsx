@@ -43,26 +43,25 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <ul className="space-y-1 md:space-y-2">
-                  {memoizedAmIngredients.map((ingredient, index) => (
-                    <IngredientTooltip 
-                      key={index} 
-                      ingredient={ingredient} 
-                      colorScheme="orange"
-                    >
-                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
-                        <i className="fas fa-flask text-terra mt-1 mr-3 flex-shrink-0"></i>
-                        <div className="w-full">
-                          <div className="flex justify-between items-start">
-                            <span className="font-bold text-sm text-forest">{ingredient.name}</span>
+                <div className="bg-gray-50 rounded-lg p-6 shadow-sm border border-neutral-200">
+                  <ul className="space-y-3">
+                    {memoizedAmIngredients.map((ingredient, index) => (
+                      <IngredientTooltip 
+                        key={index} 
+                        ingredient={ingredient} 
+                        colorScheme="orange"
+                      >
+                        <li className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
+                          <div className="flex justify-between items-start mb-1">
+                            <span className="text-sm md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
                             <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
-                        </div>
-                      </li>
-                    </IngredientTooltip>
-                  ))}
-                </ul>
+                          <p className="text-sm md:text-base lg:text-[17px] text-gray-700">{ingredient.description}</p>
+                        </li>
+                      </IngredientTooltip>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
@@ -97,26 +96,25 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <ul className="space-y-1 md:space-y-2">
-                  {memoizedPmIngredients.map((ingredient, index) => (
-                    <IngredientTooltip 
-                      key={index} 
-                      ingredient={ingredient} 
-                      colorScheme="forest"
-                    >
-                      <li className="flex items-start" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
-                        <i className="fas fa-flask text-terra mt-1 mr-2 md:mr-3 flex-shrink-0 text-xs md:text-sm"></i>
-                        <div className="w-full">
-                          <div className="flex justify-between items-start">
-                            <span className="font-bold text-xs md:text-sm text-forest">{ingredient.name}</span>
-                            <span className="text-xs text-terra-dark bg-terra-light px-1.5 md:px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                <div className="bg-gray-50 rounded-lg p-6 shadow-sm border border-neutral-200">
+                  <ul className="space-y-3">
+                    {memoizedPmIngredients.map((ingredient, index) => (
+                      <IngredientTooltip 
+                        key={index} 
+                        ingredient={ingredient} 
+                        colorScheme="forest"
+                      >
+                        <li className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
+                          <div className="flex justify-between items-start mb-1">
+                            <span className="text-sm md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
+                            <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-xs text-forest/70 font-medium">{ingredient.description}</p>
-                        </div>
-                      </li>
-                    </IngredientTooltip>
-                  ))}
-                </ul>
+                          <p className="text-sm md:text-base lg:text-[17px] text-gray-700">{ingredient.description}</p>
+                        </li>
+                      </IngredientTooltip>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               <button className="w-full py-3 px-6 bg-cta-green hover:bg-cta-green-dark text-white font-bold rounded-lg transition-colors flex items-center justify-center">
