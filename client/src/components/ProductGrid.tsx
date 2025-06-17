@@ -20,7 +20,7 @@ export default function ProductGrid() {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-6xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-            <div id="am-formula" className="bg-earth-cream rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+            <div id="am-formula" className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
@@ -34,9 +34,9 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell AM Formula</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-white">ZebraWell AM Formula</h3>
                   <div className="flex items-center">
-                    <span className="text-sm text-white font-semibold px-3 py-1 rounded-md bg-gradient-to-r from-emerald-500 to-emerald-600">Morning energizing formula</span>
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Morning energizing formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function ProductGrid() {
 
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-            <div id="pm-formula" className="bg-earth-cream rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <div id="pm-formula" className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
@@ -87,9 +87,9 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-white">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
-                    <span className="text-sm text-white font-semibold px-3 py-1 rounded-md bg-gradient-to-r from-emerald-500 to-emerald-600">Evening recovery formula</span>
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Evening recovery formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
                   </div>
                 </div>
