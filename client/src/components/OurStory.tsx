@@ -33,7 +33,7 @@ export default function OurStory() {
             <div className="flex justify-center mt-6 mb-4">
               <div className="border border-terra/30 p-1 rounded-md shadow-sm">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-terra rounded-md transform translate-x-1 translate-y-1 -z-10"></div>
+                  <div className="absolute inset-0 bg-terra rounded-md transform translate-x-3 translate-y-3 -z-10 scale-110"></div>
                   <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto relative z-10" style={{ maxHeight: '225px' }} />
                 </div>
               </div>
