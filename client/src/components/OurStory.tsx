@@ -7,14 +7,14 @@ export default function OurStory() {
     <section id="story" className="py-6 md:py-8 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 shadow-lg border border-terra/10" style={{
-          background: 'hsla(33, 34%, 86%, 1)',
-          backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
+          background: 'hsla(161, 51%, 12%, 1)',
+          backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
         }} data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest" data-aos="fade-up">
+          <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-white" data-aos="fade-up">
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-terra">Ava</span>.
           </h2>
 
-          <div className="prose prose-lg prose-forest max-w-3xl mx-auto" data-aos="fade">
+          <div className="prose prose-lg prose-white max-w-3xl mx-auto text-white" data-aos="fade">
             <p>
               Ava is our daughter — brave, brilliant, and resilient in ways most will never have to be.
               She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, dislocating joints, and extreme fatigue.
@@ -29,7 +29,7 @@ export default function OurStory() {
               in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
             </p>
 
-            <p className="font-bold text-primary text-center text-xl font-serif">
+            <p className="font-bold text-white text-center text-xl font-serif">
               She is our Why!
             </p>
 
@@ -39,7 +39,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <p className="text-center font-medium mt-4 italic">
+            <p className="text-center font-medium mt-4 italic text-white">
               If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={26} /></span>
             </p>
           </div>
