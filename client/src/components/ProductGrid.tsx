@@ -26,19 +26,19 @@ export default function ProductGrid() {
               background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
               <div className="flex items-center mb-6">
-                <div className="relative w-16 h-20 mr-4">
+                <div className="relative w-22 h-28 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-sun text-sm text-terra"></i>
+                    <div className="w-11 h-11 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-sun text-lg text-terra"></i>
                     </div>
-                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-terra">AM Formula</div>
+                    <div className="text-[11px] font-bold text-forest">ZebraWell™</div>
+                    <div className="text-[8px] text-terra">AM Formula</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-white">ZebraWell AM Formula</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B]">ZebraWell AM Formula</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Morning energizing formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
@@ -84,19 +84,19 @@ export default function ProductGrid() {
               background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
               <div className="flex items-center mb-6">
-                <div className="relative w-16 h-20 mr-4">
+                <div className="relative w-22 h-28 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-8 h-8 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-sm text-terra"></i>
+                    <div className="w-11 h-11 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-moon text-lg text-terra"></i>
                     </div>
-                    <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[6px] text-terra">PM Formula</div>
+                    <div className="text-[11px] font-bold text-forest">ZebraWell™</div>
+                    <div className="text-[8px] text-terra">PM Formula</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-white">ZebraWell PM Formula</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B]">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Evening recovery formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
