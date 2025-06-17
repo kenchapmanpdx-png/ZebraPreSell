@@ -6,7 +6,10 @@ export default function OurStory() {
   return (
     <section id="story" className="py-6 md:py-8 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-1">
-        <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 shadow-lg border border-terra/10" style={{ backgroundColor: 'hsl(40, 35%, 88%)' }} data-aos="fade-up">
+        <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 shadow-lg border border-terra/10" style={{
+          background: 'hsla(33, 34%, 86%, 1)',
+          backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
+        }} data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-forest" data-aos="fade-up">
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-terra">Ava</span>.
           </h2>
