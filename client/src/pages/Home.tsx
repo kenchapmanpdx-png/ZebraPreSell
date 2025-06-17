@@ -1,7 +1,3 @@
-` tags:
-
-```python
-<replit_final_file>
 import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
