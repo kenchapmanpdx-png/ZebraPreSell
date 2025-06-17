@@ -20,7 +20,10 @@ export default function ProductGrid() {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-6xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-            <div id="am-formula" className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+            <div id="am-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" style={{
+              background: 'hsla(161, 51%, 12%, 1)',
+              backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+            }}>
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
@@ -73,7 +76,10 @@ export default function ProductGrid() {
 
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-            <div id="pm-formula" className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <div id="pm-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200" style={{
+              background: 'hsla(161, 51%, 12%, 1)',
+              backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+            }}>
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
