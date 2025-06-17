@@ -5,7 +5,7 @@ import { amFormulaIngredients, pmFormulaIngredients } from '../data/ingredientDa
 
 export default function ProductGrid() {
   const [activeTab, setActiveTab] = useState('am');
-  
+
   // Memoize ingredient data for better performance
   const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
   const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
