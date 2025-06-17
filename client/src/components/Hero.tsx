@@ -16,22 +16,22 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-3 sm:mt-4 md:mt-8 mb-3 sm:mb-4 md:mb-8 text-xs sm:text-sm md:text-base" data-aos="fade">
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> cGMP Manufactured
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> FDA-Registered Facility
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Third-Party Tested
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> MCAS-Friendly Formulations
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Zero Junk Ever
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Rigorously Tested for Purity
+              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
             </span>
           </div>
 

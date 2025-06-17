@@ -46,7 +46,7 @@ export default function OurStory() {
 
           <div className="mt-8 flex justify-center">
             <Link to="#products">
-              <button className="bg-primary text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90">
+              <button className="bg-[#89B317] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-[#89B317]/90">
                 Discover Our Products
               </button>
             </Link>
