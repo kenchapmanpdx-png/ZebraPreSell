@@ -16,22 +16,22 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-3 sm:mt-4 md:mt-8 mb-3 sm:mb-4 md:mb-8 text-xs sm:text-sm md:text-base" data-aos="fade">
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> cGMP Manufactured
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> cGMP Manufactured
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> FDA-Registered Facility
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> FDA-Registered Facility
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Third-Party Tested
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Third-Party Tested
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> MCAS-Friendly Formulations
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> MCAS-Friendly Formulations
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Zero Junk Ever
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Zero Junk Ever
             </span>
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="bg-[#89B317] text-white px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold text-xs">✓</span> Rigorously Tested for Purity
+              <span className="bg-white text-[#89B317] px-0.5 sm:px-1 py-0.5 rounded mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.2em' }}>✓</span> Rigorously Tested for Purity
             </span>
           </div>
 
@@ -65,7 +65,7 @@ export default function Hero() {
           className="absolute inset-0 bg-repeat"
           style={{
             backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.0175,
+            opacity: 0.021,
             backgroundSize: '600px 300px'
           }}
         ></div>

@@ -29,7 +29,7 @@ export default function OurStory() {
               in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
             </p>
 
-            <p className="font-bold text-white text-center text-xl font-serif">
+            <p className="font-bold text-white text-center font-serif" style={{ fontSize: '1.75em' }}>
               She is our Why!
             </p>
 

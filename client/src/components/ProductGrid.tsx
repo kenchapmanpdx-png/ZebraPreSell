@@ -68,8 +68,8 @@ export default function ProductGrid() {
               </div>
 
               <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                background: 'hsla(18, 65%, 48%, 1)',
-                backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
+                background: 'hsla(161, 51%, 12%, 1)',
+                backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
               }}>
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
@@ -127,8 +127,8 @@ export default function ProductGrid() {
               </div>
 
               <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                background: 'hsla(18, 65%, 48%, 1)',
-                backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
+                background: 'hsla(161, 51%, 12%, 1)',
+                backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
               }}>
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details

@@ -11,7 +11,7 @@ export default function ZebraBackground() {
         backgroundImage: `url(${zebraPattern})`,
         backgroundRepeat: 'repeat',
         backgroundSize: '1200px auto', // 300% larger than the original 400px
-        opacity: 0.02, // Reduced by another 50% for cleaner hero section
+        opacity: 0.024, // Increased by 20% from 0.02
         filter: `sepia(100%) hue-rotate(80deg) saturate(60%) brightness(110%)` // Transforms black to sage green
       }}
     />

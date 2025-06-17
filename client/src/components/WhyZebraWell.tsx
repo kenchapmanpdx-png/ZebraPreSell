@@ -54,7 +54,7 @@ export default function WhyZebraWell() {
         className="absolute inset-0 bg-cover bg-center bg-repeat"
         style={{
           backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.0175,
+          opacity: 0.021,
           backgroundSize: '800px 400px'
         }}
       ></div>

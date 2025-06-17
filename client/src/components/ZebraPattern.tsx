@@ -8,7 +8,7 @@ export default function ZebraPattern() {
         backgroundImage: `url(${zebraPattern})`,
         backgroundRepeat: 'repeat',
         backgroundSize: '250px auto',
-        opacity: 0.08,
+        opacity: 0.096,
         filter: 'sepia(100%) hue-rotate(345deg) saturate(80%) brightness(50%)',
         transform: 'rotate(225deg)'
       }}
