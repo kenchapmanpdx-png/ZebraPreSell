@@ -62,6 +62,21 @@ export default function DifferenceSection() {
       icon: "🧩",
       title: "Works as a System",
       description: "Designed to work synergistically whether you need one booster or all."
+    },
+    {
+      icon: "👨‍👧",
+      title: "Real-World, Patient-Driven Design",
+      description: "Formulated by a father for his daughter — not just a marketing team."
+    },
+    {
+      icon: "🎯",
+      title: "No Guesswork or Stacks Needed",
+      description: "One system replaces 12+ supplements — simple & complete."
+    },
+    {
+      icon: "🛡️",
+      title: "Tested for Peace of Mind",
+      description: "Third-party tested in FDA-registered, cGMP facility with full transparency."
     }
   ];
 
