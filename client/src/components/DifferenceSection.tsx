@@ -80,7 +80,9 @@ export default function DifferenceSection() {
   ];
 
   return (
-    <section className="bg-surface py-20 px-6" id="what-makes-different">
+    <section id="difference" className="py-12 md:py-20 px-6" style={{
+      background: 'linear-gradient(180deg, #F3ECE1 0%, #FBFAF7 100%)'
+    }}>
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">

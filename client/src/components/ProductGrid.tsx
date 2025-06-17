@@ -10,7 +10,9 @@ export default function ProductGrid() {
   const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
   const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   return (
-    <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden">
+    <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden" style={{
+      background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)'
+    }}>
       <ZebraBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-1">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-lora text-forest text-center mb-4" data-aos="fade-up">Products</h2>
@@ -21,8 +23,7 @@ export default function ProductGrid() {
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
             <div id="am-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" style={{
-              background: 'hsla(33, 34%, 86%, 1)',
-              backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
+              background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
@@ -46,20 +47,20 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <div className="bg-gray-50 rounded-lg p-6 shadow-sm border border-neutral-200">
-                  <ul className="space-y-3">
+                <div className="bg-gray-50 rounded-lg p-4 md:p-6 shadow-sm border border-neutral-200">
+                  <ul className="space-y-4">
                     {memoizedAmIngredients.map((ingredient, index) => (
                       <IngredientTooltip 
                         key={index} 
                         ingredient={ingredient} 
                         colorScheme="orange"
                       >
-                        <li className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
-                          <div className="flex justify-between items-start mb-1">
-                            <span className="text-sm md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
+                        <li className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
+                          <div className="flex justify-between items-start mb-2">
+                            <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
                             <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-sm md:text-base lg:text-[17px] text-gray-700">{ingredient.description}</p>
+                          <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
                         </li>
                       </IngredientTooltip>
                     ))}
@@ -80,8 +81,7 @@ export default function ProductGrid() {
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
             <div id="pm-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200" style={{
-              background: 'hsla(33, 34%, 86%, 1)',
-              backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
+              background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-20 mr-4">
@@ -105,20 +105,20 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <div className="bg-gray-50 rounded-lg p-6 shadow-sm border border-neutral-200">
-                  <ul className="space-y-3">
+                <div className="bg-gray-50 rounded-lg p-4 md:p-6 shadow-sm border border-neutral-200">
+                  <ul className="space-y-4">
                     {memoizedPmIngredients.map((ingredient, index) => (
                       <IngredientTooltip 
                         key={index} 
                         ingredient={ingredient} 
                         colorScheme="forest"
                       >
-                        <li className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
-                          <div className="flex justify-between items-start mb-1">
-                            <span className="text-sm md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
+                        <li className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
+                          <div className="flex justify-between items-start mb-2">
+                            <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
                             <span className="text-xs text-terra-dark bg-terra-light px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                           </div>
-                          <p className="text-sm md:text-base lg:text-[17px] text-gray-700">{ingredient.description}</p>
+                          <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
                         </li>
                       </IngredientTooltip>
                     ))}
