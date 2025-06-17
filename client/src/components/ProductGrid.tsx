@@ -25,8 +25,8 @@ export default function ProductGrid() {
             <div id="am-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" style={{
               background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
-              <div className="flex items-center mb-6">
-                <div className="relative w-22 h-28 mr-4">
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="relative w-22 h-28 mb-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
@@ -38,10 +38,10 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B]">ZebraWell AM Formula</h3>
-                  <div className="flex items-center">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell AM Formula</h3>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Morning energizing formula</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
+                    <span className="px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
                   </div>
                 </div>
               </div>
@@ -83,8 +83,8 @@ export default function ProductGrid() {
             <div id="pm-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200" style={{
               background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
             }}>
-              <div className="flex items-center mb-6">
-                <div className="relative w-22 h-28 mr-4">
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="relative w-22 h-28 mb-4">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
@@ -96,10 +96,10 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B]">ZebraWell PM Formula</h3>
-                  <div className="flex items-center">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell PM Formula</h3>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Evening recovery formula</span>
-                    <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
+                    <span className="px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
                   </div>
                 </div>
               </div>
