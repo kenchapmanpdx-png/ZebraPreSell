@@ -36,7 +36,7 @@ export default function ProductGrid() {
                 <div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell AM Formula</h3>
                   <div className="flex items-center">
-                    <span className="text-sm text-forest font-semibold">Morning energizing formula</span>
+                    <span className="text-sm text-white font-semibold px-3 py-1 rounded-md bg-gradient-to-r from-emerald-500 to-emerald-600">Morning energizing formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function ProductGrid() {
                 <div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-lora font-black text-forest">ZebraWell PM Formula</h3>
                   <div className="flex items-center">
-                    <span className="text-sm text-forest font-semibold">Evening recovery formula</span>
+                    <span className="text-sm text-white font-semibold px-3 py-1 rounded-md bg-gradient-to-r from-emerald-500 to-emerald-600">Evening recovery formula</span>
                     <span className="ml-3 px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Recovery Support</span>
                   </div>
                 </div>
