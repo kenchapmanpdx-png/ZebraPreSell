@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export default function DifferenceSection() {
@@ -61,22 +60,22 @@ export default function DifferenceSection() {
     {
       icon: "🧩",
       title: "Works as a System",
-      description: "Designed to work synergistically whether you need one booster or all."
+      description: "AM and PM formulas work together for complete 24-hour support."
     },
     {
       icon: "👨‍👧",
-      title: "Real-World, Patient-Driven Design",
-      description: "Formulated by a father for his daughter — not just a marketing team."
+      title: "Patient-Driven Design",
+      description: "Formulated by a father for his daughter — real-world tested."
     },
     {
       icon: "🎯",
-      title: "No Guesswork or Stacks Needed",
-      description: "One system replaces 12+ supplements — simple & complete."
+      title: "No Guesswork Needed",
+      description: "Two bottles replace 12+ supplements — simple & complete."
     },
     {
       icon: "🛡️",
       title: "Tested for Peace of Mind",
-      description: "Third-party tested in FDA-registered, cGMP facility with full transparency."
+      description: "Third-party tested in FDA-registered, cGMP facility."
     }
   ];
 
