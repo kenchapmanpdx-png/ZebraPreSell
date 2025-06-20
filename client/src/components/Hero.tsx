@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="text-white py-6 sm:py-8 md:py-16 px-3 sm:px-4 md:px-8 pt-4 sm:pt-6 md:pt-10" style={{
         background: 'hsla(161, 51%, 12%, 1)',
-        backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+        backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
       }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-8">
         <div className="md:w-1/2 space-y-2 sm:space-y-3 md:space-y-6">
