@@ -40,7 +40,7 @@ export default function OurStory() {
 
             <div className="flex justify-center">
               <div className="border border-terra/30 p-1 rounded-md shadow-sm">
-                <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '280px' }} />
+                <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '350px' }} />
               </div>
             </div>
           </div>
