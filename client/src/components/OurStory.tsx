@@ -4,11 +4,33 @@ import ZebraHeart from './ZebraHeart';
 
 export default function OurStory() {
   return (
-    <section id="story" className="py-6 md:py-8 relative overflow-hidden">
+    <section id="story" className="py-6 md:py-8 relative overflow-hidden" style={{
+      margin: 0,
+      padding: 0,
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("terra-gradient.png")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      minHeight: '100vh',
+      fontFamily: 'Inter, sans-serif',
+      color: 'white',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
       <div className="container mx-auto px-6 relative z-1">
-        <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 shadow-lg border border-terra/10" style={{
-          background: 'hsla(161, 51%, 12%, 1)',
-          backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+        <div className="max-w-4xl mx-auto rounded-xl p-8 md:p-12 shadow-lg border border-terra/10 glass-section" style={{
+          background: 'rgba(0, 0, 0, 0.4)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          padding: '2rem 3rem',
+          borderRadius: '16px',
+          maxWidth: '800px',
+          width: '90%',
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
+          textAlign: 'center'
         }} data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-lora text-center mb-8 text-white" data-aos="fade-up">
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-terra" style={{ fontSize: '1.2em' }}>Ava</span>.
