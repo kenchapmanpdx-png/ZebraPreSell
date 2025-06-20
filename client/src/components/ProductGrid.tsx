@@ -10,15 +10,20 @@ export default function ProductGrid() {
   const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
   const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   return (
-    <section id="products" className="pt-1 pb-4 md:pt-2 md:pb-6 relative overflow-hidden" style={{
+    <section id="products" className="pt-16 md:pt-20 pb-8 md:pb-12 relative overflow-hidden" style={{
       background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)'
     }}>
       <ZebraBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-1">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-lora text-forest text-center mb-4" data-aos="fade-up">Products</h2>
-        <p className="text-lg md:text-xl text-neutral-dark/80 max-w-2xl mx-auto font-lora mb-8 md:mb-12 text-center py-4 md:py-6" data-aos="fade-up" data-aos-delay="200">
-          Our comprehensive AM and PM formulas provide targeted support throughout the day and night, addressing the unique needs of individuals with EDS and POTS.
-        </p>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora font-bold text-forest mb-6" data-aos="fade-up">
+            Our Products
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-terra to-[#89B317] mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+          <p className="text-xl md:text-2xl text-forest/90 max-w-4xl mx-auto font-lora leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            <strong>Comprehensive AM and PM formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
+          </p>
+        </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-6xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
