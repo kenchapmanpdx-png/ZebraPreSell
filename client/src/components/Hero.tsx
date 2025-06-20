@@ -37,9 +37,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-8" data-aos="fade-up">
             <Link to="#products" className="w-3/4 mx-auto sm:w-1/3 sm:mx-0">
-              <button className="text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-md shadow hover:opacity-90 transition-all duration-300 hover:scale-[1.05] w-full text-sm sm:text-base" style={{
-                background: 'linear-gradient(0deg, rgba(200, 89, 43, 1) 0%, rgba(181, 133, 112, 1) 49%, rgba(200, 89, 43, 1) 100%)'
-              }}>
+              <button className="bg-[#89B317] text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] w-full text-sm sm:text-base">
                 Shop Now
               </button>
             </Link>
