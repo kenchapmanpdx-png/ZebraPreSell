@@ -70,8 +70,8 @@ export default function ProductGrid() {
               </div>
 
               <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                background: 'hsla(161, 51%, 12%, 1)',
-                backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+                background: 'hsla(18, 65%, 48%, 1)',
+                backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
               }}>
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
@@ -82,7 +82,7 @@ export default function ProductGrid() {
           {/* Right Column - PM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
             <div id="pm-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200" style={{
-              background: 'linear-gradient(135deg, #F3ECE1 0%, #FBFAF7 50%, #F3ECE1 100%)'
+              background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)'
             }}>
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative w-22 h-28 mb-4">
@@ -128,8 +128,8 @@ export default function ProductGrid() {
               </div>
 
               <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                background: 'hsla(161, 51%, 12%, 1)',
-                backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
+                background: 'hsla(18, 65%, 48%, 1)',
+                backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
               }}>
                 <i className="fas fa-info-circle mr-2"></i>
                 Product Details
