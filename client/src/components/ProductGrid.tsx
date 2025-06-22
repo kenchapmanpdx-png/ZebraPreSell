@@ -45,9 +45,8 @@ export default function ProductGrid() {
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell AM Formula</h3>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
-                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90">Morning energizing formula</span>
-                    <span className="px-2 py-0.5 rounded-md bg-terra-light text-xs text-terra-dark font-bold">Daily Foundation</span>
+                  <div className="flex flex-col items-center justify-center gap-2">
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center">AM formula designed to support cellular energy, enhance cognitive function and mental clarity, and provide foundational support for methylation and mitochondrial health</span>
                   </div>
                 </div>
               </div>
