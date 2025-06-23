@@ -178,8 +178,12 @@ export default function InteractiveIngredientMap() {
       }
     };
 
-    const handleMouseEnter = (e: Event) => highlightConnection(e.currentTarget as HTMLElement, true);
-    const handleMouseLeave = (e: Event) => { if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false)};
+    const handleMouseEnter = (e: Event) => {
+      if (!activeElement) highlightConnection(e.currentTarget as HTMLElement, true);
+    };
+    const handleMouseLeave = (e: Event) => { 
+      if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false);
+    };
 
     const addEventListeners = () => {
         mapContainer.querySelectorAll('.item-card').forEach(card => {
