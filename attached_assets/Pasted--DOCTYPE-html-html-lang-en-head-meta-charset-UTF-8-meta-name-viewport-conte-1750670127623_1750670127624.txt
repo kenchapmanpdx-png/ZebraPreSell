@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZebraWell Preorder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #1d3828, #e9dbc7);
+      color: #fff;
+    }
+    header {
+      background-color: #1d3828;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #f4eee2;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1rem;
+      color: #c5d6cc;
+    }
+    .hero {
+      background: url('your-image-path.jpg') no-repeat center center/cover;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #fff4ed;
+      text-shadow: 1px 1px 5px #000;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #f4eee2;
+    }
+    .cta {
+      background-color: #fff4ed;
+      color: #1d3828;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .cta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .cta form input,
+    .cta form button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1rem;
+    }
+    .cta button {
+      background-color: #c05228;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1d3828;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #a3b8ae;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZebraWell Supplements</h1>
+    <p>Therapeutic Solutions for POTS, EDS, and Dysautonomia</p>
+  </header>
+  <section class="hero">
+    <h2>Coming Soon: Reserve Your Bottle</h2>
+    <p>Be the first to access our clinical-grade AM/PM formulas designed for rare and resilient bodies. Limited early release.</p>
+  </section>
+  <section class="cta">
+    <h3>Preorder Now</h3>
+    <p>Enter your details to reserve your spot. No payment required until shipping begins.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 ZebraWell. All rights reserved.
+  </footer>
+</body>
+</html>
