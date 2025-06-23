@@ -47,8 +47,8 @@ export default function Navigation() {
             <span className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
           </div>
           <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
-            <span className="text-sm text-white/90 font-medium">Supporting EDS & POTS</span>
-            <span className="text-xs text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
+            <span className="text-2xl text-white/90 font-medium">Supporting EDS & POTS</span>
+            <span className="text-xl text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
           </div>
         </a>
 

@@ -9,40 +9,38 @@ export default function OurStory() {
         <div className="max-w-6xl mx-auto rounded-xl p-4 md:p-12 shadow-lg border border-terra/10" style={{
           background: 'linear-gradient(0deg, rgba(200, 89, 43, 1) 0%, rgba(184, 112, 81, 1) 49%, rgba(200, 89, 43, 1) 100%)'
         }} data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl font-lora text-center mb-3 md:mb-6 text-white" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-lora text-center mb-6 md:mb-8 text-white" data-aos="fade-up" style={{ fontSize: '1.2em' }}>
             Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-white" style={{ fontSize: '1.2em' }}>Ava</span>.
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8 items-center" data-aos="fade">
-            <div className="md:col-span-2 space-y-4 text-white">
-              <p className="text-base md:text-lg leading-relaxed">
-                Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
-                She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
-              </p>
+          <div className="text-center space-y-6 text-white" data-aos="fade">
+            <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>
+              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
+              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
+            </p>
 
-              <p className="text-base md:text-lg leading-relaxed">
-                ZebraWell was born from my relentless pursuit to help her feel better, not just temporarily, but sustainably and safely.
-              </p>
+            <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>
+              ZebraWell was born from my relentless pursuit to help her feel better, not just temporarily, but sustainably and safely.
+            </p>
 
-              <p className="text-base md:text-lg leading-relaxed">
-                This isn't just a business. It's personal. Every ingredient was chosen with Ava 
-                in mind, and with the hope of helping others like her feel stronger, steadier, and cared for.
-              </p>
+            <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>
+              This isn't just a business. It's personal. Every ingredient was chosen with Ava 
+              in mind, and with the hope of helping others like her feel stronger, steadier, and cared for.
+            </p>
 
-              <div className="flex justify-center my-6">
-                <div className="border border-terra/30 p-1 rounded-md shadow-sm">
-                  <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '350px' }} />
-                </div>
+            <div className="flex justify-center my-8">
+              <div className="border border-terra/30 p-1 rounded-md shadow-sm">
+                <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '420px' }} />
               </div>
-
-              <p className="font-bold text-white text-center font-serif text-2xl md:text-3xl mt-4">
-                She is my Why!
-              </p>
-
-              <p className="text-center font-medium text-base italic text-white mt-4">
-                If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={24} /></span>
-              </p>
             </div>
+
+            <p className="font-bold text-white text-center font-serif text-3xl md:text-4xl mt-6" style={{ fontSize: '1.2em' }}>
+              She is my Why!
+            </p>
+
+            <p className="text-center font-medium text-lg italic text-white mt-6" style={{ fontSize: '1.2em' }}>
+              If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={24} /></span>
+            </p>
           </div>
 
           <div className="mt-8 flex justify-center">
