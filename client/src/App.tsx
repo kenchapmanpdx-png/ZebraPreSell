@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={TestHome} />
+      <Route path="/" component={Home} />
       <Route path="/preorder" component={PreorderPage} />
       <Route path="*" component={NotFound} />
     </Switch>

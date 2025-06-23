@@ -40,34 +40,12 @@ export default function Home() {
       <Helmet>
         <title>ZebraWell - Clinical-Grade Supplements for POTS & EDS</title>
         <meta name="description" content="Therapeutic clinical-grade supplements designed specifically for POTS and Ehlers-Danlos Syndrome (EDS). Join our reservation list." />
-        <meta name="keywords" content="POTS, EDS, supplements, clinical-grade, postural orthostatic tachycardia syndrome, ehlers-danlos syndrome, zebra, rare disease" />
-        <meta property="og:title" content="ZebraWell - Clinical-Grade Supplements for POTS & EDS" />
-        <meta property="og:description" content="Therapeutic clinical-grade supplements for POTS and EDS. Join our reservation list to be the first to know when available." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zebrawell.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ZebraWell - Clinical-Grade Supplements for POTS & EDS" />
-        <meta name="twitter:description" content="Therapeutic clinical-grade supplements for rare conditions. Join our reservation list." />
       </Helmet>
 
       <div className="min-h-screen">
         <Navigation />
         <Hero />
-        <SectionButton />
-        <ProductGrid />
-        <SectionButton />
-        <InteractiveIngredientMap />
-        <SectionButton />
-        <OurStory />
-        <SectionButton />
         <WhyZebraWell />
-        <SectionButton />
-        <ClinicalRationale />
-        <SectionButton />
-        <Testimonials />
-        <SectionButton />
-        <WhatYouGet />
-        <Contact />
       </div>
     </>
   );
