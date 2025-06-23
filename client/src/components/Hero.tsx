@@ -38,8 +38,9 @@ export default function Hero() {
         background: 'hsla(161, 51%, 12%, 1)',
         backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
       }}>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-8">
-        <div className="md:w-1/2 space-y-2 sm:space-y-3 md:space-y-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Full width heading */}
+        <div className="text-center mb-8">
           <div className="mb-3 sm:mb-4" data-aos="fade-up">
             <span className="bg-[#89B317] text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
               Coming Soon - Join Our Reservation List
@@ -48,8 +49,83 @@ export default function Hero() {
           <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Therapeutic Clinical-Grade Supplements for (POTS) <span style={{ fontSize: '0.9em' }}>Postural Orthostatic Tachycardia Syndrome</span> & (EDS) <span style={{ fontSize: '0.9em' }}>Ehlers-Danlos Syndrome</span>
           </h1>
+        </div>
 
-          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 mt-3 sm:mt-4 md:mt-8 mb-3 sm:mb-4 md:mb-8 text-xs sm:text-sm md:text-base" data-aos="fade">
+        {/* Two column layout */}
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Left column - Reservation form */}
+          <div className="md:w-1/2">
+            <div className="inline-block py-6 px-6" style={{
+              background: 'hsla(33, 34%, 86%, 1)',
+              backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
+            }}>
+              <div className="text-center">
+                <h3 className="text-xl font-serif font-bold text-forest mb-3">📧 Join Our Reservation List</h3>
+                <p className="text-base text-forest/80 leading-relaxed mb-4">
+                  Be the first to know when ZebraWell is available for order.
+                </p>
+                
+                {!isSubmitted ? (
+                  <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                    <div className="flex gap-2">
+                      <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-gray-900 text-sm"
+                      />
+                      <button
+                        type="submit"
+                        disabled={isSubmitting || !email}
+                        className="bg-[#89B317] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      >
+                        {isSubmitting ? (
+                          <div className="flex items-center">
+                            <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin mr-1"></div>
+                            Adding...
+                          </div>
+                        ) : (
+                          "Reserve Spot"
+                        )}
+                      </button>
+                    </div>
+                    <p className="text-xs text-forest/60 mt-2">
+                      We respect your privacy. Unsubscribe at any time.
+                    </p>
+                  </form>
+                ) : (
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">✅</div>
+                    <h4 className="text-xl font-bold text-forest mb-2">You're all set!</h4>
+                    <p className="text-forest/80">
+                      We'll send you an email as soon as ZebraWell is ready to order.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+            <p className="text-center text-base text-forest/80 mt-4">
+              We'll send you an email notification as soon as we launch.
+            </p>
+          </div>
+
+          {/* Right column - Bottle image */}
+          <div className="md:w-1/2">
+            <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-md flex justify-center mx-auto" data-aos="fade-left">
+              <img 
+                src="/images/zebrawell-bottles-final2.png" 
+                alt="ZebraWell AM and PM Formula bottles" 
+                className="w-full h-auto max-w-full object-contain drop-shadow-2xl rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Features section below */}
+        <div className="mt-8">
+          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base justify-center" data-aos="fade">
             <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
               <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
             </span>
@@ -70,21 +146,12 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-8" data-aos="fade-up">
-            <Link to="/preorder" className="w-3/4 mx-auto sm:w-1/3 sm:mx-0">
-              <button className="bg-[#89B317] text-white font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] w-full text-sm sm:text-base">
+          <div className="flex justify-center mt-6" data-aos="fade-up">
+            <Link to="/preorder">
+              <button className="bg-[#89B317] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
                 Join Reservation List
               </button>
             </Link>
-          </div>
-        </div>
-        <div className="md:w-1/2 mt-4 sm:mt-6 md:mt-0 w-full flex justify-center" data-aos="fade-left">
-          <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-md flex justify-center">
-            <img 
-              src="/images/zebrawell-bottles-final2.png" 
-              alt="ZebraWell AM and PM Formula bottles" 
-              className="w-full h-auto max-w-full object-contain drop-shadow-2xl rounded-lg"
-            />
           </div>
         </div>
       </div>
@@ -113,64 +180,6 @@ export default function Hero() {
             <p className="font-medium text-white">We honor the Zebra. Because rare shouldn't mean invisible.</p>
           </div>
         </div>
-      </div>
-
-      {/* Reservation Form Section */}
-      <div className="flex justify-center">
-        <div className="inline-block py-6 px-6" style={{
-          background: 'hsla(33, 34%, 86%, 1)',
-          backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
-        }}>
-          <div className="text-center">
-            <h3 className="text-xl font-serif font-bold text-forest mb-3">📧 Join Our Reservation List</h3>
-            <p className="text-base text-forest/80 leading-relaxed mb-4">
-              Be the first to know when ZebraWell is available for order.
-            </p>
-            
-            {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-gray-900 text-sm"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !email}
-                    className="bg-[#89B317] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center">
-                        <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin mr-1"></div>
-                        Adding...
-                      </div>
-                    ) : (
-                      "Reserve Spot"
-                    )}
-                  </button>
-                </div>
-                <p className="text-xs text-forest/60 mt-2">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-              </form>
-            ) : (
-              <div className="text-center">
-                <div className="text-6xl mb-4">✅</div>
-                <h4 className="text-xl font-bold text-forest mb-2">You're all set!</h4>
-                <p className="text-forest/80">
-                  We'll send you an email as soon as ZebraWell is ready to order.
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-        <p className="text-center text-base text-forest/80 mt-4">
-          We'll send you an email notification as soon as we launch.
-        </p>
       </div>
     </section>
   );
