@@ -42,7 +42,7 @@ export default function Hero() {
         {/* Full width heading */}
         <div className="text-center mb-8">
           <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
-            Therapeutic Clinical-Grade Supplements for (POTS) <span style={{ fontSize: '0.9em' }}>Postural Orthostatic Tachycardia Syndrome</span> & (EDS) <span style={{ fontSize: '0.9em' }}>Ehlers-Danlos Syndrome</span>
+            Therapeutic Clinical-Grade Supplements for POTS & EDS. (Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)
           </h1>
         </div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
                 <p className="text-base text-forest/80 leading-relaxed mb-4">
                   Be the first to know when ZebraWell is available for order.
                 </p>
-                
+
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                     <div className="flex gap-2">

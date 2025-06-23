@@ -93,8 +93,7 @@ export default function InteractiveIngredientMap() {
     };
 
     const highlightConnection = (element: HTMLElement, shouldHighlight: boolean) => {
-        if (isMobile && !shouldHighlight) return;
-
+        // Always clear existing highlights first
         mapContainer.querySelectorAll('.highlighted, .unfocused').forEach(el => {
             el.classList.remove('highlighted', 'unfocused');
             const span = el.querySelector('.font-semibold') as HTMLElement;
@@ -126,9 +125,12 @@ export default function InteractiveIngredientMap() {
                     fromEl.classList.add('highlighted');
                     toEl.classList.add('highlighted');
 
-                    path.classList.add('active-path');
-                    path.setAttribute('stroke-width', '3');
-                    path.setAttribute('opacity', '1');
+                    // Only show lines on desktop
+                    if (!isMobile) {
+                        path.classList.add('active-path');
+                        path.setAttribute('stroke-width', '3');
+                        path.setAttribute('opacity', '1');
+                    }
 
                     if (isGoal) {
                         const span = fromEl.querySelector('.font-semibold') as HTMLElement;
