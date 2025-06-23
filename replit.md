@@ -110,6 +110,7 @@ Changelog:
   - Updated floating CTA to focus on reservation list instead of sample requests
   - Added interactive ingredient-to-benefit map after Ava story section
   - Integrated 36 ingredients connecting to 14 health goals with visual highlighting
+  - Added reservation form below "Why Zebra" section above products
   - Maintained original styling and color scheme while adding preorder functionality
 
 ## User Preferences
