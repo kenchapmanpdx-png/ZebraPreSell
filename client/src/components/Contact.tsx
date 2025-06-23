@@ -18,13 +18,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-16 relative overflow-hidden">
+    <section id="contact" className="py-6 md:py-16 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             <div data-aos="fade">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-forest">Contact Us</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-forest">Contact Us</h2>
               <p className="text-neutral-dark/80 mb-6">
                 Have questions about our formulations or want to learn more about ZebraWell products? 
                 We're here to help! Reach out to our support team for any inquiries regarding our supplements.

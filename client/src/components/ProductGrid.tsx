@@ -10,12 +10,12 @@ export default function ProductGrid() {
   const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
   const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   return (
-    <section id="products" className="pt-16 md:pt-20 pb-8 md:pb-12 relative overflow-hidden" style={{
+    <section id="products" className="pt-8 md:pt-20 pb-6 md:pb-12 relative overflow-hidden" style={{
       background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)'
     }}>
       <ZebraBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-1">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-6 md:mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora font-bold text-forest mb-6" data-aos="fade-up">
             Our Products
           </h2>
