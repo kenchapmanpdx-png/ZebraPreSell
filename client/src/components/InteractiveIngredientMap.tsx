@@ -102,8 +102,9 @@ export default function InteractiveIngredientMap() {
             if (span) span.style.color = '';
         });
         svg.querySelectorAll('path').forEach(p => {
+            p.classList.remove('active-path');
             p.setAttribute('stroke-width', '1');
-            p.setAttribute('opacity', '0.3');
+            p.setAttribute('opacity', '0.1');
         });
 
         if (shouldHighlight) {
@@ -113,11 +114,7 @@ export default function InteractiveIngredientMap() {
             let connectedItems = new Set<HTMLElement>();
             connectedItems.add(element);
 
-            if (isGoal) {
-                connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"]`);
-            } else {
-                connectedPaths = svg.querySelectorAll(`path[data-from="${elementId}"]`);
-            }
+            connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"], path[data-from="${elementId}"]`);
             
             element.classList.add('highlighted');
             
@@ -130,6 +127,7 @@ export default function InteractiveIngredientMap() {
                     fromEl.classList.add('highlighted');
                     toEl.classList.add('highlighted');
                     
+                    path.classList.add('active-path');
                     path.setAttribute('stroke-width', '3');
                     path.setAttribute('opacity', '1');
                     
@@ -206,8 +204,9 @@ export default function InteractiveIngredientMap() {
         .item-card { transition: all 0.2s ease-in-out; cursor: pointer; }
         .item-card .font-semibold { transition: color 0.2s ease-in-out; }
         .item-card.highlighted { transform: scale(1.03); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); z-index: 10; position: relative; opacity: 1 !important; }
-        .item-card.unfocused { opacity: 0.4; transform: scale(0.98); }
+        .item-card.unfocused { opacity: 0.3; transform: scale(0.98); }
         svg path { transition: stroke-width 0.2s ease, opacity 0.2s ease, stroke 0.2s ease; pointer-events: none; }
+        svg path.active-path { opacity: 1 !important; stroke-width: 3 !important; }
       `}</style>
       
       <div className="max-w-7xl mx-auto">
