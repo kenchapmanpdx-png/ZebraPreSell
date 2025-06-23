@@ -2,12 +2,12 @@ import ZebraLogo from './ZebraLogo';
 
 export default function Footer() {
   return (
-    <footer className="text-white py-12" style={{
+    <footer className="text-white py-6 md:py-12" style={{
       background: 'hsla(161, 51%, 12%, 1)',
       backgroundImage: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)'
     }}>
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <ZebraLogo />

@@ -25,7 +25,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             <div data-aos="fade">
               <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-forest">Contact Us</h2>
-              <p className="text-neutral-dark/80 mb-6">
+              <p className="text-neutral-dark/80 mb-3 md:mb-6">
                 Have questions about our formulations or want to learn more about ZebraWell products? 
                 We're here to help! Reach out to our support team for any inquiries regarding our supplements.
               </p>
