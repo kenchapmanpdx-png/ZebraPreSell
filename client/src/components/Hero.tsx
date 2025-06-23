@@ -74,7 +74,7 @@ export default function Hero() {
                       <button
                         type="submit"
                         disabled={isSubmitting || !email}
-                        className="bg-[#1D4526] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#1D4526]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                        className="bg-terra text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center">
@@ -109,28 +109,28 @@ export default function Hero() {
             <div className="mt-6">
               <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base justify-center" data-aos="fade">
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
                 </span>
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
                 </span>
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
                 </span>
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
                 </span>
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
                 </span>
                 <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-[#1D4526] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
+                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
                 </span>
               </div>
 
               <div className="flex justify-center mt-6" data-aos="fade-up">
                 <Link to="/preorder">
-                  <button className="bg-[#1D4526] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#1D4526]/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
+                  <button className="bg-terra text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
                     Join Reservation List
                   </button>
                 </Link>
