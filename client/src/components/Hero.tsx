@@ -52,10 +52,10 @@ export default function Hero() {
         </div>
 
         {/* Two column layout */}
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-start gap-8">
           {/* Left column - Reservation form */}
           <div className="md:w-1/2">
-            <div className="inline-block py-6 px-6" style={{
+            <div className="inline-block py-6 px-6 rounded-3xl" style={{
               background: 'hsla(33, 34%, 86%, 1)',
               backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
             }}>
@@ -106,9 +106,41 @@ export default function Hero() {
                 )}
               </div>
             </div>
-            <p className="text-center text-base text-forest/80 mt-4">
+            <p className="text-center text-base text-white mt-4">
               We'll send you an email notification as soon as we launch.
             </p>
+
+            {/* Features section moved up */}
+            <div className="mt-6">
+              <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base justify-center" data-aos="fade">
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
+                </span>
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
+                </span>
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
+                </span>
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
+                </span>
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
+                </span>
+                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
+                  <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
+                </span>
+              </div>
+
+              <div className="flex justify-center mt-6" data-aos="fade-up">
+                <Link to="/preorder">
+                  <button className="bg-[#89B317] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
+                    Join Reservation List
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Right column - Bottle image */}
@@ -120,38 +152,6 @@ export default function Hero() {
                 className="w-full h-auto max-w-full object-contain drop-shadow-2xl rounded-lg"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Features section below */}
-        <div className="mt-8">
-          <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base justify-center" data-aos="fade">
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
-            </span>
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
-            </span>
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
-            </span>
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
-            </span>
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
-            </span>
-            <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-              <span className="text-[#89B317] mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
-            </span>
-          </div>
-
-          <div className="flex justify-center mt-6" data-aos="fade-up">
-            <Link to="/preorder">
-              <button className="bg-[#89B317] text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
-                Join Reservation List
-              </button>
-            </Link>
           </div>
         </div>
       </div>
