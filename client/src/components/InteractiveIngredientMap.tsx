@@ -60,16 +60,17 @@ export default function InteractiveIngredientMap() {
       const containerRect = mapContainer.getBoundingClientRect();
 
       connections.forEach(conn => {
-        conn.to.forEach(toId => {
-          const fromEl = mapContainer.querySelector(toId) as HTMLElement; // Now 'from' is the goal
-          const toEl = mapContainer.querySelector(conn.from) as HTMLElement; // Now 'to' is the ingredient
-
+        const toEl = mapContainer.querySelector(conn.from) as HTMLElement; // Ingredient is the destination
+        conn.to.forEach(fromId => {
+          const fromEl = mapContainer.querySelector(fromId) as HTMLElement; // Goal is the origin
+          
           if (fromEl && toEl) {
             const fromRect = fromEl.getBoundingClientRect();
             const toRect = toEl.getBoundingClientRect();
             
             const fromX = fromRect.right - containerRect.left;
             const fromY = fromRect.top - containerRect.top + fromRect.height / 2;
+            
             const toX = toRect.left - containerRect.left;
             const toY = toRect.top - containerRect.top + toRect.height / 2;
             
@@ -84,8 +85,8 @@ export default function InteractiveIngredientMap() {
             path.setAttribute('stroke-width', '1');
             path.setAttribute('fill', 'none');
             path.setAttribute('opacity', '0.3');
-            path.dataset.from = conn.from; // Still original ingredient ID
-            path.dataset.to = toId; // Still original issue ID
+            path.dataset.from = conn.from;
+            path.dataset.to = fromId;
             svg.appendChild(path);
           }
         });
