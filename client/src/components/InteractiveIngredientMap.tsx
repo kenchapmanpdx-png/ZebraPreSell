@@ -147,16 +147,36 @@ export default function InteractiveIngredientMap() {
     };
 
     const handleTap = (e: Event) => {
-      const target = e.currentTarget as HTMLElement;
-      if (activeElement === target) {
-        highlightConnection(target, false);
-        activeElement = null;
-      } else {
-        if(activeElement) highlightConnection(activeElement, false);
-        highlightConnection(target, true);
-        activeElement = target;
-      }
-    };
+          const target = e.currentTarget as HTMLElement;
+          const isGoal = target.closest('#issues-col') !== null;
+
+          // If it's the same element, unselect it
+          if (activeElement === target) {
+            highlightConnection(target, false);
+            activeElement = null;
+            return;
+          }
+
+          // If something else is active, turn that off
+          if (activeElement) {
+            highlightConnection(activeElement, false);
+          }
+
+          // Set new active element
+          highlightConnection(target, true);
+          activeElement = target;
+
+          // On mobile, ensure both sides get highlighted
+          const targetId = `#${target.id}`;
+          const paths = isGoal 
+            ? svg.querySelectorAll(`path[data-to="${targetId}"]`)
+            : svg.querySelectorAll(`path[data-from="${targetId}"]`);
+
+          paths.forEach(path => {
+            const otherEl = mapContainer.querySelector(isGoal ? path.dataset.from! : path.dataset.to!);
+            if (otherEl) highlightConnection(otherEl as HTMLElement, true);
+          });
+        };
 
     const handleMouseEnter = (e: Event) => highlightConnection(e.currentTarget as HTMLElement, true);
     const handleMouseLeave = (e: Event) => { if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false)};
