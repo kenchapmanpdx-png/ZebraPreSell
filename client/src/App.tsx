@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import PreorderPage from "@/pages/PreorderPage";
-import TestHome from "@/pages/TestHome";
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,7 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/preorder" component={PreorderPage} />
-      <Route path="*" component={NotFound} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
