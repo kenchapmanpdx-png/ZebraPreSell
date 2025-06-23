@@ -124,7 +124,7 @@ export default function Hero() {
           <div className="text-center">
             <h3 className="text-xl font-serif font-bold text-forest mb-3">📧 Join Our Reservation List</h3>
             <p className="text-base text-forest/80 leading-relaxed mb-4">
-              Be the first to know when ZebraWell is available for order. We'll send you an email notification as soon as we launch.
+              Be the first to know when ZebraWell is available for order.
             </p>
             
             {!isSubmitted ? (
@@ -168,6 +168,9 @@ export default function Hero() {
             )}
           </div>
         </div>
+        <p className="text-center text-base text-forest/80 mt-4">
+          We'll send you an email notification as soon as we launch.
+        </p>
       </div>
     </section>
   );
