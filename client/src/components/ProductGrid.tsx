@@ -38,8 +38,6 @@ export default function ProductGrid() {
                     <div className="w-16 h-16 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
                       <i className="fas fa-sun text-2xl text-terra"></i>
                     </div>
-                    <div className="text-[11px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[8px] text-terra">AM Formula</div>
                   </div>
                 </div>
                 <div>
@@ -90,8 +88,6 @@ export default function ProductGrid() {
                     <div className="w-16 h-16 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
                       <i className="fas fa-moon text-2xl text-terra"></i>
                     </div>
-                    <div className="text-[11px] font-bold text-forest">ZebraWell™</div>
-                    <div className="text-[8px] text-terra">PM Formula</div>
                   </div>
                 </div>
                 <div>
