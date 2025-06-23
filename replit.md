@@ -101,6 +101,14 @@ Changelog:
   - Updated bottle image styling with rounded corners and removed border trim
   - Updated hero statement to emphasize full condition names and therapeutic focus
   - Refined AM/PM formula descriptions to remove MCAS reference and emphasize day/night support
+- June 23, 2025. Preorder functionality implementation:
+  - Added preorder reservation system with email collection
+  - Removed "What's Inside" section (120 capsules, 4 AM/4 PM dosing info)
+  - Removed "💬 What People Are Saying" testimonials section (Emily and Sarah quotes)
+  - Updated hero with "Coming Soon" badge and "Join Reservation List" button
+  - Created dedicated preorder page at /preorder with comprehensive reservation experience
+  - Updated floating CTA to focus on reservation list instead of sample requests
+  - Maintained original styling and color scheme while adding preorder functionality
 
 ## User Preferences
 
