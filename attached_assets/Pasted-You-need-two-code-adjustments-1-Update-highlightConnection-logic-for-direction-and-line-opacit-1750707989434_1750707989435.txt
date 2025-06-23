@@ -1,0 +1,89 @@
+You need two code adjustments:
+
+🧠 1. Update highlightConnection logic for direction and line opacity
+Find this part inside highlightConnection:
+
+ts
+Copy
+Edit
+if (isGoal) {
+  connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"]`);
+} else {
+  connectedPaths = svg.querySelectorAll(`path[data-from="${elementId}"]`);
+}
+✅ Replace it with:
+
+ts
+Copy
+Edit
+connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"], path[data-from="${elementId}"]`);
+✅ This supports both ingredients and benefits — you don’t need a special case for goals vs. ingredients if you're just toggling visuals.
+
+🎨 2. Add this to the highlightConnection() to fade all other lines by default:
+Find this block:
+
+ts
+Copy
+Edit
+svg.querySelectorAll('path').forEach(p => {
+  p.setAttribute('stroke-width', '1');
+  p.setAttribute('opacity', '0.3');
+});
+✅ Replace it with this updated logic:
+
+ts
+Copy
+Edit
+svg.querySelectorAll('path').forEach(p => {
+  p.classList.remove('active-path');
+  p.setAttribute('stroke-width', '1');
+  p.setAttribute('opacity', '0.1');
+});
+Then inside your connectedPaths.forEach(...), add:
+
+ts
+Copy
+Edit
+path.classList.add('active-path');
+path.setAttribute('stroke-width', '3');
+path.setAttribute('opacity', '1');
+And style it via:
+
+css
+Copy
+Edit
+svg path.active-path {
+  opacity: 1 !important;
+  stroke-width: 3 !important;
+}
+✅ Final Optional Add-On
+If you want to visually dim unrelated benefits/ingredients, you’re already doing this:
+
+ts
+Copy
+Edit
+card.classList.add('unfocused'); // for .item-card
+Just make sure your CSS includes:
+
+css
+Copy
+Edit
+.item-card.unfocused {
+  opacity: 0.3;
+  transform: scale(0.98);
+}
+✅ What to Tell Replit
+“Please adjust the interactive SVG line map so that:
+
+When a user hovers or taps on an ingredient or benefit,
+
+All unrelated lines are faded (opacity 0.1),
+
+Only the directly connected paths animate to full opacity (1.0) and thickness (3),
+
+The connected cards should retain their existing .highlighted and .unfocused states,
+
+And the direction of the paths is correct: benefit → ingredient.
+
+I’ve already flipped dataset.from and dataset.to for correctness — make sure the visual behavior matches.”
+
