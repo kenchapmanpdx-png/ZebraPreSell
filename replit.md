@@ -108,6 +108,8 @@ Changelog:
   - Updated hero with "Coming Soon" badge and "Join Reservation List" button
   - Created dedicated preorder page at /preorder with comprehensive reservation experience
   - Updated floating CTA to focus on reservation list instead of sample requests
+  - Added interactive ingredient-to-benefit map after Ava story section
+  - Integrated 36 ingredients connecting to 14 health goals with visual highlighting
   - Maintained original styling and color scheme while adding preorder functionality
 
 ## User Preferences

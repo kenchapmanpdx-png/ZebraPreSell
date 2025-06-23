@@ -225,6 +225,20 @@
   }
 }
 
+/* Interactive Ingredient Map Styles */
+.item-card.highlighted {
+  transform: scale(1.03) !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  z-index: 10 !important;
+  position: relative !important;
+  opacity: 1 !important;
+}
+
+.item-card.unfocused {
+  opacity: 0.4 !important;
+  transform: scale(0.98) !important;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

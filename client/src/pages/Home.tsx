@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 import OurStory from '@/components/OurStory';
+import InteractiveIngredientMap from '@/components/InteractiveIngredientMap';
 import Testimonials from '@/components/Testimonials';
 import BuyNow from '@/components/BuyNow';
 import WhatYouGet from '@/components/WhatYouGet';
@@ -44,6 +45,7 @@ export default function Home() {
       <Hero />
       <ProductGrid />
       <OurStory />
+      <InteractiveIngredientMap />
       <DifferenceSection />
       <WhatYouGet />
       <Testimonials />

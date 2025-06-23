@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEBRAWELL Detailed Ingredient Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .item-card {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .item-card .font-semibold {
+             transition: color 0.2s ease-in-out;
+        }
+        .item-card.highlighted {
+            transform: scale(1.03);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            z-index: 10;
+            position: relative;
+            opacity: 1 !important;
+        }
+        .item-card.unfocused {
+            opacity: 0.4;
+            transform: scale(0.98);
+        }
+        svg path {
+            transition: stroke-width 0.2s ease, opacity 0.2s ease, stroke 0.2s ease;
+            pointer-events: none;
+        }
+        .issue-card {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800">ZEBRAWELL™</h1>
+            <h2 class="mt-2 text-xl md:text-2xl font-semibold text-sky-600">Ingredient-to-Benefit Map</h2>
+            <p class="mt-4 text-slate-600 max-w-3xl mx-auto">Hover over (or tap) an ingredient or a health goal to see its specific connections. (Lines are best viewed on desktop).</p>
+        </div>
+
+        <div id="map-container" class="relative w-full">
+            <div class="flex flex-col md:flex-row justify-between md:items-center gap-8 md:gap-16">
+
+                <!-- Column 1: Ingredients -->
+                <div id="ingredients-col" class="w-full md:w-5/12 space-y-2">
+                    <h3 class="text-lg font-bold text-slate-700 text-center md:text-left mb-3">FORMULATION INGREDIENTS</h3>
+                    <div id="ing-alcar" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Acetyl-L-Carnitine (ALCAR)</span></div>
+                    <div id="ing-astaxanthin" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Astaxanthin</span></div>
+                    <div id="ing-benfotiamine" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Benfotiamine (B1)</span></div>
+                    <div id="ing-tmg" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Betaine (TMG)</span></div>
+                    <div id="ing-biotin" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Biotin (B7)</span></div>
+                    <div id="ing-boron" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Boron</span></div>
+                    <div id="ing-cdp-choline" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">CDP-Choline</span></div>
+                    <div id="ing-chromium" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Chromium</span></div>
+                    <div id="ing-coq10" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">CoQ10 (Ubiquinol)</span></div>
+                    <div id="ing-copper" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Copper</span></div>
+                    <div id="ing-folate" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Folate (L-5-MTHF)</span></div>
+                    <div id="ing-ha" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Hyaluronic Acid</span></div>
+                    <div id="ing-iodine" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Iodine</span></div>
+                    <div id="ing-proline" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">L-Proline</span></div>
+                    <div id="ing-theanine" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">L-Theanine</span></div>
+                    <div id="ing-magnesium-glycinate" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Magnesium Glycinate</span></div>
+                    <div id="ing-magnesium-malate" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Magnesium Malate</span></div>
+                    <div id="ing-manganese" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Manganese</span></div>
+                    <div id="ing-molybdenum" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Molybdenum</span></div>
+                    <div id="ing-niacinamide" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Niacinamide (B3)</span></div>
+                    <div id="ing-pea" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Palmitoylethanolamide (PEA)</span></div>
+                    <div id="ing-pantothenic-acid" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Pantothenic Acid (B5)</span></div>
+                    <div id="ing-pc" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Phosphatidylcholine</span></div>
+                    <div id="ing-potassium" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Potassium</span></div>
+                    <div id="ing-pqq" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">PQQ</span></div>
+                    <div id="ing-riboflavin" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Riboflavin (B2)</span></div>
+                    <div id="ing-selenium" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Selenium</span></div>
+                    <div id="ing-silicon" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Silicon</span></div>
+                    <div id="ing-taurine" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Taurine</span></div>
+                    <div id="ing-thiamine-hcl" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Thiamine HCl (B1)</span></div>
+                    <div id="ing-vit-a" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin A (from Beta-Carotene)</span></div>
+                    <div id="ing-vit-b6" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin B6 (P5P)</span></div>
+                    <div id="ing-vit-b12" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin B12 (Methyl & Adeno)</span></div>
+                    <div id="ing-d3" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin D3</span></div>
+                    <div id="ing-vit-e" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin E</span></div>
+                    <div id="ing-k2" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Vitamin K2</span></div>
+                    <div id="ing-zinc" class="item-card bg-white px-3 py-1.5 rounded-md shadow-sm"><span class="font-semibold text-slate-800">Zinc</span></div>
+                </div>
+
+
+                <!-- Column 2: Issues (New Varied Color Palette) -->
+                <div id="issues-col" class="w-full md:w-5/12 space-y-6">
+                    <h3 class="text-lg font-bold text-slate-700 text-center md:text-left mb-3">TARGETED HEALTH GOALS</h3>
+                    <div id="issue-energy" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-semibold text-slate-800">Fatigue & Energy Production</div>
+                    <div id="issue-cognitive" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-sky-500 font-semibold text-slate-800">Cognitive Function & Brain Fog</div>
+                    <div id="issue-mitochondria" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-semibold text-slate-800">Mitochondrial Health</div>
+                    <div id="issue-autonomic" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-violet-500 font-semibold text-slate-800">Autonomic Regulation (POTS)</div>
+                    <div id="issue-nerve" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-lime-500 font-semibold text-slate-800">Nerve Health & Protection</div>
+                    <div id="issue-calm" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-indigo-500 font-semibold text-slate-800">Neuro-Calming & Stress</div>
+                    <div id="issue-collagen" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-teal-400 font-semibold text-slate-800">Collagen & Tissue Strength</div>
+                    <div id="issue-joint" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-orange-500 font-semibold text-slate-800">Joint Hydration & Comfort</div>
+                    <div id="issue-mcas" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-green-500 font-semibold text-slate-800">Mast Cell Stabilization</div>
+                    <div id="issue-antioxidant" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-purple-600 font-semibold text-slate-800">Antioxidant & Inflammation Control</div>
+                    <div id="issue-cardio" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-rose-500 font-semibold text-slate-800">Cardiovascular & Heart Health</div>
+                    <div id="issue-muscle" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-blue-600 font-semibold text-slate-800">Muscle Comfort & Function</div>
+                    <div id="issue-methylation" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-cyan-400 font-semibold text-slate-800">Methylation Support</div>
+                    <div id="issue-immune" class="item-card issue-card bg-white px-3 py-3 rounded-lg shadow-sm border-l-4 border-pink-500 font-semibold text-slate-800">Hormone & Immune Balance</div>
+                </div>
+            </div>
+
+            <!-- SVG for drawing connecting lines -->
+            <svg id="connector-svg" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></svg>
+        </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const connections = [
+        { from: '#ing-alcar', to: ['#issue-energy', '#issue-cognitive', '#issue-mitochondria', '#issue-nerve'] },
+        { from: '#ing-astaxanthin', to: ['#issue-antioxidant', '#issue-mcas'] },
+        { from: '#ing-benfotiamine', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-tmg', to: ['#issue-methylation', '#issue-cardio'] },
+        { from: '#ing-biotin', to: ['#issue-collagen', '#issue-methylation'] },
+        { from: '#ing-boron', to: ['#issue-collagen', '#issue-immune'] },
+        { from: '#ing-cdp-choline', to: ['#issue-cognitive', '#issue-nerve'] },
+        { from: '#ing-chromium', to: ['#issue-immune', '#issue-energy'] },
+        { from: '#ing-coq10', to: ['#issue-energy', '#issue-mitochondria', '#issue-cardio', '#issue-antioxidant'] },
+        { from: '#ing-copper', to: ['#issue-collagen', '#issue-immune'] },
+        { from: '#ing-folate', to: ['#issue-methylation', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-ha', to: ['#issue-joint'] },
+        { from: '#ing-iodine', to: ['#issue-immune'] },
+        { from: '#ing-proline', to: ['#issue-collagen'] },
+        { from: '#ing-theanine', to: ['#issue-calm'] },
+        { from: '#ing-magnesium-glycinate', to: ['#issue-calm', '#issue-muscle', '#issue-autonomic'] },
+        { from: '#ing-magnesium-malate', to: ['#issue-energy', '#issue-muscle', '#issue-calm'] },
+        { from: '#ing-manganese', to: ['#issue-collagen', '#issue-antioxidant'] },
+        { from: '#ing-molybdenum', to: ['#issue-mcas'] },
+        { from: '#ing-niacinamide', to: ['#issue-energy', '#issue-methylation'] },
+        { from: '#ing-pea', to: ['#issue-mcas', '#issue-calm', '#issue-antioxidant'] },
+        { from: '#ing-pantothenic-acid', to: ['#issue-energy', '#issue-calm'] },
+        { from: '#ing-pc', to: ['#issue-cognitive', '#issue-calm', '#issue-nerve'] },
+        { from: '#ing-potassium', to: ['#issue-cardio', '#issue-autonomic', '#issue-muscle'] },
+        { from: '#ing-pqq', to: ['#issue-energy', '#issue-mitochondria', '#issue-cognitive'] },
+        { from: '#ing-riboflavin', to: ['#issue-energy', '#issue-methylation', '#issue-mitochondria'] },
+        { from: '#ing-selenium', to: ['#issue-antioxidant', '#issue-immune'] },
+        { from: '#ing-silicon', to: ['#issue-collagen'] },
+        { from: '#ing-taurine', to: ['#issue-autonomic', '#issue-calm', '#issue-mcas', '#issue-cardio'] },
+        { from: '#ing-thiamine-hcl', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-vit-a', to: ['#issue-immune', '#issue-antioxidant'] },
+        { from: '#ing-vit-b6', to: ['#issue-energy', '#issue-nerve', '#issue-mcas', '#issue-methylation'] },
+        { from: '#ing-vit-b12', to: ['#issue-energy', '#issue-nerve', '#issue-methylation'] },
+        { from: '#ing-d3', to: ['#issue-immune', '#issue-collagen', '#issue-cardio'] },
+        { from: '#ing-vit-e', to: ['#issue-antioxidant'] },
+        { from: '#ing-k2', to: ['#issue-cardio', '#issue-collagen'] },
+        { from: '#ing-zinc', to: ['#issue-collagen', '#issue-immune'] },
+    ];
+
+    const svg = document.getElementById('connector-svg');
+    const mapContainer = document.getElementById('map-container');
+    const allIngredients = document.querySelectorAll('#ingredients-col .item-card');
+    let isMobile = window.innerWidth < 768;
+    let activeElement = null;
+
+    function drawLines() {
+        svg.innerHTML = '';
+        if (isMobile) return;
+        const containerRect = mapContainer.getBoundingClientRect();
+
+        connections.forEach(conn => {
+            conn.to.forEach(toId => {
+                const fromEl = document.querySelector(conn.from);
+                const toEl = document.querySelector(toId);
+
+                if (fromEl && toEl) {
+                    const fromRect = fromEl.getBoundingClientRect();
+                    const toRect = toEl.getBoundingClientRect();
+                    
+                    const fromX = fromRect.right - containerRect.left;
+                    const fromY = fromRect.top - containerRect.top + fromRect.height / 2;
+                    
+                    const toX = toRect.left - containerRect.left;
+                    const toY = toRect.top - containerRect.top + toRect.height / 2;
+                    
+                    const toColor = window.getComputedStyle(toEl).borderLeftColor;
+
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    const controlX1 = fromX + (toX - fromX) * 0.35;
+                    const controlX2 = fromX + (toX - fromX) * 0.65;
+                    const d = `M ${fromX} ${fromY} C ${controlX1} ${fromY}, ${controlX2} ${toY}, ${toX} ${toY}`;
+
+                    path.setAttribute('d', d);
+                    path.setAttribute('stroke', toColor);
+                    path.setAttribute('stroke-width', '1');
+                    path.setAttribute('fill', 'none');
+                    path.setAttribute('opacity', '0.3');
+                    path.dataset.from = conn.from;
+                    path.dataset.to = toId;
+                    svg.appendChild(path);
+                }
+            });
+        });
+    }
+
+    function highlightConnection(element, shouldHighlight) {
+        if (isMobile && !shouldHighlight) return;
+
+        // Reset all styles
+        document.querySelectorAll('.highlighted, .unfocused').forEach(el => {
+            el.classList.remove('highlighted', 'unfocused');
+            const span = el.querySelector('.font-semibold');
+            if (span) span.style.color = '';
+        });
+        svg.querySelectorAll('path').forEach(p => {
+            p.setAttribute('stroke-width', '1');
+            p.setAttribute('opacity', '0.3');
+        });
+
+        if (shouldHighlight) {
+            const elementId = '#' + element.id;
+            const isIngredient = element.parentElement.id === 'ingredients-col';
+            let connectedPaths;
+            let connectedItems = new Set();
+            connectedItems.add(element);
+
+            if (isIngredient) {
+                connectedPaths = svg.querySelectorAll(`path[data-from="${elementId}"]`);
+            } else {
+                connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"]`);
+            }
+            
+            element.classList.add('highlighted');
+            
+            connectedPaths.forEach(path => {
+                const fromEl = document.querySelector(path.dataset.from);
+                const toEl = document.querySelector(path.dataset.to);
+                connectedItems.add(fromEl);
+                connectedItems.add(toEl);
+                fromEl.classList.add('highlighted');
+                toEl.classList.add('highlighted');
+                
+                path.setAttribute('stroke-width', '3');
+                path.setAttribute('opacity', '1');
+                
+                if (!isIngredient) {
+                    const span = fromEl.querySelector('.font-semibold');
+                    const goalColor = window.getComputedStyle(toEl).borderLeftColor;
+                    if(span) span.style.color = goalColor;
+                }
+            });
+
+            // Fade out non-connected items in BOTH columns
+            document.querySelectorAll('.item-card').forEach(card => {
+                if (!connectedItems.has(card)) {
+                    card.classList.add('unfocused');
+                }
+            });
+        }
+    }
+    
+    function addEventListeners() {
+        document.querySelectorAll('.item-card').forEach(card => {
+            card.removeEventListener('click', handleTap);
+            card.removeEventListener('mouseenter', handleMouseEnter);
+            card.removeEventListener('mouseleave', handleMouseLeave);
+
+            if (isMobile) {
+                card.addEventListener('click', handleTap);
+            } else {
+                card.addEventListener('mouseenter', handleMouseEnter);
+                card.addEventListener('mouseleave', handleMouseLeave);
+            }
+        });
+    }
+
+    function handleTap(e) {
+        if (activeElement === this) {
+            highlightConnection(this, false);
+            activeElement = null;
+        } else {
+            highlightConnection(this, true);
+            activeElement = this;
+        }
+    }
+
+    function handleMouseEnter(e) {
+        highlightConnection(this, true);
+    }
+
+    function handleMouseLeave(e) {
+        highlightConnection(this, false);
+    }
+
+
+    drawLines();
+    addEventListeners();
+
+    const resizeObserver = new ResizeObserver(() => {
+        const oldIsMobile = isMobile;
+        isMobile = window.innerWidth < 768;
+        if(oldIsMobile !== isMobile) {
+            drawLines();
+            addEventListeners();
+        } else {
+            drawLines();
+        }
+    });
+    resizeObserver.observe(mapContainer);
+});
+</script>
+
+</body>
+</html>
