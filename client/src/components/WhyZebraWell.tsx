@@ -60,7 +60,7 @@ export default function WhyZebraWell() {
         }}
       ></div>
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-lora text-white text-center mb-8" data-aos="fade-up">Why Choose ZebraWell</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-white text-center mb-8" data-aos="fade-up">Why Choose ZebraWell</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => {
@@ -71,29 +71,29 @@ export default function WhyZebraWell() {
             // Special case for "No Junk. Ever." feature
             if (feature.title === "No Junk. Ever.") {
               // Forest green theme for background and text
-              bgColorClass = "bg-forest/80";
+              bgColorClass = "bg-green-800/80";
               iconColorClass = "text-white";
               textColorClass = "text-white";
             } else {
               // Default theme for all other features
               bgColorClass = "bg-white/90";
-              iconColorClass = "text-sage-dark";
-              textColorClass = "text-forest";
+              iconColorClass = "text-green-700";
+              textColorClass = "text-green-900";
             }
 
             return (
-              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${feature.title === "No Junk. Ever." ? "hover:bg-forest/70" : "hover:bg-white"} border border-current/10 fade-in`}>
+              <div key={index} className={`${bgColorClass} p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${feature.title === "No Junk. Ever." ? "hover:bg-green-800/70" : "hover:bg-white"} border border-current/10`}>
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 mr-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (index % 5 === 0) ? '#1a5023' : 
                     (index % 5 === 1) ? '#396132' : 
                     (index % 5 === 2) ? '#435435' : 
                     (index % 5 === 3) ? 'rgba(102, 107, 94, 0.5)' : 
                     'rgba(91, 98, 80, 0.3)' }}>
-                    <feature.icon className={`w-6 h-6 ${index % 5 === 1 ? 'text-forest' : 'text-white'}`} />
+                    <feature.icon className={`w-6 h-6 ${index % 5 === 1 ? 'text-green-900' : 'text-white'}`} />
                   </div>
                   <div>
-                    <h3 className={`text-xl font-lora font-bold mb-2 ${textColorClass}`}>{feature.title}</h3>
-                    <p className={`text-base leading-relaxed ${feature.title === "No Junk. Ever." ? "text-white/90" : "text-neutral-dark/80"}`}>{feature.description}</p>
+                    <h3 className={`text-xl font-serif font-bold mb-2 ${textColorClass}`}>{feature.title}</h3>
+                    <p className={`text-base leading-relaxed ${feature.title === "No Junk. Ever." ? "text-white/90" : "text-gray-700"}`}>{feature.description}</p>
                   </div>
                 </div>
               </div>
