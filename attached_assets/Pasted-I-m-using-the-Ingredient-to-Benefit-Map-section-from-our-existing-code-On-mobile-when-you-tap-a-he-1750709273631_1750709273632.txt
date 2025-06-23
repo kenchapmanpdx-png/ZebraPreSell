@@ -1,0 +1,82 @@
+I'm using the Ingredient-to-Benefit Map section from our existing code. On mobile, when you tap a health goal, it should:
+
+Highlight the matching ingredient tabs with the same behavior as desktop (color change + lines).
+
+Keep that health goal "active" until a different one is tapped (toggle behavior).
+
+Please update the handleTap() logic to:
+
+Highlight all associated items when a benefit or ingredient is tapped
+
+Keep the tapped item persistently highlighted
+
+Remove highlights when another item is tapped
+
+Ensure all connections (lines, ingredient colors) update as they do on hover in desktop
+
+Also make sure the logic works in both mobile and desktop views using the existing ResizeObserver and transition effects.
+
+✅ Updated handleTap() Logic to Replace in Your Code
+Replace the entire handleTap() function in your useEffect block with this:
+
+ts
+Copy
+Edit
+const handleTap = (e: Event) => {
+  const target = e.currentTarget as HTMLElement;
+  const isGoal = target.closest('#issues-col') !== null;
+
+  // If it's the same element, unselect it
+  if (activeElement === target) {
+    highlightConnection(target, false);
+    activeElement = null;
+    return;
+  }
+
+  // If something else is active, turn that off
+  if (activeElement) {
+    highlightConnection(activeElement, false);
+  }
+
+  // Set new active element
+  highlightConnection(target, true);
+  activeElement = target;
+
+  // On mobile, ensure both sides get highlighted
+  const targetId = `#${target.id}`;
+  const paths = isGoal 
+    ? svg.querySelectorAll(`path[data-to="${targetId}"]`)
+    : svg.querySelectorAll(`path[data-from="${targetId}"]`);
+
+  paths.forEach(path => {
+    const otherEl = mapContainer.querySelector(isGoal ? path.dataset.from! : path.dataset.to!);
+    if (otherEl) highlightConnection(otherEl as HTMLElement, true);
+  });
+};
+🔧 (Optional but Recommended) CSS Update for Visual Feedback
+If you want to make the active state more obvious on mobile, update your .highlighted style to slightly increase contrast:
+
+css
+Copy
+Edit
+.item-card.highlighted {
+  transform: scale(1.04);
+  box-shadow: 0 6px 10px -2px rgba(0,0,0,0.1);
+  z-index: 10;
+  position: relative;
+  opacity: 1 !important;
+  border-width: 2px !important;
+}
+✅ Test Checklist
+Once this is implemented, test these interactions on mobile view:
+
+ Tap a health goal → its connected ingredients highlight and lines draw.
+
+ Tap another goal → the previous deactivates, the new one activates.
+
+ Tap the same goal again → everything resets (toggle off).
+
+ Tap an ingredient → connected goals highlight (optional).
+
+ Behavior matches desktop expectations.
+
