@@ -10,13 +10,13 @@ export default function OurStory() {
           background: 'linear-gradient(0deg, rgba(200, 89, 43, 1) 0%, rgba(184, 112, 81, 1) 49%, rgba(200, 89, 43, 1) 100%)'
         }} data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-lora text-center mb-6 md:mb-8 text-white" data-aos="fade-up" style={{ fontSize: '1.56em' }}>
-            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-white" style={{ fontSize: '1.56em' }}>Ava</span>.
+            Behind every bottle of ZebraWell™ is a deeper purpose - and her name is <span className="text-white" style={{ fontSize: '1.56em' }}>Ava</span>.
           </h2>
 
           <div className="text-center space-y-6 text-white" data-aos="fade">
             <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>
-              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
-              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
+              Ava is my daughter - brave, brilliant, and resilient in ways most will never have to be.
+              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS - complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>

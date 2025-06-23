@@ -5,7 +5,7 @@ export default function WhyZebraWell() {
     {
       icon: "user-plus",
       title: "Formulated For Zebras",
-      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
+      description: "Built specifically for EDS, POTS, and MCAS-no more piecing together random supplements."
     },
     {
       icon: "ban",
