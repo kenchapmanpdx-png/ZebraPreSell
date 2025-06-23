@@ -15,7 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/preorder" component={PreorderPage} />
-      <Route component={NotFound} />
+      <Route path="*" component={NotFound} />
     </Switch>
   );
 }

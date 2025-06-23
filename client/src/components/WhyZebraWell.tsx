@@ -1,44 +1,45 @@
 import ZebraPatternOverlay from './ZebraPatternOverlay';
+import { UserPlus, Ban, Feather, Microscope, Dna, Brain, Leaf, PuzzleIcon as Puzzle } from 'lucide-react';
 
 export default function WhyZebraWell() {
   const features = [
     {
-      icon: "user-plus",
+      icon: UserPlus,
       title: "Formulated For Zebras",
       description: "Built specifically for EDS, POTS, and MCAS-no more piecing together random supplements."
     },
     {
-      icon: "ban",
+      icon: Ban,
       title: "No Junk. Ever.",
       description: "Free from common allergens and fillers for less reactivity and more peace of mind."
     },
     {
-      icon: "feather",
+      icon: Feather,
       title: "Gentle by Design",
       description: "Gut-safe, low-histamine formulations perfect for sensitive systems."
     },
     {
-      icon: "microscope",
+      icon: Microscope,
       title: "Total Transparency",
       description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
     },
     {
-      icon: "dna",
+      icon: Dna,
       title: "Targeted Support",
       description: "Core Formula plus specialized Boosters for personalized health management."
     },
     {
-      icon: "brain",
+      icon: Brain,
       title: "Smart Science",
       description: "Clinical insight with forms your body can absorb at therapeutic doses."
     },
     {
-      icon: "leaf",
+      icon: Leaf,
       title: "Only What Helps",
       description: "Minimalist formulation with bioavailable ingredients that support your body."
     },
     {
-      icon: "puzzle-piece",
+      icon: Puzzle,
       title: "Works as a System",
       description: "Designed to work synergistically whether you need one booster or all."
     }
@@ -88,7 +89,7 @@ export default function WhyZebraWell() {
                     (index % 5 === 2) ? '#435435' : 
                     (index % 5 === 3) ? 'rgba(102, 107, 94, 0.5)' : 
                     'rgba(91, 98, 80, 0.3)' }}>
-                    <i className={`fas fa-${feature.icon} text-xl ${index % 5 === 1 ? 'text-forest' : 'text-white'}`}></i>
+                    <feature.icon className={`w-6 h-6 ${index % 5 === 1 ? 'text-forest' : 'text-white'}`} />
                   </div>
                   <div>
                     <h3 className={`text-xl font-lora font-bold mb-2 ${textColorClass}`}>{feature.title}</h3>
