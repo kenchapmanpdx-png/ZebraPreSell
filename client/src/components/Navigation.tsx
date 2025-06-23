@@ -52,35 +52,17 @@ export default function Navigation() {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="#home" className="font-medium text-white hover:text-terra transition-colors">Home</a>
-          <a href="#products" className="font-medium text-white hover:text-terra transition-colors">Products</a>
-          <a href="#what-makes-different" className="font-medium text-white hover:text-terra transition-colors">What Makes Us Different</a>
-          <a href="#comparison" className="font-medium text-white hover:text-terra transition-colors">Research</a>
+        {/* Desktop Navigation - Hidden for presale page */}
+        <div className="hidden">
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle Menu"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        {/* Mobile Menu Button - Hidden for presale page */}
+        <div className="hidden">
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div className={`md:hidden border-t border-sage/10 pb-4 px-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
-           style={{
-             background: 'linear-gradient(90deg, hsla(76, 53%, 44%, 1) 0%, hsla(161, 51%, 12%, 1) 100%)'
-           }}>
-        <a href="#home" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Home</a>
-        <a href="#products" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Products</a>
-        <a href="#what-makes-different" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">What Makes Us Different</a>
-        <a href="#comparison" onClick={handleLinkClick} className="block py-2 font-medium text-white hover:text-terra transition-colors">Research</a>
+      {/* Mobile Navigation - Hidden for presale page */}
+      <div className="hidden">
       </div>
     </nav>
   );

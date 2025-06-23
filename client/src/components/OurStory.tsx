@@ -29,6 +29,12 @@ export default function OurStory() {
                 in mind, and with the hope of helping others like her feel stronger, steadier, and cared for.
               </p>
 
+              <div className="flex justify-center my-6">
+                <div className="border border-terra/30 p-1 rounded-md shadow-sm">
+                  <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '350px' }} />
+                </div>
+              </div>
+
               <p className="font-bold text-white text-center font-serif text-2xl md:text-3xl mt-4">
                 She is my Why!
               </p>
@@ -36,12 +42,6 @@ export default function OurStory() {
               <p className="text-center font-medium text-base italic text-white mt-4">
                 If you or someone you love is a Zebra, welcome to the herd. <span className="inline-block align-middle ml-1"><ZebraHeart size={24} /></span>
               </p>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="border border-terra/30 p-1 rounded-md shadow-sm">
-                <img src={fatherDaughterImg} alt="Father and daughter" className="rounded-md max-w-full h-auto" style={{ maxHeight: '350px' }} />
-              </div>
             </div>
           </div>
 
