@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 export default function InteractiveIngredientMap() {
@@ -59,20 +60,19 @@ export default function InteractiveIngredientMap() {
       const containerRect = mapContainer.getBoundingClientRect();
 
       connections.forEach(conn => {
-        const toEl = mapContainer.querySelector(conn.from) as HTMLElement; // Ingredient is the destination
+        const toEl = mapContainer.querySelector(conn.from) as HTMLElement;
         conn.to.forEach(fromId => {
-          const fromEl = mapContainer.querySelector(fromId) as HTMLElement; // Goal is the origin
-
+          const fromEl = mapContainer.querySelector(fromId) as HTMLElement;
+          
           if (fromEl && toEl) {
             const fromRect = fromEl.getBoundingClientRect();
             const toRect = toEl.getBoundingClientRect();
-
+            
             const fromX = fromRect.right - containerRect.left;
             const fromY = fromRect.top - containerRect.top + fromRect.height / 2;
-
             const toX = toRect.left - containerRect.left;
             const toY = toRect.top - containerRect.top + toRect.height / 2;
-
+            
             const fromColor = window.getComputedStyle(fromEl).borderLeftColor;
             const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
             const controlX1 = fromX + (toX - fromX) * 0.35;
@@ -93,92 +93,90 @@ export default function InteractiveIngredientMap() {
     };
 
     const highlightConnection = (element: HTMLElement, shouldHighlight: boolean) => {
-        // Always clear existing highlights first
+        // Reset all styles first, regardless of mobile or desktop
         mapContainer.querySelectorAll('.highlighted, .unfocused').forEach(el => {
             el.classList.remove('highlighted', 'unfocused');
             const span = el.querySelector('.font-semibold') as HTMLElement;
             if (span) span.style.color = '';
         });
-        svg.querySelectorAll('path').forEach(p => {
-            p.classList.remove('active-path');
-            p.setAttribute('stroke-width', '1');
-            p.setAttribute('opacity', '0.1');
-        });
+        if (!isMobile && svg) {
+            svg.querySelectorAll('path').forEach(p => {
+                p.setAttribute('stroke-width', '1');
+                p.setAttribute('opacity', '0.3');
+            });
+        }
 
         if (shouldHighlight) {
             const elementId = '#' + element.id;
             const isGoal = element.closest('#issues-col') !== null;
-            let connectedPaths: NodeListOf<SVGPathElement>;
+            
             let connectedItems = new Set<HTMLElement>();
             connectedItems.add(element);
 
-            connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"], path[data-from="${elementId}"]`);
-
-            element.classList.add('highlighted');
-
-            connectedPaths.forEach(path => {
-                const fromEl = mapContainer.querySelector(path.dataset.from!) as HTMLElement;
-                const toEl = mapContainer.querySelector(path.dataset.to!) as HTMLElement;
-                if(fromEl && toEl) {
-                    connectedItems.add(fromEl);
-                    connectedItems.add(toEl);
-                    fromEl.classList.add('highlighted');
-                    toEl.classList.add('highlighted');
-
-                    // Only show lines on desktop
-                    if (!isMobile) {
-                        path.classList.add('active-path');
-                        path.setAttribute('stroke-width', '3');
-                        path.setAttribute('opacity', '1');
+            if (isGoal) {
+                connections.forEach(conn => {
+                    if (conn.to.includes(elementId)) {
+                        const ingEl = mapContainer.querySelector(conn.from) as HTMLElement;
+                        if(ingEl) connectedItems.add(ingEl);
                     }
-
-                    if (isGoal) {
-                        const span = fromEl.querySelector('.font-semibold') as HTMLElement;
-                        const goalColor = window.getComputedStyle(toEl).borderLeftColor;
-                        if(span) span.style.color = goalColor;
-                    }
+                });
+            } else { // It's an ingredient
+                const conn = connections.find(c => c.from === elementId);
+                if (conn) {
+                    conn.to.forEach(issueId => {
+                        const issueEl = mapContainer.querySelector(issueId) as HTMLElement;
+                        if (issueEl) connectedItems.add(issueEl);
+                    });
                 }
-            });
+            }
+            
+            // Apply highlights to all connected items
+            connectedItems.forEach(item => item.classList.add('highlighted'));
 
+            // Fade out non-connected items in both columns
             mapContainer.querySelectorAll('.item-card').forEach(card => {
                 if (!connectedItems.has(card as HTMLElement)) {
                     card.classList.add('unfocused');
                 }
             });
+
+            // Highlight paths and change font colors on desktop
+            if (!isMobile && svg) {
+                let pathsToHighlight: SVGPathElement[] = [];
+                if(isGoal) {
+                    pathsToHighlight = Array.from(svg.querySelectorAll(`path[data-to="${elementId}"]`));
+                } else {
+                    pathsToHighlight = Array.from(svg.querySelectorAll(`path[data-from="${elementId}"]`));
+                }
+
+                pathsToHighlight.forEach(path => {
+                    path.setAttribute('stroke-width', '3');
+                    path.setAttribute('opacity', '1');
+                    if(isGoal) {
+                         const fromEl = mapContainer.querySelector(path.dataset.from!) as HTMLElement;
+                         const toEl = mapContainer.querySelector(path.dataset.to!) as HTMLElement;
+                         if (fromEl && toEl) {
+                             const span = fromEl.querySelector('.font-semibold') as HTMLElement;
+                             const goalColor = window.getComputedStyle(toEl).borderLeftColor;
+                             if(span) span.style.color = goalColor;
+                         }
+                    }
+                });
+            }
         }
     };
-
+    
     const handleTap = (e: Event) => {
-          const target = e.currentTarget as HTMLElement;
-          const isGoal = target.closest('#issues-col') !== null;
-
-          // If it's the same element, unselect it
-          if (activeElement === target) {
-            highlightConnection(target, false);
-            activeElement = null;
-            return;
-          }
-
-          // If something else is active, turn that off
-          if (activeElement) {
-            highlightConnection(activeElement, false);
-          }
-
-          // Set new active element
-          highlightConnection(target, true);
-          activeElement = target;
-
-          // On mobile, ensure both sides get highlighted
-          const targetId = `#${target.id}`;
-          const paths = isGoal 
-            ? svg.querySelectorAll(`path[data-to="${targetId}"]`)
-            : svg.querySelectorAll(`path[data-from="${targetId}"]`);
-
-          paths.forEach(path => {
-            const otherEl = mapContainer.querySelector(isGoal ? path.dataset.from! : path.dataset.to!);
-            if (otherEl) highlightConnection(otherEl as HTMLElement, true);
-          });
-        };
+      const target = e.currentTarget as HTMLElement;
+      if (activeElement === target) {
+        highlightConnection(target, false);
+        activeElement = null;
+      } else {
+        if(activeElement) highlightConnection(activeElement, false);
+        highlightConnection(target, true);
+        activeElement = target;
+      }
+    };
 
     const handleMouseEnter = (e: Event) => highlightConnection(e.currentTarget as HTMLElement, true);
     const handleMouseLeave = (e: Event) => { if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false)};
@@ -197,7 +195,7 @@ export default function InteractiveIngredientMap() {
             }
         });
     };
-
+    
     drawLines();
     addEventListeners();
 
@@ -225,11 +223,10 @@ export default function InteractiveIngredientMap() {
         .item-card { transition: all 0.2s ease-in-out; cursor: pointer; }
         .item-card .font-semibold { transition: color 0.2s ease-in-out; }
         .item-card.highlighted { transform: scale(1.03); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); z-index: 10; position: relative; opacity: 1 !important; }
-        .item-card.unfocused { opacity: 0.3; transform: scale(0.98); }
+        .item-card.unfocused { opacity: 0.4; transform: scale(0.98); }
         svg path { transition: stroke-width 0.2s ease, opacity 0.2s ease, stroke 0.2s ease; pointer-events: none; }
-        svg path.active-path { opacity: 1 !important; stroke-width: 3 !important; }
       `}</style>
-
+      
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-forest">ZEBRAWELL™</h2>
@@ -241,66 +238,66 @@ export default function InteractiveIngredientMap() {
 
         <div id="map-container" ref={mapContainerRef} className="relative w-full">
           <div className="flex flex-row justify-between items-start gap-4 md:gap-16">
-
+            
             {/* Column 1: Health Goals */}
             <div id="issues-col" className="w-1/2 md:w-5/12 space-y-2 md:space-y-6">
               <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">TARGETED HEALTH GOALS</h3>
               <div id="issue-mitochondria" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-semibold text-forest text-xs md:text-base flex items-center">Mitochondrial Health</div>
               <div id="issue-energy" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Fatigue & Energy Production</span><span className="md:hidden">Energy</span></div>
               <div id="issue-cognitive" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-sky-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Cognitive Function & Brain Fog</span><span className="md:hidden">Brain Fog</span></div>
-              <div id="issue-nerve" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-purple-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Nerve Health & Protection</span><span className="md:hidden">Nerve Health</span></div>
-              <div id="issue-autonomic" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-indigo-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Autonomic Regulation (POTS)</span><span className="md:hidden">POTS</span></div>
-              <div id="issue-calm" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-teal-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Neuro-Calming & Stress</span><span className="md:hidden">Calming</span></div>
-              <div id="issue-methylation" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-green-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Methylation Support</span><span className="md:hidden">Methylation</span></div>
-              <div id="issue-cardio" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-blue-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Cardiovascular & Heart Health</span><span className="md:hidden">Heart Health</span></div>
-              <div id="issue-muscle" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-orange-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Muscle Comfort & Function</span><span className="md:hidden">Muscle</span></div>
-              <div id="issue-collagen" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-pink-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Collagen & Tissue Strength</span><span className="md:hidden">Collagen</span></div>
-              <div id="issue-joint" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-cyan-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Joint Hydration & Comfort</span><span className="md:hidden">Joint Health</span></div>
-              <div id="issue-mcas" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-rose-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Mast Cell Stabilization</span><span className="md:hidden">Mast Cell</span></div>
-              <div id="issue-antioxidant" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-amber-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Antioxidant & Inflammation Control</span><span className="md:hidden">Antioxidant</span></div>
-              <div id="issue-immune" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-lime-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Hormone & Immune Balance</span><span className="md:hidden">Immune</span></div>
+              <div id="issue-nerve" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-lime-500 font-semibold text-forest text-xs md:text-base flex items-center">Nerve Health</div>
+              <div id="issue-autonomic" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-violet-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Autonomic Regulation (POTS)</span><span className="md:hidden">Autonomic</span></div>
+              <div id="issue-calm" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-indigo-500 font-semibold text-forest text-xs md:text-base flex items-center">Neuro-Calming</div>
+              <div id="issue-methylation" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-cyan-400 font-semibold text-forest text-xs md:text-base flex items-center">Methylation</div>
+              <div id="issue-cardio" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-rose-500 font-semibold text-forest text-xs md:text-base flex items-center">Cardiovascular</div>
+              <div id="issue-muscle" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-blue-600 font-semibold text-forest text-xs md:text-base flex items-center">Muscle</div>
+              <div id="issue-collagen" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-teal-400 font-semibold text-forest text-xs md:text-base flex items-center">Collagen/Tissue</div>
+              <div id="issue-joint" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-orange-500 font-semibold text-forest text-xs md:text-base flex items-center">Joints</div>
+              <div id="issue-mcas" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-green-500 font-semibold text-forest text-xs md:text-base flex items-center">Mast Cell</div>
+              <div id="issue-antioxidant" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-purple-600 font-semibold text-forest text-xs md:text-base flex items-center">Antioxidant</div>
+              <div id="issue-immune" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-pink-500 font-semibold text-forest text-xs md:text-base flex items-center">Immune Balance</div>
             </div>
 
             {/* Column 2: Ingredients */}
             <div id="ingredients-col" className="w-1/2 md:w-5/12 space-y-1 md:space-y-2">
               <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">FORMULATION INGREDIENTS</h3>
-              <div id="ing-alcar" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Acetyl-L-Carnitine (ALCAR)</span><span className="md:hidden">ALCAR</span></span></div>
-              <div id="ing-astaxanthin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Astaxanthin</span></div>
-              <div id="ing-benfotiamine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Benfotiamine (B1)</span><span className="md:hidden">Benfotiamine</span></span></div>
-              <div id="ing-tmg" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Betaine (TMG)</span><span className="md:hidden">Betaine</span></span></div>
-              <div id="ing-biotin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Biotin (B7)</span><span className="md:hidden">Biotin</span></span></div>
-              <div id="ing-boron" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Boron</span></div>
-              <div id="ing-cdp-choline" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">CDP-Choline</span></div>
-              <div id="ing-chromium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Chromium</span></div>
-              <div id="ing-coq10" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">CoQ10 (Ubiquinol)</span><span className="md:hidden">CoQ10</span></span></div>
-              <div id="ing-copper" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Copper</span></div>
-              <div id="ing-folate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Folate (L-5-MTHF)</span><span className="md:hidden">Folate</span></span></div>
-              <div id="ing-ha" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Hyaluronic Acid</span></div>
-              <div id="ing-iodine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Iodine</span></div>
-              <div id="ing-proline" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">L-Proline</span></div>
-              <div id="ing-theanine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">L-Theanine</span></div>
-              <div id="ing-magnesium-glycinate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Magnesium Glycinate</span></div>
-              <div id="ing-magnesium-malate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Magnesium Malate</span></div>
-              <div id="ing-manganese" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Manganese</span></div>
-              <div id="ing-molybdenum" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Molybdenum</span></div>
-              <div id="ing-niacinamide" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Niacinamide (B3)</span><span className="md:hidden">Niacinamide</span></span></div>
-              <div id="ing-pea" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Palmitoylethanolamide (PEA)</span><span className="md:hidden">PEA</span></span></div>
-              <div id="ing-pantothenic-acid" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Pantothenic Acid (B5)</span><span className="md:hidden">Vitamin B5</span></span></div>
-              <div id="ing-pc" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Phosphatidylcholine</span></div>
-              <div id="ing-potassium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Potassium</span></div>
-              <div id="ing-pqq" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">PQQ</span></div>
-              <div id="ing-riboflavin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Riboflavin (B2)</span><span className="md:hidden">Vitamin B2</span></span></div>
-              <div id="ing-selenium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Selenium</span></div>
-              <div id="ing-silicon" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Silicon</span></div>
-              <div id="ing-taurine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Taurine</span></div>
-              <div id="ing-thiamine-hcl" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Thiamine HCl (B1)</span><span className="md:hidden">Thiamine HCl</span></span></div>
-              <div id="ing-vit-a" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Vitamin A (from Beta-Carotene)</span><span className="md:hidden">Vitamin A</span></span></div>
-              <div id="ing-vit-b6" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Vitamin B6 (P5P)</span><span className="md:hidden">Vitamin B6</span></span></div>
-              <div id="ing-vit-b12" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Vitamin B12</span></div>
-              <div id="ing-d3" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Vitamin D3</span></div>
-              <div id="ing-vit-e" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Vitamin E</span></div>
-              <div id="ing-k2" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Vitamin K2</span></div>
-              <div id="ing-zinc" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm textxs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Zinc</span></div>
+              <div id="ing-alcar" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Acetyl-L-Carnitine (ALCAR)</span><span className="md:hidden">ALCAR</span></span></div>
+              <div id="ing-astaxanthin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Astaxanthin</span></div>
+              <div id="ing-benfotiamine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Benfotiamine (B1)</span><span className="md:hidden">Benfotiamine</span></span></div>
+              <div id="ing-tmg" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Betaine (TMG)</span><span className="md:hidden">Betaine</span></span></div>
+              <div id="ing-biotin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Biotin (B7)</span><span className="md:hidden">Biotin</span></span></div>
+              <div id="ing-boron" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Boron</span></div>
+              <div id="ing-cdp-choline" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">CDP-Choline</span></div>
+              <div id="ing-chromium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Chromium</span></div>
+              <div id="ing-coq10" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">CoQ10 (Ubiquinol)</span><span className="md:hidden">CoQ10</span></span></div>
+              <div id="ing-copper" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Copper</span></div>
+              <div id="ing-folate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Folate (L-5-MTHF)</span><span className="md:hidden">Folate</span></span></div>
+              <div id="ing-ha" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Hyaluronic Acid</span></div>
+              <div id="ing-iodine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Iodine</span></div>
+              <div id="ing-proline" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">L-Proline</span></div>
+              <div id="ing-theanine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">L-Theanine</span></div>
+              <div id="ing-magnesium-glycinate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Magnesium Glycinate</span></div>
+              <div id="ing-magnesium-malate" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Magnesium Malate</span></div>
+              <div id="ing-manganese" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Manganese</span></div>
+              <div id="ing-molybdenum" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Molybdenum</span></div>
+              <div id="ing-niacinamide" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Niacinamide (B3)</span><span className="md:hidden">Niacinamide</span></span></div>
+              <div id="ing-pea" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Palmitoylethanolamide (PEA)</span><span className="md:hidden">PEA</span></span></div>
+              <div id="ing-pantothenic-acid" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Pantothenic Acid (B5)</span><span className="md:hidden">Vitamin B5</span></span></div>
+              <div id="ing-pc" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Phosphatidylcholine</span></div>
+              <div id="ing-potassium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Potassium</span></div>
+              <div id="ing-pqq" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">PQQ</span></div>
+              <div id="ing-riboflavin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Riboflavin (B2)</span><span className="md:hidden">Vitamin B2</span></span></div>
+              <div id="ing-selenium" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Selenium</span></div>
+              <div id="ing-silicon" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Silicon</span></div>
+              <div id="ing-taurine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Taurine</span></div>
+              <div id="ing-thiamine-hcl" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Thiamine HCl (B1)</span><span className="md:hidden">Thiamine HCl</span></span></div>
+              <div id="ing-vit-a" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Vitamin A (from Beta-Carotene)</span><span className="md:hidden">Vitamin A</span></span></div>
+              <div id="ing-vit-b6" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest"><span className="hidden md:inline">Vitamin B6 (P5P)</span><span className="md:hidden">Vitamin B6</span></span></div>
+              <div id="ing-vit-b12" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Vitamin B12</span></div>
+              <div id="ing-d3" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Vitamin D3</span></div>
+              <div id="ing-vit-e" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Vitamin E</span></div>
+              <div id="ing-k2" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Vitamin K2</span></div>
+              <div id="ing-zinc" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base"><span className="font-semibold text-forest">Zinc</span></div>
             </div>
 
           </div>
