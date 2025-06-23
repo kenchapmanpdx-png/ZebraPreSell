@@ -115,58 +115,40 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Reservation Form Section */}
-      <div className="py-12 md:py-16 px-3 sm:px-4 md:px-8" style={{
-        background: 'hsla(33, 34%, 86%, 1)',
-        backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
-      }}>
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 text-center">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-forest mb-4">📧 Join Our Reservation List</h3>
-            <p className="text-lg text-forest/80 leading-relaxed mb-6 max-w-xl mx-auto">
-              Be the first to know when ZebraWell is available for order. We'll send you an email notification as soon as we launch.
-            </p>
-            
-            {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="flex gap-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-gray-900"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !email}
-                    className="bg-[#89B317] text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center">
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                        Adding...
-                      </div>
-                    ) : (
-                      "Reserve Spot"
-                    )}
-                  </button>
-                </div>
-                <p className="text-sm text-forest/60 mt-3">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-              </form>
-            ) : (
-              <div className="text-center">
-                <div className="text-6xl mb-4">✅</div>
-                <h4 className="text-xl font-bold text-forest mb-2">You're all set!</h4>
-                <p className="text-forest/80">
-                  We'll send you an email as soon as ZebraWell is ready to order.
-                </p>
-              </div>
-            )}
-          </div>
+      {/* Compact Reservation Form */}
+      <div className="py-8 px-3 sm:px-4 md:px-8 bg-white/10 backdrop-blur-sm">
+        <div className="max-w-2xl mx-auto text-center">
+          {!isSubmitted ? (
+            <form onSubmit={handleSubmit} className="flex gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 px-4 py-3 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-white bg-white/10 placeholder-white/70"
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting || !email}
+                className="bg-[#89B317] text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center">
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                    Adding...
+                  </div>
+                ) : (
+                  "Reserve Spot"
+                )}
+              </button>
+            </form>
+          ) : (
+            <div className="text-center text-white">
+              <div className="text-4xl mb-2">✅</div>
+              <p className="text-lg">You're on the reservation list!</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
