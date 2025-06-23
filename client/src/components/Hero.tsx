@@ -41,11 +41,6 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto">
         {/* Full width heading */}
         <div className="text-center mb-8">
-          <div className="mb-3 sm:mb-4" data-aos="fade-up">
-            <span className="bg-[#89B317] text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              Coming Soon - Join Our Reservation List
-            </span>
-          </div>
           <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Therapeutic Clinical-Grade Supplements for (POTS) <span style={{ fontSize: '0.9em' }}>Postural Orthostatic Tachycardia Syndrome</span> & (EDS) <span style={{ fontSize: '0.9em' }}>Ehlers-Danlos Syndrome</span>
           </h1>

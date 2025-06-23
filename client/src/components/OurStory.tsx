@@ -16,21 +16,21 @@ export default function OurStory() {
           <div className="grid md:grid-cols-3 gap-8 items-center" data-aos="fade">
             <div className="md:col-span-2 space-y-4 text-white">
               <p className="text-base md:text-lg leading-relaxed">
-                Ava is our daughter — brave, brilliant, and resilient in ways most will never have to be.
-                She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, dislocating joints, and extreme fatigue.
+                Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
+                She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
               </p>
 
               <p className="text-base md:text-lg leading-relaxed">
-                ZebraWell™ was born from our relentless pursuit to help her feel better — not just temporarily, but sustainably and safely.
+                ZebraWell was born from my relentless pursuit to help her feel better, not just temporarily, but sustainably and safely.
               </p>
 
               <p className="text-base md:text-lg leading-relaxed">
                 This isn't just a business. It's personal. Every ingredient was chosen with Ava 
-                in mind — and with the hope of helping others like her feel stronger, steadier, and cared for.
+                in mind, and with the hope of helping others like her feel stronger, steadier, and cared for.
               </p>
 
               <p className="font-bold text-white text-center font-serif text-2xl md:text-3xl mt-4">
-                She is our Why!
+                She is my Why!
               </p>
 
               <p className="text-center font-medium text-base italic text-white mt-4">
