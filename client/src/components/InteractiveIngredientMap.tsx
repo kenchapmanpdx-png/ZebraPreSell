@@ -1,69 +1,68 @@
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function InteractiveIngredientMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
 
+  // Data mapping ingredients to their targeted health goals
   const connections = [
-    { from: '#ing-alcar', to: ['#issue-energy', '#issue-cognitive', '#issue-mitochondria', '#issue-nerve'] },
-    { from: '#ing-astaxanthin', to: ['#issue-antioxidant', '#issue-mcas'] },
-    { from: '#ing-benfotiamine', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
-    { from: '#ing-tmg', to: ['#issue-methylation', '#issue-cardio'] },
-    { from: '#ing-biotin', to: ['#issue-collagen', '#issue-methylation'] },
-    { from: '#ing-boron', to: ['#issue-collagen', '#issue-immune'] },
-    { from: '#ing-cdp-choline', to: ['#issue-cognitive', '#issue-nerve'] },
-    { from: '#ing-chromium', to: ['#issue-immune', '#issue-energy'] },
-    { from: '#ing-coq10', to: ['#issue-energy', '#issue-mitochondria', '#issue-cardio', '#issue-antioxidant'] },
-    { from: '#ing-copper', to: ['#issue-collagen', '#issue-immune'] },
-    { from: '#ing-folate', to: ['#issue-methylation', '#issue-autonomic', '#issue-nerve'] },
-    { from: '#ing-ha', to: ['#issue-joint'] },
-    { from: '#ing-iodine', to: ['#issue-immune'] },
-    { from: '#ing-proline', to: ['#issue-collagen'] },
-    { from: '#ing-theanine', to: ['#issue-calm'] },
-    { from: '#ing-magnesium-glycinate', to: ['#issue-calm', '#issue-muscle', '#issue-autonomic'] },
-    { from: '#ing-magnesium-malate', to: ['#issue-energy', '#issue-muscle', '#issue-calm'] },
-    { from: '#ing-manganese', to: ['#issue-collagen', '#issue-antioxidant'] },
-    { from: '#ing-molybdenum', to: ['#issue-mcas'] },
-    { from: '#ing-niacinamide', to: ['#issue-energy', '#issue-methylation'] },
-    { from: '#ing-pea', to: ['#issue-mcas', '#issue-calm', '#issue-antioxidant'] },
-    { from: '#ing-pantothenic-acid', to: ['#issue-energy', '#issue-calm'] },
-    { from: '#ing-pc', to: ['#issue-cognitive', '#issue-calm', '#issue-nerve'] },
-    { from: '#ing-potassium', to: ['#issue-cardio', '#issue-autonomic', '#issue-muscle'] },
-    { from: '#ing-pqq', to: ['#issue-energy', '#issue-mitochondria', '#issue-cognitive'] },
-    { from: '#ing-riboflavin', to: ['#issue-energy', '#issue-methylation', '#issue-mitochondria'] },
-    { from: '#ing-selenium', to: ['#issue-antioxidant', '#issue-immune'] },
-    { from: '#ing-silicon', to: ['#issue-collagen'] },
-    { from: '#ing-taurine', to: ['#issue-autonomic', '#issue-calm', '#issue-mcas', '#issue-cardio'] },
-    { from: '#ing-thiamine-hcl', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
-    { from: '#ing-vit-a', to: ['#issue-immune', '#issue-antioxidant'] },
-    { from: '#ing-vit-b6', to: ['#issue-energy', '#issue-nerve', '#issue-mcas', '#issue-methylation'] },
-    { from: '#ing-vit-b12', to: ['#issue-energy', '#issue-nerve', '#issue-methylation'] },
-    { from: '#ing-d3', to: ['#issue-immune', '#issue-collagen', '#issue-cardio'] },
-    { from: '#ing-vit-e', to: ['#issue-antioxidant'] },
-    { from: '#ing-k2', to: ['#issue-cardio', '#issue-collagen'] },
-    { from: '#ing-zinc', to: ['#issue-collagen', '#issue-immune'] },
+        { from: '#ing-alcar', to: ['#issue-energy', '#issue-cognitive', '#issue-mitochondria', '#issue-nerve'] },
+        { from: '#ing-astaxanthin', to: ['#issue-antioxidant', '#issue-mcas'] },
+        { from: '#ing-benfotiamine', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-tmg', to: ['#issue-methylation', '#issue-cardio'] },
+        { from: '#ing-biotin', to: ['#issue-collagen', '#issue-methylation'] },
+        { from: '#ing-boron', to: ['#issue-collagen', '#issue-immune'] },
+        { from: '#ing-cdp-choline', to: ['#issue-cognitive', '#issue-nerve'] },
+        { from: '#ing-chromium', to: ['#issue-immune', '#issue-energy'] },
+        { from: '#ing-coq10', to: ['#issue-energy', '#issue-mitochondria', '#issue-cardio', '#issue-antioxidant'] },
+        { from: '#ing-copper', to: ['#issue-collagen', '#issue-immune'] },
+        { from: '#ing-folate', to: ['#issue-methylation', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-ha', to: ['#issue-joint'] },
+        { from: '#ing-iodine', to: ['#issue-immune'] },
+        { from: '#ing-proline', to: ['#issue-collagen'] },
+        { from: '#ing-theanine', to: ['#issue-calm'] },
+        { from: '#ing-magnesium-glycinate', to: ['#issue-calm', '#issue-muscle', '#issue-autonomic'] },
+        { from: '#ing-magnesium-malate', to: ['#issue-energy', '#issue-muscle', '#issue-calm'] },
+        { from: '#ing-manganese', to: ['#issue-collagen', '#issue-antioxidant'] },
+        { from: '#ing-molybdenum', to: ['#issue-mcas'] },
+        { from: '#ing-niacinamide', to: ['#issue-energy', '#issue-methylation'] },
+        { from: '#ing-pea', to: ['#issue-mcas', '#issue-calm', '#issue-antioxidant'] },
+        { from: '#ing-pantothenic-acid', to: ['#issue-energy', '#issue-calm'] },
+        { from: '#ing-pc', to: ['#issue-cognitive', '#issue-calm', '#issue-nerve'] },
+        { from: '#ing-potassium', to: ['#issue-cardio', '#issue-autonomic', '#issue-muscle'] },
+        { from: '#ing-pqq', to: ['#issue-energy', '#issue-mitochondria', '#issue-cognitive'] },
+        { from: '#ing-riboflavin', to: ['#issue-energy', '#issue-methylation', '#issue-mitochondria'] },
+        { from: '#ing-selenium', to: ['#issue-antioxidant', '#issue-immune'] },
+        { from: '#ing-silicon', to: ['#issue-collagen'] },
+        { from: '#ing-taurine', to: ['#issue-autonomic', '#issue-calm', '#issue-mcas', '#issue-cardio'] },
+        { from: '#ing-thiamine-hcl', to: ['#issue-energy', '#issue-autonomic', '#issue-nerve'] },
+        { from: '#ing-vit-a', to: ['#issue-immune', '#issue-antioxidant'] },
+        { from: '#ing-vit-b6', to: ['#issue-energy', '#issue-nerve', '#issue-mcas', '#issue-methylation'] },
+        { from: '#ing-vit-b12', to: ['#issue-energy', '#issue-nerve', '#issue-methylation'] },
+        { from: '#ing-d3', to: ['#issue-immune', '#issue-collagen', '#issue-cardio'] },
+        { from: '#ing-vit-e', to: ['#issue-antioxidant'] },
+        { from: '#ing-k2', to: ['#issue-cardio', '#issue-collagen'] },
+        { from: '#ing-zinc', to: ['#issue-collagen', '#issue-immune'] },
   ];
 
   useEffect(() => {
+    const svg = svgRef.current;
+    const mapContainer = mapContainerRef.current;
+    if (!svg || !mapContainer) return;
+
     let isMobile = window.innerWidth < 768;
     let activeElement: HTMLElement | null = null;
 
     const drawLines = () => {
-      if (!svgRef.current || !mapContainerRef.current) return;
-      
-      const svg = svgRef.current;
-      const mapContainer = mapContainerRef.current;
-      
       svg.innerHTML = '';
       if (isMobile) return;
-      
       const containerRect = mapContainer.getBoundingClientRect();
 
       connections.forEach(conn => {
         conn.to.forEach(toId => {
-          const fromEl = document.querySelector(conn.from);
-          const toEl = document.querySelector(toId);
+          const fromEl = mapContainer.querySelector(toId) as HTMLElement; // Now 'from' is the goal
+          const toEl = mapContainer.querySelector(conn.from) as HTMLElement; // Now 'to' is the ingredient
 
           if (fromEl && toEl) {
             const fromRect = fromEl.getBoundingClientRect();
@@ -71,24 +70,22 @@ export default function InteractiveIngredientMap() {
             
             const fromX = fromRect.right - containerRect.left;
             const fromY = fromRect.top - containerRect.top + fromRect.height / 2;
-            
             const toX = toRect.left - containerRect.left;
             const toY = toRect.top - containerRect.top + toRect.height / 2;
             
-            const toColor = window.getComputedStyle(toEl).borderLeftColor;
-
+            const fromColor = window.getComputedStyle(fromEl).borderLeftColor;
             const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
             const controlX1 = fromX + (toX - fromX) * 0.35;
             const controlX2 = fromX + (toX - fromX) * 0.65;
             const d = `M ${fromX} ${fromY} C ${controlX1} ${fromY}, ${controlX2} ${toY}, ${toX} ${toY}`;
 
             path.setAttribute('d', d);
-            path.setAttribute('stroke', toColor);
+            path.setAttribute('stroke', fromColor);
             path.setAttribute('stroke-width', '1');
             path.setAttribute('fill', 'none');
             path.setAttribute('opacity', '0.3');
-            path.setAttribute('data-from', conn.from);
-            path.setAttribute('data-to', toId);
+            path.dataset.from = conn.from; // Still original ingredient ID
+            path.dataset.to = toId; // Still original issue ID
             svg.appendChild(path);
           }
         });
@@ -96,125 +93,107 @@ export default function InteractiveIngredientMap() {
     };
 
     const highlightConnection = (element: HTMLElement, shouldHighlight: boolean) => {
-      if (!svgRef.current) return;
-      
-      if (isMobile && !shouldHighlight) return;
+        if (isMobile && !shouldHighlight) return;
 
-      // Reset all styles
-      document.querySelectorAll('.highlighted, .unfocused').forEach(el => {
-        el.classList.remove('highlighted', 'unfocused');
-        const span = el.querySelector('.font-semibold') as HTMLElement;
-        if (span) span.style.color = '';
-      });
-      
-      svgRef.current.querySelectorAll('path').forEach(p => {
-        p.setAttribute('stroke-width', '1');
-        p.setAttribute('opacity', '0.3');
-      });
+        mapContainer.querySelectorAll('.highlighted, .unfocused').forEach(el => {
+            el.classList.remove('highlighted', 'unfocused');
+            const span = el.querySelector('.font-semibold') as HTMLElement;
+            if (span) span.style.color = '';
+        });
+        svg.querySelectorAll('path').forEach(p => {
+            p.setAttribute('stroke-width', '1');
+            p.setAttribute('opacity', '0.3');
+        });
 
-      if (shouldHighlight) {
-        const elementId = '#' + element.id;
-        const isIngredient = element.closest('#ingredients-col') !== null;
-        let connectedPaths;
-        let connectedItems = new Set<HTMLElement>();
-        connectedItems.add(element);
+        if (shouldHighlight) {
+            const elementId = '#' + element.id;
+            const isGoal = element.closest('#issues-col') !== null;
+            let connectedPaths: NodeListOf<SVGPathElement>;
+            let connectedItems = new Set<HTMLElement>();
+            connectedItems.add(element);
 
-        if (isIngredient) {
-          connectedPaths = svgRef.current.querySelectorAll(`path[data-from="${elementId}"]`);
-        } else {
-          connectedPaths = svgRef.current.querySelectorAll(`path[data-to="${elementId}"]`);
-        }
-        
-        element.classList.add('highlighted');
-        
-        connectedPaths.forEach(path => {
-          const fromEl = document.querySelector(path.getAttribute('data-from')!) as HTMLElement;
-          const toEl = document.querySelector(path.getAttribute('data-to')!) as HTMLElement;
-          if (fromEl && toEl) {
-            connectedItems.add(fromEl);
-            connectedItems.add(toEl);
-            fromEl.classList.add('highlighted');
-            toEl.classList.add('highlighted');
-            
-            path.setAttribute('stroke-width', '3');
-            path.setAttribute('opacity', '1');
-            
-            if (!isIngredient) {
-              const span = fromEl.querySelector('.font-semibold') as HTMLElement;
-              const goalColor = window.getComputedStyle(toEl).borderLeftColor;
-              if(span) span.style.color = goalColor;
+            if (isGoal) {
+                connectedPaths = svg.querySelectorAll(`path[data-to="${elementId}"]`);
+            } else {
+                connectedPaths = svg.querySelectorAll(`path[data-from="${elementId}"]`);
             }
-          }
-        });
+            
+            element.classList.add('highlighted');
+            
+            connectedPaths.forEach(path => {
+                const fromEl = mapContainer.querySelector(path.dataset.from!) as HTMLElement;
+                const toEl = mapContainer.querySelector(path.dataset.to!) as HTMLElement;
+                if(fromEl && toEl) {
+                    connectedItems.add(fromEl);
+                    connectedItems.add(toEl);
+                    fromEl.classList.add('highlighted');
+                    toEl.classList.add('highlighted');
+                    
+                    path.setAttribute('stroke-width', '3');
+                    path.setAttribute('opacity', '1');
+                    
+                    if (isGoal) {
+                        const span = fromEl.querySelector('.font-semibold') as HTMLElement;
+                        const goalColor = window.getComputedStyle(toEl).borderLeftColor;
+                        if(span) span.style.color = goalColor;
+                    }
+                }
+            });
 
-        // Fade out non-connected items in BOTH columns
-        document.querySelectorAll('.item-card').forEach(card => {
-          if (!connectedItems.has(card as HTMLElement)) {
-            card.classList.add('unfocused');
-          }
-        });
-      }
+            mapContainer.querySelectorAll('.item-card').forEach(card => {
+                if (!connectedItems.has(card as HTMLElement)) {
+                    card.classList.add('unfocused');
+                }
+            });
+        }
     };
-
+    
     const handleTap = (e: Event) => {
       const target = e.currentTarget as HTMLElement;
       if (activeElement === target) {
         highlightConnection(target, false);
         activeElement = null;
       } else {
-        if (activeElement) highlightConnection(activeElement, false);
+        if(activeElement) highlightConnection(activeElement, false);
         highlightConnection(target, true);
         activeElement = target;
       }
     };
 
-    const handleMouseEnter = (e: Event) => {
-      const target = e.currentTarget as HTMLElement;
-      highlightConnection(target, true);
-    };
-
-    const handleMouseLeave = (e: Event) => {
-      if (activeElement) return;
-      const target = e.currentTarget as HTMLElement;
-      highlightConnection(target, false);
-    };
+    const handleMouseEnter = (e: Event) => highlightConnection(e.currentTarget as HTMLElement, true);
+    const handleMouseLeave = (e: Event) => { if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false)};
 
     const addEventListeners = () => {
-      document.querySelectorAll('.item-card').forEach(card => {
-        card.removeEventListener('click', handleTap);
-        card.removeEventListener('mouseenter', handleMouseEnter);
-        card.removeEventListener('mouseleave', handleMouseLeave);
+        mapContainer.querySelectorAll('.item-card').forEach(card => {
+            card.removeEventListener('click', handleTap);
+            card.removeEventListener('mouseenter', handleMouseEnter);
+            card.removeEventListener('mouseleave', handleMouseLeave);
 
-        if (isMobile) {
-          card.addEventListener('click', handleTap);
-        } else {
-          card.addEventListener('mouseenter', handleMouseEnter);
-          card.addEventListener('mouseleave', handleMouseLeave);
-        }
-      });
+            if (isMobile) {
+                card.addEventListener('click', handleTap);
+            } else {
+                card.addEventListener('mouseenter', handleMouseEnter);
+                card.addEventListener('mouseleave', handleMouseLeave);
+            }
+        });
     };
-
+    
     drawLines();
     addEventListeners();
 
     const resizeObserver = new ResizeObserver(() => {
-      const oldIsMobile = isMobile;
-      isMobile = window.innerWidth < 768;
-      if(oldIsMobile !== isMobile) {
-        drawLines();
-        addEventListeners();
-      } else {
-        drawLines();
-      }
+        const oldIsMobile = isMobile;
+        isMobile = window.innerWidth < 768;
+        if(oldIsMobile !== isMobile) {
+            drawLines();
+            addEventListeners();
+        } else {
+            drawLines();
+        }
     });
-    
-    if (mapContainerRef.current) {
-      resizeObserver.observe(mapContainerRef.current);
-    }
+    resizeObserver.observe(mapContainer);
 
-    return () => {
-      resizeObserver.disconnect();
-    };
+    return () => resizeObserver.disconnect();
   }, []);
 
   return (
@@ -222,6 +201,14 @@ export default function InteractiveIngredientMap() {
       background: 'hsla(33, 34%, 86%, 1)',
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
+      <style>{`
+        .item-card { transition: all 0.2s ease-in-out; cursor: pointer; }
+        .item-card .font-semibold { transition: color 0.2s ease-in-out; }
+        .item-card.highlighted { transform: scale(1.03); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); z-index: 10; position: relative; opacity: 1 !important; }
+        .item-card.unfocused { opacity: 0.4; transform: scale(0.98); }
+        svg path { transition: stroke-width 0.2s ease, opacity 0.2s ease, stroke 0.2s ease; pointer-events: none; }
+      `}</style>
+      
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-forest">ZEBRAWELL™</h2>
@@ -233,8 +220,27 @@ export default function InteractiveIngredientMap() {
 
         <div id="map-container" ref={mapContainerRef} className="relative w-full">
           <div className="flex flex-row justify-between items-start gap-4 md:gap-16">
+            
+            {/* Column 1: Health Goals */}
+            <div id="issues-col" className="w-1/2 md:w-5/12 space-y-2 md:space-y-6">
+              <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">TARGETED HEALTH GOALS</h3>
+              <div id="issue-energy" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Fatigue & Energy Production</span><span className="md:hidden">Energy</span></div>
+              <div id="issue-cognitive" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-sky-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Cognitive Function & Brain Fog</span><span className="md:hidden">Brain Fog</span></div>
+              <div id="issue-mitochondria" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-semibold text-forest text-xs md:text-base flex items-center">Mitochondria</div>
+              <div id="issue-autonomic" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-violet-500 font-semibold text-forest text-xs md:text-base flex items-center"><span className="hidden md:inline">Autonomic Regulation (POTS)</span><span className="md:hidden">Autonomic</span></div>
+              <div id="issue-nerve" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-lime-500 font-semibold text-forest text-xs md:text-base flex items-center">Nerve Health</div>
+              <div id="issue-calm" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-indigo-500 font-semibold text-forest text-xs md:text-base flex items-center">Neuro-Calming</div>
+              <div id="issue-collagen" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-teal-400 font-semibold text-forest text-xs md:text-base flex items-center">Collagen/Tissue</div>
+              <div id="issue-joint" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-orange-500 font-semibold text-forest text-xs md:text-base flex items-center">Joints</div>
+              <div id="issue-mcas" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-green-500 font-semibold text-forest text-xs md:text-base flex items-center">Mast Cell</div>
+              <div id="issue-antioxidant" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-purple-600 font-semibold text-forest text-xs md:text-base flex items-center">Antioxidant</div>
+              <div id="issue-cardio" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-rose-500 font-semibold text-forest text-xs md:text-base flex items-center">Cardiovascular</div>
+              <div id="issue-muscle" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-blue-600 font-semibold text-forest text-xs md:text-base flex items-center">Muscle</div>
+              <div id="issue-methylation" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-cyan-400 font-semibold text-forest text-xs md:text-base flex items-center">Methylation</div>
+              <div id="issue-immune" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-pink-500 font-semibold text-forest text-xs md:text-base flex items-center">Immune Balance</div>
+            </div>
 
-            {/* Column 1: Ingredients */}
+            {/* Column 2: Ingredients */}
             <div id="ingredients-col" className="w-1/2 md:w-5/12 space-y-1 md:space-y-2">
               <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">FORMULATION INGREDIENTS</h3>
               <div id="ing-alcar" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest"><span className="hidden md:inline">Acetyl-L-Carnitine (ALCAR)</span><span className="md:hidden">ALCAR</span></span></div>
@@ -276,27 +282,7 @@ export default function InteractiveIngredientMap() {
               <div id="ing-zinc" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105"><span className="font-semibold text-forest">Zinc</span></div>
             </div>
 
-            {/* Column 2: Health Goals */}
-            <div id="issues-col" className="w-1/2 md:w-5/12 space-y-2 md:space-y-6">
-              <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">TARGETED HEALTH GOALS</h3>
-              <div id="issue-energy" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center"><span className="hidden md:inline">Fatigue & Energy Production</span><span className="md:hidden">Energy</span></div>
-              <div id="issue-cognitive" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-sky-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center"><span className="hidden md:inline">Cognitive Function & Brain Fog</span><span className="md:hidden">Brain Fog</span></div>
-              <div id="issue-mitochondria" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Mitochondria</div>
-              <div id="issue-autonomic" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-violet-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center"><span className="hidden md:inline">Autonomic Regulation (POTS)</span><span className="md:hidden">Autonomic</span></div>
-              <div id="issue-nerve" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-lime-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Nerve Health</div>
-              <div id="issue-calm" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-indigo-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Neuro-Calming</div>
-              <div id="issue-collagen" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-teal-400 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Collagen/Tissue</div>
-              <div id="issue-joint" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-orange-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Joints</div>
-              <div id="issue-mcas" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-green-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Mast Cell</div>
-              <div id="issue-antioxidant" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-purple-600 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Antioxidant</div>
-              <div id="issue-cardio" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-rose-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Cardiovascular</div>
-              <div id="issue-muscle" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-blue-600 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Muscle</div>
-              <div id="issue-methylation" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-cyan-400 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Methylation</div>
-              <div id="issue-immune" className="item-card issue-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-pink-500 font-semibold text-forest text-xs md:text-base transition-all duration-200 cursor-pointer hover:scale-105 flex items-center">Immune Balance</div>
-            </div>
           </div>
-
-          {/* SVG for drawing connecting lines */}
           <svg ref={svgRef} id="connector-svg" className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></svg>
         </div>
       </div>
