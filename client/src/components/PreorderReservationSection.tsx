@@ -41,7 +41,7 @@ export default function PreorderReservationSection() {
             backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
           }}>
             <div className="text-center">
-              <h3 className="text-2xl font-serif font-bold text-forest mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
+              <h3 className="text-2xl font-serif font-bold text-terra mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
               <p className="text-lg text-forest/80 leading-relaxed mb-4">
                 Be the first to know when ZebraWell is available for order.
               </p>

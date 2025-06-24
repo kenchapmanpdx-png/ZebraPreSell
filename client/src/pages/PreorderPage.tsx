@@ -184,7 +184,7 @@ export default function PreorderPage() {
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 md:p-12 border border-amber-200">
               <div className="mb-8">
                 <Clock className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-terra mb-4">
                   Reserve Your Spot – Limited First Run!
                 </h2>
                 <p className="text-lg text-gray-700">
