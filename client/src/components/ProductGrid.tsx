@@ -23,7 +23,7 @@ export default function ProductGrid() {
             <strong>Comprehensive AM and PM formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-4 max-w-full mx-auto px-2">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
             <div id="am-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100" style={{
@@ -49,7 +49,7 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <div className="bg-gray-50 rounded-lg p-4 md:p-6 shadow-sm border border-neutral-200">
+                <div className="bg-gray-50 rounded-lg p-2 md:p-3 shadow-sm border border-neutral-200">
                   <ul className="space-y-4">
                     {memoizedAmIngredients.map((ingredient, index) => (
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
@@ -99,7 +99,7 @@ export default function ProductGrid() {
               </div>
 
               <div className="mb-4 md:mb-6">
-                <div className="bg-gray-50 rounded-lg p-4 md:p-6 shadow-sm border border-neutral-200">
+                <div className="bg-gray-50 rounded-lg p-2 md:p-3 shadow-sm border border-neutral-200">
                   <ul className="space-y-4">
                     {memoizedPmIngredients.map((ingredient, index) => (
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
