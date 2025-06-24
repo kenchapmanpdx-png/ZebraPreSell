@@ -36,7 +36,7 @@ export default function ProductGrid() {
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1 rotate-90">
-                      <i className="fas fa-sun text-4xl text-yellow-500"></i>
+                      <i className="fas fa-sun text-4xl text-yellow-500 -rotate-90"></i>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ProductGrid() {
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1 rotate-90">
-                      <i className="fas fa-moon text-4xl text-yellow-500"></i>
+                      <i className="fas fa-moon text-4xl text-yellow-500 -rotate-90"></i>
                     </div>
                   </div>
                 </div>
