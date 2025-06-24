@@ -1,3 +1,4 @@
+
 import { useState, FormEvent } from 'react';
 
 export default function SimpleReservationSection() {
@@ -27,12 +28,10 @@ export default function SimpleReservationSection() {
     }}>
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto px-4">
-          <div 
-            className="w-full py-6 px-6 rounded-3xl bg-white shadow-lg border border-amber-200" 
-          >
+          <div className="w-full py-6 px-6 rounded-3xl bg-white shadow-xl border-2 border-amber-300">
             <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-serif font-bold text-terra mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
-              <p className="text-base sm:text-lg text-forest/80 leading-relaxed mb-4">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#C8592B] mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
+              <p className="text-base sm:text-lg text-[#1D4526] leading-relaxed mb-4">
                 Be the first to know when ZebraWell is available for order.
               </p>
 
@@ -44,12 +43,12 @@ export default function SimpleReservationSection() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
                     required
-                    className="flex-1 px-4 py-2 rounded-lg border border-terra/20 focus:outline-none focus:ring-2 focus:ring-terra/50 text-sm"
+                    className="flex-1 px-4 py-2 rounded-lg border-2 border-amber-300 focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-sm bg-white text-gray-900"
                   />
                   <button
                     onClick={handleSubmit}
                     disabled={isSubmitting || !email}
-                    className="bg-[#C8592B] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm whitespace-nowrap"
+                    className="bg-[#C8592B] text-white font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm whitespace-nowrap border-2 border-[#C8592B]"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center">
@@ -60,13 +59,13 @@ export default function SimpleReservationSection() {
                   </button>
                 </div>
               ) : (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-md mx-auto">
+                <div className="bg-green-100 border-2 border-green-300 rounded-lg p-4 max-w-md mx-auto">
                   <p className="text-green-800 font-semibold">✓ You're on the list!</p>
                   <p className="text-green-700 text-sm mt-1">We'll notify you when ZebraWell is available.</p>
                 </div>
               )}
 
-              <p className="text-xs text-forest/60 mt-3">
+              <p className="text-xs text-[#1D4526] mt-3 opacity-80">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </div>

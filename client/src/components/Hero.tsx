@@ -52,10 +52,10 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-start gap-8">
           {/* Left column - Reservation form */}
           <div className="md:w-1/2" data-aos="fade-right" data-aos-delay="300">
-            <div className="inline-block py-6 px-6 rounded-3xl bg-white shadow-lg border border-amber-200">
+            <div className="inline-block py-6 px-6 rounded-3xl bg-white shadow-xl border-2 border-amber-300">
               <div className="text-center">
-                <h3 className="text-2xl font-serif font-bold text-terra mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
-                <p className="text-lg text-forest/80 leading-relaxed mb-4">
+                <h3 className="text-2xl font-serif font-bold text-[#C8592B] mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
+                <p className="text-lg text-[#1D4526] leading-relaxed mb-4">
                   Be the first to know when ZebraWell is available for order.
                 </p>
 
@@ -68,12 +68,12 @@ export default function Hero() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-gray-900 text-sm"
+                        className="flex-1 px-3 py-2 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 text-sm bg-white"
                       />
                       <button
                         type="submit"
                         disabled={isSubmitting || !email}
-                        className="bg-[#C8592B] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                        className="bg-[#C8592B] text-white font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm border-2 border-[#C8592B]"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center">
@@ -85,15 +85,15 @@ export default function Hero() {
                         )}
                       </button>
                     </div>
-                    <p className="text-xs text-forest/60 mt-2">
+                    <p className="text-xs text-[#1D4526] mt-2 opacity-80">
                       We respect your privacy. Unsubscribe at any time.
                     </p>
                   </form>
                 ) : (
                   <div className="text-center">
                     <div className="text-6xl mb-4">✅</div>
-                    <h4 className="text-xl font-bold text-forest mb-2">You're all set!</h4>
-                    <p className="text-forest/80">
+                    <h4 className="text-xl font-bold text-[#1D4526] mb-2">You're all set!</h4>
+                    <p className="text-[#1D4526]">
                       We'll send you an email as soon as ZebraWell is ready to order.
                     </p>
                   </div>

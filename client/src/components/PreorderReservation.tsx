@@ -1,3 +1,4 @@
+
 import { useState, FormEvent } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -38,10 +39,10 @@ export default function PreorderReservation() {
         backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
       }}>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12 text-center">
+          <div className="bg-white rounded-2xl shadow-xl border-2 border-amber-300 p-8 md:p-12 text-center">
             <div className="text-6xl mb-4">✅</div>
-            <h2 className="text-3xl font-serif font-bold text-forest mb-4 fade-in">You're All Set!</h2>
-            <p className="text-xl text-forest/80 leading-relaxed fade-in max-w-2xl mx-auto">
+            <h2 className="text-3xl font-serif font-bold text-[#1D4526] mb-4 fade-in">You're All Set!</h2>
+            <p className="text-xl text-[#1D4526] leading-relaxed fade-in max-w-2xl mx-auto">
               We'll send you an email as soon as ZebraWell is ready to order. Thank you for joining our community.
             </p>
           </div>
@@ -56,9 +57,9 @@ export default function PreorderReservation() {
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-4 md:p-12 text-center">
-          <h2 className="text-3xl font-serif font-bold text-terra mb-3 md:mb-6 fade-in">📧 Reserve Your Spot – Limited First Run!</h2>
-          <p className="text-xl text-forest/80 leading-relaxed fade-in max-w-2xl mx-auto mb-4 md:mb-8">
+        <div className="bg-white rounded-2xl shadow-xl border-2 border-amber-300 p-4 md:p-12 text-center">
+          <h2 className="text-3xl font-serif font-bold text-[#C8592B] mb-3 md:mb-6 fade-in">📧 Reserve Your Spot – Limited First Run!</h2>
+          <p className="text-xl text-[#1D4526] leading-relaxed fade-in max-w-2xl mx-auto mb-4 md:mb-8">
             Be the first to know when ZebraWell is available for order.
           </p>
           
@@ -70,12 +71,12 @@ export default function PreorderReservation() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#89B317] focus:border-transparent text-gray-900"
+                className="flex-1 px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 bg-white"
               />
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className="bg-terra text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#C8592B] text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed border-2 border-[#C8592B]"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">
@@ -87,7 +88,7 @@ export default function PreorderReservation() {
                 )}
               </button>
             </div>
-            <p className="text-sm text-forest/60 mt-3">
+            <p className="text-sm text-[#1D4526] mt-3 opacity-80">
               We respect your privacy. Unsubscribe at any time.
             </p>
           </form>
