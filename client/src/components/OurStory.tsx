@@ -4,13 +4,13 @@ import ZebraHeart from './ZebraHeart';
 
 export default function OurStory() {
   return (
-    <section id="story" className="py-2 md:py-6 relative overflow-hidden">
+    <section id="story" className="py-4 md:py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-1">
         <div className="max-w-6xl mx-auto rounded-xl p-2 md:p-6 shadow-lg border border-terra/10" style={{
           background: 'linear-gradient(0deg, rgba(200, 89, 43, 1) 0%, rgba(184, 112, 81, 1) 49%, rgba(200, 89, 43, 1) 100%)'
         }} data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-lora text-center mb-6 md:mb-8 text-white" data-aos="fade-up" style={{ fontSize: '1.72em' }}>
-            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-yellow-500" style={{ fontSize: '1.56em' }}>Ava</span>.
+          <h2 className="text-4xl md:text-5xl font-lora text-center mb-12 md:mb-16 text-white" data-aos="fade-up" style={{ fontSize: '1.72em' }}>
+            Behind every bottle of ZebraWell is a deeper purpose — and her name is <span className="text-yellow-500" style={{ fontSize: '1.56em' }}>Ava</span>.
           </h2>
 
           <div className="text-center space-y-4 text-white px-2 md:px-4" data-aos="fade">

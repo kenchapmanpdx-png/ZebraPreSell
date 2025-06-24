@@ -55,7 +55,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-xs text-terra-dark bg-stone-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-sm text-terra-dark bg-yellow-500 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>
@@ -105,7 +105,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-xs text-terra-dark bg-stone-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-sm text-white bg-[#36454F] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>
