@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="text-white py-6 sm:py-8 md:py-16 px-3 sm:px-4 md:px-8 pt-4 sm:pt-6 md:pt-10" style={{
+    <section className="text-white py-4 sm:py-6 md:py-10 px-3 sm:px-4 md:px-8 pt-2 sm:pt-4 md:pt-6" style={{
         background: 'hsla(161, 51%, 12%, 1)',
         backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
       }}>

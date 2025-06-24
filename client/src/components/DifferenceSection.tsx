@@ -80,7 +80,7 @@ export default function DifferenceSection() {
   ];
 
   return (
-    <section id="difference" className="py-6 md:py-20 px-6" style={{
+    <section id="difference" className="py-4 md:py-12 px-6" style={{
       background: 'linear-gradient(180deg, #F3ECE1 0%, #FBFAF7 100%)'
     }}>
       <div className="max-w-6xl mx-auto text-center">

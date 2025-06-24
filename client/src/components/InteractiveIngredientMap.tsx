@@ -221,7 +221,7 @@ export default function InteractiveIngredientMap() {
   }, []);
 
   return (
-    <section className="py-6 md:py-16 px-2 sm:px-4 md:px-8" style={{
+    <section className="py-4 md:py-10 px-2 sm:px-4 md:px-8" style={{
       background: 'hsla(33, 34%, 86%, 1)',
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
