@@ -41,26 +41,26 @@ export default function PreorderReservationSection() {
             backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
           }}>
             <div className="text-center">
-              <h3 className="text-2xl font-serif font-bold text-terra mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
-              <p className="text-lg text-forest/80 leading-relaxed mb-4">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-terra mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
+              <p className="text-base sm:text-lg text-forest/80 leading-relaxed mb-4">
                 Be the first to know when ZebraWell is available for order.
               </p>
 
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                  <div className="flex flex-col sm:flex-row gap-2">
+                  <div className="flex flex-col gap-3">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="w-full sm:flex-1 px-4 py-2 rounded-lg border border-terra/20 focus:outline-none focus:ring-2 focus:ring-terra/50"
+                      className="w-full px-4 py-3 rounded-lg border border-terra/20 focus:outline-none focus:ring-2 focus:ring-terra/50"
                     />
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-6 py-2 bg-terra text-white font-bold rounded-lg hover:bg-terra transition-colors disabled:opacity-50"
+                      className="w-full px-6 py-3 bg-terra text-white font-bold rounded-lg hover:bg-terra transition-colors disabled:opacity-50"
                     >
                       {isSubmitting ? 'Adding...' : 'Claim Your Spot'}
                     </button>
