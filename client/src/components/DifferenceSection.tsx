@@ -60,7 +60,7 @@ export default function DifferenceSection() {
           We've reimagined supplement design for the unique needs of rare condition warriors.
         </p>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md border-2 border-forest p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
               <div className="text-2xl mb-2">{feature.icon}</div>
