@@ -44,7 +44,7 @@ export default function PreorderPage() {
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
       <Navigation />
       <ZebraPatternOverlay opacity={0.03} />
-      
+
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">
         <div className="container mx-auto px-6">
@@ -53,14 +53,14 @@ export default function PreorderPage() {
               <Sparkles className="w-4 h-4 mr-2" />
               Coming Soon
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Be the First to Experience
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 mt-2">
                 ZebraWell
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               Clinical-grade supplements designed specifically for EDS, POTS, and MCAS. 
               Join our reservation list to be notified when we launch.
@@ -84,7 +84,7 @@ export default function PreorderPage() {
               <div>
                 <ProductBottles />
               </div>
-              
+
               <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -104,7 +104,7 @@ export default function PreorderPage() {
                       <div className="text-xs text-gray-500 mt-1">4 capsules</div>
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="border-green-200 bg-green-50/50">
                     <CardContent className="p-4 text-center">
                       <div className="text-2xl font-bold text-green-700 mb-1">PM</div>
@@ -141,9 +141,9 @@ export default function PreorderPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
               💬 What People Are Saying
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+              <Card className="border-amber-200 bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Heart className="w-5 h-5 text-red-500 mr-2" />
@@ -158,7 +158,7 @@ export default function PreorderPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-amber-200 bg-white/80 backdrop-blur-sm">
+              <Card className="border-amber-200 bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <Heart className="w-5 h-5 text-red-500 mr-2" />
@@ -206,7 +206,7 @@ export default function PreorderPage() {
                       className="pl-12 py-3 text-lg border-amber-200 focus:border-amber-400 focus:ring-amber-400 bg-white"
                     />
                   </div>
-                  
+
                   <Button
                     type="submit"
                     disabled={isSubmitting || !email}
