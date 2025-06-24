@@ -35,7 +35,7 @@ export default function ProductGrid() {
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1 rotate-90">
                       <i className="fas fa-sun text-4xl text-yellow-500"></i>
                     </div>
                   </div>
@@ -55,7 +55,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-xs text-terra-dark bg-amber-50 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-xs text-terra-dark bg-amber-100 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
                       </li>
@@ -85,7 +85,7 @@ export default function ProductGrid() {
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1 rotate-90">
                       <i className="fas fa-moon text-4xl text-yellow-500"></i>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-xs text-terra-dark bg-amber-50 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-xs text-terra-dark bg-amber-100 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
                       </li>

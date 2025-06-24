@@ -62,11 +62,7 @@ export default function DifferenceSection() {
       title: "Works as a System",
       description: "AM and PM formulas work together for complete 24-hour support."
     },
-    {
-      icon: "👨‍👧",
-      title: "Patient-Driven Design",
-      description: "Formulated by a father for his daughter — real-world tested."
-    },
+
     {
       icon: "🎯",
       title: "No Guesswork Needed",
