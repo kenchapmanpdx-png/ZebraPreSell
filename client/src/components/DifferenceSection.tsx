@@ -22,8 +22,8 @@ export default function DifferenceSection() {
     },
     {
       icon: "👥",
-      title: "Formulated For Zebras",
-      description: "Built specifically for EDS, POTS, and MCAS—no more piecing together random supplements."
+      title: "Built specifically for EDS & POTS while being mindful of MCAS",
+      description: "No more piecing together random supplements."
     },
     {
       icon: "🍃",
@@ -32,13 +32,8 @@ export default function DifferenceSection() {
     },
     {
       icon: "🔍",
-      title: "Total Transparency",
-      description: "Third-party testing and Certificates of Analysis prove our commitment to quality."
-    },
-    {
-      icon: "🎯",
-      title: "Targeted Support",
-      description: "Core Formula plus specialized Boosters for personalized health management."
+      title: "Commitment to Quality",
+      description: "Third-party testing and Certificates of Analysis."
     },
     {
       icon: "🌱",
@@ -48,7 +43,7 @@ export default function DifferenceSection() {
     {
       icon: "🧩",
       title: "Works as a System",
-      description: "AM and PM formulas work together for complete 24-hour support."
+      description: "AM and PM formulas work together for 24-hr support."
     },
 
 
