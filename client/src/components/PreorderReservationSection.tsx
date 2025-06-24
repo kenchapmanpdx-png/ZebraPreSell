@@ -35,8 +35,8 @@ export default function PreorderReservationSection() {
       background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)'
     }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="inline-block py-6 px-6 rounded-3xl mx-auto" style={{
+        <div className="max-w-2xl mx-auto px-4">
+          <div className="w-full py-6 px-6 rounded-3xl" style={{
             background: 'hsla(33, 34%, 86%, 1)',
             backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
           }}>
@@ -48,19 +48,19 @@ export default function PreorderReservationSection() {
 
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="flex-1 px-4 py-2 rounded-lg border border-terra/20 focus:outline-none focus:ring-2 focus:ring-terra/50"
+                      className="w-full sm:flex-1 px-4 py-2 rounded-lg border border-terra/20 focus:outline-none focus:ring-2 focus:ring-terra/50"
                     />
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="px-6 py-2 bg-terra text-white font-bold rounded-lg hover:bg-terra/90 transition-colors disabled:opacity-50 whitespace-nowrap"
+                      className="w-full sm:w-auto px-6 py-2 bg-terra text-white font-bold rounded-lg hover:bg-terra transition-colors disabled:opacity-50"
                     >
                       {isSubmitting ? 'Adding...' : 'Claim Your Spot'}
                     </button>
