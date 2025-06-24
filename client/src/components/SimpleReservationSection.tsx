@@ -28,11 +28,10 @@ export default function SimpleReservationSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto px-4">
           <div 
-            className="w-full py-6 px-6 rounded-3xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out" 
+            className="w-full py-6 px-6 rounded-3xl opacity-100 transform translate-y-0 transition-all duration-500 ease-out" 
             style={{
               background: 'hsla(33, 34%, 86%, 1)',
-              backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)',
-              animation: 'fadeInUp 0.6s ease-out 0.2s forwards'
+              backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
             }}
           >
             <div className="text-center">
