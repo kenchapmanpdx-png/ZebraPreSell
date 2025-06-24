@@ -39,7 +39,7 @@ export default function PreorderReservation() {
         backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
       }}>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl border-2 border-amber-300 p-8 md:p-12 text-center">
+          <div className="rounded-2xl shadow-xl border-2 border-amber-300 p-8 md:p-12 text-center" style={{ backgroundColor: 'white', opacity: 1, backdropFilter: 'none' }}>
             <div className="text-6xl mb-4">✅</div>
             <h2 className="text-3xl font-serif font-bold text-[#1D4526] mb-4 fade-in">You're All Set!</h2>
             <p className="text-xl text-[#1D4526] leading-relaxed fade-in max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ export default function PreorderReservation() {
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl border-2 border-amber-300 p-4 md:p-12 text-center">
+        <div className="rounded-2xl shadow-xl border-2 border-amber-300 p-4 md:p-12 text-center" style={{ backgroundColor: 'white', opacity: 1, backdropFilter: 'none' }}>
           <h2 className="text-3xl font-serif font-bold text-[#C8592B] mb-3 md:mb-6 fade-in">📧 Reserve Your Spot – Limited First Run!</h2>
           <p className="text-xl text-[#1D4526] leading-relaxed fade-in max-w-2xl mx-auto mb-4 md:mb-8">
             Be the first to know when ZebraWell is available for order.

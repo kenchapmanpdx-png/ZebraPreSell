@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from 'react';
 
 export default function SimpleReservationSection() {
@@ -9,7 +8,7 @@ export default function SimpleReservationSection() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -28,7 +27,7 @@ export default function SimpleReservationSection() {
     }}>
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto px-4">
-          <div className="w-full py-6 px-6 rounded-3xl bg-white shadow-xl border-2 border-amber-300">
+          <div className="rounded-2xl shadow-xl border-2 border-amber-300 p-8 md:p-12 text-center" style={{ backgroundColor: 'white', opacity: 1, backdropFilter: 'none' }}>
             <div className="text-center">
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#C8592B] mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
               <p className="text-base sm:text-lg text-[#1D4526] leading-relaxed mb-4">

@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-start gap-8">
           {/* Left column - Reservation form */}
           <div className="md:w-1/2" data-aos="fade-right" data-aos-delay="300">
-            <div className="inline-block py-6 px-6 rounded-3xl bg-white shadow-xl border-2 border-amber-300">
+            <div className="inline-block py-6 px-6 rounded-3xl shadow-xl border-2 border-amber-300" style={{ backgroundColor: 'white', opacity: 1, backdropFilter: 'none' }}>
               <div className="text-center">
                 <h3 className="text-2xl font-serif font-bold text-[#C8592B] mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
                 <p className="text-lg text-[#1D4526] leading-relaxed mb-4">
