@@ -77,7 +77,7 @@ export default function PreorderPage() {
       </section>
 
       {/* Product Preview */}
-      <section className="py-16 bg-white/70 backdrop-blur-sm">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">

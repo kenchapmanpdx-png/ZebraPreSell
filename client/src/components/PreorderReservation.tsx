@@ -56,7 +56,7 @@ export default function PreorderReservation() {
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-4 md:p-12 text-center">
+        <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-4 md:p-12 text-center">
           <h2 className="text-3xl font-serif font-bold text-terra mb-3 md:mb-6 fade-in">📧 Reserve Your Spot – Limited First Run!</h2>
           <p className="text-xl text-forest/80 leading-relaxed fade-in max-w-2xl mx-auto mb-4 md:mb-8">
             Be the first to know when ZebraWell is available for order.
