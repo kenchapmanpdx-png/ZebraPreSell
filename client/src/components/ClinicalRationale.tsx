@@ -25,7 +25,7 @@ export default function ClinicalRationale() {
             <p className="text-xs text-forest/70">Bone mineralization</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-purple-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-[#3E3E67] border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">PEA</h3>
             <p className="text-xs text-forest/70">Pain relief & inflammation</p>
           </div>
@@ -70,7 +70,7 @@ export default function ClinicalRationale() {
             <p className="text-xs text-forest/70">Methylation support</p>
           </div>
 
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-violet-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
+          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-[#3E3E67] border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
             <h3 className="text-sm font-bold text-forest mb-1">Zinc Glycinate</h3>
             <p className="text-xs text-forest/70">Immune support</p>
           </div>
