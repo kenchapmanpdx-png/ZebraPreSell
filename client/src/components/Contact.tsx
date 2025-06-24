@@ -18,7 +18,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-6 md:py-16 relative overflow-hidden">
+    <section id="contact" className="py-4 md:py-10 relative overflow-hidden">
       <ZebraBackground />
       <div className="container mx-auto px-6 relative z-1">
         <div className="max-w-4xl mx-auto">
