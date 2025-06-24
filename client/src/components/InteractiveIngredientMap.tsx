@@ -86,6 +86,7 @@ export default function InteractiveIngredientMap() {
             path.setAttribute('opacity', '0.3');
             path.dataset.from = conn.from;
             path.dataset.to = fromId;
+            path.dataset.originalColor = fromColor;
             svg.appendChild(path);
           }
         });
@@ -103,6 +104,7 @@ export default function InteractiveIngredientMap() {
             svg.querySelectorAll('path').forEach(p => {
                 p.setAttribute('stroke-width', '1');
                 p.setAttribute('opacity', '0.3');
+                p.setAttribute('stroke', p.dataset.originalColor || window.getComputedStyle(mapContainer.querySelector(p.dataset.from!) as HTMLElement).borderLeftColor);
             });
         }
 
@@ -149,9 +151,18 @@ export default function InteractiveIngredientMap() {
                     pathsToHighlight = Array.from(svg.querySelectorAll(`path[data-from="${elementId}"]`));
                 }
 
+                // Fade all paths to gray first
+                svg.querySelectorAll('path').forEach(path => {
+                    if (!pathsToHighlight.includes(path as SVGPathElement)) {
+                        path.setAttribute('stroke', '#d1d5db');
+                        path.setAttribute('opacity', '0.2');
+                    }
+                });
+
                 pathsToHighlight.forEach(path => {
                     path.setAttribute('stroke-width', '3');
                     path.setAttribute('opacity', '1');
+                    path.setAttribute('stroke', path.dataset.originalColor || window.getComputedStyle(mapContainer.querySelector(path.dataset.from!) as HTMLElement).borderLeftColor);
                     if(isGoal) {
                          const fromEl = mapContainer.querySelector(path.dataset.from!) as HTMLElement;
                          const toEl = mapContainer.querySelector(path.dataset.to!) as HTMLElement;
