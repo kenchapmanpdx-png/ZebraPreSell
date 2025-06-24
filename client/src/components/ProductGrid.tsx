@@ -20,7 +20,7 @@ export default function ProductGrid() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-terra to-[#89B317] mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
           <p className="text-xl md:text-2xl text-forest/90 max-w-4xl mx-auto font-lora leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-            <strong>Comprehensive <span className="text-yellow-500">AM</span> and <span className="text-[#3C3C53]">PM</span> formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
+            <strong>Comprehensive <span className="text-yellow-500">AM</span> and <span className="text-[#303051]">PM</span> formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-2 md:gap-4 max-w-full mx-auto px-2">
@@ -55,7 +55,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-sm text-terra-dark bg-yellow-500 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-sm text-terra-dark bg-yellow-500/90 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>
@@ -91,9 +91,9 @@ export default function ProductGrid() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#3C3C53]">PM</span> Formula</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#303051]">PM</span> Formula</h3>
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#3C3C53]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#303051]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-sm text-white bg-[#3C3C53] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-sm text-white bg-[#303051] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>

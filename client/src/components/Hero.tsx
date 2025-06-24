@@ -76,7 +76,7 @@ export default function Hero() {
                       <button
                         type="submit"
                         disabled={isSubmitting || !email}
-                        className="bg-terra text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                        className="bg-[#C8592B] text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center">
