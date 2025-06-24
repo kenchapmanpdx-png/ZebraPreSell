@@ -10,7 +10,7 @@ export default function OurStory() {
           background: 'linear-gradient(0deg, rgba(200, 89, 43, 1) 0%, rgba(184, 112, 81, 1) 49%, rgba(200, 89, 43, 1) 100%)'
         }} data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-lora text-center mb-6 md:mb-8 text-white" data-aos="fade-up" style={{ fontSize: '1.56em' }}>
-            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-white" style={{ fontSize: '1.56em' }}>Ava</span>.
+            Behind every bottle of ZebraWell™ is a deeper purpose — and her name is <span className="text-yellow-500" style={{ fontSize: '1.56em' }}>Ava</span>.
           </h2>
 
           <div className="text-center space-y-6 text-white" data-aos="fade">
@@ -44,7 +44,7 @@ export default function OurStory() {
 
           <div className="mt-8 flex justify-center">
             <Link to="#products">
-              <button className="bg-[#89B317] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-[#89B317]/90">
+              <button className="bg-yellow-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-600">
                 Discover Our Products
               </button>
             </Link>

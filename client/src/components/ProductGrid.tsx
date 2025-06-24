@@ -30,8 +30,8 @@ export default function ProductGrid() {
               background: 'hsla(161, 51%, 12%, 1)',
               backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
             }}>
-              <div className="flex flex-col items-center text-center mb-6">
-                <div className="relative w-22 h-28 mb-4">
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="relative w-22 h-28 mb-2">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
@@ -80,8 +80,8 @@ export default function ProductGrid() {
               background: 'hsla(161, 51%, 12%, 1)',
               backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
             }}>
-              <div className="flex flex-col items-center text-center mb-6">
-                <div className="relative w-22 h-28 mb-4">
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="relative w-22 h-28 mb-2">
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
