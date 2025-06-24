@@ -14,7 +14,7 @@ export default function OurStory() {
           </h2>
 
           <div className="text-center space-y-6 text-white" data-aos="fade">
-            <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.2em' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto" style={{ fontSize: '1.38em' }}>
               Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
               She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
             </p>
