@@ -237,11 +237,11 @@ export default function InteractiveIngredientMap() {
       backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
     }}>
       <style>{`
-        .item-card { transition: all 0.2s ease-in-out; cursor: pointer; }
-        .item-card .font-semibold { transition: color 0.2s ease-in-out; }
+        .item-card { transition: all 0.15s ease-in-out; cursor: pointer; }
+        .item-card .font-semibold { transition: color 0.15s ease-in-out; }
         .item-card.highlighted { transform: scale(1.03); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); z-index: 10; position: relative; opacity: 1 !important; }
         .item-card.unfocused { opacity: 0.4; transform: scale(0.98); }
-        svg path { transition: stroke-width 0.2s ease, opacity 0.2s ease, stroke 0.2s ease; pointer-events: none; }
+        svg path { transition: stroke-width 0.15s ease, opacity 0.15s ease, stroke 0.15s ease; pointer-events: none; }
       `}</style>
       
       <div className="max-w-7xl mx-auto">

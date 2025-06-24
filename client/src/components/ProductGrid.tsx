@@ -35,7 +35,7 @@ export default function ProductGrid() {
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-1">
                       <i className="fas fa-sun text-4xl text-yellow-500"></i>
                     </div>
                   </div>
@@ -85,15 +85,15 @@ export default function ProductGrid() {
                   <div className="absolute inset-0 rounded-lg bg-sand border border-terra/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <div className="w-12 h-12 rounded-full border-2 border-terra/40 bg-[#303051] flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-4xl text-yellow-500"></i>
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-1">
+                      <i className="fas fa-moon text-4xl text-[#3E3E67]"></i>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#303051]">PM</span> Formula</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#3E3E67]">PM</span> Formula</h3>
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#303051]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#3E3E67]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
                   </div>
                 </div>
               </div>

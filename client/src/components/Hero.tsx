@@ -44,7 +44,7 @@ export default function Hero() {
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Therapeutic Clinical-Grade Supplements
             <div className="text-center mt-2">for POTS & EDS.</div>
-            <div className="text-center mt-6 mb-6" style={{ fontSize: '0.65em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
+            <div className="text-center mt-6 mb-6" style={{ fontSize: '0.696em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
           </h1>
         </div>
 
@@ -130,13 +130,7 @@ export default function Hero() {
                 </span>
               </div>
 
-              <div className="flex justify-center mt-6" data-aos="fade-up">
-                <Link to="/preorder">
-                  <button className="bg-terra text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
-                    Claim Your Spot
-                  </button>
-                </Link>
-              </div>
+
             </div>
           </div>
 
