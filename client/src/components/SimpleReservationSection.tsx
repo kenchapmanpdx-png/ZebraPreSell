@@ -47,7 +47,7 @@ export default function SimpleReservationSection() {
                   <button
                     onClick={handleSubmit}
                     disabled={isSubmitting || !email}
-                    className="bg-[#C8592B] text-white font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm whitespace-nowrap border-2 border-[#C8592B]"
+                    className="bg-[#C8592B] text-white font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-[#B5512A] transition-all duration-300 hover:scale-[1.05] disabled:opacity-100 disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-not-allowed text-sm whitespace-nowrap border-2 border-[#C8592B] disabled:border-gray-300"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center">
