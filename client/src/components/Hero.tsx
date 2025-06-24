@@ -77,7 +77,7 @@ export default function Hero() {
                           ${
                             email 
                               ? 'bg-[#2ECC71] border-[#2ECC71] hover:bg-[#28B763] hover:scale-[1.05]'
-                              : 'bg-[#C8592B] border-[#C8592B] opacity-70 cursor-not-allowed'
+                              : 'bg-[#C8592B] border-[#C8592B] opacity-100 cursor-not-allowed'
                           } border-2`
                         }
                       >
