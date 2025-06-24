@@ -218,7 +218,7 @@ export default function PreorderPage() {
                         Adding you to the list...
                       </div>
                     ) : (
-                      "Reserve Your Spot"
+                      "Claim Your Spot"
                     )}
                   </Button>
                 </form>

@@ -84,7 +84,7 @@ export default function Hero() {
                             Adding...
                           </div>
                         ) : (
-                          "Reserve Spot"
+                          "Claim Your Spot"
                         )}
                       </button>
                     </div>
