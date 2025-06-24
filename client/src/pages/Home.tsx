@@ -10,7 +10,7 @@ import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
 import OurStory from '@/components/OurStory';
 import InteractiveIngredientMap from '@/components/InteractiveIngredientMap';
-import PreorderReservationSection from '@/components/PreorderReservationSection';
+import SimpleReservationSection from '@/components/SimpleReservationSection';
 import Testimonials from '@/components/Testimonials';
 import BuyNow from '@/components/BuyNow';
 import WhatYouGet from '@/components/WhatYouGet';
@@ -46,7 +46,7 @@ export default function Home() {
       <Hero />
       <ProductGrid />
       <OurStory />
-      <PreorderReservationSection />
+      <SimpleReservationSection />
       <InteractiveIngredientMap />
       <DifferenceSection />
       <WhatYouGet />
