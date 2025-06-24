@@ -51,7 +51,7 @@ export default function Hero() {
         {/* Two column layout */}
         <div className="flex flex-col md:flex-row items-start gap-8">
           {/* Left column - Reservation form */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="fade-right" data-aos-delay="300">
             <div className="inline-block py-6 px-6 rounded-3xl" style={{
               background: 'hsla(33, 34%, 86%, 1)',
               backgroundImage: 'linear-gradient(90deg, hsla(33, 34%, 86%, 1) 0%, hsla(34, 37%, 96%, 1) 52%, hsla(33, 34%, 86%, 1) 100%)'
