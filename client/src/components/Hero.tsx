@@ -76,7 +76,7 @@ export default function Hero() {
                       <button
                         type="submit"
                         disabled={isSubmitting || !email}
-                        className="bg-terra text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                        className="bg-terra text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center">
@@ -132,7 +132,7 @@ export default function Hero() {
 
               <div className="flex justify-center mt-6" data-aos="fade-up">
                 <Link to="/preorder">
-                  <button className="bg-terra text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
+                  <button className="bg-terra text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
                     Claim Your Spot
                   </button>
                 </Link>

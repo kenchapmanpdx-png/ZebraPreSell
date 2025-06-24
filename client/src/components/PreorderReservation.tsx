@@ -75,7 +75,7 @@ export default function PreorderReservation() {
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className="bg-terra text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-terra text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-terra transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">
