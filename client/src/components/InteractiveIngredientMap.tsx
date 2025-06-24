@@ -191,9 +191,11 @@ export default function InteractiveIngredientMap() {
             card.removeEventListener('mouseenter', handleMouseEnter);
             card.removeEventListener('mouseleave', handleMouseLeave);
 
-            if (isMobile) {
-                card.addEventListener('click', handleTap);
-            } else {
+            // Always add click/tap functionality
+            card.addEventListener('click', handleTap);
+            
+            // Add hover effects only on desktop
+            if (!isMobile) {
                 card.addEventListener('mouseenter', handleMouseEnter);
                 card.addEventListener('mouseleave', handleMouseLeave);
             }
@@ -236,7 +238,7 @@ export default function InteractiveIngredientMap() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-forest">ZEBRAWELL™</h2>
           <h3 className="mt-2 text-lg sm:text-xl md:text-2xl font-semibold text-sky-600">Ingredient-to-Benefit Map</h3>
           <p className="mt-3 text-sm md:text-base text-forest/80 max-w-3xl mx-auto">
-            Hover over (or tap) an ingredient or a health goal to see its specific connections.
+            Click or tap on an ingredient or health goal to see its specific connections. Click another to switch focus.
           </p>
         </div>
 
