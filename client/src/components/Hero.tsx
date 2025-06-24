@@ -43,8 +43,8 @@ export default function Hero() {
         <div className="text-center mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Therapeutic Clinical-Grade Supplements
-            <div className="text-center">for POTS & EDS.</div>
-            <div className="text-center" style={{ fontSize: '0.72em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
+            <div className="text-center mt-2">for POTS & EDS.</div>
+            <div className="text-center mt-3" style={{ fontSize: '0.65em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
           </h1>
         </div>
 
