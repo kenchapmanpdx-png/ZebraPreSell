@@ -15,7 +15,7 @@ export default function ProductGrid() {
       <ZebraBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-1">
         <div className="text-center mb-6 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora font-bold text-forest mb-6" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora font-bold text-terra mb-6" data-aos="fade-up">
             Our Products
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-terra to-[#89B317] mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
@@ -36,7 +36,7 @@ export default function ProductGrid() {
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-16 h-16 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-sun text-2xl text-terra"></i>
+                      <i className="fas fa-sun text-4xl text-terra"></i>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ProductGrid() {
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-16 h-16 rounded-full border-2 border-terra/40 bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-2xl text-terra"></i>
+                      <i className="fas fa-moon text-4xl text-terra"></i>
                     </div>
                   </div>
                 </div>

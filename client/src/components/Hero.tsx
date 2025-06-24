@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto">
         {/* Full width heading */}
         <div className="text-center mb-8">
-          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Therapeutic Clinical-Grade Supplements
             <div className="text-center">for POTS & EDS.</div>
             <div className="text-center" style={{ fontSize: '0.72em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
@@ -169,8 +169,8 @@ export default function Hero() {
           }}
         ></div>
         <div className="max-w-3xl mx-auto px-2 sm:px-4 md:px-6 text-center relative z-10" data-aos="fade">
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-2 sm:space-y-3 md:space-y-4 text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed" data-aos="fade">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-3 sm:mb-4 md:mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed" data-aos="fade">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
             <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>
