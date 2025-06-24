@@ -23,7 +23,7 @@ export default function ProductGrid() {
             <strong>Comprehensive AM and PM formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-7xl mx-auto">
           {/* Left Column - AM Formula */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
             <div id="am-formula" className="rounded-xl shadow-lg p-4 md:p-6 lg:p-8 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100" style={{
@@ -57,7 +57,7 @@ export default function ProductGrid() {
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
                           <span className="text-xs text-terra-dark bg-stone-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
-                        <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
+                        <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>
                     ))}
                   </ul>
@@ -107,7 +107,7 @@ export default function ProductGrid() {
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
                           <span className="text-xs text-terra-dark bg-stone-200 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
-                        <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
+                        <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>
                     ))}
                   </ul>
