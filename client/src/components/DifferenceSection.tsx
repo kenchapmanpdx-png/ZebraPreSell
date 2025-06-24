@@ -2,26 +2,14 @@ import React from 'react';
 
 export default function DifferenceSection() {
   const features = [
-    {
-      icon: "🧬",
-      title: "Formulated for EDS, POTS & MCAS",
-      description: "Built specifically for rare, sensitive bodies."
-    },
+
     {
       icon: "💊",
       title: "2 Bottles Replace 15",
       description: "AM & PM system delivers complete, targeted support."
     },
-    {
-      icon: "🌿",
-      title: "Clean & MCAS-Friendly",
-      description: "Free from dyes, stearates, soy, and titanium dioxide."
-    },
-    {
-      icon: "🔬",
-      title: "Third-Party Tested",
-      description: "Every batch tested for purity and potency."
-    },
+
+
     {
       icon: "🧠",
       title: "Smart Science",
@@ -63,16 +51,8 @@ export default function DifferenceSection() {
       description: "AM and PM formulas work together for complete 24-hour support."
     },
 
-    {
-      icon: "🎯",
-      title: "No Guesswork Needed",
-      description: "Two bottles replace 12+ supplements — simple & complete."
-    },
-    {
-      icon: "🛡️",
-      title: "Tested for Peace of Mind",
-      description: "Third-party tested in FDA-registered, cGMP facility."
-    }
+
+
   ];
 
   return (
@@ -81,7 +61,7 @@ export default function DifferenceSection() {
     }}>
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest mb-2 md:mb-4" data-aos="fade-up">What Makes ZebraWell Different</h2>
-        <p className="text-lg text-gray-600 mb-6 md:mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <p className="text-xl text-gray-600 mb-6 md:mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           We've reimagined supplement design for the unique needs of rare condition warriors.
         </p>
 
