@@ -209,8 +209,12 @@ export default function PreorderPage() {
 
                   <Button
                     type="submit"
-                    disabled={isSubmitting || !email}
-                    className="w-full py-3 text-lg bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                    disabled={isSubmitting}
+                    className={`w-full py-3 text-lg text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 ${
+                      email 
+                        ? 'bg-[#2ECC71] border-[#2ECC71] hover:bg-[#28B763]'
+                        : 'bg-[#C8592B] border-[#C8592B] opacity-70 cursor-not-allowed'
+                    }`}
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
