@@ -76,11 +76,17 @@ export default function PreorderReservation() {
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className={`${email ? 'bg-green-500 hover:bg-green-600 border-green-500' : 'bg-[#C8592B] hover:bg-[#B5512A] border-[#C8592B]'} text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.05] disabled:opacity-100 disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-not-allowed border-2 disabled:border-gray-300`}
+                className={`text-white font-semibold px-6 py-3 rounded-lg shadow transition-all duration-300 text-sm whitespace-nowrap
+                  ${
+                    email 
+                      ? 'bg-[#2ECC71] border-[#2ECC71] hover:bg-[#28B763] hover:scale-[1.05]'
+                      : 'bg-[#C8592B] border-[#C8592B] opacity-70 cursor-not-allowed'
+                  } border-2`
+                }
               >
                 {isSubmitting ? (
                   <div className="flex items-center">
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                    <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin mr-1"></div>
                     Adding...
                   </div>
                 ) : (
