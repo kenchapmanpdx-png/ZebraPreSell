@@ -57,9 +57,9 @@ export default function PreorderReservation() {
     }}>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-4 md:p-12 text-center">
-          <h2 className="text-3xl font-serif font-bold text-forest mb-3 md:mb-6 fade-in">📧 Join Our Reservation List</h2>
+          <h2 className="text-3xl font-serif font-bold text-terra mb-3 md:mb-6 fade-in">📧 Reserve Your Spot – Limited First Run!</h2>
           <p className="text-xl text-forest/80 leading-relaxed fade-in max-w-2xl mx-auto mb-4 md:mb-8">
-            Be the first to know when ZebraWell is available for order. We'll send you an email notification as soon as we launch.
+            Be the first to know when ZebraWell is available for order.
           </p>
           
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -75,7 +75,7 @@ export default function PreorderReservation() {
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className="bg-[#89B317] text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-[#89B317]/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-terra text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">
@@ -83,7 +83,7 @@ export default function PreorderReservation() {
                     Adding...
                   </div>
                 ) : (
-                  "Reserve Spot"
+                  "Claim Your Spot"
                 )}
               </button>
             </div>

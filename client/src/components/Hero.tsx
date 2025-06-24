@@ -133,7 +133,7 @@ export default function Hero() {
               <div className="flex justify-center mt-6" data-aos="fade-up">
                 <Link to="/preorder">
                   <button className="bg-terra text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-terra/90 transition-all duration-300 hover:scale-[1.05] text-sm sm:text-base">
-                    Join Reservation List
+                    Claim Your Spot
                   </button>
                 </Link>
               </div>

@@ -51,7 +51,7 @@ export default function Boosters() {
                   <div className="w-8 h-8 rounded-full border-2 border-sage/30 bg-white flex items-center justify-center mb-1">
                     <i className="fas fa-sun text-sm text-sage"></i>
                   </div>
-                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell</div>
                   <div className="text-[6px] text-sage">AM Formula</div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function Boosters() {
                   <div className="w-8 h-8 rounded-full border-2 border-forest/30 bg-white flex items-center justify-center mb-1">
                     <i className="fas fa-moon text-sm text-forest"></i>
                   </div>
-                  <div className="text-[8px] font-bold text-forest">ZebraWell™</div>
+                  <div className="text-[8px] font-bold text-forest">ZebraWell</div>
                   <div className="text-[6px] text-forest">PM Formula</div>
                 </div>
               </div>
