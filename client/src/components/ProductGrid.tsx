@@ -42,7 +42,7 @@ export default function ProductGrid() {
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-yellow-500">AM</span> Formula</h3>
-                  <div className="text-xl md:text-2xl font-bold text-yellow-600 mb-3 text-center">Fuel + Focus</div>
+                  <div className="text-xl md:text-2xl font-bold text-[#C8592B] mb-3 text-center">Fuel + Focus</div>
                   <div className="flex flex-col items-center justify-center gap-2">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-yellow-500">AM</span> formula designed to support cellular energy, enhance cognitive function and mental clarity, and provide foundational support for methylation and mitochondrial health</span>
                   </div>
@@ -87,15 +87,15 @@ export default function ProductGrid() {
                   <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-terra/20 to-sand rounded-b-lg rounded-t-3xl shadow-inner"></div>
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
                     <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-1">
-                      <i className="fas fa-moon text-4xl text-[#3E3E67]"></i>
+                      <i className="fas fa-moon text-4xl text-[#5A5A85]"></i>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#3E3E67]">PM</span> Formula</h3>
-                  <div className="text-xl md:text-2xl font-bold text-[#3E3E67] mb-3 text-center">Repair + Recover</div>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#5A5A85]">PM</span> Formula</h3>
+                  <div className="text-xl md:text-2xl font-bold text-[#C8592B] mb-3 text-center">Repair + Recover</div>
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#3E3E67]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
+                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#5A5A85]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function ProductGrid() {
                       <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
                         <div className="flex justify-between items-start mb-2">
                           <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-sm text-white bg-[#303051] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
+                          <span className="text-sm text-white bg-[#5A5A85] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
                         </div>
                         <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description.replace(/\band\b/g, '&')}</p>
                       </li>

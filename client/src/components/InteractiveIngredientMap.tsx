@@ -93,10 +93,10 @@ export default function InteractiveIngredientMap() {
       });
     };
 
-    const highlightConnection = (element: HTMLElement, shouldHighlight: boolean) => {
+    const highlightConnection = (element: HTMLElement, shouldHighlight: boolean, isHover: boolean = false) => {
         // Reset all styles first, regardless of mobile or desktop
-        mapContainer.querySelectorAll('.highlighted, .unfocused').forEach(el => {
-            el.classList.remove('highlighted', 'unfocused');
+        mapContainer.querySelectorAll('.highlighted, .unfocused, .hover-highlighted').forEach(el => {
+            el.classList.remove('highlighted', 'unfocused', 'hover-highlighted');
             const span = el.querySelector('.font-semibold') as HTMLElement;
             if (span) span.style.color = '';
         });
@@ -133,7 +133,8 @@ export default function InteractiveIngredientMap() {
             }
             
             // Apply highlights to all connected items
-            connectedItems.forEach(item => item.classList.add('highlighted'));
+            const highlightClass = isHover ? 'hover-highlighted' : 'highlighted';
+            connectedItems.forEach(item => item.classList.add(highlightClass));
 
             // Fade out non-connected items in both columns
             mapContainer.querySelectorAll('.item-card').forEach(card => {
@@ -180,20 +181,20 @@ export default function InteractiveIngredientMap() {
     const handleTap = (e: Event) => {
       const target = e.currentTarget as HTMLElement;
       if (activeElement === target) {
-        highlightConnection(target, false);
+        highlightConnection(target, false, false);
         activeElement = null;
       } else {
-        if(activeElement) highlightConnection(activeElement, false);
-        highlightConnection(target, true);
+        if(activeElement) highlightConnection(activeElement, false, false);
+        highlightConnection(target, true, false);
         activeElement = target;
       }
     };
 
     const handleMouseEnter = (e: Event) => {
-      if (!activeElement) highlightConnection(e.currentTarget as HTMLElement, true);
+      if (!activeElement) highlightConnection(e.currentTarget as HTMLElement, true, true);
     };
     const handleMouseLeave = (e: Event) => { 
-      if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false);
+      if(!activeElement) highlightConnection(e.currentTarget as HTMLElement, false, false);
     };
 
     const addEventListeners = () => {
@@ -240,6 +241,7 @@ export default function InteractiveIngredientMap() {
         .item-card { transition: all 0.15s ease-in-out; cursor: pointer; }
         .item-card .font-semibold { transition: color 0.15s ease-in-out; }
         .item-card.highlighted { transform: scale(1.03); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); z-index: 10; position: relative; opacity: 1 !important; }
+        .item-card.hover-highlighted { transform: scale(1.02); box-shadow: 0 2px 4px -1px rgb(0 0 0 / 0.08); z-index: 5; position: relative; opacity: 1 !important; }
         .item-card.unfocused { opacity: 0.4; transform: scale(0.98); }
         svg path { transition: stroke-width 0.15s ease, opacity 0.15s ease, stroke 0.15s ease; pointer-events: none; }
       `}</style>
