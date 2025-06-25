@@ -45,11 +45,7 @@ export default function Hero() {
             Therapeutic Clinical-Grade Supplements
             <div className="text-center mt-2">for POTS & EDS.</div>
             <div className="text-center mt-6 mb-6" style={{ fontSize: '0.696em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
-            <div className="text-center mt-4" style={{ fontSize: '0.5em', color: '#C8592B' }}>
-              <span className="inline-block mx-2">ZebraWell AM: Fuel + Focus</span>
-              <span className="inline-block mx-2">•</span>
-              <span className="inline-block mx-2">ZebraWell PM: Repair + Recover</span>
-            </div>
+            
           </h1>
         </div>
 
