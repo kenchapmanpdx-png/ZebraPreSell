@@ -106,7 +106,7 @@ export default function PreorderPage() {
                     Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night. 
                     That's it—no more 12-bottle stacks.
                   </p>
-                </div>v>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <Card className="border-amber-200 bg-amber-50/50">
