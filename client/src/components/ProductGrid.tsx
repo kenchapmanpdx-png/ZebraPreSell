@@ -42,6 +42,7 @@ export default function ProductGrid() {
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-yellow-500">AM</span> Formula</h3>
+                  <div className="text-xl md:text-2xl font-bold text-yellow-600 mb-3 text-center">Fuel + Focus</div>
                   <div className="flex flex-col items-center justify-center gap-2">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-yellow-500">AM</span> formula designed to support cellular energy, enhance cognitive function and mental clarity, and provide foundational support for methylation and mitochondrial health</span>
                   </div>
@@ -92,6 +93,7 @@ export default function ProductGrid() {
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#3E3E67]">PM</span> Formula</h3>
+                  <div className="text-xl md:text-2xl font-bold text-[#3E3E67] mb-3 text-center">Repair + Recover</div>
                   <div className="flex flex-col items-center justify-center gap-2">
                     <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#3E3E67]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
                   </div>
