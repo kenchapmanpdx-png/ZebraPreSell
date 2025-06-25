@@ -90,11 +90,23 @@ export default function PreorderPage() {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     What's Inside
                   </h2>
+                  <div className="mb-6">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex-1">
+                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraWell AM</h3>
+                        <p className="text-[#1D4526] font-medium">Fuel + Focus</p>
+                      </div>
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex-1">
+                        <h3 className="font-bold text-[#C8592B] mb-2">ZebraWell PM</h3>
+                        <p className="text-[#1D4526] font-medium">Repair + Recover</p>
+                      </div>
+                    </div>
+                  </div>
                   <p className="text-lg text-gray-700 mb-6">
                     Each bottle contains 120 capsules (30-day supply). Take 4 capsules in the morning and 4 at night. 
                     That's it—no more 12-bottle stacks.
                   </p>
-                </div>
+                </div>v>
 
                 <div className="grid grid-cols-2 gap-4">
                   <Card className="border-amber-200 bg-amber-50/50">

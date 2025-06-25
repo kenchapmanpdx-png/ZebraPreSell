@@ -63,15 +63,15 @@ export default function PreorderReservation() {
             Be the first to know when ZebraWell is available for order.
           </p>
           
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex gap-3">
+          <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="Enter your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 bg-white"
+                className="flex-1 min-w-0 px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 bg-white"
               />
               <button
                 type="submit"

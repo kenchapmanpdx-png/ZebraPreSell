@@ -45,6 +45,11 @@ export default function Hero() {
             Therapeutic Clinical-Grade Supplements
             <div className="text-center mt-2">for POTS & EDS.</div>
             <div className="text-center mt-6 mb-6" style={{ fontSize: '0.696em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
+            <div className="text-center mt-4" style={{ fontSize: '0.5em', color: '#C8592B' }}>
+              <span className="inline-block mx-2">ZebraWell AM: Fuel + Focus</span>
+              <span className="inline-block mx-2">•</span>
+              <span className="inline-block mx-2">ZebraWell PM: Repair + Recover</span>
+            </div>
           </h1>
         </div>
 
@@ -60,15 +65,15 @@ export default function Hero() {
                 </p>
 
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                    <div className="flex gap-2">
+                  <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+                    <div className="flex flex-col sm:flex-row gap-2">
                       <input
                         type="email"
                         placeholder="Enter your email address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="flex-1 px-3 py-2 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 text-sm bg-white"
+                        className="flex-1 min-w-0 px-3 py-2 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 text-sm bg-white"
                       />
                       <button
                         type="submit"

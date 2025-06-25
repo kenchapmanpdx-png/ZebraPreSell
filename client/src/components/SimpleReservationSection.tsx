@@ -35,14 +35,14 @@ export default function SimpleReservationSection() {
               </p>
 
               {!isSubmitted ? (
-                <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                <div className="flex flex-col sm:flex-row gap-2 w-full max-w-md mx-auto">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
                     required
-                    className="flex-1 px-4 py-2 rounded-lg border-2 border-amber-300 focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-sm bg-white text-gray-900"
+                    className="flex-1 min-w-0 px-4 py-2 rounded-lg border-2 border-amber-300 focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-sm bg-white text-gray-900"
                   />
                   <button
                     onClick={handleSubmit}
