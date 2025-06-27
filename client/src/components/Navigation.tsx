@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ZebraLogo from './ZebraLogo';
+import { Link } from 'wouter';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function Navigation() {
       ></div>
       <div className="container mx-auto px-3 md:px-4 flex justify-between items-center relative z-10">
         {/* Logo */}
-        <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
+        <Link href="/" className="flex items-center ml-0 md:ml-[-20px]">
           <div className="scale-115">
             <ZebraLogo />
           </div>
@@ -52,194 +53,71 @@ export default function Navigation() {
             <span className="text-xl text-white/90 font-medium font-sans">Supporting EDS & POTS</span>
             <span className="text-xl text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
           </div>
-        </a>
+        </Link>
 
-        {/* Desktop Navigation - Hidden for presale page */}
-        <div className="hidden">
-        </div>
-
-        {/* Mobile Menu Button - Hidden for presale page */}
-        <div className="hidden">
-        </div>
-      </div>
-
-      {/* Mobile Navigation - Hidden for presale page */}
-      <div className="hidden">
-      </div>
-    </nav>
-  );
-}
-```
-
-```typescript
-import { useState, useEffect } from 'react';
-import ZebraLogo from './ZebraLogo';
-import Link from 'next/link'; // Import Link from next/link
-
-export default function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Handle scroll effect for sticky navigation
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setScrolled(scrollTop > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Handle mobile menu links - close menu when a link is clicked
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  return (
-    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-1 md:py-2 shadow-md' : 'py-2 md:py-3'} border-b border-sage/10 relative`} 
-         style={{
-           background: '#1D4526'
-         }}>
-      {/* Zebra pattern overlay */}
-      <div 
-        className="absolute inset-0 bg-repeat"
-        style={{
-          backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.025,
-          backgroundSize: '800px 400px'
-        }}
-      ></div>
-      <div className="container mx-auto px-3 md:px-4 flex justify-between items-center relative z-10">
-        {/* Logo */}
-        <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
-          <div className="scale-115">
-            <ZebraLogo />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
-          </div>
-          <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
-            <span className="text-xl text-white/90 font-medium font-sans">Supporting EDS & POTS</span>
-            <span className="text-xl text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
-          </div>
-        </a>
-
-        {/* Desktop Navigation - Hidden for presale page */}
-        <div className="hidden md:flex space-x-6 items-center"> {/* Make this visible */}
-          <Link href="/#products" className="text-white hover:text-amber-200 transition-colors">
-            Products
-          </Link>
-          <Link href="/#story" className="text-white hover:text-amber-200 transition-colors">
-            Our Story
-          </Link>
-          <Link href="/preorder" className="text-white hover:text-amber-200 transition-colors">
-            Preorder
-          </Link>
-          <Link href="/#contact" className="text-white hover:text-amber-200 transition-colors">
-            Contact
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button - Hidden for presale page */}
-        <div className="hidden">
-        </div>
-      </div>
-
-      {/* Mobile Navigation - Hidden for presale page */}
-      <div className="hidden">
-      </div>
-    </nav>
-  );
-}
-```
-
-```
-import { useState, useEffect } from 'react';
-import ZebraLogo from './ZebraLogo';
-import Link from 'next/link'; // Import Link from next/link
-
-export default function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Handle scroll effect for sticky navigation
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setScrolled(scrollTop > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Handle mobile menu links - close menu when a link is clicked
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  return (
-    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-1 md:py-2 shadow-md' : 'py-2 md:py-3'} border-b border-sage/10 relative`} 
-         style={{
-           background: '#1D4526'
-         }}>
-      {/* Zebra pattern overlay */}
-      <div 
-        className="absolute inset-0 bg-repeat"
-        style={{
-          backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.025,
-          backgroundSize: '800px 400px'
-        }}
-      ></div>
-      <div className="container mx-auto px-3 md:px-4 flex justify-between items-center relative z-10">
-        {/* Logo */}
-        <a href="#" className="flex items-center ml-0 md:ml-[-20px]">
-          <div className="scale-115">
-            <ZebraLogo />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
-          </div>
-          <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
-            <span className="text-xl text-white/90 font-medium font-sans">Supporting EDS & POTS</span>
-            <span className="text-xl text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
-          </div>
-        </a>
-
-        {/* Desktop Navigation - Hidden for presale page */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link href="/#products" className="text-white hover:text-amber-200 transition-colors">
+          <a href="/#products" className="text-white hover:text-amber-200 transition-colors">
             Products
-          </Link>
-          <Link href="/#story" className="text-white hover:text-amber-200 transition-colors">
+          </a>
+          <a href="/#story" className="text-white hover:text-amber-200 transition-colors">
             Our Story
-          </Link>
+          </a>
           <Link href="/preorder" className="text-white hover:text-amber-200 transition-colors">
             Preorder
           </Link>
-          <Link href="/#contact" className="text-white hover:text-amber-200 transition-colors">
+          <a href="/#contact" className="text-white hover:text-amber-200 transition-colors">
             Contact
-          </Link>
+          </a>
         </div>
 
-        {/* Mobile Menu Button - Hidden for presale page */}
-        <div className="hidden">
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
 
-      {/* Mobile Navigation - Hidden for presale page */}
-      <div className="hidden">
-      </div>
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-forest border-t border-sage/20">
+          <div className="px-4 py-2 space-y-2">
+            <a 
+              href="/#products" 
+              className="block text-white hover:text-amber-200 transition-colors py-2"
+              onClick={handleLinkClick}
+            >
+              Products
+            </a>
+            <a 
+              href="/#story" 
+              className="block text-white hover:text-amber-200 transition-colors py-2"
+              onClick={handleLinkClick}
+            >
+              Our Story
+            </a>
+            <Link 
+              href="/preorder" 
+              className="block text-white hover:text-amber-200 transition-colors py-2"
+              onClick={handleLinkClick}
+            >
+              Preorder
+            </Link>
+            <a 
+              href="/#contact" 
+              className="block text-white hover:text-amber-200 transition-colors py-2"
+              onClick={handleLinkClick}
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
