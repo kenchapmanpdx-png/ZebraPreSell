@@ -146,6 +146,94 @@ export default function PreorderPage() {
         </div>
       </section>
 
+      {/* Symptom Selector Quiz */}
+      <section id="zebrawell-quiz" className="py-12 px-4 md:px-12 bg-amber-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-green-900 mb-4">What Symptoms Are You Struggling With Most?</h2>
+          <p className="text-base md:text-lg text-gray-700 mb-6">Select up to 3 symptoms and see how ZebraWell supports them.</p>
+
+          {/* Quiz Form */}
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mb-6">
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Fatigue" className="quiz-checkbox" />
+              Fatigue / Low Energy
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Brain Fog" className="quiz-checkbox" />
+              Brain Fog
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Dizziness" className="quiz-checkbox" />
+              Dizziness / Lightheadedness
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Poor Circulation" className="quiz-checkbox" />
+              Cold Hands / Poor Circulation
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Joint Pain" className="quiz-checkbox" />
+              Joint Pain / Hypermobile Discomfort
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Gut Issues" className="quiz-checkbox" />
+              Gut Issues / IBS
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Anxiety" className="quiz-checkbox" />
+              Anxiety / Dysautonomia
+            </label>
+            <label className="quiz-option flex items-center gap-2 text-base text-gray-800 bg-gray-50 p-3 rounded-lg cursor-pointer border border-gray-300 transition-all duration-200 hover:bg-green-50 hover:border-gray-400">
+              <input type="checkbox" name="symptoms" value="Inflammation" className="quiz-checkbox" />
+              Chronic Inflammation
+            </label>
+          </div>
+
+          {/* Submit Button */}
+          <button 
+            type="button" 
+            onClick={() => {
+              const selected = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => el.value);
+              const resultList = document.getElementById('resultList');
+              const resultBox = document.getElementById('quizResults');
+              
+              if (resultList && resultBox) {
+                resultList.innerHTML = '';
+                if (selected.length === 0) {
+                  resultList.innerHTML = '<li>Please select at least one symptom.</li>';
+                } else {
+                  const data = {
+                    "Fatigue": ["CoQ10 (AM)", "ALCAR (AM/PM)", "Magnesium Malate (AM/PM)"],
+                    "Brain Fog": ["Alpha-GPC (AM/PM)", "B12 (AM)", "Taurine (AM/PM)"],
+                    "Dizziness": ["Taurine (AM/PM)", "Magnesium (AM/PM)", "Thiamine (AM)"],
+                    "Poor Circulation": ["Vitamin K2 (AM)", "Copper (PM)", "Zinc (AM/PM)"],
+                    "Joint Pain": ["PEA (AM/PM)", "Silicon (AM)", "Hyaluronic Acid (PM)"],
+                    "Gut Issues": ["Zinc Carnosine (PM)", "PEA (AM/PM)", "Magnesium (PM)"],
+                    "Anxiety": ["L-Theanine (PM)", "Taurine (PM)", "Magnesium (PM)"],
+                    "Inflammation": ["R-Lipoic Acid (PM)", "NAC (AM)", "PEA (AM/PM)"]
+                  };
+
+                  selected.forEach(symptom => {
+                    const ingredients = data[symptom] || [];
+                    const line = `<li><strong>${symptom}</strong>: ${ingredients.join(', ')}</li>`;
+                    resultList.innerHTML += line;
+                  });
+                }
+                resultBox.classList.remove('hidden');
+              }
+            }}
+            className="bg-[#8c5c2c] hover:bg-[#a86636] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 mt-4"
+          >
+            Show My Support Plan
+          </button>
+
+          {/* Results Output */}
+          <div id="quizResults" className="mt-8 hidden text-left bg-white border border-green-200 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-green-800 mb-2">Here's how ZebraWell can help:</h3>
+            <ul id="resultList" className="list-disc list-inside text-gray-800"></ul>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-16 bg-gradient-to-r from-amber-100/50 to-orange-100/50">
         <div className="container mx-auto px-6">
