@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto">
         {/* Rotating text section */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
+          <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4">
             <span>Wellness for the</span> <br />
             <div className="relative inline-block w-full min-h-[1.5em] overflow-visible pb-2">
               <span 
@@ -66,7 +66,8 @@ export default function Hero() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
                 }`}
                 style={{
-                  filter: isVisible ? 'blur(0)' : 'blur(0.5px)'
+                  filter: isVisible ? 'blur(0)' : 'blur(0.5px)',
+                  fontSize: '0.85em'
                 }}
               >
                 {words[currentWordIndex]}
