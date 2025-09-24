@@ -1,0 +1,59 @@
+ rotating hero text implementation. Here's the complete code you need to copy for the rotating text effect:
+
+React Component Code (TypeScript/JSX):
+const [currentWordIndex, setCurrentWordIndex] = useState(0);
+const [isVisible, setIsVisible] = useState(true);
+const words = ["Unseen", "Disbelieved", "Dismissed", "Frustrated", "Fighting Alone", "Overlooked", "Rare", "Resilient"];
+useEffect(() => {
+  const cycleWords = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      setIsVisible(true);
+    }, 1200);
+  };
+  const interval = setInterval(cycleWords, 4500);
+  return () => clearInterval(interval);
+}, [words.length]);
+JSX for the Hero Text:
+<h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[#1a2c26] mb-4">
+  <span>Wellness for the</span> <br />
+  <div className="relative inline-block w-full min-h-[1.5em] overflow-visible pb-2">
+    <span 
+      className={`absolute top-0 left-0 w-full bg-gradient-to-r from-[#ff774d] to-[#ffb48a] bg-clip-text text-transparent word-fade-smooth ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
+      }`}
+      style={{
+        filter: isVisible ? 'blur(0)' : 'blur(0.5px)'
+      }}
+    >
+      {words[currentWordIndex]}
+    </span>
+  </div>
+</h1>
+CSS for Smooth Transitions:
+.word-fade-smooth {
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+@keyframes smoothWordFade {
+  0% { 
+    opacity: 0; 
+    transform: translateY(8px) scale(0.99);
+    filter: blur(0.5px);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+How it works:
+State Management: currentWordIndex tracks which word to show, isVisible controls the fade effect
+Timing: Words change every 4.5 seconds with a 1.2-second fade transition
+Smooth Animation: Uses CSS transitions with cubic-bezier easing for professional feel
+Visual Effects: Includes slight blur and transform effects during transitions
+Gradient Text: The rotating words have a gradient color effect
+Just replace the words array with your own text and adjust the colors/timing as needed for your application!

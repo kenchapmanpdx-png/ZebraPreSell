@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { useToast } from '@/hooks/use-toast';
 import ZebraHeart from './ZebraHeart';
@@ -8,6 +8,23 @@ export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+
+  // Rotating text state
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const words = ["Unseen", "Disbelieved", "Dismissed", "Frustrated", "Fighting Alone", "Overlooked", "Rare", "Resilient"];
+
+  useEffect(() => {
+    const cycleWords = () => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setIsVisible(true);
+      }, 1200);
+    };
+    const interval = setInterval(cycleWords, 4500);
+    return () => clearInterval(interval);
+  }, [words.length]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,6 +64,25 @@ export default function Hero() {
             <div className="text-center mt-6 mb-6" style={{ fontSize: '0.696em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
             
           </h1>
+        </div>
+
+        {/* Rotating text section */}
+        <div className="text-center mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white mb-4">
+            <span>Wellness for the</span> <br />
+            <div className="relative inline-block w-full min-h-[1.5em] overflow-visible pb-2">
+              <span 
+                className={`absolute top-0 left-0 w-full bg-gradient-to-r from-[#ff774d] to-[#ffb48a] bg-clip-text text-transparent word-fade-smooth ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
+                }`}
+                style={{
+                  filter: isVisible ? 'blur(0)' : 'blur(0.5px)'
+                }}
+              >
+                {words[currentWordIndex]}
+              </span>
+            </div>
+          </h2>
         </div>
 
         {/* Two column layout */}

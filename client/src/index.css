@@ -57,6 +57,27 @@
   --inw-green: 85 64% 41.8%; /* 5% darker than original */
 }
 
+/* Rotating text animations */
+.word-fade-smooth {
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+@keyframes smoothWordFade {
+  0% { 
+    opacity: 0; 
+    transform: translateY(8px) scale(0.99);
+    filter: blur(0.5px);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
 .dark {
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
