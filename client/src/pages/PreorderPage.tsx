@@ -192,7 +192,7 @@ export default function PreorderPage() {
           <button 
             type="button" 
             onClick={() => {
-              const selected = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => el.value);
+              const selected = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => (el as HTMLInputElement).value);
               const resultList = document.getElementById('resultList');
               const resultBox = document.getElementById('quizResults');
               
@@ -201,7 +201,7 @@ export default function PreorderPage() {
                 if (selected.length === 0) {
                   resultList.innerHTML = '<li>Please select at least one symptom.</li>';
                 } else {
-                  const data = {
+                  const data: Record<string, string[]> = {
                     "Fatigue": ["CoQ10 (AM)", "ALCAR (AM/PM)", "Magnesium Malate (AM/PM)"],
                     "Brain Fog": ["Alpha-GPC (AM/PM)", "B12 (AM)", "Taurine (AM/PM)"],
                     "Dizziness": ["Taurine (AM/PM)", "Magnesium (AM/PM)", "Thiamine (AM)"],
