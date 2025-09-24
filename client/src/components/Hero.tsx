@@ -67,23 +67,25 @@ export default function Hero() {
         </div>
 
         {/* Rotating text section */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4">
-            <span>Wellness for the</span> <br />
-            <div className="relative inline-block w-full min-h-[1.5em] overflow-visible pb-2">
-              <span 
-                className={`absolute top-0 left-0 w-full bg-gradient-to-r from-[#ff774d] to-[#ffb48a] bg-clip-text text-transparent word-fade-smooth ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
-                }`}
-                style={{
-                  filter: isVisible ? 'blur(0)' : 'blur(0.5px)',
-                  fontSize: '0.85em'
-                }}
-              >
-                {words[currentWordIndex]}
-              </span>
-            </div>
-          </h2>
+        <div className="flex justify-center mb-8">
+          <div className="flex justify-center md:justify-start md:ml-0">
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4 text-left">
+              <span>Wellness for the</span> <br />
+              <div className="relative inline-block min-h-[1.5em] overflow-visible pb-2">
+                <span 
+                  className={`bg-gradient-to-r from-[#ff774d] to-[#ffb48a] bg-clip-text text-transparent word-fade-smooth ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
+                  }`}
+                  style={{
+                    filter: isVisible ? 'blur(0)' : 'blur(0.5px)',
+                    fontSize: '0.85em'
+                  }}
+                >
+                  {words[currentWordIndex]}
+                </span>
+              </div>
+            </h2>
+          </div>
         </div>
 
         {/* Two column layout */}
