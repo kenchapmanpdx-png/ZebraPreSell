@@ -67,9 +67,9 @@ export default function Hero() {
         </div>
 
         {/* Rotating text section */}
-        <div className="flex justify-center mb-8">
-          <div className="flex justify-center md:justify-start md:ml-0">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4 text-left">
+        <div className="flex justify-start mb-8 pl-4 md:pl-8">
+          <div className="text-left">
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4">
               <span>Wellness for the</span> <br />
               <div className="relative inline-block min-h-[1.5em] overflow-visible pb-2">
                 <span 
