@@ -1,34 +1,115 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { 
+  insertPreorderReservationSchema,
+  insertContactSubmissionSchema,
+  insertSampleRequestSchema
+} from "@shared/schema";
+import { fromZodError } from "zod-validation-error";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // API route for contact form submissions
-  app.post('/api/contact', (req, res) => {
-    const { name, email, message } = req.body;
-    
-    // Validate data
-    if (!name || !email || !message) {
-      return res.status(400).json({ message: "All fields are required" });
+  // API route for preorder reservations
+  app.post('/api/preorder', async (req, res) => {
+    try {
+      const validationResult = insertPreorderReservationSchema.safeParse(req.body);
+      
+      if (!validationResult.success) {
+        const validationError = fromZodError(validationResult.error);
+        return res.status(400).json({ 
+          message: "Validation failed", 
+          errors: validationError.details 
+        });
+      }
+
+      const reservation = await storage.createPreorderReservation(validationResult.data);
+      return res.status(201).json({ 
+        message: "Preorder reservation created successfully",
+        data: reservation
+      });
+    } catch (error) {
+      console.error('Error creating preorder reservation:', error);
+      return res.status(500).json({ message: "Internal server error" });
     }
-    
-    // In a real app, this would store the contact submission or send an email
-    // For now, just return success
-    return res.status(200).json({ message: "Contact form submitted successfully" });
+  });
+
+  // API route for contact form submissions
+  app.post('/api/contact', async (req, res) => {
+    try {
+      const validationResult = insertContactSubmissionSchema.safeParse(req.body);
+      
+      if (!validationResult.success) {
+        const validationError = fromZodError(validationResult.error);
+        return res.status(400).json({ 
+          message: "Validation failed", 
+          errors: validationError.details 
+        });
+      }
+
+      const submission = await storage.createContactSubmission(validationResult.data);
+      return res.status(201).json({ 
+        message: "Contact form submitted successfully",
+        data: submission
+      });
+    } catch (error) {
+      console.error('Error creating contact submission:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
   });
   
   // API route for sample requests
-  app.post('/api/request-sample', (req, res) => {
-    const { name, email, reason } = req.body;
-    
-    // Validate data
-    if (!name || !email || !reason) {
-      return res.status(400).json({ message: "All fields are required" });
+  app.post('/api/request-sample', async (req, res) => {
+    try {
+      const validationResult = insertSampleRequestSchema.safeParse(req.body);
+      
+      if (!validationResult.success) {
+        const validationError = fromZodError(validationResult.error);
+        return res.status(400).json({ 
+          message: "Validation failed", 
+          errors: validationError.details 
+        });
+      }
+
+      const request = await storage.createSampleRequest(validationResult.data);
+      return res.status(201).json({ 
+        message: "Sample request submitted successfully",
+        data: request
+      });
+    } catch (error) {
+      console.error('Error creating sample request:', error);
+      return res.status(500).json({ message: "Internal server error" });
     }
-    
-    // In a real app, this would store the sample request or trigger a fulfillment process
-    // For now, just return success
-    return res.status(200).json({ message: "Sample request submitted successfully" });
+  });
+
+  // Get all submissions (for admin/debugging purposes)
+  app.get('/api/admin/preorders', async (req, res) => {
+    try {
+      const reservations = await storage.getPreorderReservations();
+      return res.json({ data: reservations });
+    } catch (error) {
+      console.error('Error fetching preorder reservations:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.get('/api/admin/contacts', async (req, res) => {
+    try {
+      const submissions = await storage.getContactSubmissions();
+      return res.json({ data: submissions });
+    } catch (error) {
+      console.error('Error fetching contact submissions:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.get('/api/admin/samples', async (req, res) => {
+    try {
+      const requests = await storage.getSampleRequests();
+      return res.json({ data: requests });
+    } catch (error) {
+      console.error('Error fetching sample requests:', error);
+      return res.status(500).json({ message: "Internal server error" });
+    }
   });
 
   const httpServer = createServer(app);

@@ -45,9 +45,14 @@ export class MemStorage implements IStorage {
   async createPreorderReservation(insertReservation: InsertPreorderReservation): Promise<PreorderReservation> {
     const id = this.currentPreorderReservationId++;
     const reservation: PreorderReservation = { 
-      ...insertReservation, 
+      ...insertReservation,
       id,
-      createdAt: new Date()
+      createdAt: new Date(),
+      // Convert undefined to null for database compatibility
+      phone: insertReservation.phone ?? null,
+      conditions: insertReservation.conditions ?? null,
+      currentSupplements: insertReservation.currentSupplements ?? null,
+      hearAboutUs: insertReservation.hearAboutUs ?? null,
     };
     this.preorderReservations.set(id, reservation);
     return reservation;
