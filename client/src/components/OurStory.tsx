@@ -14,7 +14,7 @@ export default function OurStory() {
           <div className="text-center space-y-4 text-white px-2 md:px-4" data-aos="fade">
             <p className="text-lg md:text-xl leading-relaxed max-w-5xl mx-auto" style={{ fontSize: '1.38em' }}>
               Ava is my daughter, brave, brilliant, and resilient in ways most will never have to be.
-              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), POTS, and Mast Cell Activation Syndrome (MCAS). These are complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, Subluxating Joints, and extreme fatigue.
+              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), Postural Orthostatic Tachycardia Syndrome (POTS), and Mast Cell Activation Syndrome (MCAS). These are complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, Subluxating Joints, and extreme fatigue.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed max-w-5xl mx-auto" style={{ fontSize: '1.38em' }}>
