@@ -663,7 +663,7 @@ export default function InteractiveIngredientMap() {
           <div className="flex flex-row justify-between items-start gap-4 md:gap-16">
             
             {/* Column 1: Health Goals */}
-            <div id="issues-col" className="w-[34%] md:w-[27%] space-y-2 md:space-y-6" role="list" aria-label="Health Goals">
+            <div id="issues-col" className="w-[39%] md:w-[31%] space-y-2 md:space-y-6" role="list" aria-label="Health Goals">
               <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">TARGETED HEALTH GOALS</h3>
               <div id="issue-mitochondria" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-yellow-400 font-semibold text-forest text-xs md:text-base flex items-center" role="listitem" tabIndex={0} aria-label="Mitochondrial Health - click to see connected ingredients">Mitochondrial Health</div>
               <div id="issue-energy" className="item-card bg-white px-2 py-2 md:px-3 md:py-3 rounded-lg shadow-sm border-l-4 border-red-500 font-semibold text-forest text-xs md:text-base flex items-center" role="listitem" tabIndex={0} aria-label="Fatigue and Energy Production - click to see connected ingredients">Fatigue & Energy Production</div>
@@ -682,7 +682,7 @@ export default function InteractiveIngredientMap() {
             </div>
 
             {/* Column 2: Ingredients */}
-            <div id="ingredients-col" className="w-[34%] md:w-[27%] space-y-1 md:space-y-2" role="list" aria-label="Formulation Ingredients">
+            <div id="ingredients-col" className="w-[39%] md:w-[31%] space-y-1 md:space-y-2" role="list" aria-label="Formulation Ingredients">
               <h3 className="text-base md:text-lg font-bold text-forest text-center md:text-left mb-2 md:mb-3">FORMULATION INGREDIENTS</h3>
               <div id="ing-astaxanthin" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0} aria-label="Astaxanthin - click to see health benefits"><span className="font-semibold text-forest">Astaxanthin</span></div>
               <div id="ing-benfotiamine" className="item-card bg-white px-2 py-1 md:px-3 md:py-1.5 rounded-md shadow-sm text-xs md:text-base" role="listitem" tabIndex={0} aria-label="Benfotiamine B1 - click to see health benefits"><span className="font-semibold text-forest">Benfotiamine (B1)</span></div>
