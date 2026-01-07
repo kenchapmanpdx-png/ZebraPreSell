@@ -8,13 +8,13 @@ export default function OurStory() {
       <div className="container mx-auto px-4 relative z-1">
         <div className="max-w-6xl mx-auto rounded-xl p-2 md:p-6 shadow-lg border border-terra/10 bg-terra" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-lora text-center mb-6 md:mb-8 text-white pt-8 md:pt-16" data-aos="fade-up" style={{ fontSize: '1.72em' }}>
-            Behind every bottle of ZebraWell is a deeper purpose — and her name is <span className="text-yellow-500" style={{ fontSize: '1.56em' }}>Ava</span>.
+            Behind every bottle of ZebraWell is a deeper purpose and her name is <span className="text-yellow-500" style={{ fontSize: '1.56em' }}>Ava</span>.
           </h2>
 
           <div className="text-center space-y-4 text-white px-2 md:px-4" data-aos="fade">
             <p className="text-lg md:text-xl leading-relaxed max-w-5xl mx-auto" style={{ fontSize: '1.38em' }}>
-              Ava is my daughter — brave, brilliant, and resilient in ways most will never have to be.
-              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), and POTS — complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, partially dislocating joints, and extreme fatigue.
+              Ava is my daughter, brave, brilliant, and resilient in ways most will never have to be.
+              She lives with Scoliosis, Ehlers-Danlos Syndrome (hEDS), POTS, and Mast Cell Activation Syndrome (MCAS). These are complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, Subluxating Joints, and extreme fatigue.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed max-w-5xl mx-auto" style={{ fontSize: '1.38em' }}>
