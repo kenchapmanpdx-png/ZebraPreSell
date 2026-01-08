@@ -25,10 +25,14 @@ export default function ProductGrid() {
           </p>
           <button
             onClick={() => setView(view === 'capsules' ? 'powder' : 'capsules')}
-            className="bg-white border border-gray-300 rounded-lg px-5 py-2.5 cursor-pointer font-medium hover:bg-gray-50 transition-colors"
+            className={`rounded-xl px-8 py-4 cursor-pointer font-bold text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
+              view === 'capsules' 
+                ? 'bg-gradient-to-r from-green-600 to-green-500 text-white border-2 border-green-400' 
+                : 'bg-white text-forest border-2 border-gray-300 hover:bg-gray-50'
+            }`}
             data-testid="toggle-view-button"
           >
-            {view === 'capsules' ? 'View Powder Formula →' : '← Back to Capsules'}
+            {view === 'capsules' ? '🥤 View Powder Formula →' : '← Back to Capsules'}
           </button>
         </div>
 
