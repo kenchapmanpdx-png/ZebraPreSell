@@ -1,0 +1,187 @@
+import { useState } from 'react';
+
+// v6.8 AM CAPSULES (19 ingredients)
+const amIngredients = [
+  { name: "L-Lysine HCl", dosage: "500 mg", description: "Essential collagen cross-linking substrate; required for carnitine synthesis" },
+  { name: "Nicotinamide Riboside (Niagen®)", dosage: "250 mg", description: "NAD+ precursor providing mast cell stabilization via SIRT6 pathway activation" },
+  { name: "CoQ10 (Ubiquinol)", dosage: "200 mg", description: "Highly absorbable form to fuel mitochondrial energy production & combat fatigue" },
+  { name: "Recombinant Human Lactoferrin", dosage: "150 mg", description: "Precision-fermented human lactoferrin for unique tryptase inhibition; dairy-free & MCAS-safe" },
+  { name: "Benfotiamine (B1)", dosage: "150 mg", description: "Fat-soluble form of Vitamin B1 with 5× bioavailability supporting nerve health & autonomic function" },
+  { name: "Pycnogenol®", dosage: "100 mg", description: "French Maritime Pine bark shown to reduce MMP-8 in human RCT; supports collagen protection" },
+  { name: "Niacinamide (B3)", dosage: "50 mg", description: "Flush-free NAD+ precursor at conservative dose to avoid histamine elevation" },
+  { name: "P5P (Pyridoxal-5-Phosphate)", dosage: "50 mg", description: "Active form of B6, essential for DAO enzyme histamine degradation & neurotransmitter synthesis" },
+  { name: "Manganese Bisglycinate", dosage: "4 mg", description: "Essential cofactor for SOD2 antioxidant enzyme & glycosyltransferase function" },
+  { name: "R5P (Riboflavin-5-Phosphate)", dosage: "25 mg", description: "Active form of B2, crucial for FAD cofactor & mitochondrial ETC Complexes I/II" },
+  { name: "PQQ (BioPQQ®)", dosage: "20 mg", description: "Inhibits MMP-1, MMP-3 & MMP-13 in human dermal fibroblasts; supports mitochondrial biogenesis" },
+  { name: "Copper Bisglycinate", dosage: "2 mg", description: "Essential lysyl oxidase cofactor for collagen cross-linking; separated from zinc by 12+ hours" },
+  { name: "Pantothenic Acid (B5)", dosage: "5 mg", description: "Supports Coenzyme A synthesis for Krebs cycle energy metabolism" },
+  { name: "Boron Glycinate", dosage: "2 mg", description: "Supports bone metabolism & proper utilization of other minerals like magnesium" },
+  { name: "Vitamin B12 (Methylcobalamin)", dosage: "1 mg", description: "Active methylated form supporting methylation pathways & neurological function" },
+  { name: "Methylfolate (5-MTHF)", dosage: "800 mcg", description: "Most bioavailable active form of folate (Quatrefolic®), bypassing MTHFR polymorphisms" },
+  { name: "Molybdenum Glycinate", dosage: "150 mcg", description: "Essential sulfite oxidase cofactor supporting detoxification pathways" },
+  { name: "Selenium (Selenomethionine)", dosage: "100 mcg", description: "Essential glutathione peroxidase cofactor & thyroid function support" },
+  { name: "Biotin (B7)", dosage: "300 mcg", description: "Essential carboxylase cofactor supporting energy metabolism" }
+];
+
+// v6.8 PM CAPSULES (8 ingredients)
+const pmIngredients = [
+  { name: "L-Lysine HCl", dosage: "500 mg", description: "Evening dose maintains sustained collagen substrate availability throughout overnight repair" },
+  { name: "Nicotinamide Riboside (Niagen®)", dosage: "250 mg", description: "Evening dose maintains stable NAD+ elevation due to short 2.7-hour half-life" },
+  { name: "L-Theanine (Suntheanine®)", dosage: "200 mg", description: "Promotes calm relaxation without drowsiness via GABA-A modulation & mast cell stabilization" },
+  { name: "Pycnogenol®", dosage: "100 mg", description: "Evening dose provides sustained MMP-8 inhibition matching successful German RCT protocol" },
+  { name: "Zinc Carnosine (PepZin GI®)", dosage: "75 mg", description: "Clinically-proven GI mucosal healing compound; reduces gut permeability; separated from copper" },
+  { name: "Vitamin D3", dosage: "2,000 IU", description: "Supports mast cell stabilization & immune modulation; paired with K2 for optimal function" },
+  { name: "Vitamin K2 (MK-7)", dosage: "100 mcg", description: "Activates osteocalcin for bone health; synergistic with D3. ⚠️ Contraindicated with warfarin" },
+  { name: "Astaxanthin (AstaReal®)", dosage: "8 mg", description: "Powerful antioxidant with MMP inhibition ratio of 1.44× & mast cell support ratio of 1.21×" }
+];
+
+// v6.8 POWDER (10 ingredients)
+const powderIngredients = [
+  { name: "Magnesium Glycinate", dosage: "300 mg elem", description: "MCAS-safe chelated form supporting muscle relaxation, DAO cofactor function & autonomic stability" },
+  { name: "Sodium Ascorbate (Vitamin C)", dosage: "2,000 mg", description: "Essential collagen synthesis cofactor; provides ~218mg sodium beneficial for POTS; non-acidic" },
+  { name: "Taurine", dosage: "1,500 mg", description: "Provides MMP-9 transcriptional suppression, mast cell stabilization & GABA-A modulation" },
+  { name: "PEA (Micronized/Levagen+)", dosage: "1,400 mg", description: "CB2/PPAR-α agonist achieving 54% histamine inhibition; used at 10:1 ratio with luteolin" },
+  { name: "L-Carnitine Fumarate", dosage: "1,000 mg", description: "Supports mitochondrial fatty acid transport; fumarate form feeds directly into Krebs cycle" },
+  { name: "L-Proline", dosage: "1,000 mg", description: "Conditionally essential collagen substrate in hEDS; supports gut lining integrity" },
+  { name: "Silicon (MMST)", dosage: "10 mg elem", description: "Collagen cross-linking support in highly bioavailable MMST form; acacia matrix carrier" },
+  { name: "EMIQ", dosage: "300 mg", description: "Enzymatically modified isoquercitrin with 17× quercetin bioavailability for mast cell stabilization" },
+  { name: "Chlorogenic Acid", dosage: "200 mg", description: "MMP-9 inhibitor achieving 1.6× IC50 concentration; provides mild BP support (AM only)" },
+  { name: "Luteolin (Micronized)", dosage: "140 mg", description: "Superior mast cell stabilization vs cromolyn; used at 10:1 ratio with PEA per Glialia® protocol" }
+];
+
+export default function App() {
+  const [view, setView] = useState('capsules');
+
+  return (
+    <div style={{ background: 'linear-gradient(180deg, #F3ECE1 0%, #E8DCC9 100%)', minHeight: '100vh', padding: '24px 16px' }}>
+      {/* Header */}
+      <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+        <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '36px', fontWeight: 'bold', color: '#8B4513', marginBottom: '12px' }}>
+          Our Products
+        </h1>
+        <div style={{ width: '80px', height: '4px', background: 'linear-gradient(90deg, #8B4513, #228B22)', margin: '0 auto 16px' }}></div>
+        <p style={{ fontFamily: 'Georgia, serif', fontSize: '16px', color: '#2d5a3d', maxWidth: '700px', margin: '0 auto 20px' }}>
+          <strong>Comprehensive <span style={{ color: '#eab308' }}>AM</span> and <span style={{ color: '#5A5A85' }}>PM</span> formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
+        </p>
+        <button
+          onClick={() => setView(view === 'capsules' ? 'powder' : 'capsules')}
+          style={{ background: 'white', border: '1px solid #ccc', borderRadius: '8px', padding: '10px 20px', cursor: 'pointer', fontWeight: '500' }}
+        >
+          {view === 'capsules' ? 'View Powder Formula →' : '← Back to Capsules'}
+        </button>
+      </div>
+
+      {view === 'capsules' ? (
+        /* TWO COLUMN SIDE-BY-SIDE LAYOUT */
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', maxWidth: '1200px', margin: '0 auto' }}>
+          
+          {/* LEFT: AM FORMULA */}
+          <div style={{
+            background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)',
+            borderRadius: '12px',
+            padding: '16px',
+            borderTop: '4px solid rgba(200,89,43,0.3)'
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <div style={{ width: '48px', height: '48px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 8px', fontSize: '28px' }}>☀️</div>
+              <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '24px', fontWeight: 'bold', color: '#C8592B', margin: '0 0 4px' }}>
+                ZebraWell <span style={{ color: '#eab308' }}>AM</span> Formula
+              </h2>
+              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#C8592B', marginBottom: '8px' }}>Fuel + Focus</div>
+              <div style={{ background: 'rgba(255,255,255,0.9)', borderRadius: '6px', padding: '8px 12px', fontSize: '13px', color: '#0f2e24' }}>
+                <span style={{ color: '#eab308' }}>AM</span> formula designed to support cellular energy, enhance cognitive function and mental clarity, and provide foundational support for methylation and mitochondrial health
+              </div>
+            </div>
+            <div style={{ background: '#f9fafb', borderRadius: '8px', padding: '12px' }}>
+              {amIngredients.map((item, i) => (
+                <div key={i} style={{ paddingBottom: '12px', marginBottom: '12px', borderBottom: i < amIngredients.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
+                    <span style={{ fontWeight: 'bold', color: '#0f2e24', fontSize: '14px' }}>{item.name}</span>
+                    <span style={{ background: '#eab308', color: '#422006', padding: '2px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '600', marginLeft: '8px', whiteSpace: 'nowrap' }}>{item.dosage}</span>
+                  </div>
+                  <p style={{ color: '#4b5563', fontSize: '13px', margin: 0, lineHeight: '1.4' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <button style={{ width: '100%', marginTop: '16px', padding: '12px', background: 'linear-gradient(90deg, #C8592B, #9A4420, #C8592B)', color: 'white', fontWeight: 'bold', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>
+              ℹ️ Product Details
+            </button>
+          </div>
+
+          {/* RIGHT: PM FORMULA */}
+          <div style={{
+            background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)',
+            borderRadius: '12px',
+            padding: '16px',
+            borderTop: '4px solid rgba(200,89,43,0.3)'
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <div style={{ width: '48px', height: '48px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 8px', fontSize: '28px' }}>🌙</div>
+              <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '24px', fontWeight: 'bold', color: '#C8592B', margin: '0 0 4px' }}>
+                ZebraWell <span style={{ color: '#5A5A85' }}>PM</span> Formula
+              </h2>
+              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#C8592B', marginBottom: '8px' }}>Repair + Recover</div>
+              <div style={{ background: 'rgba(255,255,255,0.9)', borderRadius: '6px', padding: '8px 12px', fontSize: '13px', color: '#0f2e24' }}>
+                <span style={{ color: '#5A5A85' }}>PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight
+              </div>
+            </div>
+            <div style={{ background: '#f9fafb', borderRadius: '8px', padding: '12px' }}>
+              {pmIngredients.map((item, i) => (
+                <div key={i} style={{ paddingBottom: '12px', marginBottom: '12px', borderBottom: i < pmIngredients.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
+                    <span style={{ fontWeight: 'bold', color: '#0f2e24', fontSize: '14px' }}>{item.name}</span>
+                    <span style={{ background: '#5A5A85', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '600', marginLeft: '8px', whiteSpace: 'nowrap' }}>{item.dosage}</span>
+                  </div>
+                  <p style={{ color: '#4b5563', fontSize: '13px', margin: 0, lineHeight: '1.4' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <button style={{ width: '100%', marginTop: '16px', padding: '12px', background: 'linear-gradient(90deg, #C8592B, #9A4420, #C8592B)', color: 'white', fontWeight: 'bold', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>
+              ℹ️ Product Details
+            </button>
+          </div>
+        </div>
+      ) : (
+        /* POWDER VIEW */
+        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div style={{
+            background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)',
+            borderRadius: '12px',
+            padding: '16px',
+            borderTop: '4px solid rgba(34,139,34,0.3)'
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <div style={{ width: '48px', height: '48px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 8px', fontSize: '28px' }}>🥤</div>
+              <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '24px', fontWeight: 'bold', color: '#C8592B', margin: '0 0 4px' }}>
+                ZebraWell <span style={{ color: '#22c55e' }}>Powder</span> Formula
+              </h2>
+              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#C8592B', marginBottom: '8px' }}>Foundation + Protection</div>
+              <div style={{ background: 'rgba(255,255,255,0.9)', borderRadius: '6px', padding: '8px 12px', fontSize: '13px', color: '#0f2e24' }}>
+                <span style={{ color: '#22c55e' }}>~5g AM + ~5g PM</span> mixed in cold juice — provides bulk mast cell stabilizers, collagen substrates, and key minerals
+              </div>
+            </div>
+            <div style={{ background: '#f9fafb', borderRadius: '8px', padding: '12px' }}>
+              {powderIngredients.map((item, i) => (
+                <div key={i} style={{ paddingBottom: '12px', marginBottom: '12px', borderBottom: i < powderIngredients.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
+                    <span style={{ fontWeight: 'bold', color: '#0f2e24', fontSize: '14px' }}>{item.name}</span>
+                    <span style={{ background: '#22c55e', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '600', marginLeft: '8px', whiteSpace: 'nowrap' }}>{item.dosage}</span>
+                  </div>
+                  <p style={{ color: '#4b5563', fontSize: '13px', margin: 0, lineHeight: '1.4' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ background: 'rgba(0,100,0,0.2)', borderRadius: '8px', padding: '12px', marginTop: '12px' }}>
+              <p style={{ color: '#d1fae5', fontSize: '13px', textAlign: 'center', margin: 0 }}>
+                <strong>Mixing tip:</strong> Combine with cold orange or tart cherry juice. Sweet magnesium & tart vitamin C mask the bitter L-Carnitine.
+              </p>
+            </div>
+            <button style={{ width: '100%', marginTop: '16px', padding: '12px', background: 'linear-gradient(90deg, #C8592B, #9A4420, #C8592B)', color: 'white', fontWeight: 'bold', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>
+              ℹ️ Product Details
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
