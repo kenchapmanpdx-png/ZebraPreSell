@@ -1,10 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import ZebraBackground from './ZebraBackground';
 import { amFormulaIngredients, pmFormulaIngredients, powderIngredients } from '../data/ingredientData';
 
-export default function ProductGrid() {
-  const [view, setView] = useState<'capsules' | 'powder'>('capsules');
+const amBenefits = ["Mitochondrial Energy", "Methylation Support", "Mast Cell Stabilization", "Connective Tissue"];
+const pmBenefits = ["Collagen Cross-linking", "Overnight Repair", "Histamine Metabolism", "Relaxation Support"];
+const powderBenefits = ["Mast Cell Stabilization", "Collagen Substrates", "MMP Inhibition", "ECM Protection"];
 
+export default function ProductGrid() {
   const memoizedAmIngredients = useMemo(() => amFormulaIngredients, []);
   const memoizedPmIngredients = useMemo(() => pmFormulaIngredients, []);
   const memoizedPowderIngredients = useMemo(() => powderIngredients, []);
@@ -15,168 +17,105 @@ export default function ProductGrid() {
     }}>
       <ZebraBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-1">
-        <div className="text-center mb-6 md:mb-16">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora font-bold text-terra mb-6" data-aos="fade-up">
             Our Products
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-terra to-[#89B317] mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
-          <p className="text-xl md:text-2xl text-forest/90 max-w-4xl mx-auto font-lora leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="200">
+          <p className="text-xl md:text-2xl text-forest/90 max-w-4xl mx-auto font-lora leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             <strong>Comprehensive <span className="text-yellow-500">AM</span> and <span className="text-[#303051]">PM</span> formulas</strong> providing targeted support throughout the day and night, specifically designed for the unique needs of individuals with EDS and POTS.
           </p>
-          <button
-            onClick={() => setView(view === 'capsules' ? 'powder' : 'capsules')}
-            className={`rounded-xl px-8 py-4 cursor-pointer font-bold text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
-              view === 'capsules' 
-                ? 'bg-gradient-to-r from-green-600 to-green-500 text-white border-2 border-green-400' 
-                : 'bg-white text-forest border-2 border-gray-300 hover:bg-gray-50'
-            }`}
-            data-testid="toggle-view-button"
-          >
-            {view === 'capsules' ? '🥤 View Powder Formula →' : '← Back to Capsules'}
-          </button>
         </div>
 
-        {view === 'capsules' ? (
-          <div className="flex flex-col md:flex-row gap-2 md:gap-4 max-w-full mx-auto px-2">
-            {/* Left Column - AM Formula */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-              <div id="am-formula" className="rounded-xl shadow-lg p-2 md:p-3 lg:p-4 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100" style={{
-                background: 'hsla(161, 51%, 12%, 1)',
-                backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
-              }}>
-                <div className="flex flex-col items-center text-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 text-3xl">
-                    ☀️
-                  </div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-yellow-500">AM</span> Formula</h3>
-                    <div className="text-xl md:text-2xl font-bold text-[#C8592B] mb-3 text-center">Fuel + Focus</div>
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-yellow-500">AM</span> formula designed to support cellular energy, enhance cognitive function and mental clarity, and provide foundational support for methylation and mitochondrial health</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mb-4 md:mb-6">
-                  <div className="bg-gray-50 rounded-lg p-2 md:p-3 shadow-sm border border-neutral-200">
-                    <ul className="space-y-4">
-                      {memoizedAmIngredients.map((ingredient, index) => (
-                        <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
-                          <div className="flex justify-between items-start mb-2">
-                            <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                            <span className="text-sm text-terra-dark bg-yellow-500/90 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
-                          </div>
-                          <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                  background: 'hsla(18, 65%, 48%, 1)',
-                  backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
-                }}>
-                  ℹ️ Product Details
-                </button>
+        <div className="max-w-5xl mx-auto">
+          {/* AM + PM Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+            {/* AM Formula Card */}
+            <div 
+              className="rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              style={{
+                background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)'
+              }}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-xl mb-3">
+                ☀️
+              </div>
+              <h3 className="text-[#C8592B] text-xl md:text-2xl font-bold mb-1">ZebraWell AM Formula</h3>
+              <p className="text-white/80 text-sm mb-3">Fuel + Focus</p>
+              <p className="text-white/90 text-sm leading-relaxed mb-4">
+                Targeted mitochondrial support, methylation optimization, and gentle 
+                mast cell stabilization for sustained energy without overstimulation.
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {amBenefits.map((benefit, i) => (
+                  <span key={i} className="bg-yellow-500 text-gray-900 px-2.5 py-1 rounded-full text-xs font-medium">
+                    {benefit}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Right Column - PM Formula */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8">
-              <div id="pm-formula" className="rounded-xl shadow-lg p-2 md:p-3 lg:p-4 border-t-4 border-terra/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200" style={{
-                background: 'hsla(161, 51%, 12%, 1)',
-                backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
-              }}>
-                <div className="flex flex-col items-center text-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 text-3xl">
-                    🌙
-                  </div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-[#5A5A85]">PM</span> Formula</h3>
-                    <div className="text-xl md:text-2xl font-bold text-[#C8592B] mb-3 text-center">Repair + Recover</div>
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-[#5A5A85]">PM</span> formula focused on supporting connective tissue repair, promoting neurological calm and relaxation, providing powerful antioxidant defense, and replenishing key minerals overnight</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mb-4 md:mb-6">
-                  <div className="bg-gray-50 rounded-lg p-2 md:p-3 shadow-sm border border-neutral-200">
-                    <ul className="space-y-4">
-                      {memoizedPmIngredients.map((ingredient, index) => (
-                        <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${300 + (index * 20)}`}>
-                          <div className="flex justify-between items-start mb-2">
-                            <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                            <span className="text-sm text-white bg-[#5A5A85] px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
-                          </div>
-                          <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                  background: 'hsla(18, 65%, 48%, 1)',
-                  backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
-                }}>
-                  ℹ️ Product Details
-                </button>
+            {/* PM Formula Card */}
+            <div 
+              className="rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              style={{
+                background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)'
+              }}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-xl mb-3">
+                🌙
+              </div>
+              <h3 className="text-[#C8592B] text-xl md:text-2xl font-bold mb-1">ZebraWell PM Formula</h3>
+              <p className="text-white/80 text-sm mb-3">Repair + Recover</p>
+              <p className="text-white/90 text-sm leading-relaxed mb-4">
+                Support overnight collagen synthesis and tissue repair with strategic 
+                mineral timing and histamine metabolism support.
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {pmBenefits.map((benefit, i) => (
+                  <span key={i} className="bg-[#5A5A85] text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                    {benefit}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
-        ) : (
-          /* POWDER VIEW */
-          <div className="max-w-2xl mx-auto px-2">
-            <div id="powder-formula" className="rounded-xl shadow-lg p-2 md:p-3 lg:p-4 border-t-4 border-green-500/30 transform transition-all hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" style={{
-              background: 'hsla(161, 51%, 12%, 1)',
-              backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
-            }}>
-              <div className="flex flex-col items-center text-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 text-3xl">
-                  🥤
-                </div>
-                <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-lora font-black text-[#C8592B] mb-2">ZebraWell <span className="text-green-500">Powder</span> Formula</h3>
-                  <div className="text-xl md:text-2xl font-bold text-[#C8592B] mb-3 text-center">Foundation + Protection</div>
-                  <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="text-sm text-emerald-900 font-semibold px-3 py-1 rounded-md bg-white/90 text-center"><span className="text-green-500">~5g AM + ~5g PM</span> mixed in cold juice — provides bulk mast cell stabilizers, collagen substrates, and key minerals</span>
-                  </div>
-                </div>
-              </div>
 
-              <div className="mb-4 md:mb-6">
-                <div className="bg-gray-50 rounded-lg p-2 md:p-3 shadow-sm border border-neutral-200">
-                  <ul className="space-y-4">
-                    {memoizedPowderIngredients.map((ingredient, index) => (
-                      <li key={index} className="pb-3 mb-3 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0" data-aos="fade-up" data-aos-delay={`${250 + (index * 25)}`}>
-                        <div className="flex justify-between items-start mb-2">
-                          <span className="text-base md:text-base lg:text-[17px] font-bold text-[#0F2E24]">{ingredient.name}</span>
-                          <span className="text-sm text-white bg-green-500 px-2 py-0.5 rounded ml-2 flex-shrink-0 font-semibold">{ingredient.dosage}</span>
-                        </div>
-                        <p className="text-base md:text-base lg:text-[17px] text-gray-700 leading-relaxed">{ingredient.description}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          {/* Powder Row */}
+          <div 
+            className="rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            style={{
+              background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)'
+            }}
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div className="flex items-start gap-5">
+              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-xl flex-shrink-0">
+                🥄
               </div>
-
-              <div className="bg-green-900/20 rounded-lg p-3 mb-4">
-                <p className="text-emerald-100 text-sm text-center">
-                  <strong>Mixing tip:</strong> Combine with cold orange or tart cherry juice. Sweet magnesium & tart vitamin C mask the bitter L-Carnitine.
+              <div className="flex-1">
+                <h3 className="text-[#C8592B] text-xl md:text-2xl font-bold mb-1">ZebraWell Daily Powder</h3>
+                <p className="text-white/80 text-sm mb-3">Foundation + Protection</p>
+                <p className="text-white/90 text-sm leading-relaxed mb-4">
+                  High-dose mast cell stabilizers and collagen building blocks in a mixable powder. 
+                  Delivers therapeutic doses of quercetin, vitamin C, and amino acids that would require too many capsules.
                 </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {powderBenefits.map((benefit, i) => (
+                    <span key={i} className="bg-[#2d5a3d] text-white px-2.5 py-1 rounded-full text-xs font-medium border border-white/30">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
               </div>
-
-              <button className="w-full py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center" style={{
-                background: 'hsla(18, 65%, 48%, 1)',
-                backgroundImage: 'linear-gradient(90deg, hsla(18, 65%, 48%, 1) 0%, hsla(18, 64%, 40%, 1) 20%, hsla(18, 65%, 48%, 1) 49%, hsla(18, 64%, 40%, 1) 81%, hsla(18, 65%, 48%, 1) 100%)'
-              }}>
-                ℹ️ Product Details
-              </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

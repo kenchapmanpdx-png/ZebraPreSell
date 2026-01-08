@@ -1,0 +1,149 @@
+import React from 'react';
+
+const ZebraWellOverview = () => {
+  const cardStyle = {
+    background: 'linear-gradient(135deg, #0f2e24 0%, #2d5a3d 50%, #0f2e24 100%)',
+    borderRadius: '16px',
+    padding: '24px',
+    color: 'white',
+  };
+
+  const headerStyle = {
+    color: '#C8592B',
+    fontSize: '1.35rem',
+    fontWeight: 'bold',
+    marginBottom: '4px',
+  };
+
+  const subtitleStyle = {
+    color: 'rgba(255,255,255,0.8)',
+    fontSize: '0.95rem',
+    marginBottom: '12px',
+  };
+
+  const descriptionStyle = {
+    color: 'rgba(255,255,255,0.9)',
+    fontSize: '0.9rem',
+    lineHeight: '1.5',
+    marginBottom: '16px',
+  };
+
+  const benefitsContainerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '6px',
+  };
+
+  const amBadgeStyle = {
+    background: '#eab308',
+    color: '#1a1a1a',
+    padding: '5px 10px',
+    borderRadius: '16px',
+    fontSize: '0.8rem',
+    fontWeight: '500',
+  };
+
+  const pmBadgeStyle = {
+    background: '#5A5A85',
+    color: 'white',
+    padding: '5px 10px',
+    borderRadius: '16px',
+    fontSize: '0.8rem',
+    fontWeight: '500',
+  };
+
+  const powderBadgeStyle = {
+    background: '#2d5a3d',
+    color: 'white',
+    padding: '5px 10px',
+    borderRadius: '16px',
+    fontSize: '0.8rem',
+    fontWeight: '500',
+    border: '1px solid rgba(255,255,255,0.3)',
+  };
+
+  const iconCircleStyle = {
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    background: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '20px',
+    marginBottom: '10px',
+  };
+
+  return (
+    <div style={{ 
+      padding: '24px',
+      maxWidth: '900px',
+      margin: '0 auto',
+    }}>
+      {/* AM + PM Row */}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: '1fr 1fr', 
+        gap: '20px',
+        marginBottom: '20px',
+      }}>
+        {/* AM Formula */}
+        <div style={cardStyle}>
+          <div style={iconCircleStyle}>☀️</div>
+          <h3 style={headerStyle}>ZebraWell AM Formula</h3>
+          <p style={subtitleStyle}>Fuel + Focus</p>
+          <p style={descriptionStyle}>
+            Targeted mitochondrial support, methylation optimization, and gentle 
+            mast cell stabilization for sustained energy without overstimulation.
+          </p>
+          <div style={benefitsContainerStyle}>
+            <span style={amBadgeStyle}>Mitochondrial Energy</span>
+            <span style={amBadgeStyle}>Methylation Support</span>
+            <span style={amBadgeStyle}>Mast Cell Stabilization</span>
+            <span style={amBadgeStyle}>Connective Tissue</span>
+          </div>
+        </div>
+
+        {/* PM Formula */}
+        <div style={cardStyle}>
+          <div style={iconCircleStyle}>🌙</div>
+          <h3 style={headerStyle}>ZebraWell PM Formula</h3>
+          <p style={subtitleStyle}>Repair + Recover</p>
+          <p style={descriptionStyle}>
+            Support overnight collagen synthesis and tissue repair with strategic 
+            mineral timing and histamine metabolism support.
+          </p>
+          <div style={benefitsContainerStyle}>
+            <span style={pmBadgeStyle}>Collagen Cross-linking</span>
+            <span style={pmBadgeStyle}>Overnight Repair</span>
+            <span style={pmBadgeStyle}>Histamine Metabolism</span>
+            <span style={pmBadgeStyle}>Relaxation Support</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Powder Row */}
+      <div style={cardStyle}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+          <div style={iconCircleStyle}>🥄</div>
+          <div style={{ flex: 1 }}>
+            <h3 style={headerStyle}>ZebraWell Daily Powder</h3>
+            <p style={subtitleStyle}>Foundation + Protection</p>
+            <p style={descriptionStyle}>
+              High-dose mast cell stabilizers and collagen building blocks in a mixable powder. 
+              Delivers therapeutic doses of quercetin, vitamin C, and amino acids that would require too many capsules.
+            </p>
+            <div style={benefitsContainerStyle}>
+              <span style={powderBadgeStyle}>Mast Cell Stabilization</span>
+              <span style={powderBadgeStyle}>Collagen Substrates</span>
+              <span style={powderBadgeStyle}>MMP Inhibition</span>
+              <span style={powderBadgeStyle}>ECM Protection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ZebraWellOverview;
