@@ -32,21 +32,20 @@ export default function Contact() {
               <div className="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center mr-2">
                 <i className="fas fa-envelope text-forest text-sm"></i>
               </div>
-              <span className="text-sm md:text-base">support@zebrawell.com</span>
+              <span className="text-sm md:text-base">ken@wellnessforzebras.com</span>
             </div>
 
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center mr-2">
                 <i className="fas fa-phone text-forest text-sm"></i>
               </div>
-              <span className="text-sm md:text-base">(800) 555-WELL</span>
             </div>
 
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center mr-2">
                 <i className="fas fa-map-marker-alt text-forest text-sm"></i>
               </div>
-              <span className="text-sm md:text-base">Portland, OR</span>
+              <span className="text-sm md:text-base">Phoenix, Arizona</span>
             </div>
           </div>
         </div>
