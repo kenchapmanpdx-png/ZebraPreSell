@@ -210,8 +210,6 @@ export default function Hero() {
           <div className="space-y-2 sm:space-y-3 md:space-y-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed" data-aos="fade">
             <p>The Zebra is the mascot for rare conditions and diseases.</p>
             <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
-            <p>But sometimes, it's a Zebra — someone with a rare, often misunderstood and undiagnosed condition.</p>
-            <p className="font-medium text-white">We honor the Zebra. Because rare shouldn't mean invisible.</p>
           </div>
         </div>
       </div>
