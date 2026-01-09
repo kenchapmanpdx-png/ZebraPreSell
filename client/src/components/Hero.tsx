@@ -61,7 +61,7 @@ export default function Hero() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
             Clinical-Grade Supplements
             <div className="text-center mt-2">for POTS & EDS.</div>
-            <div className="text-center mt-6 mb-6" style={{ fontSize: '0.696em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
+            <div className="text-center mt-6 mb-6" style={{ fontSize: '0.59em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
             
           </h1>
         </div>
