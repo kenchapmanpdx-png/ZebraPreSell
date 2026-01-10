@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
@@ -8,97 +8,48 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 20 14.3% 4.1%;
-  --muted: 60 4.8% 95.9%;
-  --muted-foreground: 25 5.3% 44.7%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 20 14.3% 4.1%;
+  /* GLOBAL BASE COLORS (The "Luxury" Foundation) */
+  --background: 40 30% 98%; /* Warm Cream #FDFBF7 */
+  --foreground: 161 51% 12%; /* Deep Forest #0f2e24 */
+
   --card: 0 0% 100%;
-  --card-foreground: 20 14.3% 4.1%;
-  --border: 20 5.9% 90%;
-  --input: 20 5.9% 90%;
-  --primary: 207 90% 54%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 60 4.8% 95.9%;
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 60 4.8% 95.9%;
-  --accent-foreground: 24 9.8% 10%;
+  --card-foreground: 161 51% 12%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 161 51% 12%;
+
+  /* PRIMARY = Deep Forest Green (Authority) */
+  --primary: 161 51% 12%;
+  --primary-foreground: 40 30% 98%;
+
+  /* SECONDARY = Warm Sand/Beige (Support) */
+  --secondary: 35 25% 88%;
+  --secondary-foreground: 161 51% 12%;
+
+  /* ACCENT = Rich Copper (Call to Action) */
+  --accent: 23 77% 44%; /* #C8592B */
+  --accent-foreground: 0 0% 100%;
+
+  /* DESTRUCTIVE (Errors) */
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 20 14.3% 4.1%;
-  --radius: 0.5rem;
-
-  /* ZebraWell earthy, clean, modern colors */
-  --sage: 120 15% 50%;
-  --sage-light: 120 25% 85%;
-  --sage-dark: 120 15% 30%;
-  --terra: 23 77% 44%;
-  --terra-light: 23 77% 85%;
-  --terra-dark: 23 77% 34%;
-  --cream: 40 30% 95%;
-  --sand: 35 25% 88%;
-  --clay: 20 35% 82%;
-  --forest: 125 40% 34%;
-  --forest-light: 128 47% 74%;
-  --neutral-lightest: 0 0% 100%;
-  --neutral-light: 35 10% 95%;
-  --neutral-medium: 35 5% 85%;
-  --neutral-dark: 35 10% 25%;
-  --medical-blue: 210 100% 40%;
-  --medical-blue-light: 210 100% 85%;
-  --medical-blue-dark: 210 100% 30%;
-  --cta-green: 76 76% 40%;
-  --cta-green-light: 76 76% 85%;
-  --cta-green-dark: 76 76% 30%;
-
-  /* Gradient colors for Why Zebra section */
-  --inw-forest: 125 40% 22.5%; /* 10% darker than original */
-  --inw-green: 85 64% 41.8%; /* 5% darker than original */
-}
-
-/* Rotating text animations */
-.word-fade-smooth {
-  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
-              filter 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, transform;
-}
-
-@keyframes smoothWordFade {
-  0% { 
-    opacity: 0; 
-    transform: translateY(8px) scale(0.99);
-    filter: blur(0.5px);
-  }
-  100% { 
-    opacity: 1; 
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --primary: 207 90% 54%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 240 4.9% 83.9%;
-  --radius: 0.5rem;
+
+  --border: 35 15% 85%; /* Warm Gray */
+  --input: 35 15% 85%;
+  --ring: 23 77% 44%; /* Focus ring is Copper */
+
+  --radius: 0.75rem;
+
+  /* CUSTOM BRAND PALETTE VARIABLES */
+  --sage: 120 15% 50%;
+  --sage-light: 86 42% 82%; /* #D4E4BC New Growth */
+  --sage-dark: 120 15% 30%;
+
+  --terra: 23 77% 44%; /* Copper */
+  --terra-light: 25 60% 85%; /* Rose Gold */
+
+  --cream: 40 30% 98%; /* #FDFBF7 */
+  --sand: 35 30% 85%; /* #E8DCCA */
 }
 
 @layer base {
@@ -107,227 +58,25 @@
   }
 
   body {
-    @apply font-montserrat antialiased bg-white text-neutral-dark scroll-smooth;
+    /* Set global font to Montserrat, background to Cream, text to Deep Forest */
+    @apply font-montserrat antialiased bg-[#FDFBF7] text-[#0f2e24];
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-@layer components {
-  .natural-texture {
-    background-color: white;
-  }
-
-  .leaf-pattern {
-    background-color: hsl(var(--sage-light) / 0.9);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%237a9c65' fill-opacity='0.2'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-
-  .grain-texture {
-    background-color: white;
-  }
-
-  .subtle-waves {
-    background-color: white;
-  }
-
-  .clinical-pattern {
-    background-color: white;
-  }
-
-  .medical-grid {
-    background-color: white;
-  }
-
-  .zebra-bg {
-    position: relative;
-    background-color: white;
-  }
-
-  .zebra-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('@assets/zebra-pattern.jpg');
-    background-repeat: repeat;
-    background-size: 400px auto;
-    opacity: 0.2;
-    z-index: 0;
-  }
-
-  .inw-gradient {
-    position: relative;
-    background: linear-gradient(to left, hsl(var(--inw-forest)), hsl(var(--inw-green)));
-  }
-
-  .inw-gradient-tagline {
-    background-color: hsla(var(--inw-forest), 0.15);
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  }
-
-  .fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Premium hover animations */
-  .premium-hover {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .premium-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .subtle-scale {
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .subtle-scale:hover {
-    transform: scale(1.02);
-  }
-
-  .glow-on-hover {
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .glow-on-hover:hover {
-    box-shadow: 0 0 30px rgba(137, 179, 23, 0.3);
-  }
-
-  .slide-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .slide-in-left.appear {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .slide-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .slide-in-right.appear {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .stagger-delay-1 {
-    transition-delay: 0.1s;
-  }
-
-  .stagger-delay-2 {
-    transition-delay: 0.2s;
-  }
-
-  .stagger-delay-3 {
-    transition-delay: 0.3s;
-  }
-
-  .container {
-    @apply mx-auto px-4 sm:px-6;
-  }
-}
-
-/* Interactive Ingredient Map Styles */
-.item-card.highlighted {
-  transform: scale(1.03) !important;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
-  z-index: 10 !important;
-  position: relative !important;
-  opacity: 1 !important;
-}
-
-.item-card.unfocused {
-  opacity: 0.4 !important;
-  transform: scale(0.98) !important;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Mobile-first responsive design */
-@media (max-width: 640px) {
-  body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* Improve touch targets for mobile */
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Better spacing for small screens */
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* Custom utilities */
-.subtle-scale {
-  transition: transform 0.2s ease;
-}
-
-.subtle-scale:hover {
-  transform: scale(1.02);
-}
-
-/* Improve touch responsiveness on mobile */
-@media (hover: none) and (pointer: coarse) {
-  .subtle-scale:hover {
-    transform: none;
-  }
-
-  .subtle-scale:active {
-    transform: scale(0.98);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile optimization for text readability */
-@media (max-width: 640px) {
+  /* Update Headings to Playfair Display automatically */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    word-wrap: break-word;
+    @apply font-serif font-bold tracking-tight text-[#0f2e24];
+  }
+}
+
+/* PRE-BUILT LUXURY CLASSES */
+@layer components {
+  /* The "Copper Button" - Use this everywhere */
+  .btn-copper {
+    @apply bg-[#C8592B] text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#B04A20] hover:-translate-y-0.5 hover:shadow-orange-900/20 border border-white/10;
   }
 
-  p {
-    line-height: 1.6;
+  /* The "Forest Button" - Secondary actions */
+  .btn-forest {
+    @apply bg-[#0f2e24] text-[#FDFBF7] font-bold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:bg-[#1a4a3a] hover:-translate-y-0.5 border border-[#C8592B]/30;
   }
 }

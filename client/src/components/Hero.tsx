@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'wouter';
 import { useToast } from '@/hooks/use-toast';
-import ZebraHeart from './ZebraHeart';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -9,7 +7,6 @@ export default function Hero() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  // Rotating text state
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const words = ["Unseen", "Disbelieved", "Dismissed", "Frustrated", "Fighting Alone", "Overlooked", "Rare", "Resilient"];
@@ -29,9 +26,7 @@ export default function Hero() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      // Simulate API call for now
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSubmitted(true);
       setEmail('');
@@ -40,178 +35,116 @@ export default function Hero() {
         description: "We'll notify you as soon as ZebraWell is available for order.",
       });
     } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or contact us directly.",
-        variant: "destructive",
-      });
+      toast({ variant: "destructive", title: "Error", description: "Please try again." });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section className="text-white py-4 sm:py-6 md:py-10 px-3 sm:px-4 md:px-8 pt-2 sm:pt-4 md:pt-6" style={{
-        background: 'hsla(161, 51%, 12%, 1)',
-        backgroundImage: 'radial-gradient(circle at 30% 30%, hsla(161, 51%, 18%, 0.2), transparent 60%), linear-gradient(90deg, hsla(161, 51%, 12%, 1) 10%, hsla(115, 41%, 27%, 1) 50%, hsla(161, 51%, 12%, 1) 90%)'
-      }}>
-      <div className="max-w-6xl mx-auto">
-        {/* Full width heading - reduced by 35% */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-tight mb-3 sm:mb-4 md:mb-5" data-aos="fade-up" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}>
+    // NEW GRADIENT: The "Copper & Cream" Luxury Vibe
+    // A radial gradient that highlights the content in warm cream and deepens to rich beige/copper at the edges.
+    <section className="relative py-8 md:py-16 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FDFBF7] via-[#E8DCCA] to-[#C89F87]">
+
+      {/* Warm Light Orbs for richness and depth */}
+      <div className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-[#F9C365]/20 blur-[120px] rounded-full pointer-events-none mix-blend-overlay"></div>
+      <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#C8592B]/10 blur-[100px] rounded-full pointer-events-none mix-blend-multiply"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* CENTERED HEADER */}
+        <div className="text-center mb-10 md:mb-14">
+          <div className="inline-block mb-3 px-4 py-1.5 rounded-full bg-[#0f2e24] text-[#F9C365] border border-[#F9C365]/40 text-xs font-bold uppercase tracking-widest shadow-md">
+            Coming Soon
+          </div>
+          <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight mb-4 text-[#0f2e24] drop-shadow-sm" data-aos="fade-up">
             Clinical-Grade Supplements
-            <div className="text-center mt-2">for POTS & EDS.</div>
-            <div className="text-center mt-6 mb-6" style={{ fontSize: '0.59em' }}>(Postural Orthostatic Tachycardia Syndrome & Ehlers-Danlos Syndrome)</div>
-            
+            <span className="block mt-2 text-[#2C3E2D] font-medium text-2xl md:text-4xl">
+              Engineered for <span className="border-b-4 border-[#C8592B]/40">POTS & EDS</span>.
+            </span>
           </h1>
         </div>
 
-        {/* Rotating text section */}
-        <div className="flex justify-start mb-8 pl-4 md:pl-8">
-          <div className="text-left">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-white mb-4">
-              <span>Wellness for the</span> <br />
-              <div className="relative inline-block min-h-[1.5em] overflow-visible pb-2">
-                <span 
-                  className={`bg-gradient-to-r from-[#ff774d] to-[#ffb48a] bg-clip-text text-transparent word-fade-smooth ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[2px]'
-                  }`}
-                  style={{
-                    filter: isVisible ? 'blur(0)' : 'blur(0.5px)',
-                    fontSize: '0.85em'
-                  }}
-                >
-                  {words[currentWordIndex]}
-                </span>
-              </div>
-            </h2>
-          </div>
-        </div>
+        {/* TWO COLUMN CONTENT */}
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
 
-        {/* Two column layout */}
-        <div className="flex flex-col md:flex-row items-start gap-8">
-          {/* Left column - Reservation form */}
-          <div className="md:w-1/2" data-aos="fade-right" data-aos-delay="300">
-            <div className="inline-block py-6 px-6 rounded-3xl shadow-xl border-2 border-amber-300" style={{ backgroundColor: 'white', opacity: 1, backdropFilter: 'none' }}>
-              <div className="text-center">
-                <h3 className="text-2xl font-serif font-bold text-[#C8592B] mb-3">📧 Reserve Your Spot – Limited First Run!</h3>
-                <p className="text-lg text-[#1D4526] leading-relaxed mb-4">
-                  Be the first to know when ZebraWell is available for order.
-                </p>
+          {/* LEFT: The "Ask" (Reservation Form) */}
+          <div className="w-full md:w-1/2" data-aos="fade-right" data-aos-delay="200">
+            {/* Glass Card: Looks incredible against the warm copper background */}
+            <div className="bg-white/80 backdrop-blur-xl border border-white/70 rounded-3xl p-8 shadow-2xl shadow-[#C8592B]/10">
+              <h2 className="text-3xl font-serif font-bold text-[#0f2e24] mb-2">
+                Wellness for the
+                <div className="h-[1.2em] overflow-hidden inline-block align-bottom ml-2">
+                  <span 
+                    className={`block bg-gradient-to-r from-[#C8592B] to-[#D97746] bg-clip-text text-transparent transition-all duration-700 ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                  >
+                    {words[currentWordIndex]}
+                  </span>
+                </div>
+              </h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
+                Stop guessing with your health. Join the list to be the first to access our clinical-grade formulations.
+              </p>
 
-                {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="flex-1 min-w-0 px-3 py-2 border-2 border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8592B] focus:border-[#C8592B] text-gray-900 text-sm bg-white"
-                      />
-                      <button
-                        type="submit"
-                        disabled={isSubmitting || !email}
-                        className={`text-white font-semibold px-4 py-2 rounded-lg shadow transition-all duration-300 text-sm whitespace-nowrap
-                          ${
-                            email 
-                              ? 'bg-[#2ECC71] border-[#2ECC71] hover:bg-[#28B763] hover:scale-[1.05]'
-                              : 'bg-[#C8592B] border-[#C8592B] opacity-100 cursor-not-allowed'
-                          } border-2`
-                        }
-                      >
-                        {isSubmitting ? (
-                          <div className="flex items-center">
-                            <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin mr-1"></div>
-                            Adding...
-                          </div>
-                        ) : (
-                          "Claim Your Spot"
-                        )}
-                      </button>
-                    </div>
-                    <p className="text-xs text-[#1D4526] mt-2 opacity-80">
-                      We respect your privacy. Unsubscribe at any time.
-                    </p>
-                  </form>
-                ) : (
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">✅</div>
-                    <h4 className="text-xl font-bold text-[#1D4526] mb-2">You're all set!</h4>
-                    <p className="text-[#1D4526]">
-                      We'll send you an email as soon as ZebraWell is ready to order.
-                    </p>
+              {!isSubmitted ? (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                  <div className="relative">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="w-full pl-5 pr-4 py-4 bg-white/90 border border-[#D4D4D4] rounded-xl text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8592B]/30 focus:border-[#C8592B] transition-all shadow-inner"
+                    />
                   </div>
-                )}
-              </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting || !email}
+                    className={`w-full py-4 px-6 rounded-xl font-bold text-lg text-white shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-[#C8592B]/20
+                      ${email 
+                          ? 'bg-gradient-to-r from-[#C8592B] to-[#B04A20] hover:shadow-[#C8592B]/30' 
+                          : 'bg-[#A4B494] cursor-not-allowed opacity-80'
+                      }`}
+                  >
+                    {isSubmitting ? "Processing..." : "Claim My Spot"}
+                  </button>
+                  <p className="text-xs text-center text-gray-600 mt-2 font-medium">No spam. Only important updates.</p>
+                </form>
+              ) : (
+                <div className="bg-[#FDFBF7] border border-[#C8592B]/20 rounded-xl p-6 text-center animate-in fade-in zoom-in">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white text-[#C8592B] rounded-full mb-3 text-2xl shadow-sm border border-[#C8592B]/10">🌿</div>
+                  <h3 className="text-xl font-bold text-[#0f2e24]">You're on the list!</h3>
+                  <p className="text-sm text-[#2C3E2D]/80 mt-1">Keep an eye on your inbox.</p>
+                </div>
+              )}
             </div>
-            <p className="text-center text-base text-white mt-4">
-              We'll send you an email notification as soon as we launch.
-            </p>
 
-            {/* Features section moved up */}
-            <div className="mt-6">
-              <div className="flex flex-wrap gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base justify-center" data-aos="fade">
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> cGMP Manufactured
-                </span>
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> FDA-Registered Facility
-                </span>
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Third-Party Tested
-                </span>
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> MCAS-Friendly Formulations
-                </span>
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Zero Junk Ever
-                </span>
-                <span className="bg-white/10 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-0.5 sm:py-1 md:py-1.5 lg:py-2 rounded-full border border-white/20 subtle-scale">
-                  <span className="text-terra mr-1 sm:mr-2 font-bold" style={{ fontSize: '1.44em' }}>✓</span> Rigorously Tested for Purity
-                </span>
-              </div>
-
-
-            </div>
-          </div>
-
-          {/* Right column - Bottle image */}
-          <div className="md:w-1/2">
-            <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-md flex justify-center mx-auto" data-aos="fade-left">
-              <img 
-                src="/images/zebrawell-bottles-final2.png" 
-                alt="ZebraWell AM and PM Formula bottles" 
-                className="w-full h-auto max-w-full object-contain drop-shadow-2xl rounded-lg"
-              />
+            {/* TRUST BADGES - Updated to match warm tones */}
+            <div className="mt-8 grid grid-cols-2 gap-3">
+               {["FDA-Registered Facility", "cGMP Manufactured", "Zero Fillers", "MCAS Friendly"].map(badge => (
+                 <div key={badge} className="flex items-center text-sm font-bold text-[#0f2e24]/80 bg-white/40 px-3 py-2 rounded-lg border border-[#C8592B]/10 shadow-sm backdrop-blur-sm">
+                   <span className="w-1.5 h-1.5 rounded-full bg-[#C8592B] mr-2"></span>
+                   {badge}
+                 </div>
+               ))}
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Why Zebra Section */}
-      <div className="relative w-fit mx-auto py-6 sm:py-8 md:py-12 mt-6 sm:mt-8 md:mt-16 rounded-lg overflow-hidden px-3 sm:px-4 md:px-8 border-2 border-white" style={{
-        background: '#1D4526'
-      }}>
-        {/* Solid dark green background */}
-        <div className="absolute inset-0" style={{ background: '#1D4526' }}></div>
-        {/* Zebra pattern overlay */}
-        <div 
-          className="absolute inset-0 bg-repeat"
-          style={{
-            backgroundImage: 'url(/zebra-pattern.jpg)',
-            opacity: 0.021,
-            backgroundSize: '600px 300px'
-          }}
-        ></div>
-        <div className="max-w-3xl mx-auto px-2 sm:px-4 md:px-6 text-center relative z-10" data-aos="fade">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-3 sm:mb-4 md:mb-6 text-white font-serif font-bold">Why "<span className="text-terra">Zebra</span>"?</h3>
-          <div className="space-y-2 sm:space-y-3 md:space-y-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed" data-aos="fade">
-            <p>The Zebra is the mascot for rare conditions and diseases.</p>
-            <p>The medical system teaches, "When you hear hoofbeats, think horses."</p>
-            <p>But sometimes it's a zebra.</p>
+          {/* RIGHT: The Product */}
+          <div className="w-full md:w-1/2 relative" data-aos="fade-left">
+            {/* Warm Copper Glow behind bottle */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] aspect-square bg-[#C8592B]/10 rounded-full blur-3xl -z-10"></div>
+
+            <img 
+              src="/images/zebrawell-bottles-final2.png" 
+              alt="ZebraWell Clinical Grade Supplements" 
+              className="w-full h-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-700 ease-out"
+            />
           </div>
+
         </div>
       </div>
     </section>

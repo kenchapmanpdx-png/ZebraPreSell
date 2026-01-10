@@ -5,10 +5,8 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
-      montserrat: ['Montserrat', 'sans-serif'],
-      lora: ['Lora', 'serif'],
+      sans: ['Montserrat', 'Inter', 'sans-serif'], // Main Body Font
+      serif: ['Playfair Display', 'Lora', 'serif'], // Heading Font
     },
     extend: {
       borderRadius: {
@@ -17,6 +15,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // MAPPING GLOBAL VARIABLES
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -28,108 +27,44 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#0f2e24", // Deep Forest Green
+          foreground: "#FDFBF7", // Warm Cream
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#E8DCCA", // Warm Sand
+          foreground: "#0f2e24",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#F5F5F0",
+          foreground: "#5D4037",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#C8592B", // Copper
+          foreground: "#FFFFFF",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        // Premium color system
-        primary: '#0f2e24',
-        accent: '#d4af37',
-        surface: '#f6f6f6',
-        
-        // ZebraWell earthy colors
+        border: "#E6B8A2", // Rose Gold border
+        input: "#E6B8A2",
+        ring: "#C8592B", // Copper ring
+
+        // EXPLICIT LUXURY PALETTE
         sage: {
-          light: "hsl(var(--sage-light))",
-          DEFAULT: "hsl(var(--sage))",
-          dark: "hsl(var(--sage-dark))",
+          light: "#D4E4BC", // New Growth
+          DEFAULT: "#A4B494", // Botanical
+          dark: "#4A5D4B",
         },
         terra: {
-          light: "hsl(var(--terra-light))",
-          DEFAULT: "hsl(var(--terra))",
-          dark: "hsl(var(--terra-dark))",
+          light: "#E6B8A2", // Rose Gold
+          DEFAULT: "#C8592B", // Copper
+          dark: "#8c5c2c", // Bronze
         },
         forest: {
-          light: "hsl(var(--forest-light))",
-          DEFAULT: "hsl(var(--forest))",
+          DEFAULT: "#0f2e24", // Deep Green
         },
-        neutral: {
-          lightest: "hsl(var(--neutral-lightest))",
-          light: "hsl(var(--neutral-light))",
-          medium: "hsl(var(--neutral-medium))",
-          dark: "hsl(var(--neutral-dark))",
-        },
-        medical: {
-          blue: "hsl(var(--medical-blue))",
-          "blue-light": "hsl(var(--medical-blue-light))",
-          "blue-dark": "hsl(var(--medical-blue-dark))",
-        },
-        cta: {
-          green: "hsl(var(--cta-green))",
-          "green-light": "hsl(var(--cta-green-light))",
-          "green-dark": "hsl(var(--cta-green-dark))",
-        },
-        earth: {
-          cream: "hsl(var(--cream))",
-          sand: "hsl(var(--sand))",
-          clay: "hsl(var(--clay))",
-        },
-        chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
-        },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-      },
-      keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        cream: "#FDFBF7", // Background
       },
     },
   },

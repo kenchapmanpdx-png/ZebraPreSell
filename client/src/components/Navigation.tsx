@@ -1,120 +1,120 @@
-import { useState, useEffect } from 'react';
-import ZebraLogo from './ZebraLogo';
-import { Link } from 'wouter';
+import { Link, useLocation } from "wouter";
+import { useState, useEffect } from "react";
+import ZebraLogo from "./ZebraLogo";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
 
-  // Handle scroll effect for sticky navigation
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setScrolled(scrollTop > 100);
+      setScrolled(window.scrollY > 20);
     };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle mobile menu links - close menu when a link is clicked
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const navLinks = [
+    { name: "Our Story", href: "/#story" },
+    { name: "Products", href: "/#products" },
+    { name: "Ingredients", href: "/#ingredients" },
+    { name: "FAQ", href: "/#faq" },
+  ];
 
   return (
-    <nav id="main-nav" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-1 md:py-2 shadow-md' : 'py-2 md:py-3'} border-b border-sage/10 relative`} 
-         style={{
-           background: '#1D4526'
-         }}>
-      {/* Zebra pattern overlay */}
+    // HEADER: Deep Green Background + Copper/Beige Accents
+    <nav 
+      className={`fixed w-full z-50 transition-all duration-500 ease-in-out border-b border-[#C89F87]/20 ${
+        scrolled 
+          ? "py-3 shadow-xl bg-[#0f2e24]" 
+          : "py-5 bg-[#0f2e24]"
+      }`}
+    >
+      {/* ZEBRA TEXTURE: Subtle and Sophisticated */}
       <div 
-        className="absolute inset-0 bg-repeat"
-        style={{
-          backgroundImage: 'url(/zebra-pattern.jpg)',
-          opacity: 0.025,
-          backgroundSize: '800px 400px'
+        className="absolute inset-0 opacity-[0.07] pointer-events-none mix-blend-overlay"
+        style={{ 
+          backgroundImage: 'url("/zebra-pattern.jpg")', 
+          backgroundSize: '300px' 
         }}
       ></div>
-      <div className="container mx-auto px-3 md:px-4 flex justify-between items-center relative z-10">
-        {/* Logo */}
-        <Link href="/" className="flex items-center ml-0 md:ml-[-20px]">
-          <div className="scale-115">
-            <ZebraLogo />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-lora"><span className="text-white font-medium">Zebra</span><span className="text-terra font-normal">Well</span></span>
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-lora ml-1 -mt-1 tracking-wide">Supplements</span>
-          </div>
-          <div className="hidden md:flex flex-col ml-6 border-l border-white/20 pl-6">
-            <span className="text-xl text-white/90 font-medium font-sans">Supporting EDS & POTS</span>
-            <span className="text-xl text-white/70 font-lora italic">Wellness for the Rare and Resilient</span>
-          </div>
+
+      <div className="container mx-auto px-6 flex justify-between items-center relative z-10">
+
+        {/* LOGO: Zebra Head inside Cream Circle with Copper Border */}
+        <Link href="/">
+          <a className="flex items-center gap-3 group cursor-pointer">
+            <div className="w-12 h-12 bg-[#FDFBF7] rounded-full flex items-center justify-center border-2 border-[#C8592B] shadow-md transition-transform duration-300 group-hover:scale-110">
+              <ZebraLogo className="w-7 h-7 text-[#0f2e24] fill-current" />
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-xl font-serif font-bold tracking-tight text-[#FDFBF7] leading-none">
+                Zebra<span className="text-[#C8592B]">Well</span>
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#E6B8A2] font-medium mt-1">
+                Clinical Grade
+              </span>
+            </div>
+          </a>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <a href="/#products" className="text-white hover:text-amber-200 transition-colors">
-            Products
-          </a>
-          <a href="/#story" className="text-white hover:text-amber-200 transition-colors">
-            Our Story
-          </a>
-          <Link href="/preorder" className="text-white hover:text-amber-200 transition-colors">
-            Preorder
+        {/* DESKTOP LINKS - Rose Gold & Cream */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-[#FDFBF7]/90 hover:text-[#E6B8A2] transition-colors uppercase tracking-widest relative group"
+            >
+              {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C8592B] transition-all group-hover:w-full"></span>
+            </a>
+          ))}
+
+          <Link href="/preorder">
+            <button className="bg-gradient-to-r from-[#C8592B] to-[#B04A20] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-[#0f2e24]/50 hover:shadow-orange-900/20 transition-all hover:-translate-y-0.5 border border-[#E6B8A2]/20">
+              Pre-Order
+            </button>
           </Link>
-          <a href="/#contact" className="text-white hover:text-amber-200 transition-colors">
-            Contact
-          </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+        {/* MOBILE MENU BUTTON */}
+        <button 
+          className="md:hidden text-[#FDFBF7]"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-forest border-t border-sage/20">
-          <div className="px-4 py-2 space-y-2">
-            <a 
-              href="/#products" 
-              className="block text-white hover:text-amber-200 transition-colors py-2"
-              onClick={handleLinkClick}
-            >
-              Products
-            </a>
-            <a 
-              href="/#story" 
-              className="block text-white hover:text-amber-200 transition-colors py-2"
-              onClick={handleLinkClick}
-            >
-              Our Story
-            </a>
-            <Link 
-              href="/preorder" 
-              className="block text-white hover:text-amber-200 transition-colors py-2"
-              onClick={handleLinkClick}
-            >
-              Preorder
+      {/* MOBILE MENU DROPDOWN */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#0f2e24] border-t border-[#C89F87]/20 shadow-2xl animate-in slide-in-from-top-2">
+           {/* Mobile Texture */}
+           <div 
+            className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
+            style={{ backgroundImage: 'url("/zebra-pattern.jpg")' }}
+          ></div>
+
+          <div className="flex flex-col p-6 space-y-6 relative z-10 text-center">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-xl font-serif font-medium text-[#FDFBF7] hover:text-[#C8592B]"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+             <Link href="/preorder">
+              <button className="w-full bg-[#C8592B] text-white py-4 rounded-lg font-bold mt-4 shadow-md border border-[#E6B8A2]/30">
+                Pre-Order Now
+              </button>
             </Link>
-            <a 
-              href="/#contact" 
-              className="block text-white hover:text-amber-200 transition-colors py-2"
-              onClick={handleLinkClick}
-            >
-              Contact
-            </a>
           </div>
         </div>
       )}
