@@ -45,7 +45,7 @@ export default function Navigation() {
 
         {/* LOGO: Zebra Head inside Cream Circle with Copper Border */}
         <Link href="/">
-          <a className="flex items-center gap-3 group cursor-pointer">
+          <div className="flex items-center gap-3 group cursor-pointer">
             <div className="w-12 h-12 bg-[#FDFBF7] rounded-full flex items-center justify-center border-2 border-[#C8592B] shadow-md transition-transform duration-300 group-hover:scale-110">
               <ZebraLogo className="w-7 h-7 text-[#0f2e24] fill-current" />
             </div>
@@ -58,7 +58,7 @@ export default function Navigation() {
                 Clinical Grade
               </span>
             </div>
-          </a>
+          </div>
         </Link>
 
         {/* DESKTOP LINKS - Rose Gold & Cream */}
