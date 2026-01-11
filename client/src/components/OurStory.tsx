@@ -1,4 +1,3 @@
-import { Link } from 'wouter';
 import fatherDaughterImg from '../assets/father-daughter.jpg';
 import ZebraHeart from './ZebraHeart';
 
@@ -28,7 +27,7 @@ export default function OurStory() {
               {/* QUOTE CAPTION: Moved down (-bottom-20) to stop covering the photo */}
               <div className="absolute -bottom-18 -right-4 md:-right-10 bg-white p-5 shadow-xl rounded-lg border border-stone-100 max-w-[240px] hidden md:block z-20">
                 <p className="font-serif text-[#0f2e24] italic text-sm leading-relaxed">
-                  "She is brave, brilliant, and resilient."
+                  "Ava is brave, brilliant, and resilient in ways most will never have to be."
                 </p>
                 <div className="w-8 h-0.5 bg-[#C8592B]/30 mt-3"></div>
               </div>
@@ -68,9 +67,12 @@ export default function OurStory() {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
-              <Link href="/preorder" className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer inline-block">
-                Read Our Full Story
-              </Link>
+              <a 
+                href="#ingredients" 
+                className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer inline-block"
+              >
+                Explore Our Ingredients
+              </a>
 
               <div className="flex items-center text-[#5A6C5C] text-sm font-medium">
                 <span className="mr-2 p-2 bg-[#E8EDE6] rounded-full text-[#0f2e24]"><ZebraHeart size={18} /></span>
