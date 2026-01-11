@@ -42,39 +42,58 @@ export default function Hero() {
   };
 
   return (
-    // NEW GRADIENT: The "Copper & Cream" Luxury Vibe
-    // A radial gradient that highlights the content in warm cream and deepens to rich beige/copper at the edges.
-    <section className="relative py-8 md:py-16 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FDFBF7] via-[#E8DCCA] to-[#C89F87]">
+    // HERO: Champagne Center -> Warm Bronze Edges
+    // Richer contrast so it doesn't look "flat"
+    <section className="relative pt-40 pb-24 px-4 overflow-hidden">
 
-      {/* Warm Light Orbs for richness and depth */}
-      <div className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-[#F9C365]/20 blur-[120px] rounded-full pointer-events-none mix-blend-overlay"></div>
-      <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#C8592B]/10 blur-[100px] rounded-full pointer-events-none mix-blend-multiply"></div>
+      {/* ANIMATED BACKGROUND */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          // Richer palette: Cream -> Sand -> Warm Taupe/Bronze
+          background: 'radial-gradient(circle at 50% 50%, #FDFBF7 0%, #E8DCCA 50%, #D4B59E 100%)',
+          backgroundSize: '200% 200%',
+          animation: 'breathingGradient 8s ease-in-out infinite alternate'
+        }}
+      ></div>
+
+      <style>{`
+        @keyframes breathingGradient {
+          0% { background-position: 50% 40%; }
+          100% { background-position: 50% 60%; }
+        }
+      `}</style>
+
+      {/* Texture Overlay (Adds that "Paper" feel) */}
+      <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none mix-blend-multiply" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* CENTERED HEADER */}
-        <div className="text-center mb-10 md:mb-14">
-          <div className="inline-block mb-3 px-4 py-1.5 rounded-full bg-[#0f2e24] text-[#F9C365] border border-[#F9C365]/40 text-xs font-bold uppercase tracking-widest shadow-md">
-            Coming Soon
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight mb-4 text-[#0f2e24] drop-shadow-sm" data-aos="fade-up">
-            Clinical-Grade Supplements
-            <span className="block mt-2 text-[#2C3E2D] font-medium text-2xl md:text-4xl">
-              Engineered for <span className="border-b-4 border-[#C8592B]/40">POTS & EDS</span>.
+        <div className="text-center mb-12 md:mb-16">
+          {/* Size reduced ~20% */}
+          <h1 className="text-4xl md:text-[5rem] font-serif font-bold leading-tight mb-6 drop-shadow-sm" data-aos="fade-up">
+            <span className="block text-[#2c1810] mb-2">Clinical-Grade Supplements</span>
+
+            <span className="block text-2xl md:text-4xl font-medium mt-4 text-[#3E2723]">
+              Engineered for
+              {/* TEXT COLOR: Matches the Pre-Order Orange exactly (#C8592B) */}
+              <span className="ml-3 font-bold uppercase tracking-wide text-[#C8592B] drop-shadow-sm">
+                POTS, EDS & MCAS
+              </span>
             </span>
           </h1>
         </div>
 
         {/* TWO COLUMN CONTENT */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
 
-          {/* LEFT: The "Ask" (Reservation Form) */}
+          {/* LEFT: Reservation Form */}
           <div className="w-full md:w-1/2" data-aos="fade-right" data-aos-delay="200">
-            {/* Glass Card: Looks incredible against the warm copper background */}
-            <div className="bg-white/80 backdrop-blur-xl border border-white/70 rounded-3xl p-8 shadow-2xl shadow-[#C8592B]/10">
-              <h2 className="text-3xl font-serif font-bold text-[#0f2e24] mb-2">
+            <div className="bg-white/70 backdrop-blur-xl border border-white/60 rounded-3xl p-8 md:p-10 shadow-2xl shadow-[#3E2723]/10">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#2c1810] mb-3">
                 Wellness for the
-                <div className="h-[1.2em] overflow-hidden inline-block align-bottom ml-2">
+                <div className="h-[1.2em] overflow-hidden inline-block align-bottom ml-3">
                   <span 
                     className={`block bg-gradient-to-r from-[#C8592B] to-[#D97746] bg-clip-text text-transparent transition-all duration-700 ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -84,12 +103,12 @@ export default function Hero() {
                   </span>
                 </div>
               </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
+              <p className="text-lg md:text-xl text-[#5D4037] mb-8 leading-relaxed font-medium">
                 Stop guessing with your health. Join the list to be the first to access our clinical-grade formulations.
               </p>
 
               {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <div className="relative">
                     <input
                       type="email"
@@ -97,47 +116,43 @@ export default function Hero() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full pl-5 pr-4 py-4 bg-white/90 border border-[#D4D4D4] rounded-xl text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8592B]/30 focus:border-[#C8592B] transition-all shadow-inner"
+                      className="w-full pl-6 pr-4 py-5 bg-white/80 border border-[#D7CCC8] rounded-2xl text-[#3E2723] text-lg placeholder:text-[#8D6E63] focus:outline-none focus:ring-2 focus:ring-[#C8592B]/30 focus:border-[#C8592B] transition-all shadow-inner"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting || !email}
-                    className={`w-full py-4 px-6 rounded-xl font-bold text-lg text-white shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-[#C8592B]/20
+                    className={`w-full py-5 px-6 rounded-2xl font-bold text-xl text-white shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-t border-white/20
                       ${email 
-                          ? 'bg-gradient-to-r from-[#C8592B] to-[#B04A20] hover:shadow-[#C8592B]/30' 
-                          : 'bg-[#A4B494] cursor-not-allowed opacity-80'
+                          ? 'bg-[#C8592B] hover:bg-[#B04A20] hover:shadow-[#C8592B]/30' 
+                          : 'bg-[#A1887F] cursor-not-allowed opacity-80'
                       }`}
                   >
                     {isSubmitting ? "Processing..." : "Claim My Spot"}
                   </button>
-                  <p className="text-xs text-center text-gray-600 mt-2 font-medium">No spam. Only important updates.</p>
                 </form>
               ) : (
-                <div className="bg-[#FDFBF7] border border-[#C8592B]/20 rounded-xl p-6 text-center animate-in fade-in zoom-in">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white text-[#C8592B] rounded-full mb-3 text-2xl shadow-sm border border-[#C8592B]/10">🌿</div>
-                  <h3 className="text-xl font-bold text-[#0f2e24]">You're on the list!</h3>
-                  <p className="text-sm text-[#2C3E2D]/80 mt-1">Keep an eye on your inbox.</p>
+                <div className="bg-[#FFFDF9] border border-[#C8592B]/20 rounded-2xl p-8 text-center animate-in fade-in zoom-in">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white text-[#C8592B] rounded-full mb-4 text-3xl shadow-sm border border-[#C8592B]/10">🌿</div>
+                  <h3 className="text-2xl font-bold text-[#2c1810]">You're on the list!</h3>
+                  <p className="text-base text-[#5D4037] mt-2">Keep an eye on your inbox.</p>
                 </div>
               )}
             </div>
 
-            {/* TRUST BADGES - Updated to match warm tones */}
-            <div className="mt-8 grid grid-cols-2 gap-3">
-               {["FDA-Registered Facility", "cGMP Manufactured", "Zero Fillers", "MCAS Friendly"].map(badge => (
-                 <div key={badge} className="flex items-center text-sm font-bold text-[#0f2e24]/80 bg-white/40 px-3 py-2 rounded-lg border border-[#C8592B]/10 shadow-sm backdrop-blur-sm">
-                   <span className="w-1.5 h-1.5 rounded-full bg-[#C8592B] mr-2"></span>
-                   {badge}
-                 </div>
+            {/* BADGES */}
+            <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
+               {["FDA-Registered", "cGMP Certified", "MCAS Friendly", "Zero Fillers"].map(badge => (
+                 <span key={badge} className="inline-flex items-center px-4 py-2 rounded-full bg-white/40 border border-[#C8592B]/10 text-[#2c1810] text-sm font-bold backdrop-blur-sm shadow-sm">
+                   <span className="w-2 h-2 rounded-full bg-[#C8592B] mr-2"></span>{badge}
+                 </span>
                ))}
             </div>
           </div>
 
-          {/* RIGHT: The Product */}
+          {/* RIGHT: Product Image */}
           <div className="w-full md:w-1/2 relative" data-aos="fade-left">
-            {/* Warm Copper Glow behind bottle */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] aspect-square bg-[#C8592B]/10 rounded-full blur-3xl -z-10"></div>
-
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square bg-[#E5D4C8]/40 rounded-full blur-[100px] -z-10"></div>
             <img 
               src="/images/zebrawell-bottles-final2.png" 
               alt="ZebraWell Clinical Grade Supplements" 
