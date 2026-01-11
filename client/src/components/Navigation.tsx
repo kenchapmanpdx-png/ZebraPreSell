@@ -35,7 +35,8 @@ export default function Navigation() {
 
         {/* LOGO: MAX SIZE */}
         <Link href="/">
-          <div className="flex items-center gap-4 group cursor-pointer">
+          <a className="flex items-center gap-4 group cursor-pointer">
+            {/* Circle Container: w-20 h-20 (5rem) - Very Large */}
             <div className="w-20 h-20 bg-[#FDFBF7] rounded-full flex items-center justify-center border-[3px] border-[#C8592B] shadow-lg transition-transform duration-300 group-hover:scale-105">
               <ZebraLogo className="w-12 h-12 text-[#2c1810] fill-current" />
             </div>
@@ -48,7 +49,7 @@ export default function Navigation() {
                 Clinical Grade
               </span>
             </div>
-          </div>
+          </a>
         </Link>
 
         {/* DESKTOP LINKS */}
