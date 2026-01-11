@@ -12,19 +12,44 @@ export default function OurPromise() {
     <div className="min-h-screen bg-[#FDFBF7]">
       <Navigation />
 
-      {/* HEADER: Light & Clean */}
-      <section className="pt-40 pb-12 px-4 relative">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#E8DCCA]/40 border border-[#C8592B]/20 text-[#C8592B] text-xs font-bold uppercase tracking-widest">
+      {/* HEADER: HIGH CONTRAST MOVING GRADIENT */}
+      <section 
+        className="pt-40 pb-16 px-4 relative overflow-hidden"
+        style={{
+          // UPDATED GRADIENT:
+          // 1. Pure White (#FFFFFF) - To make the highlights pop
+          // 2. Rich Tan (#D7BFA6) - To create the "shadow" of the wave
+          // 3. Warm Beige (#E8DCCA) - The transition color
+          // 4. Pure White (#FFFFFF) - Loop back to start
+          background: 'linear-gradient(-45deg, #FFFFFF, #D7BFA6, #E8DCCA, #FFFFFF)',
+          backgroundSize: '400% 400%',
+          animation: 'stripeFlow 12s ease infinite'
+        }}
+      >
+        {/* ANIMATION DEFINITION */}
+        <style>{`
+          @keyframes stripeFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+        `}</style>
+
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/80 border border-[#C8592B]/20 text-[#C8592B] text-xs font-bold uppercase tracking-widest backdrop-blur-md shadow-sm">
             <HeartHandshake size={14} />
             Code of Ethics
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-[#0f2e24]">
+
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-[#0f2e24] drop-shadow-sm">
             The Zebra <span className="text-[#C8592B] italic">Promise</span>
           </h1>
+
           <p className="text-xl md:text-2xl text-[#5D4037] font-medium max-w-2xl mx-auto leading-relaxed">
             Our commitment to the hEDS, POTS, and MCAS community.
           </p>
+
           <div className="w-24 h-1 bg-[#C8592B]/20 mx-auto mt-8 rounded-full"></div>
         </div>
       </section>
@@ -102,8 +127,8 @@ export default function OurPromise() {
         </div>
       </section>
 
-      {/* BOTTOM LINE: DARK GREEN GRADIENT (No Zebra Pattern) */}
-      <section className="py-24 px-4 bg-gradient-to-r from-[#1a4a3a] to-[#0f2e24] text-center relative overflow-hidden">
+      {/* BOTTOM LINE: STATIC DARK GREEN GRADIENT (No Movement) */}
+      <section className="py-24 px-4 bg-gradient-to-br from-[#0f2e24] to-[#1a4a3a] text-center relative overflow-hidden">
         <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-2xl md:text-4xl font-serif font-bold mb-8 text-[#FDFBF7]">The Bottom Line</h2>
           <p className="text-lg md:text-xl text-[#E8EDE6]/90 mb-12 leading-relaxed">

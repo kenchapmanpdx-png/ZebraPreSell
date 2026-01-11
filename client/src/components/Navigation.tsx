@@ -47,11 +47,11 @@ export default function Navigation() {
           : "py-6 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center relative z-10">
+      <div className="container mx-auto px-4 lg:px-6 flex justify-between items-center relative z-10">
 
         {/* LOGO */}
         <Link href="/">
-          <div className="flex items-center gap-4 group cursor-pointer" aria-label="ZebraWell Home">
+          <div className="flex items-center gap-4 group cursor-pointer -ml-2 lg:-ml-4" aria-label="ZebraWell Home">
             <div className="w-20 h-20 bg-[#FDFBF7] rounded-full flex items-center justify-center border-[3px] border-[#C8592B] shadow-lg transition-transform duration-300 group-hover:scale-105">
               <ZebraLogo className="w-12 h-12 text-[#2c1810] fill-current" />
             </div>
