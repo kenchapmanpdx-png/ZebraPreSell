@@ -69,9 +69,9 @@ export default function OurStory() {
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
               <Link href="/preorder"> 
-                <a className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer">
+                <span className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer inline-block">
                   Read Our Full Story
-                </a>
+                </span>
               </Link>
 
               <div className="flex items-center text-[#5A6C5C] text-sm font-medium">
