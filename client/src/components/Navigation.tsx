@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import ZebraLogo from "./ZebraLogo";
 import { Menu, X } from "lucide-react";
@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +16,24 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // UPDATED: Added "Our Promise" to the navigation list
   const navLinks = [
     { name: "Our Story", href: "/#story" },
+    { name: "Our Promise", href: "/our-promise" }, // NEW PAGE LINK
     { name: "Products", href: "/#products" },
     { name: "Ingredients", href: "/#ingredients" },
     { name: "FAQ", href: "/#faq" },
   ];
 
   const handleWaitlistClick = () => {
-    // Scroll smoothly to the email form in the hero
-    const heroForm = document.getElementById('waitlist-form');
-    if (heroForm) {
-      heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // If we are not on the home page, we need to go there first
+    if (location !== '/') {
+      window.location.href = '/#waitlist-form';
+    } else {
+      const heroForm = document.getElementById('waitlist-form');
+      if (heroForm) {
+        heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     }
   };
 
@@ -63,17 +70,15 @@ export default function Navigation() {
         {/* DESKTOP LINKS */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-base font-bold text-[#2c1810] hover:text-[#C8592B] transition-colors uppercase tracking-widest relative group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C8592B] transition-all group-hover:w-full"></span>
-            </a>
+            <Link key={link.name} href={link.href}>
+              <a className="text-base font-bold text-[#2c1810] hover:text-[#C8592B] transition-colors uppercase tracking-widest relative group cursor-pointer">
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C8592B] transition-all group-hover:w-full"></span>
+              </a>
+            </Link>
           ))}
 
-          {/* CTA: Changed to scroll to the actual form instead of a separate page */}
+          {/* CTA BUTTON */}
           <button 
             onClick={handleWaitlistClick}
             className="bg-[#C8592B] text-white px-8 py-3 rounded-full font-bold text-base shadow-xl hover:bg-[#B04A20] transition-all hover:-translate-y-0.5"
@@ -97,21 +102,21 @@ export default function Navigation() {
         <div className="md:hidden absolute top-full left-0 w-full bg-[#FDFBF7] border-t border-[#C89F87]/20 shadow-2xl animate-in slide-in-from-top-2">
           <div className="flex flex-col p-8 space-y-6 relative z-10 text-center">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-2xl font-serif font-bold text-[#2c1810] hover:text-[#C8592B]"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
+              <Link key={link.name} href={link.href}>
+                <a 
+                  className="text-2xl font-serif font-bold text-[#2c1810] hover:text-[#C8592B]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              </Link>
             ))}
-              <button 
-                onClick={() => { handleWaitlistClick(); setIsOpen(false); }}
-                className="w-full bg-[#C8592B] text-white py-4 rounded-xl font-bold mt-4 shadow-md text-lg"
-              >
-                Join Waitlist
-              </button>
+            <button 
+              onClick={() => { handleWaitlistClick(); setIsOpen(false); }}
+              className="w-full bg-[#C8592B] text-white py-4 rounded-xl font-bold mt-4 shadow-md text-lg"
+            >
+              Join Waitlist
+            </button>
           </div>
         </div>
       )}

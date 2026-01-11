@@ -37,10 +37,10 @@ export default function WhyZebra() {
 
           <div className="bg-white/60 backdrop-blur-sm border border-[#C8592B]/10 rounded-xl p-8 shadow-xl transform rotate-1">
             <p className="text-xs text-[#8D6E63] font-bold uppercase tracking-widest mb-3">
-              Medical School Adage
+              Medical Schools teach
             </p>
             <p className="font-serif text-2xl md:text-4xl text-[#C8592B] italic leading-tight">
-              "When you hear hoofbeats, think horses, not zebras."
+              "When you hear hoofbeats, think horses." but sometimes, its a Zebra.
             </p>
           </div>
 

@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import PreorderPage from "@/pages/PreorderPage";
+import OurPromise from "@/pages/OurPromise"; // <--- NEW IMPORT
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,12 +16,14 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/preorder" component={PreorderPage} />
+      <Route path="/our-promise" component={OurPromise} /> {/* <--- NEW ROUTE */}
       <Route component={NotFound} />
     </Switch>
   );
 }
 
 function App() {
+  // Keep the animation initialization
   useEffect(() => {
     AOS.init({
       duration: 800,
