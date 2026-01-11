@@ -1,61 +1,80 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import WhyZebra from '@/components/WhyZebra'; // ADDED THIS
-import DifferenceSection from '@/components/DifferenceSection';
+import WhyZebra from '@/components/WhyZebra'; // POINTING TO THE NEW FILE
+import OurStory from '@/components/OurStory';
 import ProductGrid from '@/components/ProductGrid';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import SampleRequestModal from '@/components/SampleRequestModal';
-import OurStory from '@/components/OurStory';
-import InteractiveIngredientMap from '@/components/InteractiveIngredientMap';
-import SimpleReservationSection from '@/components/SimpleReservationSection';
-import Testimonials from '@/components/Testimonials';
-import BuyNow from '@/components/BuyNow';
-import WhatYouGet from '@/components/WhatYouGet';
-import ClinicalRationale from '@/components/ClinicalRationale';
+
+// LAZY LOAD HEAVY COMPONENTS
+const InteractiveIngredientMap = lazy(() => import('@/components/InteractiveIngredientMap'));
+const Testimonials = lazy(() => import('@/components/Testimonials'));
+const DifferenceSection = lazy(() => import('@/components/DifferenceSection'));
+const WhatYouGet = lazy(() => import('@/components/WhatYouGet'));
+const ClinicalRationale = lazy(() => import('@/components/ClinicalRationale')); 
+const FAQ = lazy(() => import('@/components/FAQ')); 
 
 export default function Home() {
   // Scroll animation functionality
   useEffect(() => {
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-
-    const checkAnimation = () => {
-      animatedElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-
-        if (elementTop < window.innerHeight - elementVisible) {
-          element.classList.add('appear');
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
         }
       });
     };
 
-    window.addEventListener('scroll', checkAnimation);
-    checkAnimation();
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1, 
+    });
 
-    return () => {
-      window.removeEventListener('scroll', checkAnimation);
-    };
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#FDFBF7]">
       <Navigation />
-      <Hero />
 
-      {/* Added WhyZebra here to bridge the Hero and Story */}
-      <WhyZebra />
+      <main>
+        {/* 1. HERO */}
+        <Hero />
 
-      <OurStory />
-      <ProductGrid />
-      <SimpleReservationSection />
-      <InteractiveIngredientMap />
-      <DifferenceSection />
-      <WhatYouGet />
-      <Testimonials />
-      <Contact />
+        {/* 2. COMPACT BANNER (The new Beige Strip) */}
+        <WhyZebra />
+
+        {/* 3. STORY */}
+        <OurStory />
+
+        {/* 4. CLINICAL PROOF */}
+        <Suspense fallback={<div className="h-96 bg-[#FDFBF7]" />}>
+           <ClinicalRationale />
+           <DifferenceSection />
+        </Suspense>
+
+        {/* 5. PRODUCTS */}
+        <div id="products">
+          <ProductGrid />
+        </div>
+
+        {/* 6. INTERACTIVE MAP */}
+        <Suspense fallback={<div className="h-96" />}>
+          <InteractiveIngredientMap />
+        </Suspense>
+
+        {/* 7. CLOSING INFO */}
+        <Suspense fallback={<div className="h-20" />}>
+           <WhatYouGet />
+           <Testimonials />
+           <FAQ /> 
+        </Suspense>
+      </main>
+
       <Footer />
       <FloatingCTA />
       <SampleRequestModal />

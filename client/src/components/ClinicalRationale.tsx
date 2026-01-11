@@ -1,106 +1,81 @@
+import React from "react";
+import { Check, ShieldCheck } from "lucide-react";
+
 export default function ClinicalRationale() {
+  // Grouped for better cognitive load (UX best practice)
+  const ingredients = [
+    { name: "Magnesium Malate", benefit: "Energy production & muscle function", category: "Energy" },
+    { name: "CoQ10 (Ubiquinol)", benefit: "Mitochondrial energy support", category: "Energy" },
+    { name: "Vitamin D3", benefit: "Immune & bone health", category: "Structural" },
+    { name: "Vitamin K2", benefit: "Bone mineralization", category: "Structural" },
+    { name: "PEA", benefit: "Pain relief & inflammation", category: "Relief" },
+    { name: "Alpha-GPC", benefit: "Cognitive support", category: "Brain" },
+    { name: "ALCAR", benefit: "Brain & mitochondrial support", category: "Brain" },
+    { name: "Taurine", benefit: "Cardiovascular support", category: "Flow" },
+    { name: "Thiamine", benefit: "Nervous system health", category: "Nerve" },
+    { name: "B2 (R5P)", benefit: "Energy metabolism", category: "Energy" },
+    { name: "B6 (P5P)", benefit: "Neurotransmitter support", category: "Brain" },
+    { name: "B12 (Dual-form)", benefit: "Energy & nerve function", category: "Energy" },
+    { name: "Folate (L-5-MTHF)", benefit: "Methylation support", category: "Genetics" },
+    { name: "Zinc Glycinate", benefit: "Immune support", category: "Immunity" },
+    { name: "Copper Glycinate", benefit: "Connective tissue health", category: "Structural" },
+    { name: "Silicon (ch-OSA)", benefit: "Collagen synthesis", category: "Structural" },
+    // PM Specifics
+    { name: "L-Theanine", benefit: "Relaxation & sleep", category: "Calm" },
+    { name: "Hyaluronic Acid", benefit: "Joint lubrication", category: "Structural" },
+    { name: "R-Lipoic Acid", benefit: "Antioxidant & nerve health", category: "Nerve" },
+  ];
+
   return (
-    <section className="bg-gray-50 py-8 md:py-16 px-4 md:px-8" style={{ background: 'linear-gradient(90deg, hsla(161, 51%, 12%, 1) 15%, hsla(115, 41%, 27%, 1) 49%, hsla(161, 51%, 12%, 1) 85%)' }}>
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6 md:mb-8 text-center fade-in">🧬 Why Each Ingredient Matters</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 fade-in">
-          {/* AM Formula Ingredients */}
-          <div className="bg-white rounded-lg p-2 shadow border-l-4 border-l-orange-400 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Magnesium Malate</h3>
-            <p className="text-xs text-forest/70">Energy production & muscle function</p>
-          </div>
+    <section className="py-16 md:py-24 bg-[#FDFBF7] relative">
+      <div className="container mx-auto px-4 max-w-7xl">
 
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-green-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">CoQ10 (Ubiquinol)</h3>
-            <p className="text-xs text-forest/70">Mitochondrial energy support</p>
+        {/* SECTION HEADER */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-[#E8DCCA]/30 border border-[#C8592B]/20 text-[#C8592B] text-xs font-bold uppercase tracking-widest shadow-sm">
+            <ShieldCheck size={14} />
+            Clinical Grade Formulation
           </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-yellow-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Vitamin D3</h3>
-            <p className="text-xs text-forest/70">Immune & bone health</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-blue-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Vitamin K2</h3>
-            <p className="text-xs text-forest/70">Bone mineralization</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-[#3E3E67] border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">PEA</h3>
-            <p className="text-xs text-forest/70">Pain relief & inflammation</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-teal-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Alpha-GPC</h3>
-            <p className="text-xs text-forest/70">Cognitive support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-indigo-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">ALCAR</h3>
-            <p className="text-xs text-forest/70">Brain & mitochondrial support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-pink-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Taurine</h3>
-            <p className="text-xs text-forest/70">Cardiovascular support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-red-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Thiamine</h3>
-            <p className="text-xs text-forest/70">Nervous system health</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-emerald-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">B2 (R5P)</h3>
-            <p className="text-xs text-forest/70">Energy metabolism</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-cyan-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">B6 (P5P)</h3>
-            <p className="text-xs text-forest/70">Neurotransmitter support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-amber-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">B12 (Dual-form)</h3>
-            <p className="text-xs text-forest/70">Energy & nerve function</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-lime-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Folate (L-5-MTHF)</h3>
-            <p className="text-xs text-forest/70">Methylation support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-[#3E3E67] border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Zinc Glycinate</h3>
-            <p className="text-xs text-forest/70">Immune support</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-rose-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Copper Glycinate</h3>
-            <p className="text-xs text-forest/70">Connective tissue health</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-slate-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Silicon (ch-OSA)</h3>
-            <p className="text-xs text-forest/70">Collagen synthesis</p>
-          </div>
-
-          {/* PM Formula Additional Ingredients */}
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-sky-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">L-Theanine</h3>
-            <p className="text-xs text-forest/70">Relaxation & sleep</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-fuchsia-500 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">Hyaluronic Acid</h3>
-            <p className="text-xs text-forest/70">Joint lubrication</p>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 shadow border-l-4 border-l-emerald-600 border-t border-r border-b border-gray-100 hover:shadow-lg transition-all duration-300">
-            <h3 className="text-sm font-bold text-forest mb-1">R-Lipoic Acid</h3>
-            <p className="text-xs text-forest/70">Antioxidant & nerve health</p>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#0f2e24] mb-4">
+            Why Each Ingredient <span className="text-[#C8592B] italic">Matters</span>
+          </h2>
+          <p className="text-[#5D4037] max-w-2xl mx-auto text-lg">
+            No fillers. No fluff. Just highly bioavailable nutrients engineered for complex biologies.
+          </p>
         </div>
+
+        {/* INGREDIENT GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {ingredients.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-xl p-5 shadow-sm border border-[#E6B8A2]/30 hover:shadow-md hover:border-[#C8592B]/50 transition-all duration-300 group"
+            >
+              <div className="flex items-start justify-between mb-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#C8592B]/70 bg-[#FDFBF7] px-2 py-1 rounded-md">
+                  {item.category}
+                </span>
+                <div className="w-2 h-2 rounded-full bg-[#D4E4BC] group-hover:bg-[#C8592B] transition-colors"></div>
+              </div>
+
+              <h3 className="text-lg font-bold text-[#0f2e24] mb-1 group-hover:text-[#C8592B] transition-colors">
+                {item.name}
+              </h3>
+
+              <p className="text-sm text-[#5D4037] leading-tight">
+                {item.benefit}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* BOTTOM CALLOUT */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-[#0f2e24]/60 italic">
+            * These statements have not been evaluated by the Food and Drug Administration.
+          </p>
+        </div>
+
       </div>
     </section>
   );

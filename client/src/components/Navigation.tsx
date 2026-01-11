@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import ZebraLogo from "./ZebraLogo";
 import { Menu, X } from "lucide-react";
@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,20 +22,29 @@ export default function Navigation() {
     { name: "FAQ", href: "/#faq" },
   ];
 
+  const handleWaitlistClick = () => {
+    // Scroll smoothly to the email form in the hero
+    const heroForm = document.getElementById('waitlist-form');
+    if (heroForm) {
+      heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   return (
     <nav 
+      role="navigation"
+      aria-label="Main Navigation"
       className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
         scrolled 
-          ? "py-4 shadow-md bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#C89F87]/20" 
-          : "py-8 bg-transparent"
+          ? "py-3 shadow-md bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#C89F87]/20" 
+          : "py-6 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center relative z-10">
 
-        {/* LOGO: MAX SIZE */}
+        {/* LOGO */}
         <Link href="/">
-          <a className="flex items-center gap-4 group cursor-pointer">
-            {/* Circle Container: w-20 h-20 (5rem) - Very Large */}
+          <div className="flex items-center gap-4 group cursor-pointer" aria-label="ZebraWell Home">
             <div className="w-20 h-20 bg-[#FDFBF7] rounded-full flex items-center justify-center border-[3px] border-[#C8592B] shadow-lg transition-transform duration-300 group-hover:scale-105">
               <ZebraLogo className="w-12 h-12 text-[#2c1810] fill-current" />
             </div>
@@ -49,7 +57,7 @@ export default function Navigation() {
                 Clinical Grade
               </span>
             </div>
-          </a>
+          </div>
         </Link>
 
         {/* DESKTOP LINKS */}
@@ -65,17 +73,20 @@ export default function Navigation() {
             </a>
           ))}
 
-          <Link href="/preorder">
-            <button className="bg-[#C8592B] text-white px-8 py-3 rounded-full font-bold text-base shadow-xl hover:bg-[#B04A20] transition-all hover:-translate-y-0.5">
-              Pre-Order
-            </button>
-          </Link>
+          {/* CTA: Changed to scroll to the actual form instead of a separate page */}
+          <button 
+            onClick={handleWaitlistClick}
+            className="bg-[#C8592B] text-white px-8 py-3 rounded-full font-bold text-base shadow-xl hover:bg-[#B04A20] transition-all hover:-translate-y-0.5"
+          >
+            Join Waitlist
+          </button>
         </div>
 
         {/* MOBILE MENU BUTTON */}
         <button 
           className="md:hidden text-[#2c1810]"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
@@ -95,11 +106,12 @@ export default function Navigation() {
                 {link.name}
               </a>
             ))}
-             <Link href="/preorder">
-              <button className="w-full bg-[#C8592B] text-white py-4 rounded-xl font-bold mt-4 shadow-md text-lg">
-                Pre-Order Now
+              <button 
+                onClick={() => { handleWaitlistClick(); setIsOpen(false); }}
+                className="w-full bg-[#C8592B] text-white py-4 rounded-xl font-bold mt-4 shadow-md text-lg"
+              >
+                Join Waitlist
               </button>
-            </Link>
           </div>
         </div>
       )}
