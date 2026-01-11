@@ -53,7 +53,7 @@ export default function OurStory() {
             <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
               <p>
                 Ava is my daughter. She lives with Scoliosis, hEDS, POTS, and MCAS. 
-                These are complex, mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
+                Mostly invisible conditions that affect everything from how her body utilizes nutrients to how she lives with chronic pain, subluxating joints, and extreme fatigue.
               </p>
 
               <p>
@@ -68,15 +68,13 @@ export default function OurStory() {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
-              <Link href="/preorder"> 
-                <span className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer inline-block">
-                  Read Our Full Story
-                </span>
+              <Link href="/preorder" className="bg-[#0f2e24] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#1a4a3a] transition-all hover:-translate-y-1 cursor-pointer inline-block">
+                Read Our Full Story
               </Link>
 
               <div className="flex items-center text-[#5A6C5C] text-sm font-medium">
                 <span className="mr-2 p-2 bg-[#E8EDE6] rounded-full text-[#0f2e24]"><ZebraHeart size={18} /></span>
-                <span>Welcome to the herd.</span>
+                <span>If you or someone you love is a Zebra, welcome to the herd.</span>
               </div>
             </div>
           </div>
